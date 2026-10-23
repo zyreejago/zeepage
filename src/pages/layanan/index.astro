@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { content, WA } from '../../data/home-content';
+import { daerahList } from '../../data/daerah';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/layanan/';
+const c = content.id;
+
+const h2s = [
+  'Jasa Pembuatan Landing Page',
+  'Jasa Pembuatan Website Company Profile',
+  'Jasa Pembuatan Website Toko Online',
+  'Jasa Pembuatan Aplikasi Web',
+  'Jasa Redesign dan Maintenance Website',
+];
+---
+
+<BaseLayout
+  title="Layanan Jasa Pembuatan Website di Bali | zeepage"
+  description="Layanan jasa pembuatan website di Bali oleh zeepage: landing page mulai Rp 699 ribu, company profile, toko online, aplikasi web, redesign dan maintenance. Konsultasi gratis."
+  lang="id"
+  canonical={canonical}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Layanan</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Layanan jasa pembuatan website <em class="font-display italic font-medium text-brand">di Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          {c.services.note} Semua paket dikerjakan langsung oleh tim zeepage, tanpa perantara, dan diawali konsultasi gratis untuk memastikan paketnya tepat sasaran.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-6">
+          {c.services.rows.map((r: any, i: number) => (
+            <article class="bg-white border border-line rounded-3xl p-7 sm:p-9" data-reveal>
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="max-w-2xl">
+                  <p class="font-display italic text-brand/70 text-lg mb-2">{String(i + 1).padStart(2, '0')}</p>
+                  <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">{h2s[i]}</h2>
+                  <p class="text-ink/60 leading-relaxed mt-4">{r.desc}</p>
+                  <p class="text-xs font-semibold tracking-wide uppercase text-ink/40 mt-4">{r.meta}</p>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <p class="font-display italic text-xl sm:text-2xl text-brand">{r.price}</p>
+                  <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 bg-brand text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Paket Ini</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Area layanan jasa pembuatan website</h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>Kami berbasis di Bali dan melayani pembuatan website untuk bisnis di seluruh kabupaten, kota, dan kawasan berikut. Di luar Bali, pengerjaan berjalan online untuk klien di seluruh Indonesia.</p>
+        <ul data-reveal-group class="flex flex-wrap gap-2.5 mt-8">
+          {daerahList.filter((d) => d.tipe !== 'provinsi').map((d) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{d.nama}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Masih bingung memilih <em class="font-display italic font-medium text-brand">paket?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan saja kebutuhan bisnis Anda. Kami bantu pilihkan jenis website dan paket yang paling sesuai, gratis dan tanpa komitmen.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Konsultasi Gratis</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

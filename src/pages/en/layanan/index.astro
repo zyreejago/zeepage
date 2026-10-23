@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import '../../../styles/global.css';
+
+import en from '../../../i18n/en.json';
+import { content, WA_EN } from '../../../data/home-content';
+import { daerahList } from '../../../data/daerah';
+
+const t = en;
+const lang = 'en';
+const canonical = 'https://zeepage.com/en/layanan/';
+const c = content.en;
+
+const h2s = [
+  'Landing Page Design Service',
+  'Company Profile Website Service',
+  'Online Store Website Service',
+  'Web Application Development Service',
+  'Website Redesign and Maintenance Service',
+];
+---
+
+<BaseLayout
+  title="Website Design Services in Bali | zeepage"
+  description="Website design services in Bali by zeepage: landing pages from Rp 699k, company profiles, online stores, web applications, redesign and maintenance. Free consultation."
+  lang="en"
+  canonical={canonical}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Services</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Website design services <em class="font-display italic font-medium text-brand">in Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          {c.services.note} Every package is built directly by the zeepage team, with no middlemen, and starts with a free consultation so the package fits your goals.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-6">
+          {c.services.rows.map((r: any, i: number) => (
+            <article class="bg-white border border-line rounded-3xl p-7 sm:p-9" data-reveal>
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div class="max-w-2xl">
+                  <p class="font-display italic text-brand/70 text-lg mb-2">{String(i + 1).padStart(2, '0')}</p>
+                  <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">{h2s[i]}</h2>
+                  <p class="text-ink/60 leading-relaxed mt-4">{r.desc}</p>
+                  <p class="text-xs font-semibold tracking-wide uppercase text-ink/40 mt-4">{r.meta}</p>
+                </div>
+                <div class="text-left sm:text-right shrink-0">
+                  <p class="font-display italic text-xl sm:text-2xl text-brand">{r.price}</p>
+                  <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 bg-brand text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-branddark transition-colors">Ask About This Package</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website design service areas</h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>We are based in Bali and build websites for businesses across the regencies, cities, and areas below. Outside Bali, all work runs online for clients across Indonesia.</p>
+        <ul data-reveal-group class="flex flex-wrap gap-2.5 mt-8">
+          {daerahList.filter((d) => d.tipe !== 'provinsi').map((d) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{d.nama}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Not sure which <em class="font-display italic font-medium text-brand">package fits?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Just tell us what your business needs. We will help you pick the right type of website and package, free and with no commitment.</p>
+        <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Free Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
