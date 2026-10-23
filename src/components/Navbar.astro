@@ -15,6 +15,21 @@ export interface Props {
 
 const { t, lang, cta } = Astro.props;
 const homeHref = lang === 'id' ? '/' : '/en/';
+
+// Language toggle stays on the same page in the other language.
+const rawPath = Astro.url.pathname;
+const isEnPath = rawPath === '/en/' || rawPath.startsWith('/en/');
+const barePath = isEnPath ? rawPath.slice(3) : rawPath;
+let idHref = barePath;
+let enHref = '/en' + barePath;
+if (/^\/blog\/.+/.test(barePath)) {
+  // Blog articles have no direct translation; go to the other language's blog index.
+  idHref = '/blog/';
+  enHref = '/en/blog/';
+} else if (/^\/jasa-/.test(barePath) || /^\/layanan\/.+/.test(barePath)) {
+  // Indonesian-only service and area pages; closest English equivalent is the services page.
+  enHref = '/en/layanan/';
+}
 ---
 
 <style>
@@ -49,8 +64,8 @@ const homeHref = lang === 'id' ? '/' : '/en/';
       </div>
       <div class="flex items-center gap-2 sm:gap-3">
         <div class="flex items-center rounded-full border border-ink/15 overflow-hidden text-xs font-bold">
-          <a href="/" class:list={['px-3 py-1.5', lang === 'id' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>ID</a>
-          <a href="/en/" class:list={['px-3 py-1.5', lang === 'en' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>EN</a>
+          <a href={idHref} class:list={['px-3 py-1.5', lang === 'id' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>ID</a>
+          <a href={enHref} class:list={['px-3 py-1.5', lang === 'en' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>EN</a>
         </div>
         <a
           href={cta.whatsappUrl}
