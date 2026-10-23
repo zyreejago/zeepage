@@ -13,7 +13,7 @@ export const content: Record<Lang, any> = {
     htmlLang: 'id',
     title: 'Jasa Pembuatan Website Profesional di Bali | zeepage',
     description:
-      'zeepage adalah studio pembuatan website di Bali untuk UMKM dan brand yang sedang bertumbuh. Landing page mulai Rp 699 ribu, company profile Rp 1.499 ribu termasuk domain .com gratis 1 tahun.',
+      'zeepage adalah jasa pembuatan website di Bali untuk UMKM dan brand yang sedang bertumbuh. Landing page mulai Rp 699 ribu, company profile Rp 1.499 ribu termasuk domain .com gratis 1 tahun.',
     nav: [
       { label: 'Layanan', href: '#layanan' },
       { label: 'Karya', href: '#karya' },
@@ -23,7 +23,7 @@ export const content: Record<Lang, any> = {
     ],
     navCta: 'Konsultasi Gratis',
     hero: {
-      eyebrow: 'Studio pembuatan website, berbasis di Bali',
+      eyebrow: 'Jasa pembuatan website, berbasis di Bali',
       h1a: 'Website yang membuat',
       h1accent: 'bisnis Anda',
       h1b: 'ditemukan pelanggan.',
@@ -40,15 +40,15 @@ export const content: Record<Lang, any> = {
     },
     marquee: ['Landing Page', 'Company Profile', 'E-Commerce', 'Web Application', 'Redesign Website', 'Maintenance'],
     manifesto: {
-      label: 'ZEEPAGE / STUDIO WEB DARI BALI',
+      label: 'ZEEPAGE / JASA WEB DARI BALI',
       text: 'zeepage adalah studio kecil yang mengerjakan setiap proyek secara langsung, tanpa perantara. Fokus kami sederhana: website yang tampil profesional, terbuka cepat di ponsel, dan mengubah pengunjung menjadi pelanggan yang menghubungi Anda lewat WhatsApp.',
       link: 'Lihat layanan kami',
     },
     services: {
       index: '01',
       label: 'Layanan',
-      heading: 'Yang kami',
-      accent: 'kerjakan.',
+      heading: 'Jasa pembuatan website',
+      accent: 'untuk bisnis Anda.',
       note: 'Dua paket pertama harganya tetap dan tertulis jelas. Sisanya menyesuaikan kebutuhan, selalu diawali konsultasi gratis.',
       rows: [
         {
@@ -201,7 +201,7 @@ export const content: Record<Lang, any> = {
       ],
     },
     footer: {
-      desc: 'Studio pembuatan website profesional, cepat, dan SEO friendly untuk bisnis di Bali dan seluruh Indonesia.',
+      desc: 'Jasa pembuatan website profesional, cepat, dan SEO friendly untuk bisnis di Bali dan seluruh Indonesia.',
       rights: 'zeepage. Seluruh hak cipta dilindungi.',
       backTop: 'Kembali ke atas',
     },
@@ -211,7 +211,7 @@ export const content: Record<Lang, any> = {
     htmlLang: 'en',
     title: 'Professional Website Design Services in Bali | zeepage',
     description:
-      'zeepage is a website design studio in Bali for growing businesses and brands. Landing pages from Rp 699k, company profile websites Rp 1.499k including a free .com domain for 1 year.',
+      'zeepage provides website design services in Bali for growing businesses and brands. Landing pages from Rp 699k, company profile websites Rp 1.499k including a free .com domain for 1 year.',
     nav: [
       { label: 'Services', href: '#layanan' },
       { label: 'Work', href: '#karya' },
@@ -221,7 +221,7 @@ export const content: Record<Lang, any> = {
     ],
     navCta: 'Free Consultation',
     hero: {
-      eyebrow: 'Website design studio, based in Bali',
+      eyebrow: 'Website design services, based in Bali',
       h1a: 'A website that gets',
       h1accent: 'your business',
       h1b: 'found by customers.',
@@ -238,15 +238,15 @@ export const content: Record<Lang, any> = {
     },
     marquee: ['Landing Page', 'Company Profile', 'E-Commerce', 'Web Application', 'Website Redesign', 'Maintenance'],
     manifesto: {
-      label: 'ZEEPAGE / WEB STUDIO FROM BALI',
+      label: 'ZEEPAGE / WEB SERVICE FROM BALI',
       text: 'zeepage is a small studio that works on every project directly, with no middlemen. Our focus is simple: a website that looks professional, loads fast on phones, and turns visitors into customers who message you on WhatsApp.',
       link: 'See our services',
     },
     services: {
       index: '01',
       label: 'Services',
-      heading: 'What we',
-      accent: 'do best.',
+      heading: 'Website design services',
+      accent: 'for your business.',
       note: 'The first two packages have fixed, clearly written prices. The rest adapt to your needs, always starting with a free consultation.',
       rows: [
         {
@@ -399,7 +399,7 @@ export const content: Record<Lang, any> = {
       ],
     },
     footer: {
-      desc: 'A studio building professional, fast, and SEO friendly websites for businesses in Bali and across Indonesia.',
+      desc: 'A website design service building professional, fast, and SEO friendly websites for businesses in Bali and across Indonesia.',
       rights: 'zeepage. All rights reserved.',
       backTop: 'Back to top',
     },
