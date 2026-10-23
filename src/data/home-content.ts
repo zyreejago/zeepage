@@ -35,7 +35,7 @@ export const content: Record<Lang, any> = {
       collage: [
         { src: '/demopadel.webp', alt: 'Contoh website aplikasi booking lapangan padel' },
         { src: '/sagaroof.webp', alt: 'Contoh website company profile perusahaan atap' },
-        { src: '/travel.webp', alt: 'Contoh website perusahaan travel' },
+        { src: '/donasi (2).webp', alt: 'Contoh platform donasi online' },
         { src: '/posapotek.webp', alt: 'Contoh aplikasi web kasir apotek' },
       ],
     },
@@ -93,7 +93,7 @@ export const content: Record<Lang, any> = {
       items: [
         { title: 'DemoPadel', cat: 'Web Application', img: '/demopadel.webp', href: '/portofolio/demopadel/', demo: true },
         { title: 'Sagaroof', cat: 'Company Profile', img: '/sagaroof.webp', href: '/portofolio/sagaroof/', demo: true },
-        { title: 'TravelGo', cat: 'Company Profile', img: '/travel.webp', href: '/portofolio/travelgo/', demo: false },
+        { title: 'DonasiKita', cat: 'Platform Donasi', img: '/donasi (2).webp', href: '/portofolio/donasikita/', demo: false },
         { title: 'PosApotek', cat: 'Web Application', img: '/posapotek.webp', href: '/portofolio/posapotek/', demo: false },
       ],
       demoLabel: 'Demo konsep',
@@ -261,7 +261,7 @@ export const content: Record<Lang, any> = {
       collage: [
         { src: '/demopadel.webp', alt: 'Sample booking web application for a padel venue' },
         { src: '/sagaroof.webp', alt: 'Sample company profile website for a roofing company' },
-        { src: '/travel.webp', alt: 'Sample website for a travel company' },
+        { src: '/donasi (2).webp', alt: 'Sample online donation platform website' },
         { src: '/posapotek.webp', alt: 'Sample point of sale web app for a pharmacy' },
       ],
     },
@@ -319,7 +319,7 @@ export const content: Record<Lang, any> = {
       items: [
         { title: 'DemoPadel', cat: 'Web Application', img: '/demopadel.webp', href: '/en/portfolio/demopadel/', demo: true },
         { title: 'Sagaroof', cat: 'Company Profile', img: '/sagaroof.webp', href: '/en/portfolio/sagaroof/', demo: true },
-        { title: 'TravelGo', cat: 'Company Profile', img: '/travel.webp', href: '/en/portfolio/travelgo/', demo: false },
+        { title: 'DonasiKita', cat: 'Donation Platform', img: '/donasi (2).webp', href: '/en/portfolio/donasikita/', demo: false },
         { title: 'PosApotek', cat: 'Web Application', img: '/posapotek.webp', href: '/en/portfolio/posapotek/', demo: false },
       ],
       demoLabel: 'Concept demo',
