@@ -35,7 +35,7 @@ const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
             <a href={wa} target="_blank" rel="noopener noreferrer" class="bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">
               {t.hero.cta1}
             </a>
-            <a href="#karya" class="border border-ink/20 font-bold px-7 py-3.5 rounded-full hover:border-ink hover:bg-white transition-colors">
+            <a href={lang === 'en' ? '/en/portfolio/' : '/portofolio/'} class="border border-ink/20 font-bold px-7 py-3.5 rounded-full hover:border-ink hover:bg-white transition-colors">
               {t.hero.cta2}
             </a>
           </div>

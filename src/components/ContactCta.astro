@@ -1,14 +1,16 @@
 ---
-import { content, WA } from '../data/home-content';
+import { content, WA, WA_EN } from '../data/home-content';
 
 export interface Props {
   heading: string;
   accent: string;
   sub: string;
+  lang?: 'id' | 'en';
 }
 
-const { heading, accent, sub } = Astro.props;
-const c = content.id.contact;
+const { heading, accent, sub, lang = 'id' } = Astro.props;
+const c = content[lang].contact;
+const wa = lang === 'en' ? WA_EN : WA;
 ---
 
 <section id="kontak" class="relative py-20 sm:py-28" style="background: linear-gradient(140deg, #0040FF 0%, #0020AA 100%);">
@@ -20,7 +22,7 @@ const c = content.id.contact;
     </h2>
     <p class="text-white/70 leading-relaxed max-w-xl mt-6" data-reveal>{sub}</p>
     <div data-reveal>
-      <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white text-brand font-bold px-8 py-4 rounded-full mt-9 hover:bg-paper transition-colors">
+      <a href={wa} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white text-brand font-bold px-8 py-4 rounded-full mt-9 hover:bg-paper transition-colors">
         {c.waLabel}
       </a>
     </div>

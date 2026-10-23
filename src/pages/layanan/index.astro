@@ -2,6 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import Pricing from '../../components/Pricing.astro';
+import ComparisonSection from '../../components/ComparisonSection.astro';
+import ContactCta from '../../components/ContactCta.astro';
 import '../../styles/global.css';
 
 import id from '../../i18n/id.json';
@@ -12,6 +15,34 @@ const t = id;
 const lang = 'id';
 const canonical = 'https://zeepage.com/layanan/';
 const c = content.id;
+const pricingT = {
+  ...t.pricing,
+  badge: 'Harga',
+  title: 'Paket Harga Pembuatan Website',
+  titleHighlight: 'untuk UMKM & Bisnis',
+  subtitle: 'Semua paket sudah termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis. Tanpa biaya tersembunyi.',
+};
+
+const tokoOnline = {
+  name: 'Website Toko Online',
+  was: 'Rp 3.500.000',
+  price: 'Rp 2.500.000',
+  target: 'Untuk bisnis yang ingin jualan online dengan katalog produk, keranjang belanja, dan pemesanan otomatis.',
+  features: [
+    'Free Domain .com',
+    'Free Hosting',
+    'Free SSL (Security)',
+    'Free Support',
+    'Free Maintenance',
+    'Website Responsive',
+    'Keranjang Belanja',
+    'Pemesanan Online / Whatsapp',
+    'Hitung Ongkir Otomatis',
+    'Biaya Tahunan Rp 1.200.000',
+  ],
+  whatsapp: 'https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Website%20Toko%20Online%20Rp%202.500.000.%20Mohon%20info%20selengkapnya.',
+};
+
 
 const h2s = [
   'Jasa Pembuatan Landing Page',
@@ -78,13 +109,46 @@ const h2s = [
       </div>
     </section>
 
+    <Pricing t={pricingT} lang={lang} id="paket" />
+
     <section class="py-16 sm:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Masih bingung memilih <em class="font-display italic font-medium text-brand">paket?</em></h2>
-        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan saja kebutuhan bisnis Anda. Kami bantu pilihkan jenis website dan paket yang paling sesuai, gratis dan tanpa komitmen.</p>
-        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Konsultasi Gratis</a>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-10" data-reveal>
+          <p class="text-sm font-bold text-brand mb-2">Toko Online</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Harga website toko online <em class="font-display italic font-medium text-brand">untuk jualan online.</em>
+          </h2>
+          <p class="text-ink/55 max-w-xl text-sm sm:text-base leading-relaxed mt-4">Satu paket lengkap untuk mulai jualan online: katalog produk, keranjang belanja, pemesanan via WhatsApp, dan hitung ongkir otomatis.</p>
+        </div>
+
+        <article class="relative rounded-3xl bg-ink text-white p-7 sm:p-10 shadow-2xl" data-reveal>
+          <span class="absolute -top-3 left-7 bg-brand text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full">Promo</span>
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="flex flex-col">
+              <h3 class="font-bold text-lg">{tokoOnline.name}</h3>
+              <p class="mt-4 text-white/50 line-through text-2xl font-bold">{tokoOnline.was}</p>
+              <p class="font-extrabold tracking-tight text-5xl mt-1">{tokoOnline.price}</p>
+              <p class="text-sm mt-3 text-white/70 leading-relaxed">{tokoOnline.target}</p>
+              <a href={tokoOnline.whatsapp} target="_blank" rel="noopener noreferrer" class="mt-auto pt-8">
+                <span class="inline-flex justify-center w-full sm:w-auto bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors">Pilih Paket Toko Online</span>
+              </a>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3.5 text-sm content-start">
+              {tokoOnline.features.map((f) => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 mt-0.5 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
+
+    <ComparisonSection t={content.id} />
+
+<ContactCta lang="id" heading="Masih bingung memilih" accent="paket?" sub="Ceritakan saja kebutuhan bisnis Anda. Kami bantu pilihkan jenis website dan paket yang paling sesuai, gratis dan tanpa komitmen." />
   </main>
 
   <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />

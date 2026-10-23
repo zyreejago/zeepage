@@ -50,7 +50,7 @@ export const content: Record<Lang, any> = {
       label: 'Layanan',
       heading: 'Jasa pembuatan website di Bali',
       accent: 'untuk Anda.',
-      note: 'Dua paket pertama harganya tetap dan tertulis jelas. Sisanya menyesuaikan kebutuhan, selalu diawali konsultasi gratis.',
+      note: 'Tiga layanan pertama harganya tetap dan tertulis jelas. Sisanya menyesuaikan kebutuhan, selalu diawali konsultasi gratis.',
       rows: [
         {
           name: 'Landing Page',
@@ -66,7 +66,7 @@ export const content: Record<Lang, any> = {
         },
         {
           name: 'E-Commerce',
-          price: 'Menyesuaikan kebutuhan',
+          price: 'Rp 2.500.000',
           desc: 'Toko online dengan katalog produk, keranjang, dan payment gateway, supaya pelanggan bisa membeli langsung tanpa menunggu balasan admin.',
           meta: 'Katalog produk / pembayaran online / panel kelola',
         },
@@ -276,7 +276,7 @@ export const content: Record<Lang, any> = {
       label: 'Services',
       heading: 'Website design services in Bali',
       accent: 'for your business.',
-      note: 'The first two packages have fixed, clearly written prices. The rest adapt to your needs, always starting with a free consultation.',
+      note: 'The first three services have fixed, clearly written prices. The rest adapt to your needs, always starting with a free consultation.',
       rows: [
         {
           name: 'Landing Page',
@@ -292,7 +292,7 @@ export const content: Record<Lang, any> = {
         },
         {
           name: 'E-Commerce',
-          price: 'Scoped to your needs',
+          price: 'Rp 2,500,000',
           desc: 'An online store with a product catalog, cart, and payment gateway, so customers can buy directly without waiting for an admin reply.',
           meta: 'Product catalog / online payments / admin panel',
         },
