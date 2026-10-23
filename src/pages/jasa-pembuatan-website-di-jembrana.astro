@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA } from '../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-jembrana/';
+
+const alasan = [
+  {
+    title: 'Hasil bumi dan laut Jembrana pantas dipasarkan lebih jauh',
+    desc: 'Kakao dari Melaya, hasil laut dari Pengambengan, dan kopi dari Pekutatan selama ini banyak berhenti di tengkulak. Katalog online membuat produsen dan koperasi bisa menjangkau pembeli di luar Bali dengan harga yang lebih adil.',
+  },
+  {
+    title: 'Medewi dan Bali Barat dicari wisatawan dari layar ponsel',
+    desc: 'Peselancar yang menuju Medewi dan wisatawan Taman Nasional Bali Barat merencanakan perjalanan dari internet. Penginapan, surf camp, dan jasa transport tanpa website kehilangan tamu yang sebenarnya sudah mencari.',
+  },
+  {
+    title: 'Persaingan online di barat Bali masih sangat sepi',
+    desc: 'Berbeda dengan Bali selatan, jumlah usaha Jembrana yang punya website resmi masih sedikit. Artinya peluang tampil di halaman pertama Google untuk kata kunci lokal jauh lebih terbuka, dan lebih murah untuk dimenangkan.',
+  },
+];
+
+const bisnis = [
+  { name: 'Produsen kakao, kopi & hasil bumi', desc: 'Profil usaha dan katalog produk untuk menjangkau distributor dan pembeli luar daerah.' },
+  { name: 'Pengolahan & pengepul hasil laut', desc: 'Company profile yang meyakinkan mitra dari Jawa dan luar Bali, lengkap dengan kapasitas dan daftar produk.' },
+  { name: 'Penginapan & surf camp Medewi', desc: 'Galeri ombak dan kamar, tarif yang jelas, dan pemesanan langsung via WhatsApp tanpa potongan komisi.' },
+  { name: 'Rental & transport Gilimanuk', desc: 'Daftar armada dan rute penyeberangan yang mudah ditemukan penumpang yang baru tiba di Bali.' },
+  { name: 'Toko, bengkel & jasa di Negara', desc: 'Website sederhana agar pelanggan sekota menemukan alamat, jam buka, dan nomor WhatsApp Anda lebih dulu.' },
+  { name: 'Homestay & wisata desa', desc: 'Cerita desa dan paket wisata yang tertata, terhubung ke Google Maps agar tamu tidak tersesat.' },
+];
+
+const cakupan = ['Negara', 'Jembrana', 'Melaya', 'Mendoyo', 'Pekutatan', 'Gilimanuk', 'Pengambengan', 'Medewi', 'Yeh Embang', 'Baler Bale Agung'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Jembrana?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu, termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis. Website toko online tersedia Rp 2.500.000 untuk menjual produk secara langsung.',
+  },
+  {
+    q: 'Saya di Negara atau Melaya, apakah pengerjaannya harus tatap muka?',
+    a: 'Tidak. Semua proses berjalan online lewat WhatsApp, dari konsultasi sampai serah terima. Anda cukup mengirim logo, foto produk, dan daftar harga, sisanya kami yang kerjakan.',
+  },
+  {
+    q: 'Bisakah website membantu jualan kakao atau hasil laut ke luar Bali?',
+    a: 'Bisa. Dengan katalog produk dan tombol WhatsApp, pembeli dari Jawa atau kota lain bisa melihat produk dan menghubungi Anda langsung. Bila perlu, paket toko online dilengkapi keranjang belanja dan hitung ongkir otomatis.',
+  },
+  {
+    q: 'Berapa lama website saya jadi?',
+    a: 'Landing page selesai 1 sampai 2 minggu dan company profile 2 sampai 4 minggu sejak materi lengkap. Kami kabari progresnya secara berkala lewat WhatsApp.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Jembrana',
+      url: canonical,
+      description: 'Jasa pembuatan website di Jembrana oleh zeepage untuk produsen hasil bumi, penginapan Medewi, dan UMKM Negara: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Jembrana untuk Hasil Bumi, Wisata & UMKM | zeepage"
+  description="Jasa pembuatan website di Jembrana oleh zeepage: website untuk produsen kakao dan hasil laut, penginapan Medewi, dan UMKM di Negara mulai Rp 799 ribu. Termasuk domain .com gratis, hosting gratis, SSL gratis, dan support gratis."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-14 sm:pb-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Jembrana, <em class="font-display italic font-medium text-brand">gerbang barat Bali yang layak dikenal lebih luas.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Jembrana adalah pintu pertama Bali dari arah Jawa lewat Gilimanuk, rumah bagi Taman Nasional Bali Barat, ombak Medewi, dan hasil bumi serta laut yang melimpah. Sayangnya banyak usaha bagus di kabupaten ini belum terlihat sama sekali di internet.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu pelaku usaha di Negara, Melaya, Mendoyo, sampai Pekutatan tampil online dengan website resmi mulai Rp 799 ribu, lengkap dengan domain .com, hosting, SSL, dan support gratis.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+        <ul class="flex flex-wrap gap-2.5 mt-10" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-white text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl mb-10" data-reveal>Tiga alasan usaha di Jembrana <em class="font-display italic font-medium text-brand">perlu website sekarang</em></h2>
+        <div class="grid gap-6">
+          {alasan.map((a, i) => (
+            <article class="bg-white border border-line rounded-3xl p-7 sm:p-9" data-reveal>
+              <div class="flex gap-5 sm:gap-7">
+                <p class="font-display italic text-brand/70 text-3xl sm:text-4xl shrink-0">{String(i + 1).padStart(2, '0')}</p>
+                <div>
+                  <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">{a.title}</h3>
+                  <p class="text-ink/60 leading-relaxed mt-3 max-w-3xl">{a.desc}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Jenis usaha di Jembrana <em class="font-display italic font-medium text-brand">yang paling terbantu website</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Yang sering ditanyakan pemilik usaha <em class="font-display italic font-medium text-brand">di Jembrana</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Usaha Anda di kabupaten lain? Kami juga melayani <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">di Karangasem</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Produk Jembrana Anda <em class="font-display italic font-medium text-brand">siap dikenal luar Bali?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Mulai dari katalog sederhana sampai toko online, kami bantu pilihkan yang paling masuk akal untuk usaha Anda. Konsultasi gratis lewat WhatsApp.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Mulai Konsultasi</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

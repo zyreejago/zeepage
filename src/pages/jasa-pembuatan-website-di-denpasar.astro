@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA } from '../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-denpasar/';
+
+const alasan = [
+  {
+    title: 'Persaingan paling ketat ada di kota ini',
+    desc: 'Dari Teuku Umar sampai Gatot Subroto, deretan usaha sejenis bisa belasan dalam satu ruas jalan. Website yang rapi dan cepat adalah pembeda pertama sebelum pelanggan memutuskan datang ke tempat Anda atau ke sebelah.',
+  },
+  {
+    title: 'Warga kota selalu riset dulu di Google',
+    desc: 'Sebelum ke klinik, bengkel, atau restoran, orang Denpasar membandingkan rating, foto, dan harga lewat Google dan Maps. Bisnis tanpa website resmi terlihat kurang meyakinkan di hasil pencarian itu.',
+  },
+  {
+    title: 'Pusat kantor, pusat peluang B2B',
+    desc: 'Renon dipenuhi kantor pemerintahan dan swasta. Company profile yang kredibel membantu usaha Anda dilirik untuk pengadaan, kerja sama, dan tender yang mensyaratkan kehadiran digital resmi.',
+  },
+];
+
+const bisnis = [
+  { name: 'Klinik, apotek & praktik dokter', desc: 'Jadwal praktik, daftar layanan, dan tombol WhatsApp untuk pendaftaran membuat pasien lebih mudah menjangkau Anda.' },
+  { name: 'Dealer, bengkel & rental kendaraan', desc: 'Katalog unit dan armada yang bisa diperbarui kapan pun, lengkap dengan simulasi harga dan pemesanan via WhatsApp.' },
+  { name: 'Kantor hukum, notaris & konsultan', desc: 'Profil tim, bidang praktik, dan artikel insight yang membangun kepercayaan klien sejak pencarian pertama.' },
+  { name: 'Sekolah, kampus & tempat kursus', desc: 'Info program, biaya, dan pendaftaran online yang jelas mengurangi pertanyaan berulang ke admin.' },
+  { name: 'Kuliner, kafe & toko retail', desc: 'Menu digital, katalog produk, dan pemesanan online untuk pelanggan setia di sekitar kota.' },
+  { name: 'Jasa profesional & kontraktor', desc: 'Portofolio proyek dan testimoni yang tertata membuat penawaran Anda lebih mudah diterima pemilik proyek.' },
+];
+
+const cakupan = ['Denpasar Barat', 'Denpasar Timur', 'Denpasar Utara', 'Denpasar Selatan', 'Sanur', 'Renon', 'Panjer', 'Sesetan', 'Peguyangan', 'Ubung', 'Pemogan', 'Padangsambian'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Denpasar?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu. Keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis, dengan biaya tahunan Rp 600 ribu mulai tahun kedua.',
+  },
+  {
+    q: 'Apakah saya harus datang ke kantor untuk memesan?',
+    a: 'Tidak perlu. Seluruh proses dari konsultasi, pengiriman materi, sampai revisi berjalan lewat WhatsApp dan online. Kami berbasis di Bali, jadi bila Anda ingin bertemu langsung di Denpasar, itu juga bisa diatur.',
+  },
+  {
+    q: 'Bisakah website saya muncul di Google Maps?',
+    a: 'Bisa. Paket company profile termasuk setup Google Business Profile, sehingga usaha Anda tampil di Google Maps dengan alamat, jam buka, dan tombol arah yang benar.',
+  },
+  {
+    q: 'Berapa lama pengerjaan website untuk bisnis di Denpasar?',
+    a: 'Landing page selesai dalam 1 sampai 2 minggu dan company profile dalam 2 sampai 4 minggu, tergantung kelengkapan materi seperti logo, foto, dan teks dari Anda.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Denpasar',
+      url: canonical,
+      description: 'Jasa pembuatan website di Denpasar oleh zeepage untuk UMKM, klinik, kantor, dan toko: landing page mulai Rp 799 ribu, company profile Rp 1.499 ribu, termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Denpasar untuk UMKM, Klinik & Kantor | zeepage"
+  description="Jasa pembuatan website di Denpasar oleh zeepage: landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu untuk UMKM, klinik, kantor, dan toko. Termasuk domain .com gratis, hosting gratis, SSL gratis, dan support gratis."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Denpasar, <em class="font-display italic font-medium text-brand">untuk bisnis yang mau naik kelas.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Denpasar adalah ibu kota Bali sekaligus pusat perdagangan dan pemerintahan. Di kota ini pelanggan membandingkan beberapa usaha sekaligus sebelum memutuskan, dan perbandingan itu hampir selalu dimulai dari Google. Website resmi membuat bisnis Anda terlihat serius sejak detik pertama pencarian.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu UMKM, klinik, kantor, dan toko di Denpasar memiliki website yang cepat, rapi, dan mudah ditemukan, mulai Rp 799 ribu sudah termasuk domain .com, hosting, SSL, dan support.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Kenapa bisnis di Denpasar <em class="font-display italic font-medium text-brand">butuh website resmi?</em></h2>
+        <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website untuk berbagai usaha <em class="font-display italic font-medium text-brand">di ibu kota Bali</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah yang kami layani di Denpasar</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar jasa pembuatan website <em class="font-display italic font-medium text-brand">di Denpasar</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Cari area lain? Lihat juga <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">jasa pembuatan website di Buleleng</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">jasa pembuatan website di Karangasem</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">jasa pembuatan website di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Bisnis Anda di Denpasar <em class="font-display italic font-medium text-brand">siap punya website?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan usaha Anda lewat WhatsApp. Kami bantu pilihkan paket yang paling pas, gratis dan tanpa komitmen.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Mulai Konsultasi</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

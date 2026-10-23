@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA } from '../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-karangasem/';
+
+const bisnis = [
+  { name: 'Dive center & operator snorkeling', desc: 'Jadwal trip ke Tulamben dan Amed, daftar harga dive, dan booking langsung dari wisatawan yang merencanakan liburan jauh hari.' },
+  { name: 'Villa, bungalow & penginapan', desc: 'Foto kamar dan pemandangan Gunung Agung yang menjual, plus pemesanan langsung tanpa potongan komisi platform.' },
+  { name: 'Produsen salak & olahan Sibetan', desc: 'Katalog salak, dodol, dan wine salak untuk pembeli oleh oleh dan distributor di luar Karangasem.' },
+  { name: 'Tenun & songket Sidemen', desc: 'Galeri motif dan cerita penenun yang membuat produk Anda dihargai sebagai karya, bukan sekadar kain.' },
+  { name: 'Restoran & warung wisata', desc: 'Menu, lokasi yang terhubung ke Maps, dan reservasi WhatsApp untuk rombongan yang melintas Candidasa atau Tirta Gangga.' },
+  { name: 'Transport & tour Bali timur', desc: 'Paket rute Lempuyang, Tirta Gangga, dan Taman Ujung dengan harga transparan yang mudah dibagikan ke calon tamu.' },
+];
+
+const alasan = [
+  {
+    title: 'Tamu Karangasem merencanakan perjalanan dari luar negeri',
+    desc: 'Penyelam yang mengincar bangkai kapal USAT Liberty di Tulamben dan pendaki Gunung Agung hampir semuanya memesan jauh sebelum tiba di Bali. Tanpa website, usaha Anda tidak ikut serta dalam perencanaan itu.',
+  },
+  {
+    title: 'Komisi platform booking menggerus margin',
+    desc: 'Setiap pemesanan lewat perantara berarti potongan belasan persen. Website dengan tombol WhatsApp membuat tamu memesan langsung ke Anda, dan tamu yang puas bisa memesan lagi tanpa perantara.',
+  },
+  {
+    title: 'Produk khas Bali timur belum punya etalase',
+    desc: 'Salak Sibetan, garam Amed, dan tenun Sidemen dikenal wisatawan yang sudah datang, tetapi sulit ditemukan pembeli online. Website memberi etalase permanen yang bekerja siang dan malam.',
+  },
+];
+
+const cakupan = ['Amlapura', 'Karangasem', 'Abang', 'Bebandem', 'Selat', 'Sidemen', 'Manggis', 'Kubu', 'Rendang', 'Amed', 'Tulamben', 'Candidasa', 'Padang Bai'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Karangasem?',
+    a: 'Landing page mulai Rp 799 ribu, company profile Rp 1.499 ribu, dan website toko online Rp 2.500.000. Semua paket termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis.',
+  },
+  {
+    q: 'Bisakah website dibuat dua bahasa, Indonesia dan Inggris?',
+    a: 'Bisa. zeepage memang membangun situs dwibahasa, jadi penginapan, dive center, dan tour Anda bisa tampil dalam Bahasa Indonesia dan Inggris dengan tombol ganti bahasa yang rapi.',
+  },
+  {
+    q: 'Apakah website bisa mengurangi ketergantungan pada platform booking?',
+    a: 'Bisa. Website dilengkapi tombol WhatsApp dan formulir pemesanan agar tamu menghubungi Anda langsung. Banyak tamu lama akhirnya memesan ulang langsung karena sudah menyimpan kontak Anda.',
+  },
+  {
+    q: 'Saya di Amed atau Sidemen, jauh dari kota. Apakah tetap bisa dilayani?',
+    a: 'Tetap bisa. Seluruh pengerjaan berjalan online lewat WhatsApp dan panggilan video bila perlu. Anda cukup menyiapkan foto tempat dan daftar harga, sisanya kami susun menjadi halaman yang siap tayang.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Karangasem',
+      url: canonical,
+      description: 'Jasa pembuatan website di Karangasem oleh zeepage untuk dive center Amed dan Tulamben, villa, produsen salak Sibetan, dan tenun Sidemen: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Karangasem untuk Wisata Amed, Tulamben & UMKM | zeepage"
+  description="Jasa pembuatan website di Karangasem oleh zeepage: website untuk dive center, villa, produsen salak, dan pengrajin tenun mulai Rp 799 ribu, tersedia dua bahasa. Termasuk domain .com gratis, hosting gratis, SSL gratis, dan support gratis."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Karangasem, <em class="font-display italic font-medium text-brand">dari Amed sampai Sidemen, tamunya datang dari Google.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Karangasem adalah wajah Bali timur: Gunung Agung yang megah, perairan Tulamben dan Amed yang diburu penyelam dunia, air jernih Tirta Gangga, sampai desa Sidemen yang tenang. Tamu tamu ini menemukan tempat menginap, dive center, dan produk lokal lewat internet jauh sebelum mereka mendarat.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu usaha di Karangasem tampil di pencarian itu dengan website resmi mulai Rp 799 ribu, bisa dua bahasa, lengkap dengan domain .com, hosting, SSL, dan support gratis.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website untuk wajah wisata <em class="font-display italic font-medium text-brand">dan produk Bali timur</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-white border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Alasan usaha di Karangasem <em class="font-display italic font-medium text-brand">tidak cukup hanya mengandalkan media sosial</em></h2>
+        <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-paper border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah layanan kami di Karangasem</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan dari pemilik usaha <em class="font-display italic font-medium text-brand">di Karangasem</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Lihat juga layanan kami untuk <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Tamu berikutnya sedang mencari <em class="font-display italic font-medium text-brand">usaha seperti punya Anda</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Pastikan yang mereka temukan adalah website resmi Anda, bukan hanya perantara. Konsultasi gratis, kami bantu dari nol.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Mulai Konsultasi</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

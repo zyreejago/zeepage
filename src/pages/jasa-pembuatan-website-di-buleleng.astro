@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA } from '../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-buleleng/';
+
+const alasan = [
+  {
+    title: 'Kota pendidikan butuh informasi yang rapi',
+    desc: 'Singaraja adalah rumah bagi ribuan mahasiswa dan pelajar. Sekolah, kampus, bimbingan belajar, sampai penyedia kos berlomba tampil meyakinkan di internet karena calon siswa dan orang tua membandingkan semuanya dari ponsel.',
+  },
+  {
+    title: 'Lovina dan Munduk dijual lewat pencarian',
+    desc: 'Wisatawan yang ingin melihat lumba lumba di Lovina atau berkabut di Munduk mencari operator tour dan villa lewat Google, bukan dari brosur. Website dengan galeri dan harga jelas memenangkan pemesanan itu.',
+  },
+  {
+    title: 'Kopi dan hasil utara Bali siap naik kelas',
+    desc: 'Kopi Banyuatis dan Munduk, anggur, dan kakao dari Buleleng punya cerita asal yang kuat. Company profile dan katalog online membantu produsen menegosiasikan harga lebih baik ke pembeli luar daerah.',
+  },
+];
+
+const bisnis = [
+  { name: 'Hotel, villa & dolphin tour Lovina', desc: 'Paket tour lumba lumba, tarif kamar, dan pemesanan WhatsApp yang langsung masuk ke Anda.' },
+  { name: 'Sekolah, kampus & bimbingan belajar', desc: 'Profil program, jadwal pendaftaran, dan formulir minat yang mengurangi antrean pertanyaan ke tata usaha.' },
+  { name: 'Kopi, agro & produk lokal', desc: 'Katalog biji kopi dan produk olahan dengan cerita asal usul yang membuat pembeli percaya.' },
+  { name: 'Klinik, apotek & layanan kesehatan', desc: 'Jadwal dokter, layanan, dan lokasi yang terhubung ke Maps untuk warga Singaraja dan sekitarnya.' },
+  { name: 'Toko & distributor di Singaraja', desc: 'Katalog stok dan daftar harga yang bisa dibagikan ke pelanggan lewat satu tautan resmi.' },
+  { name: 'Villa & retreat Munduk', desc: 'Halaman dwibahasa dengan foto danau dan kebun kopi, plus pemesanan langsung tanpa perantara.' },
+];
+
+const cakupan = ['Singaraja', 'Buleleng', 'Sukasada', 'Banjar', 'Seririt', 'Gerokgak', 'Sawan', 'Kubutambahan', 'Tejakula', 'Busungbiu', 'Lovina', 'Munduk', 'Gitgit'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Buleleng?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu, termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis. Biaya tahunan Rp 600 ribu berlaku mulai tahun kedua.',
+  },
+  {
+    q: 'Bisakah membuat website untuk sekolah atau lembaga kursus?',
+    a: 'Bisa. Kami susun halaman program, biaya, jadwal pendaftaran, dan formulir minat online. Paket company profile juga termasuk setup Google Business Profile agar sekolah Anda mudah ditemukan di Maps.',
+  },
+  {
+    q: 'Website untuk tour Lovina apakah bisa menerima pemesanan langsung?',
+    a: 'Bisa. Setiap paket dilengkapi tombol WhatsApp, dan paket toko online memiliki keranjang belanja serta pemesanan online. Tamu dari Google bisa langsung memesan tanpa Anda membayar komisi ke perantara.',
+  },
+  {
+    q: 'Berapa lama pengerjaannya dan apakah harus bertemu?',
+    a: 'Landing page selesai 1 sampai 2 minggu dan company profile 2 sampai 4 minggu. Semua proses berjalan online lewat WhatsApp, jadi Anda di Singaraja, Seririt, atau Tejakula tetap terlayani penuh.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Buleleng',
+      url: canonical,
+      description: 'Jasa pembuatan website di Buleleng oleh zeepage untuk hotel dan tour Lovina, sekolah di Singaraja, produsen kopi, dan UMKM Bali utara: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Buleleng untuk Lovina, Sekolah & UMKM Singaraja | zeepage"
+  description="Jasa pembuatan website di Buleleng oleh zeepage: website untuk hotel dan dolphin tour Lovina, sekolah dan kampus di Singaraja, produsen kopi, dan UMKM mulai Rp 799 ribu. Termasuk domain .com gratis, hosting gratis, SSL gratis, dan support gratis."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Buleleng, <em class="font-display italic font-medium text-brand">untuk Bali utara yang sedang bergerak.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Buleleng adalah kabupaten terluas di Bali. Singaraja menyimpan sejarah sebagai bekas ibu kota dan kini dikenal sebagai kota pendidikan, Lovina menjadi ikon wisata lumba lumba, dan dataran tinggi Munduk menghasilkan kopi yang dicari penikmatnya. Skala sebesar ini layak didukung kehadiran online yang sama besarnya.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage melayani pembuatan website untuk usaha di seluruh Buleleng mulai Rp 799 ribu, dikerjakan online dari konsultasi sampai tayang, termasuk domain .com, hosting, SSL, dan support gratis.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1fr_1.4fr] gap-10">
+        <div data-reveal>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Kenapa Buleleng <em class="font-display italic font-medium text-brand">tidak bisa menunggu lebih lama</em></h2>
+          <p class="text-ink/55 leading-relaxed mt-4">Jarak Bali utara dari pusat ekonomi di selatan membuat internet menjadi jalan pintasnya. Usaha yang mudah ditemukan online memangkas jarak itu setiap hari.</p>
+        </div>
+        <div class="grid gap-5" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Dari Lovina sampai Munduk, <em class="font-display italic font-medium text-brand">usaha yang kami bantu</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah yang kami layani di Buleleng</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar jasa pembuatan website <em class="font-display italic font-medium text-brand">di Buleleng</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Bandingkan juga halaman kami untuk <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">di Karangasem</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Usaha Anda di Buleleng <em class="font-display italic font-medium text-brand">layak ditemukan Google</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan usaha Anda lewat WhatsApp, kami jawab dengan rekomendasi paket dan harga tertulis. Gratis, tanpa komitmen.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Mulai Konsultasi</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
