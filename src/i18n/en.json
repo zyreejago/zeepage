@@ -19,6 +19,10 @@
         "href": "/en/#harga"
       },
       {
+        "label": "About",
+        "href": "/en/tentang/"
+      },
+      {
         "label": "Blog",
         "href": "/en/blog/"
       }

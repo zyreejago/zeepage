@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/tentang/';
+
+const principles = [
+  {
+    title: 'Dikerjakan langsung, tanpa perantara',
+    desc: 'zeepage adalah studio jasa pembuatan website di Bali yang mengerjakan setiap proyek secara langsung. Anda berkomunikasi dengan orang yang benar benar membangun website Anda, bukan sales atau admin perantara.',
+  },
+  {
+    title: 'Harga tertulis sejak awal',
+    desc: 'Harga pembuatan website kami tetap dan tertulis jelas sebelum pengerjaan dimulai. Landing page Rp 799 ribu dan company profile Rp 1.499 ribu, tanpa biaya tersembunyi di tengah jalan.',
+  },
+  {
+    title: 'Dibangun untuk ditemukan Google',
+    desc: 'Setiap website kami susun dengan struktur SEO on page sejak awal: judul dan deskripsi yang relevan, struktur heading yang rapi, kecepatan muat yang ringan, dan tampilan yang nyaman di ponsel.',
+  },
+  {
+    title: 'Fokus mengubah pengunjung jadi pelanggan',
+    desc: 'Website yang bagus bukan cuma soal tampilan. Kami menata alur halaman agar pengunjung mudah menghubungi Anda lewat WhatsApp, melihat katalog, dan mengambil tindakan.',
+  },
+];
+
+const layananRingkas = [
+  {
+    name: 'Landing Page',
+    price: 'Mulai Rp 799 ribu',
+    desc: 'Satu halaman fokus konversi untuk campaign, peluncuran produk, atau personal brand, lengkap dengan tombol WhatsApp dan form order.',
+    href: '/layanan/',
+  },
+  {
+    name: 'Company Profile',
+    price: 'Mulai Rp 1.499 ribu',
+    desc: 'Website lengkap sampai 7 halaman untuk bisnis yang ingin tampil kredibel, dengan SEO on page dan domain .com gratis 1 tahun.',
+    href: '/layanan/',
+  },
+  {
+    name: 'Toko Online dan Aplikasi Web',
+    price: 'Menyesuaikan kebutuhan',
+    desc: 'Toko online dengan katalog dan keranjang belanja, serta aplikasi web custom yang mengikuti alur kerja bisnis Anda.',
+    href: '/layanan/',
+  },
+];
+
+const langkah = [
+  {
+    title: '1. Konsultasi gratis',
+    desc: 'Ceritakan bisnis dan kebutuhan website Anda lewat WhatsApp. Kami bantu pilihkan jenis website yang paling sesuai, tanpa komitmen apa pun.',
+  },
+  {
+    title: '2. Penawaran tertulis',
+    desc: 'Anda menerima penawaran tertulis dengan harga final dan rincian yang didapat, sebelum pengerjaan dimulai. Tidak ada biaya yang muncul belakangan.',
+  },
+  {
+    title: '3. Pengerjaan dan revisi',
+    desc: 'Landing page selesai dalam 1 sampai 2 minggu dan company profile dalam 2 sampai 4 minggu, sudah termasuk revisi desain sesuai paket yang dipilih.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      name: 'Tentang zeepage, Jasa Pembuatan Website di Bali',
+      url: canonical,
+      description:
+        'Tentang zeepage, jasa pembuatan website di Bali untuk UMKM dan brand: landing page, company profile, dan toko online dengan harga transparan mulai Rp 799 ribu.',
+      inLanguage: 'id-ID',
+      mainEntity: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://zeepage.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Tentang', item: canonical },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tentang zeepage | Jasa Pembuatan Website di Bali untuk UMKM dan Bisnis"
+  description="Tentang zeepage, jasa pembuatan website di Bali: studio web yang mengerjakan landing page, company profile, dan toko online untuk UMKM dan brand di Bali serta seluruh Indonesia. Harga transparan mulai Rp 799 ribu, konsultasi gratis."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-8 sm:pb-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Tentang Kami</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Tentang zeepage, jasa pembuatan website <em class="font-display italic font-medium text-brand">di Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          zeepage adalah jasa pembuatan website di Bali untuk UMKM dan brand yang sedang bertumbuh. Kami merancang dan membangun website yang cepat, rapi, dan mudah ditemukan pelanggan di Google, mulai dari landing page, company profile, sampai toko online.
+        </p>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-4" data-reveal>
+          Berbasis di Bali dan melayani seluruh Indonesia secara online, kami percaya bisnis kecil pun berhak punya website profesional dengan harga yang masuk akal dan proses yang jelas sejak hari pertama.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-10" data-reveal>
+          <p class="text-sm font-bold text-brand mb-2">Cara Kami Bekerja</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Prinsip di balik setiap <em class="font-display italic font-medium text-brand">website yang kami buat.</em>
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5" data-reveal-group>
+          {principles.map((p) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{p.title}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{p.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Layanan pembuatan website <em class="font-display italic font-medium text-brand">yang kami kerjakan.</em></h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>Tiga layanan utama zeepage sebagai jasa pembuatan website di Bali. Semua paket sudah termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis.</p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {layananRingkas.map((l) => (
+            <article class="bg-paper border border-line rounded-3xl p-7 flex flex-col">
+              <h3 class="font-bold">{l.name}</h3>
+              <p class="text-2xl font-extrabold tracking-tight mt-3">{l.price}</p>
+              <p class="text-ink/60 leading-relaxed mt-3 text-sm sm:text-base">{l.desc}</p>
+              <a href={l.href} class="mt-auto pt-6 inline-flex font-bold text-brand hover:text-branddark transition-colors">Lihat Layanan</a>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-8" data-reveal>
+          Butuh rincian biaya per paket? Kunjungi halaman <a href="/harga/" class="font-bold text-brand hover:text-branddark transition-colors">harga pembuatan website</a> kami.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Jasa pembuatan website untuk <em class="font-display italic font-medium text-brand">Bali dan seluruh Indonesia.</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          Basis kami di Bali membuat kami dekat dengan bisnis lokal di Denpasar, Badung, Gianyar, Tabanan, dan daerah lain di Bali, dari villa, rental, restoran, sampai toko dan jasa profesional. Di luar Bali, seluruh proses pembuatan website berjalan online lewat WhatsApp dan email, jadi bisnis di mana pun di Indonesia tetap bisa kami layani dengan standar yang sama.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {langkah.map((s) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{s.title}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{s.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Siap punya website <em class="font-display italic font-medium text-brand">untuk bisnis Anda?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan kebutuhan bisnis Anda kepada tim jasa pembuatan website zeepage. Konsultasinya gratis dan tanpa komitmen.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Konsultasi Gratis</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import '../../../styles/global.css';
+
+import en from '../../../i18n/en.json';
+import { WA_EN } from '../../../data/home-content';
+
+const t = en;
+const lang = 'en';
+const canonical = 'https://zeepage.com/en/tentang/';
+
+const principles = [
+  {
+    title: 'Handled directly, no middlemen',
+    desc: 'zeepage is a website design service in Bali that builds every project directly. You talk to the person actually building your website, not a sales rep or an account manager in between.',
+  },
+  {
+    title: 'Pricing in writing, from day one',
+    desc: 'Our website pricing is fixed and written clearly before work begins. Landing pages are Rp 799k and company profile websites Rp 1,499k, with no hidden fees appearing halfway through.',
+  },
+  {
+    title: 'Built to be found on Google',
+    desc: 'Every website is structured with on page SEO from the start: relevant titles and descriptions, a clean heading structure, fast loading, and a layout that feels right on mobile.',
+  },
+  {
+    title: 'Focused on turning visitors into customers',
+    desc: 'A good website is not only about looks. We arrange each page so visitors can easily reach you on WhatsApp, browse your catalog, and take action.',
+  },
+];
+
+const layananRingkas = [
+  {
+    name: 'Landing Page',
+    price: 'From Rp 799k',
+    desc: 'A single conversion focused page for campaigns, product launches, or personal brands, complete with a WhatsApp button and an order form.',
+    href: '/en/layanan/',
+  },
+  {
+    name: 'Company Profile',
+    price: 'From Rp 1,499k',
+    desc: 'A complete website of up to 7 pages for businesses that want to look credible, with on page SEO and a free .com domain for 1 year.',
+    href: '/en/layanan/',
+  },
+  {
+    name: 'Online Store and Web Apps',
+    price: 'Based on your needs',
+    desc: 'Online stores with catalogs and shopping carts, plus custom web applications that follow how your business actually works.',
+    href: '/en/layanan/',
+  },
+];
+
+const langkah = [
+  {
+    title: '1. Free consultation',
+    desc: 'Tell us about your business and the website you need on WhatsApp. We help you pick the right type of website, with no commitment at all.',
+  },
+  {
+    title: '2. Written proposal',
+    desc: 'You receive a written proposal with the final price and everything included, before any work starts. No surprise costs later on.',
+  },
+  {
+    title: '3. Build and revisions',
+    desc: 'Landing pages are done in 1 to 2 weeks and company profile websites in 2 to 4 weeks, including the design revisions in your package.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      name: 'About zeepage, Website Design Services in Bali',
+      url: canonical,
+      description:
+        'About zeepage, a website design service in Bali for small businesses and brands: landing pages, company profile websites, and online stores with transparent pricing from Rp 799k.',
+      inLanguage: 'en',
+      mainEntity: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeepage.com/en/' },
+        { '@type': 'ListItem', position: 2, name: 'About', item: canonical },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="About zeepage | Website Design Services in Bali for Small Businesses"
+  description="About zeepage, a website design service in Bali: a small web studio building landing pages, company profile websites, and online stores for businesses in Bali and across Indonesia. Transparent pricing from Rp 799k, free consultation."
+  lang="en"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-8 sm:pb-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>About Us</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          About zeepage, website design services <em class="font-display italic font-medium text-brand">in Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          zeepage provides website design services in Bali for small businesses and growing brands. We design and build fast, tidy websites that customers can find on Google, from landing pages and company profile websites to online stores.
+        </p>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-4" data-reveal>
+          Based in Bali and serving clients across Indonesia online, we believe small businesses deserve a professional website at a fair price, with a clear process from the very first day.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Free Consultation</a>
+          <a href="/en/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">See Pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-10" data-reveal>
+          <p class="text-sm font-bold text-brand mb-2">How We Work</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            The principles behind <em class="font-display italic font-medium text-brand">every website we build.</em>
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5" data-reveal-group>
+          {principles.map((p) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{p.title}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{p.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website services <em class="font-display italic font-medium text-brand">we build for you.</em></h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>The three main services of zeepage as a website design service in Bali. Every package includes a free .com domain for 1 year, free hosting, free SSL, and free support.</p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {layananRingkas.map((l) => (
+            <article class="bg-paper border border-line rounded-3xl p-7 flex flex-col">
+              <h3 class="font-bold">{l.name}</h3>
+              <p class="text-2xl font-extrabold tracking-tight mt-3">{l.price}</p>
+              <p class="text-ink/60 leading-relaxed mt-3 text-sm sm:text-base">{l.desc}</p>
+              <a href={l.href} class="mt-auto pt-6 inline-flex font-bold text-brand hover:text-branddark transition-colors">View Services</a>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-8" data-reveal>
+          Need the full breakdown per package? Visit our <a href="/en/harga/" class="font-bold text-brand hover:text-branddark transition-colors">website pricing</a> page.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website design services for <em class="font-display italic font-medium text-brand">Bali and all of Indonesia.</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          Our base in Bali keeps us close to local businesses in Denpasar, Badung, Gianyar, Tabanan, and other parts of Bali, from villas, rentals, and restaurants to shops and professional services. Outside Bali, the whole website building process runs online over WhatsApp and email, so businesses anywhere in Indonesia get the same standard of work.
+        </p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {langkah.map((s) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{s.title}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{s.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Ready for a website <em class="font-display italic font-medium text-brand">for your business?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Tell the zeepage website design team what your business needs. The consultation is free, with no commitment.</p>
+        <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Free Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
