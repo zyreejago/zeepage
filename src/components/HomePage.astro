@@ -1,5 +1,6 @@
 ---
 import { content, WA, WA_EN, type Lang } from '../data/home-content';
+import { daerahList } from '../data/daerah';
 import Testimonials from './Testimonials.astro';
 
 interface Props {
@@ -245,6 +246,26 @@ const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
           ))}
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- AREA LAYANAN -->
+  <section class="py-16 sm:py-24 bg-white border-y border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10" data-reveal>
+        <div>
+          <p class="text-sm font-bold text-brand mb-2">{t.areas.label}</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            {t.areas.heading} <em class="font-display italic font-medium text-brand">{t.areas.accent}</em>
+          </h2>
+        </div>
+        <p class="text-ink/55 max-w-sm text-sm leading-relaxed">{t.areas.note}</p>
+      </div>
+      <ul data-reveal-group class="flex flex-wrap gap-2.5">
+        {daerahList.filter((d) => d.tipe !== 'provinsi').map((d) => (
+          <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{d.nama}</li>
+        ))}
+      </ul>
     </div>
   </section>
 

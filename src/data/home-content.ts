@@ -165,6 +165,12 @@ export const content: Record<Lang, any> = {
       allLabel: 'Lihat semua artikel',
       allHref: '/blog/',
     },
+    areas: {
+      label: 'Area Layanan',
+      heading: 'Melayani jasa pembuatan website',
+      accent: 'di seluruh Bali.',
+      note: 'Basis kami di Bali dan semua pengerjaan berjalan online, jadi lokasi Anda tidak pernah jadi hambatan. Di luar Bali, kami melayani klien di seluruh Indonesia.',
+    },
     steps: {
       index: '06',
       label: 'Cara kerja',
@@ -362,6 +368,12 @@ export const content: Record<Lang, any> = {
       ],
       allLabel: 'See all articles',
       allHref: '/en/blog/',
+    },
+    areas: {
+      label: 'Service Areas',
+      heading: 'Website design services',
+      accent: 'across Bali.',
+      note: 'We are based in Bali and all work runs online, so your location is never a barrier. Outside Bali, we serve clients across Indonesia.',
     },
     steps: {
       index: '06',
