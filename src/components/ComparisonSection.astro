@@ -1,0 +1,81 @@
+---
+export interface Props {
+  t: any;
+}
+
+const { t } = Astro.props;
+---
+
+<section class="py-16 sm:py-24 bg-white border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-12 gap-6 items-end mb-10 lg:mb-14" data-reveal>
+      <div class="lg:col-span-8">
+        <p class="text-sm font-bold text-brand mb-2">{t.comparison.label}</p>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          {t.comparison.heading} <em class="font-display italic font-medium text-brand">{t.comparison.accent}</em>
+        </h2>
+      </div>
+      <p class="lg:col-span-4 text-ink/55 text-sm sm:text-base leading-relaxed">{t.comparison.note}</p>
+    </div>
+
+    <div class="hidden lg:block bg-white border border-line rounded-3xl overflow-hidden" data-reveal>
+      <div class="grid grid-cols-[1.4fr_1fr_1fr_1fr_1fr] border-b-2 border-ink">
+        <div class="p-6 font-semibold text-[11px] tracking-[0.22em] uppercase text-ink/50">{t.comparison.criteriaLabel}</div>
+        {t.comparison.columns.map((c: any, ci: number) => (
+          <div class:list={['p-6 border-l border-line', ci === 0 && 'bg-ink text-white']}>
+            <div class="font-extrabold text-lg leading-tight">{c.name}</div>
+            <div class:list={['font-semibold text-[10px] tracking-[0.22em] uppercase mt-1', ci === 0 ? 'text-white/60' : 'text-ink/50']}>{c.sub}</div>
+          </div>
+        ))}
+      </div>
+      {t.comparison.rows.map((r: any, ri: number) => (
+        <div class:list={['grid grid-cols-[1.4fr_1fr_1fr_1fr_1fr]', ri < t.comparison.rows.length - 1 && 'border-b border-line']}>
+          <div class="p-6 flex items-center gap-3">
+            <span class="font-semibold text-[10px] tracking-[0.22em] uppercase text-brand min-w-[2rem]">{String(ri + 1).padStart(2, '0')}</span>
+            <span class="font-semibold text-base">{r.label}</span>
+          </div>
+          {r.cells.map((cell: any, ci: number) => (
+            <div class:list={['p-6 border-l border-line flex items-start gap-2.5', ci === 0 && 'bg-brand/5']}>
+              {cell.s === 'y' ? (
+                <svg class="w-4 h-4 shrink-0 mt-0.5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              ) : cell.s === 'm' ? (
+                <svg class="w-4 h-4 shrink-0 mt-0.5 text-ink/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+              ) : (
+                <svg class="w-4 h-4 shrink-0 mt-0.5 text-ink/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              )}
+              <span class:list={['text-sm leading-snug', ci === 0 ? 'font-semibold' : 'font-medium text-ink/60']}>{cell.t}</span>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+
+    <div class="lg:hidden space-y-4" data-reveal-group>
+      {t.comparison.columns.map((c: any, ci: number) => (
+        <div class:list={['rounded-3xl p-6 border', ci === 0 ? 'bg-ink text-white border-ink' : 'bg-paper border-line']}>
+          <div class:list={['pb-4 mb-4 border-b', ci === 0 ? 'border-white/20' : 'border-line']}>
+            <div class="font-extrabold text-lg">{c.name}</div>
+            <div class:list={['font-semibold text-[10px] tracking-[0.22em] uppercase mt-1', ci === 0 ? 'text-white/60' : 'text-ink/50']}>{c.sub}</div>
+          </div>
+          <ul class="space-y-3">
+            {t.comparison.rows.map((r: any, ri: number) => (
+              <li class="flex items-start gap-3">
+                {r.cells[ci].s === 'y' ? (
+                  <svg class:list={['w-4 h-4 shrink-0 mt-0.5', ci === 0 ? 'text-white' : 'text-brand']} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                ) : r.cells[ci].s === 'm' ? (
+                  <svg class:list={['w-4 h-4 shrink-0 mt-0.5', ci === 0 ? 'text-white/50' : 'text-ink/40']} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+                ) : (
+                  <svg class:list={['w-4 h-4 shrink-0 mt-0.5', ci === 0 ? 'text-white/40' : 'text-ink/30']} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                )}
+                <div class="flex-1 min-w-0">
+                  <div class:list={['font-semibold text-xs', ci === 0 ? 'text-white/60' : 'text-ink/50']}>{r.label}</div>
+                  <div class:list={['font-medium text-sm', ci === 0 ? 'text-white' : '']}>{r.cells[ci].t}</div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

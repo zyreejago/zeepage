@@ -3,12 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Pricing from '../components/Pricing.astro';
+import WorksSection from '../components/WorksSection.astro';
+import ComparisonSection from '../components/ComparisonSection.astro';
+import ContactCta from '../components/ContactCta.astro';
 import '../styles/global.css';
 
 import id from '../i18n/id.json';
-import { WA } from '../data/home-content';
+import { WA, content } from '../data/home-content';
 
 const t = id;
+const home = content.id;
 const lang = 'id';
 const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-buleleng/';
 
@@ -141,7 +145,11 @@ const structuredData = {
       </div>
     </section>
 
+    <WorksSection t={home} />
+
     <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <ComparisonSection t={home} />
 
     <section class="py-16 sm:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -160,13 +168,7 @@ const structuredData = {
       </div>
     </section>
 
-    <section class="pb-16 sm:pb-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Usaha Anda di Buleleng <em class="font-display italic font-medium text-brand">layak ditemukan Google</em></h2>
-        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan usaha Anda lewat WhatsApp, kami jawab dengan rekomendasi paket dan harga tertulis. Gratis, tanpa komitmen.</p>
-        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Mulai Konsultasi</a>
-      </div>
-    </section>
+    <ContactCta heading="Usaha Anda di Buleleng" accent="layak ditemukan Google" sub="Ceritakan usaha Anda lewat WhatsApp, kami jawab dengan rekomendasi paket dan harga tertulis. Gratis, tanpa komitmen." />
   </main>
 
   <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
