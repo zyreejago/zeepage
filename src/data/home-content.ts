@@ -159,9 +159,8 @@ export const content: Record<Lang, any> = {
       accent: 'studio.',
       note: 'Panduan praktis seputar website untuk berbagai jenis bisnis di Bali.',
       items: [
-        { title: 'Website untuk Spa di Bali: Menu Treatment, Harga, dan Reservasi Online', date: '17 Oktober 2026', href: '/blog/website-untuk-spa/' },
-        { title: 'Website untuk Salon dan Barbershop di Bali: Layanan, Harga, dan Booking Jadwal Online', date: '17 Oktober 2026', href: '/blog/website-untuk-salon/' },
-        { title: 'Website untuk Gym dan Studio Fitness di Bali: Jadwal Kelas, Harga Member, dan Pendaftaran Online', date: '17 Oktober 2026', href: '/blog/website-untuk-gym/' },
+        { title: 'Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar', date: '23 Oktober 2026', href: '/blog/website-klinik-kantor-toko-denpasar/' },
+        { title: 'Promosi Wisata Buleleng Lewat Website: Panduan untuk Hotel dan Tour di Lovina', date: '23 Oktober 2026', href: '/blog/promosi-wisata-buleleng-website/' },
       ],
       allLabel: 'Lihat semua artikel',
       allHref: '/blog/',
@@ -386,9 +385,8 @@ export const content: Record<Lang, any> = {
       accent: 'the studio.',
       note: 'Practical guides about websites for different kinds of businesses in Bali.',
       items: [
-        { title: 'Website for Surf Camps in Bali: Lesson Packages, Schedules, and Direct Bookings', date: 'October 17, 2026', href: '/en/blog/website-for-surf-camps-in-bali/' },
-        { title: 'Website for Yoga Studios in Bali: Class Schedules, Retreats, and Online Booking', date: 'October 17, 2026', href: '/en/blog/website-for-yoga-studios-in-bali/' },
-        { title: 'Website for Dive Centers in Bali: Trip Schedules, Course Prices, and Direct Bookings', date: 'October 17, 2026', href: '/en/blog/website-for-dive-centers-in-bali/' },
+        { title: 'How Dive Shops and Villas in Amed, Karangasem Can Win Direct Bookings Online', date: 'October 23, 2026', href: '/en/blog/amed-direct-bookings-website/' },
+        { title: 'Getting Found on Google: A Website Guide for Medewi Surf Camps and Jembrana Producers', date: 'October 23, 2026', href: '/en/blog/medewi-surf-camps-website-guide/' },
       ],
       allLabel: 'See all articles',
       allHref: '/en/blog/',
