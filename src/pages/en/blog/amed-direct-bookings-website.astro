@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import '../../../styles/global.css';
+
+import en from '../../../i18n/en.json';
+import { WA_EN } from '../../../data/home-content';
+
+const t = en;
+const lang = 'en';
+
+const title = 'How Dive Shops and Villas in Amed, Karangasem Can Win Direct Bookings Online';
+const description = 'Dive shops and villas in Amed, Karangasem can win direct bookings online with their own website instead of paying platform commissions on every guest. Here is what to build and how the simple funnel works.';
+const canonical = 'https://zeepage.com/en/blog/amed-direct-bookings-website/';
+const cover = '/blog/amed-karangasem-direct-bookings-online.webp';
+const coverAlt = 'How dive shops and villas in Amed, Karangasem can win direct bookings online with their own website by zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-23',
+  inLanguage: 'en',
+  author: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+  publisher: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+  mainEntityOfPage: canonical,
+};
+---
+
+<BaseLayout title={title + ' | zeepage'} description={description} lang="en" canonical={canonical} structuredData={structuredData}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <p class="inline-flex items-center rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand">Blog</p>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 mt-5">October 23, 2026 • by zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Amed and Tulamben draw a very particular kind of guest. Divers plan trips to the USAT Liberty wreck months in advance, comparing dive shops from their homes in Europe, Australia, and beyond. Villa guests do the same, shortlisting quiet corners of East Bali long before they board a plane. Almost every booking your business will ever get starts as research, done far away, on a screen.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Yet most businesses in Karangasem still rely entirely on booking platforms and social media to be found. That arrangement works, but it comes with a quiet cost: a commission on every single guest, listings you do not control, and repeat visitors who still book through an intermediary because they never saved your direct contact. A website of your own changes that balance. This guide walks through what an Amed dive shop or villa website actually needs, and how the simple path from a Google search to a WhatsApp booking works.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-2 mb-5">Why Amed and Tulamben businesses lose bookings without their own website</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Trip planning for East Bali happens on Google. A diver searches for wreck diving in Tulamben, reads about the Liberty, then looks for a shop to take them there. If your business only exists as a platform listing, you appear inside a long row of near identical results, sorted by rules you cannot influence, next to competitors offering the same dives. The guest compares prices inside the platform, books inside the platform, and the platform keeps its cut.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">The bigger loss happens later. Guests who loved their stay or their dives often want to come back, and many would happily book direct if it were easy. Without a website and a visible WhatsApp number, the easiest path is still the platform, so you pay commission again on a guest you had already earned. A website gives those guests a front door that belongs to you.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Pages every dive shop website needs</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Divers are detail people. They book with the shop that answers their questions before they have to ask. Your website should cover:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong>Dive trips and sites:</strong> dedicated pages for the USAT Liberty wreck, Coral Garden, the Japanese wreck, and your macro sites, each with depths, conditions, and the certification level needed.</li>
+          <li><strong>Fun dive and course prices in the open:</strong> guests distrust hidden pricing. Published rates for fun dives, discovery dives, and courses filter out time wasters and build confidence.</li>
+          <li><strong>Safety standards and equipment:</strong> state your oxygen availability, first aid training, gear brands, and maintenance routine. For many divers this page decides the booking.</li>
+          <li><strong>Instructor profiles:</strong> names, certifications, languages spoken, and years diving East Bali. People book with people.</li>
+          <li><strong>Daily schedule and meeting point:</strong> pickup times, where guests gather, and how transfers from the Amed strip work.</li>
+          <li><strong>Booking via WhatsApp:</strong> a button on every page, with a promise of a quick reply during local hours so guests know a human will answer.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Pages every villa and bungalow website needs</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">For accommodation, the website has a different job: to make a stranger comfortable sending money to a small property on the other side of the world. The essentials are:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong>Room types with honest photos:</strong> real rooms, real bathrooms, real views. Honest photos that match reality generate good reviews; staged surprises generate bad ones.</li>
+          <li><strong>Rates by season:</strong> clear high season and low season pricing so guests can plan without an email exchange.</li>
+          <li><strong>Location map and distances:</strong> how far to the beach, the nearest dive sites, warungs, and the Mount Agung viewpoints guests see in photos.</li>
+          <li><strong>House rules and check-in info:</strong> arrival times, breakfast, scooter rental, and quiet hours, stated plainly to prevent misunderstandings.</li>
+          <li><strong>Direct booking benefits:</strong> tell guests what booking direct gets them, such as flexible dates, a personal contact before arrival, or help arranging transport and dives.</li>
+          <li><strong>A gallery that sells the view:</strong> sunrise over the Lombok Strait and Agung behind the garden are your best salespeople. Give them a full page.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Two languages, one website</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Karangasem serves two audiences at once. International guests research and book in English, while domestic visitors from Java and the rest of Indonesia plan in Indonesian, often for long weekends and family trips. A bilingual website reaches both markets with the same content, maintained in one place.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">The important part is completeness. Both language versions should carry the full site: the same pages, the same prices, the same booking buttons. A half translated site with missing pages in one language reads as carelessness, and guests notice. Done properly, each version feels native, and your business looks established in both markets.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">From Google search to WhatsApp booking: the simple funnel</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">A direct booking funnel does not need to be complicated. It works in five steps. A guest searches Google for diving or a stay in Amed. They land on a clear page that answers their exact question, with photos, details, and prices in the open. The page gives them proof the business is real and experienced. They tap the WhatsApp button instead of creating an account on yet another platform. You confirm the booking in a short chat, and the full payment conversation stays between you and your guest.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Every step removes a small piece of friction: no account creation, no platform checkout, no commission deducted at the end. WhatsApp matters here because it is already how Bali does business. Guests get fast answers, you get their number saved for the next trip, and the relationship belongs to you.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Start with the page your guests need most</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">You do not need a large website to start winning direct bookings. A focused site with your key trips or rooms, honest prices, and a WhatsApp button on every page already outperforms a social media profile for guests who plan ahead. You can see how packages are structured on our <a href="/en/harga/" class="font-semibold text-brand hover:underline">pricing page</a>, and if you want the wider picture for East Bali businesses, read about our <a href="/jasa-pembuatan-website-di-karangasem/" class="font-semibold text-brand hover:underline">web design services in Karangasem</a>. Start with the one page your guests ask about most, and build from there.</p>
+
+        <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight text-white">Ready to take bookings directly?</h2>
+          <p class="text-white/70 leading-relaxed mt-4 mb-8">Tell us about your dive shop or villa in Amed and we will suggest the simplest website setup for direct bookings, with no obligation.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href={WA_EN} class="bg-brand text-white rounded-full px-7 py-3.5 font-bold">Free Consultation</a>
+            <a href="/jasa-pembuatan-website-di-karangasem/" class="border border-white/40 rounded-full px-7 py-3.5 font-bold text-white">See Web Design in Karangasem</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

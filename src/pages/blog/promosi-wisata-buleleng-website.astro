@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+
+const title = 'Promosi Wisata Buleleng Lewat Website: Panduan untuk Hotel dan Tour di Lovina';
+const description = 'Promosi wisata Buleleng lewat website membantu hotel dan operator tour di Lovina mendapat tamu langsung tanpa komisi perantara. Ini halaman yang wajib ada, peran Google Maps, dan cara mengubah pengunjung menjadi pemesanan.';
+const canonical = 'https://zeepage.com/blog/promosi-wisata-buleleng-website/';
+const cover = '/blog/promosi-wisata-buleleng-lewat-website.webp';
+const coverAlt = 'Promosi wisata Buleleng lewat website untuk hotel dan tour di Lovina oleh zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-23',
+  inLanguage: 'id-ID',
+  author: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+  publisher: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+  mainEntityOfPage: canonical,
+};
+---
+
+<BaseLayout title={title + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-flex items-center rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold tracking-wide text-brand">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 mt-5">23 Oktober 2026 • oleh zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Buleleng punya modal wisata yang lengkap. Ada lumba lumba Lovina yang terkenal sejak lama, bangunan heritage dan pelabuhan tua di Singaraja, dataran tinggi Munduk dengan kebun kopi dan danau kembarnya, sampai deretan air terjun seperti Gitgit dan Sekumpul. Tamu yang datang ke sini jarang memutuskan secara spontan. Mereka meneliti dulu dari rumah: membaca ulasan, membandingkan harga, melihat foto, lalu memesan jauh sebelum tiba di Bali.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Masalahnya, banyak hotel dan operator tour di Buleleng hanya bisa ditemukan lewat perantara. Setiap pemesanan yang datang dari platform besar dipotong komisi, dan hubungan dengan tamu pun berhenti di situ. Padahal promosi wisata Buleleng lewat website sendiri memberi jalan lain: tamu menemukan Anda di Google, membaca informasi resmi dari Anda, lalu memesan langsung tanpa potongan. Panduan ini membahas halaman apa saja yang wajib ada agar website itu benar benar menghasilkan pemesanan.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-2 mb-5">Kenapa promosi wisata Buleleng tidak cukup mengandalkan media sosial dan perantara</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Media sosial memang berguna untuk membangun kedekatan, tetapi unggahan tenggelam dalam hitungan hari. Calon tamu yang serius memesan justru mencari lewat Google dengan kata kunci yang jelas, misalnya tour lumba lumba Lovina atau penginapan dekat pantai. Kalau yang muncul hanya halaman platform perantara, tamu akan memesan di sana dan Anda membayar komisi untuk tamu yang sebenarnya sudah mencari nama daerah Anda sendiri.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Perantara juga memegang hubungan dengan tamu. Anda tidak mendapat nomor kontak mereka, tidak bisa mengirim penawaran kunjungan berikutnya, dan tidak bisa mengoreksi informasi yang keliru di listing. Website sendiri membalik keadaan itu: informasi resmi ada di tangan Anda, tamu menghubungi Anda langsung, dan setiap kunjungan berikutnya tidak perlu dibayar lagi ke pihak ketiga.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Halaman wajib untuk website hotel dan penginapan di Lovina</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Pengunjung website hotel datang dengan pertanyaan yang sangat praktis. Jawab pertanyaan itu satu per satu di halaman yang jelas, jangan biarkan mereka menebak nebak dari foto saja.</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong class="text-ink">Tipe kamar dengan foto asli dan fasilitas.</strong> Tampilkan setiap tipe kamar dengan foto kondisi sebenarnya, kapasitas tamu, jenis tempat tidur, dan fasilitas di dalamnya seperti AC, air panas, dan balkon.</li>
+          <li><strong class="text-ink">Tarif yang jelas per musim.</strong> Cantumkan tarif musim biasa dan musim ramai beserta tanggal berlakunya, supaya tamu tidak perlu bertanya dulu hanya untuk tahu kisaran harga.</li>
+          <li><strong class="text-ink">Galeri suasana.</strong> Foto pantai di depan penginapan, kolam, taman, dan area sarapan membantu tamu membayangkan pengalaman menginap, bukan sekadar kamar.</li>
+          <li><strong class="text-ink">Lokasi dan jarak ke Pantai Lovina.</strong> Sebutkan jarak ke titik keberangkatan perahu lumba lumba dan tempat makan terdekat, lengkap dengan tautan Google Maps.</li>
+          <li><strong class="text-ink">Kebijakan pemesanan dan pembatalan.</strong> Jelaskan cara konfirmasi, uang muka bila ada, dan batas pembatalan sejak awal agar tidak ada salah paham.</li>
+          <li><strong class="text-ink">Tombol WhatsApp yang selalu terlihat.</strong> Tombol mengambang di setiap halaman membuat tamu bisa bertanya atau memesan tanpa mencari halaman kontak.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Halaman wajib untuk operator tour dan aktivitas</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Untuk operator tour, website berfungsi seperti brosur yang bisa menjawab sebelum tamu sempat ragu. Setiap paket sebaiknya punya halaman sendiri agar mudah ditemukan Google dan mudah dibagikan lewat WhatsApp.</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong class="text-ink">Paket tour dengan durasi dan harga.</strong> Tulis paket dolphin tour, snorkeling, trekking air terjun Gitgit dan Sekumpul, sampai tur kebun kopi Munduk, lengkap dengan durasi dan tarif per orang atau per perahu.</li>
+          <li><strong class="text-ink">Titik jemput dan area jemput.</strong> Jelaskan area penjemputan yang dilayani dan biaya tambahan untuk penjemputan di luar area tersebut.</li>
+          <li><strong class="text-ink">Yang termasuk dan tidak termasuk.</strong> Perahu, alat snorkeling, sarapan, tiket masuk, dan pemandu perlu dirinci agar tamu tahu persis apa yang mereka bayar.</li>
+          <li><strong class="text-ink">Jadwal keberangkatan.</strong> Cantumkan jam berangkat setiap paket dan saran waktu terbaik, misalnya pagi hari untuk melihat lumba lumba.</li>
+          <li><strong class="text-ink">Galeri foto kegiatan asli.</strong> Foto dari kegiatan Anda sendiri jauh lebih meyakinkan daripada foto stok, terutama untuk aktivitas di laut.</li>
+          <li><strong class="text-ink">Cara memesan via WhatsApp.</strong> Akhiri setiap halaman paket dengan langkah pemesanan yang singkat dan tombol chat langsung.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Peran Google Maps dan ulasan untuk wisata Buleleng</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Wisatawan bergerak dengan Google Maps. Mereka mencari penginapan dan aktivitas dari peta, membaca ulasan terbaru, lalu menekan tombol rute atau telepon. Karena itu Profil Bisnis Google Anda harus konsisten dengan website: nama usaha sama, alamat dan titik peta tepat, jam operasional benar, dan nomor WhatsApp yang tercantum benar benar aktif.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Ulasan juga perlu dirawat, bukan dibiarkan. Balas setiap ulasan dengan sopan, termasuk yang kurang baik, karena calon tamu membaca cara Anda menanggapi. Tambahkan foto baru secara berkala, dan arahkan tamu yang puas untuk menulis ulasan lewat tautan pendek yang Anda kirim setelah kegiatan selesai. Website dan Maps yang saling menguatkan membuat bisnis Anda terlihat aktif dan bisa dipercaya.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Mengubah pengunjung website menjadi pemesanan langsung</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Kunjungan saja tidak cukup; website harus menuntun pengunjung ke satu tindakan yang jelas. Letakkan ajakan yang sama di setiap halaman: tombol WhatsApp dengan pesan pembuka yang sudah terisi, misalnya menanyakan ketersediaan kamar atau jadwal tour pada tanggal tertentu. Pesan yang sudah terisi menurunkan keraguan tamu untuk memulai percakapan.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Pastikan juga website ringan dibuka dari ponsel, karena sebagian besar tamu meneliti perjalanan dari HP dengan sinyal yang tidak selalu bagus. Terakhir, sediakan halaman berbahasa Inggris untuk paket dan kamar utama. Tamu asing adalah pasar besar Lovina dan Munduk, dan mereka jauh lebih berani memesan langsung bila bisa membaca detail tanpa bantuan penerjemah.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Penutup: milik Anda sendiri, bekerja setiap hari</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Website bukan brosur sekali cetak. Ia adalah aset milik Anda sendiri yang bekerja setiap hari, menjawab pertanyaan calon tamu bahkan saat Anda sedang di laut mengantar tour atau melayani tamu yang menginap. Mulailah dari halaman yang paling dicari, rawat ulasan di Maps, dan biarkan pemesanan datang langsung ke WhatsApp Anda. Untuk melihat pilihan paket dan biayanya, silakan cek <a href="/harga/" class="font-semibold text-brand hover:underline">halaman harga zeepage</a>, atau pelajari layanan lengkap kami lewat <a href="/jasa-pembuatan-website-di-buleleng/" class="font-semibold text-brand hover:underline">jasa pembuatan website di Buleleng</a>.</p>
+
+        <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight mb-4">Hotel atau tour Anda di Buleleng siap dapat tamu langsung?</h2>
+          <p class="text-white/70 leading-relaxed mb-8">Ceritakan bisnis Anda lewat WhatsApp. Kami bantu susun halaman kamar atau paket tour yang membuat tamu memesan langsung ke Anda, tanpa komisi perantara.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href={WA} class="bg-brand text-white rounded-full px-7 py-3.5 font-bold">Konsultasi Gratis</a>
+            <a href="/jasa-pembuatan-website-di-buleleng/" class="border border-white/40 rounded-full px-7 py-3.5 font-bold">Lihat Jasa Pembuatan Website di Buleleng</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

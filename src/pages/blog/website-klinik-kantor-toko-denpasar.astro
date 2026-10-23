@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+
+const title = 'Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar';
+const description = 'Panduan membuat website untuk klinik, kantor, dan toko di Denpasar: fitur yang wajib ada untuk tiap jenis usaha, kesalahan yang membuat website sepi pengunjung, dan cara memilih paket yang tepat.';
+const canonical = 'https://zeepage.com/blog/website-klinik-kantor-toko-denpasar/';
+const cover = '/blog/panduan-website-klinik-kantor-toko-denpasar.webp';
+const coverAlt = 'Panduan membuat website untuk klinik, kantor, dan toko di Denpasar oleh zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-23',
+  inLanguage: 'id-ID',
+  author: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+  publisher: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+};
+---
+
+<BaseLayout title={title + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-block rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 text-sm mt-5">23 Oktober 2026 • oleh zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Denpasar adalah pusat bisnisnya Bali. Hampir semua kebutuhan warga kota, dari berobat, mengurus keperluan kantor, sampai belanja harian, sekarang dimulai dari pencarian di Google. Calon pelanggan jarang langsung datang. Mereka membandingkan dulu beberapa usaha sekaligus: mana yang informasinya paling jelas, mana yang paling mudah dihubungi, dan mana yang terlihat paling meyakinkan. Di titik perbandingan inilah website bekerja, jauh sebelum pelanggan tiba di lokasi Anda.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Masalahnya, pengunjung website klinik, kantor, dan toko datang dengan kebutuhan yang sangat berbeda. Pasien mencari kepastian jadwal dan rasa aman. Klien perusahaan menilai kredibilitas sebelum berani menghubungi. Pembeli ingin melihat barang dan cara memesannya secepat mungkin. Panduan ini membahas apa saja yang wajib ada di website untuk masing masing jenis usaha di Denpasar, agar website Anda menjawab cara pelanggan Anda mengambil keputusan.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-2 mb-5">Kenapa website klinik, kantor, dan toko tidak bisa disamakan</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Tiga jenis usaha berarti tiga niat kunjungan yang berbeda. Pasien datang dengan kecemasan dan pertanyaan praktis: dokter apa yang praktik hari ini, bagaimana cara mendaftar, apakah bisa memakai asuransi. Calon klien kantor datang dengan sikap menilai: perusahaan ini bergerak di bidang apa, siapa timnya, pengalaman apa yang bisa dibuktikan. Pembeli toko datang dengan niat transaksi: barangnya ada atau tidak, berapa harganya, dan bagaimana cara membelinya sekarang juga.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Website yang memakai satu pola generik untuk ketiganya akan terasa tanggung di semua sisi. Terlalu ramai untuk kantor yang membutuhkan kesan resmi, terlalu kaku untuk toko yang membutuhkan katalog yang lincah, dan terlalu umum untuk klinik yang hidup dari kepercayaan. Karena itu susunan halaman, isi, dan tombol ajakan di website Anda perlu mengikuti jenis usaha Anda, bukan mengikuti template yang kebetulan tersedia.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Yang wajib ada di website klinik dan praktik dokter</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Bagi klinik, website adalah perpanjangan meja pendaftaran. Tugas utamanya mengurangi pertanyaan berulang dan membuat pasien yakin untuk datang. Hal hal berikut sebaiknya selalu ada:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Jadwal praktik yang selalu terbaru, karena jadwal yang berubah tanpa pembaruan adalah sumber kekecewaan pasien yang paling sering terjadi.</li>
+          <li>Daftar layanan dan poli yang tersedia, ditulis dengan bahasa sederhana yang dipahami pasien awam.</li>
+          <li>Profil dokter secara singkat, berisi nama, bidang keahlian, dan foto, supaya pasien merasa sudah mengenal sebelum datang.</li>
+          <li>Tombol WhatsApp untuk pendaftaran yang terlihat jelas di setiap halaman, bukan tersembunyi di bagian paling bawah.</li>
+          <li>Alamat lengkap yang terhubung ke Google Maps, agar pasien bisa langsung membuka rute dari ponselnya.</li>
+          <li>Informasi penerimaan asuransi atau BPJS bila klinik Anda memang melayaninya, ditulis terbuka di halaman layanan agar tidak menimbulkan pertanyaan berulang.</li>
+          <li>Halaman tanya jawab seputar pendaftaran, misalnya cara mendaftar, dokumen yang perlu dibawa, dan perkiraan alur kunjungan.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Yang wajib ada di website kantor dan jasa profesional</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Website kantor dan jasa profesional bekerja seperti dokumen perkenalan yang dibaca calon klien, mitra, bahkan panitia pengadaan. Isinya harus membuktikan kemampuan, bukan sekadar mengklaimnya. Unsur yang perlu disiapkan antara lain:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Profil perusahaan yang menjelaskan bidang usaha, latar belakang, dan keunggulan secara ringkas dan jelas.</li>
+          <li>Daftar layanan yang spesifik, merinci pekerjaan yang benar benar Anda tangani, bukan sekadar label umum seperti jasa konsultan.</li>
+          <li>Portofolio atau daftar proyek yang pernah dikerjakan sebagai bukti pengalaman yang bisa diverifikasi calon klien.</li>
+          <li>Artikel insight seputar bidang Anda, untuk membangun otoritas sekaligus membantu calon klien menemukan Anda lewat Google.</li>
+          <li>Formulir kontak dan alamat resmi yang lengkap, termasuk alamat email perusahaan.</li>
+          <li>Halaman tentang yang meyakinkan, yang berguna saat perusahaan Anda sedang dinilai untuk kerja sama atau mengikuti proses tender.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Yang wajib ada di website toko dan retail</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Pengunjung website toko tidak datang untuk membaca panjang lebar. Mereka datang untuk melihat barang, mengecek harga, lalu memesan. Karena itu kecepatan dan kejelasan adalah segalanya. Pastikan website toko Anda memiliki:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Katalog produk dengan foto yang jelas dan harga yang tercantum, agar pembeli tidak perlu menebak atau bertanya satu per satu.</li>
+          <li>Info stok sederhana, misalnya penanda tersedia atau habis pada tiap produk, supaya tidak ada pesanan yang berujung kecewa.</li>
+          <li>Pemesanan via WhatsApp, karena sebagian besar pembeli lokal lebih nyaman memastikan barang dulu sebelum membayar.</li>
+          <li>Info pengiriman dalam kota, termasuk pilihan ojek online atau kurir lokal beserta perkiraan ongkos kirimnya.</li>
+          <li>Jam buka dan lokasi semua cabang, ditulis konsisten dengan data yang tampil di Google Maps.</li>
+          <li>Seksi promo yang mudah diperbarui, sehingga penawaran musiman dan cuci gudang bisa segera diketahui pelanggan.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Kesalahan yang membuat website bisnis di Denpasar sepi</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Banyak website bisnis sebenarnya sudah jadi, tetapi tidak menghasilkan apa apa. Penyebabnya biasanya bukan desain, melainkan detail kecil yang membuat pengunjung batal melangkah. Kesalahan yang paling sering kami temui:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Nomor WhatsApp yang tidak aktif atau berbeda beda di tiap halaman, sehingga pengunjung ragu untuk menghubungi.</li>
+          <li>Website yang lambat dibuka di HP, padahal hampir semua pencarian lokal dilakukan dari ponsel.</li>
+          <li>Alamat yang tidak sama dengan titik lokasi di Google Maps, membuat pelanggan tersesat atau batal datang.</li>
+          <li>Tidak ada ajakan bertindak yang jelas, sehingga pengunjung selesai membaca lalu pergi tanpa tahu harus berbuat apa.</li>
+          <li>Konten yang tidak pernah diperbarui sejak website dibuat, dari jadwal dan harga sampai foto yang sudah tidak relevan lagi.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Mulai dari yang paling berdampak</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Anda tidak harus merombak semuanya sekaligus. Mulailah dari halaman yang paling sering dibutuhkan pelanggan Anda. Klinik sebaiknya membereskan jadwal dan pendaftaran lebih dulu. Kantor sebaiknya menguatkan profil dan daftar layanan. Toko sebaiknya memastikan katalog dan cara pemesanan berjalan mulus. Setelah fondasi itu beres, barulah artikel, fitur tambahan, dan pengembangan lain menyusul dengan arah yang lebih jelas.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Kalau Anda ingin melihat pilihan paket dan biayanya sebelum memutuskan, silakan cek <a href="/harga/" class="font-semibold text-brand hover:underline">halaman harga</a> kami. Dan bila usaha Anda berdomisili di kota ini, halaman <a href="/jasa-pembuatan-website-di-denpasar/" class="font-semibold text-brand hover:underline">jasa pembuatan website di Denpasar</a> merangkum layanan kami untuk bisnis lokal secara lebih lengkap, termasuk alur pengerjaan dari konsultasi sampai serah terima.</p>
+
+        <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight text-white">Bisnis Anda di Denpasar butuh website?</h2>
+          <p class="text-white/70 leading-relaxed mt-4 max-w-2xl">Ceritakan jenis usaha dan kebutuhan Anda lewat WhatsApp. Kami bantu pilihkan susunan halaman dan paket yang paling sesuai, tanpa kewajiban untuk langsung memesan.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href={WA} class="bg-brand text-white rounded-full px-7 py-3.5 font-bold">Konsultasi Gratis</a>
+            <a href="/jasa-pembuatan-website-di-denpasar/" class="border border-white/40 text-white rounded-full px-7 py-3.5 font-bold">Lihat Jasa Pembuatan Website di Denpasar</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

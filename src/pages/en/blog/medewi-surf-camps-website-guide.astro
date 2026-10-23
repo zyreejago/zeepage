@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import '../../../styles/global.css';
+import en from '../../../i18n/en.json';
+import { WA_EN } from '../../../data/home-content';
+
+const t = en;
+const lang = 'en';
+
+const title = 'Getting Found on Google: A Website Guide for Medewi Surf Camps and Jembrana Producers';
+const description = 'A practical website guide for Medewi surf camps and Jembrana producers: the pages you need, local SEO basics, and a simple plan that helps West Bali businesses get found on Google.';
+const canonical = 'https://zeepage.com/en/blog/medewi-surf-camps-website-guide/';
+const cover = '/blog/medewi-surf-camps-website-guide.webp';
+const coverAlt = 'A website guide for Medewi surf camps and Jembrana producers to get found on Google by zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-23',
+  inLanguage: 'en',
+  author: {
+    '@type': 'Organization',
+    name: 'zeepage',
+    url: 'https://zeepage.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'zeepage',
+    url: 'https://zeepage.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://zeepage.com/logo-ui.webp',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonical,
+  },
+};
+---
+
+<BaseLayout title={title + ' | zeepage'} description={description} lang="en" canonical={canonical} structuredData={structuredData}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-block text-sm font-bold tracking-wide uppercase text-brand bg-accent px-4 py-1.5 rounded-full">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 mt-6">October 23, 2026 • by zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Jembrana is where Bali begins for anyone arriving by land. Ferries from Java dock at Gilimanuk around the clock, and the road east passes fishing ports, cacao groves, and one of the longest left-hand waves in Indonesia at Medewi. Further north, West Bali National Park protects some of the island's last lowland forest, home to the Bali starling and quiet snorkeling around Menjangan Island. It is a regency full of places worth visiting and products worth buying.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Yet try finding those businesses with a simple Google search and most of them disappear. Surf camps without a website, producers who sell through middlemen, homestays known only by word of mouth. That visibility gap is frustrating, but it is also an opportunity: in West Bali, the competition on Google is still so thin that a modest website, set up properly, can put a small business on the first page. This guide explains what that website needs and how to get found, step by step.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-2 mb-5">Why West Bali businesses are hard to find on Google today</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">The first reason is simple: many Jembrana businesses have no official website at all. Their information lives scattered across Instagram posts, a Facebook page last updated years ago, and a phone number passed between travelers. Google can index social posts, but it trusts a proper website far more when deciding what to show for searches like "surf camp Medewi" or "Bali cacao supplier".</p>
+        <p class="text-ink/65 leading-relaxed mb-5">The second reason is geography. Bali's south, from Canggu to Uluwatu, is saturated with businesses that have invested in websites and SEO for a decade, so search results skew heavily toward them. Meanwhile, travelers planning a west coast trip do almost everything from their phones: checking the surf forecast, comparing rooms, figuring out the drive from Gilimanuk. If your business does not appear in that moment of planning, the booking goes somewhere else, often to a platform that takes a commission. The good news is that searches with "Medewi" or "Jembrana" in them have far fewer competitors, so showing up there is genuinely achievable.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">What a surf camp website needs</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">A surf camp sells an experience, but guests book based on clear, practical information. Your website should answer the questions every surfer asks before committing to the trip west:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong>The wave, explained honestly.</strong> Describe Medewi's long left-hander as it really is: the best swell directions, which tides suit beginners and which suit experienced surfers, and how conditions change between the dry and wet seasons. Honest detail builds trust and attracts the guests who will actually enjoy your break.</li>
+          <li><strong>Rooms and rates.</strong> Photos of every room type with the nightly rate and what is included, so guests do not have to message three camps just to compare basics.</li>
+          <li><strong>Board rental and lessons, with prices.</strong> List your board quiver by size, rental rates per day, and lesson packages with instructor ratios. Surfers traveling light decide fast when this is clear.</li>
+          <li><strong>Transfer information.</strong> How to reach you from Ngurah Rai Airport and from Gilimanuk harbor, how long each drive takes, and whether you offer pickups. This page alone removes the biggest hesitation about staying in the west.</li>
+          <li><strong>Food and daily rhythm.</strong> A small gallery of meals, the warung nearby, yoga deck, and what a typical day looks like. Guests staying a week or more want to picture their routine.</li>
+          <li><strong>A WhatsApp booking button.</strong> One tap should open a chat with a pre-filled message. Direct bookings mean no platform commission and a personal connection before the guest even arrives.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">What local producers and processors need</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Jembrana's producers, from cacao farmers around Melaya to seafood processors at Pengambengan, face a different problem: buyers outside Bali cannot find them, so the harvest moves through layers of middlemen. A straightforward company website changes who gets to contact you first:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li><strong>A product catalog with grades and packaging.</strong> For cacao, coffee, or dried seafood, list each product with its grade, moisture or processing standard where relevant, minimum order, and available packaging sizes. Buyers think in specifications, so give them specifications.</li>
+          <li><strong>Your production story and capacity.</strong> Where the raw material comes from, how it is fermented, dried, or processed, and roughly how much you can supply per month. This is what separates a producer from an anonymous trader in a buyer's eyes.</li>
+          <li><strong>A wholesale and reseller contact.</strong> A dedicated page or section for trade inquiries, with a WhatsApp number answered by someone who can discuss volume and pricing.</li>
+          <li><strong>Certifications or lab results, only if you truly have them.</strong> If your products have been lab tested or your group holds a certification, publish it with the document visible. If not, leave this section out entirely; honest absence beats borrowed logos.</li>
+          <li><strong>Delivery coverage beyond Bali.</strong> State clearly which regions you can ship to, through which couriers or cargo services, and typical lead times. A buyer in Surabaya or Jakarta needs this before they will start a conversation.</li>
+        </ul>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">Local SEO basics for Jembrana businesses</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">A website alone is not enough; Google also needs to believe your business is real and local. Start with a Google Business Profile and claim it properly. Use one consistent business name, address, and phone number everywhere: on your website, your Maps listing, and your social profiles. Inconsistent details, such as two different phone numbers, quietly weaken your ranking.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Check that your map pin sits exactly on your location, not at the village center or the main road. In rural areas a misplaced pin can send guests to the wrong hamlet entirely. Then work on reviews: ask happy guests and buyers to leave one, and reply to every review you receive, good or bad, briefly and politely. Finally, add fresh photos to your profile regularly, real photos of the rooms, the harvest, the boats, the team. Profiles with recent photos look alive to both Google and the humans browsing them.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">A simple 30 day plan to get found</h2>
+        <h3 class="text-xl font-bold mt-9 mb-3">Week 1: Claim your place on the map</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Create or claim your Google Business Profile, fix the pin, add your hours, phone number, and a first batch of ten good photos. This costs nothing and is the single fastest visibility win available to you.</p>
+        <h3 class="text-xl font-bold mt-9 mb-3">Week 2: Launch a simple website</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Put up a clean website with the pages described above: your offer, your prices or catalog, how to reach you, and a WhatsApp button. Simple and accurate beats elaborate and half finished. Make sure the name, address, and phone number match your Maps profile exactly.</p>
+        <h3 class="text-xl font-bold mt-9 mb-3">Week 3: Publish two helpful pages</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Add two pages that answer real questions your customers ask. A surf camp might write a guide to Medewi's seasons and tides, or how to get from Gilimanuk to Medewi. A producer might write about how their cacao is fermented, or the difference between their product grades. These pages are what Google shows to people who are researching, not just buying.</p>
+        <h3 class="text-xl font-bold mt-9 mb-3">Week 4: Start the review habit</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Ask every happy guest or buyer, in person and with a short link, to leave a review. Reply to each one. From here on, this is not a project but a habit, a few minutes a week that compounds month after month.</p>
+
+        <h2 class="text-3xl font-extrabold tracking-tight mt-14 mb-5">The west deserves to be found</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">West Bali does not lack quality; it lacks visibility. The surf is world class, the cacao is excellent, and the road from Gilimanuk brings thousands of potential customers past your door every week. A clear website and a cared-for Maps profile are how those people find you instead of scrolling past. If you would like to see what it costs, our <a href="/en/harga/" class="font-semibold text-brand hover:underline">transparent pricing page</a> lists every package in plain sight, and our <a href="/jasa-pembuatan-website-di-jembrana/" class="font-semibold text-brand hover:underline">web design service for Jembrana</a> page explains how we work with businesses across the regency. The west deserves to be found, and getting found is a solvable problem.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
+        <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight mb-4">Want your West Bali business found on Google?</h2>
+          <p class="text-white/70 leading-relaxed mb-8">Tell us about your surf camp, homestay, or product, and we will suggest the simplest website that gets you found, free of charge and with no obligation.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href={WA_EN} target="_blank" rel="noopener" class="bg-brand text-white rounded-full px-7 py-3.5 font-bold hover:bg-branddark transition">Free Consultation</a>
+            <a href="/jasa-pembuatan-website-di-jembrana/" class="border border-white/40 rounded-full px-7 py-3.5 font-bold hover:bg-white/10 transition">See Web Design in Jembrana</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
