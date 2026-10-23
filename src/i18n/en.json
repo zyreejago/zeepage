@@ -122,32 +122,42 @@
         "title": "ZeeRental",
         "slug": "zeerental",
         "category": "Web Application",
-        "heading": "Booking Website and Management App for a Car and Motorcycle Rental in Bali",
+        "heading": "Car and Motorcycle Rental Booking Website in Bali",
         "desc": "Booking website and management app for a car and motorcycle rental with a fleet catalog, transparent rates, and a dashboard for bookings and availability.",
-        "meta": "ZeeRental project detail by zeepage: booking website and management app for a car and motorcycle rental in Bali with a daily summary dashboard, fleet data, bookings, and an availability calendar.",
+        "meta": "ZeeRental project detail by zeepage: a booking website and management app for a car and motorcycle rental in Bali with a daily summary panel.",
         "detail": "A booking website and management app for ZeeRental, a car and motorcycle rental business in Denpasar, Bali. Visitors browse the fleet with final rates and book through WhatsApp, while the owner runs daily operations from a dashboard with daily summaries, vehicle handovers, fleet data, booking lists, an availability calendar, and business settings.",
         "tech": [
           "React",
           "Dashboard",
           "Booking Management"
         ],
-        "link": "https://rental.zeepage.com/"
+        "link": "https://rental.zeepage.com/",
+        "story": [
+          "ZeeRental serves tourists and locals who need a car or motorcycle while in Bali. Bookings used to run manually through WhatsApp messages: customers asked which units were available, the admin checked handwritten notes, then replied one by one. It was slow, prone to double bookings, and hard to track on busy days. The owner needed one place where customers could browse the fleet and book by themselves, while the internal team managed everything from a tidy panel.",
+          "We built a booking website showing the full fleet catalog with photos, daily rental prices, and availability status, plus a booking form that connects straight to WhatsApp. On the internal side, the management app shows a daily summary of units currently rented out, delivery and pickup schedules, and incoming orders. Every vehicle, price, and rental duration is recorded in a structured way, so the admin no longer relies on memory or paper notes. The result is a flow that takes minutes from browsing the fleet to a confirmed booking, and an owner who can see the whole day at a glance.",
+          "The most valuable feature is fleet availability that always stays in sync with booking data, so two customers can never reserve the same unit on the same day. For travelers the process feels like booking a hotel: pick a unit, fill in the details, confirm. For the owner, every order is recorded automatically and can be rechecked anytime. This model suits any vehicle rental business in a tourist area that wants to graduate from manual record keeping."
+        ]
       },
       {
         "img": "/hidroponik.webp",
         "title": "Hidroponik Nusantara",
         "slug": "hidroponik-nusantara",
         "category": "Company Profile",
-        "heading": "Company Profile and Online Catalog Website for a Hydroponic Company",
+        "heading": "Company Profile Website for a Hydroponic Company",
         "desc": "Company profile and online catalog website for a hydroponic farming company with fresh vegetable pricing per kilogram and order tracking.",
-        "meta": "Project detail of the Hidroponik Nusantara company profile and online catalog website by zeepage: hydroponic vegetable catalog with per-kilogram pricing, ordering guide, and order tracking.",
+        "meta": "Project detail of the Hidroponik Nusantara company profile and online catalog website by zeepage: a hydroponic vegetable catalog with order tracking.",
         "detail": "A company profile and online catalog website for Hidroponik Nusantara, a hydroponic farming company providing fresh vegetables straight from the greenhouse. Features a product catalog with transparent per-kilogram pricing, an ordering guide page, location information, order tracking, and a shopping cart.",
         "tech": [
           "Company Profile",
           "Product Catalog",
           "Order Tracking"
         ],
-        "link": "https://hidroponik.zeepage.com/"
+        "link": "https://hidroponik.zeepage.com/",
+        "story": [
+          "Hidroponik Nusantara supplies fresh hydroponic vegetables to households, cafes, and restaurants. Their challenge was not in the greenhouse but in communication: the product catalog changes with every harvest, prices were asked over and over in chat, and orders from business customers were hard to recap. They needed a website that works as the official company catalog and a product showcase customers can always refer to.",
+          "This company profile website presents the company profile, the advantages of hydroponic farming, and a vegetable catalog with prices that are easy to update. Customers can build an order and track its status on the order tracking page, while the team manages products and orders from an admin panel. The page structure is built with on page SEO so buyers searching for a hydroponic vegetable supplier can find them easily. With one always current catalog at a single web address, the team no longer sends out manual price lists every time someone asks.",
+          "One thing guarded from the start was ease of updates: harvests change weekly, so staff must be able to edit the catalog without technical skills. Every product appears with a photo, selling unit, and the latest price, while incoming orders are recorded neatly for the sales team to follow up. This company profile plus catalog combination suits food producers and distributors who want to look professional to business buyers and home customers alike."
+        ]
       },
       {
         "img": "/demopadel.webp",
@@ -156,30 +166,40 @@
         "category": "Web Application",
         "heading": "Online Padel Court Booking Web Application",
         "desc": "Online padel court booking platform, pick a venue and time slot, then pay and play without the queue.",
-        "meta": "Project detail of the online padel court booking web application by zeepage: pick a venue and time slot, pay, and play without the queue, complete with venue catalog and event pages.",
+        "meta": "Project detail of the online padel court booking web app by zeepage: pick a venue and time slot, pay, and play without queuing.",
         "detail": "A padel court booking website with a practical flow: choose a venue, pick a time slot, complete the payment, and play. Includes service and venue catalogs, event pages, court and player statistics, and an energetic responsive sports design.",
         "tech": [
           "Booking Flow",
           "Venue Catalog",
           "Responsive"
         ],
-        "link": "https://padel.zeepage.com/"
+        "link": "https://padel.zeepage.com/",
+        "story": [
+          "Padel is booming, and court operators need booking that moves as fast as the game itself. DemoPadel was designed as a booking app concept that mirrors the flow of professional court booking platforms: players choose a venue, see the available schedule, and lock in a playing time without calling or waiting for a busy admin to reply.",
+          "The flow is four simple steps: pick a venue, choose a time, complete the payment, then show up and play. Inside there is a venue catalog with photos and facilities, an events page for tournaments and coaching clinics, and court and player statistics that make the platform feel alive. The design is energetic with bold sporty colors and fully responsive, because most players book from their phones between activities. The concept shows how a structured booking system reduces queues, prevents schedule clashes, and gives operators clean booking data.",
+          "As a concept demo, the focus is proving the flow and user experience: how fast a player can go from the homepage to holding a booked slot. Every screen removes unnecessary decisions, with real time availability shown in a grid that is easy to scan. For sports venue operators, a foundation like this can grow directly into a full operational system with member data, subscription packages, and revenue reports."
+        ]
       },
       {
         "img": "/sagaroof.webp",
         "title": "Sagaroof",
         "slug": "sagaroof",
         "category": "Company Profile",
-        "heading": "Company Profile Website for a uPVC Roofing Distributor in Bali",
+        "heading": "uPVC Roofing Distributor Company Profile Website",
         "desc": "Company profile and catalog website for a uPVC roofing distributor in Bali with transparent pricing and WhatsApp ordering.",
-        "meta": "Project detail of the Sagaroof company profile website by zeepage: uPVC roofing catalog with transparent per-meter and per-piece pricing, promo banners, gallery, and WhatsApp ordering.",
+        "meta": "Project detail of the Sagaroof company profile website by zeepage: a uPVC roofing catalog with transparent per-meter pricing and promo banners.",
         "detail": "A company profile and online catalog website for Sagaroof, a quality uPVC roofing distributor in Bali. Features rotating promo banners, a product catalog with transparent per-meter and per-piece pricing, a gallery, and consultation and ordering buttons via WhatsApp.",
         "tech": [
           "Company Profile",
           "Product Catalog",
           "WhatsApp Order"
         ],
-        "link": "https://demosagaroof.vercel.app/"
+        "link": "https://demosagaroof.vercel.app/",
+        "story": [
+          "Sagaroof is a uPVC roofing distributor in Bali serving contractors, building material stores, and homeowners. Roofing products are hard to sell with photos alone: buyers need specifications, color and profile options, and clear prices per meter and per sheet. Without a website, all those questions piled up in chat and often ended without a decision because buyers were unsure about the total cost.",
+          "We built a company profile website that doubles as an online catalog: every product appears with specifications and transparent pricing, plus promo banners and explanations of why uPVC roofing beats conventional materials. Pages are structured to be found on Google by people searching for uPVC roofing in Bali, with WhatsApp buttons at key points for consultation and quotations. As a result, buyers can study the products and estimate costs themselves before contacting the sales team, so incoming conversations are far more serious.",
+          "The catalog is organized the way contractors think: starting from roof profile, thickness, and color, down to per unit pricing, everything can be compared in a single scroll. There are also care and warranty explanations that first time buyers often ask about. For building material distributors, this kind of website turns a quickly outdated printed catalog into a digital showcase that is always current and easy to share with a single link."
+        ]
       },
       {
         "img": "/webzeeboost.webp",
@@ -188,12 +208,17 @@
         "category": "Web Application",
         "heading": "Game Top Up Website with Automatic Payments",
         "desc": "Robux topup website with maximum SEO optimization and integrated payment system.",
-        "meta": "Project detail of the Robux top up website by zeepage: an integrated automatic payment system and maximum SEO optimization so buyers can easily find it on Google.",
+        "meta": "Project detail of the Robux top up website by zeepage: automatic payments and strong SEO so buyers can find and check out in seconds.",
         "detail": "A Robux topup platform with SEO-optimized features to reach more users. Equipped with automated payment via Duitku.com, real-time stock management, and transaction history. Fast performance and search engine friendly.",
         "tech": [
           "Next.js",
           "MySQL2",
           "Duitku.com"
+        ],
+        "story": [
+          "The Robux Top Up Website serves Roblox players who want to buy Robux quickly and safely. The game top up business is fiercely competitive: buyers compare prices in seconds and move to another site if the process is slow or looks untrustworthy. Speed and payment convenience decide whether a visitor buys or leaves.",
+          "The platform has an automatic payment system integrated with a payment gateway, so orders are processed as soon as payment is confirmed, without waiting for an admin to come online. Robux denominations are displayed clearly at competitive prices, and the purchase flow is kept as short as possible from choosing a denomination to entering a username. Technically, every page is optimized for SEO so players searching for Robux top ups on Google can find it, with content structure and loading speed carefully maintained. The dark gaming styled design feels familiar to its target users.",
+          "The part guarded most is trust at the payment moment: the final price is shown before checkout, widely known payment methods are provided, and buyers can follow their transaction status until the Robux arrives. That combination of instant processing and a professional look gives first time buyers the confidence to try, and a reason to return. The same pattern works for any game top up and digital product business that relies on high volumes of fast transactions."
         ]
       },
       {
@@ -209,6 +234,11 @@
           "Next.js",
           "Supabase",
           "Midtrans"
+        ],
+        "story": [
+          "Bakery House is a home bakery whose products are loved by loyal customers, but its reach was limited to the surrounding neighborhood and orders through personal chats. The owner wanted to reach a wider market without opening a physical branch, while spending less time answering the same questions about menus and prices every day.",
+          "The website shows a catalog of breads and cakes with appetizing photos, clear prices, and an online ordering form for daily needs and special events. Customers can browse the full menu, choose products, and send an order that connects directly to the kitchen's WhatsApp. The design is warm with classic bakery colors and friendly typography, reflecting the personal character of a home business. With a digital storefront accessible anytime, Bakery House can receive orders from new customers who discover it through Google search and social media.",
+          "Menus are organized by category so event customers and daily customers both find what they need quickly, complete with notes for special requests such as cake messages or flavor choices. The owner can also swap seasonal menus without technical help. For home based food businesses, a catalog website with WhatsApp connected ordering like this is the most realistic digital step before moving to a full online store system."
         ]
       },
       {
@@ -225,6 +255,11 @@
           "Inertia",
           "React",
           "Midtrans"
+        ],
+        "story": [
+          "DonasiKita is a social fundraising platform that helps individuals and communities raise support for medical needs, disasters, education, and humanitarian causes. The biggest challenge for any donation platform is trust: donors want to make sure their money reaches the right campaign, and fundraisers need an easy way to share campaigns with their networks.",
+          "The platform provides campaign pages with a story, photos, a funding target, and a transparent fundraising progress indicator. Donors can give in a few steps with integrated payments through various methods, then share the campaign to WhatsApp and social media. Every campaign is organized into easy to browse categories, and the interface is kept simple so donors of all ages feel comfortable, including first time online donors. This structure helps campaigns reach far more people than a social media post that sinks within hours.",
+          "Security and transparency are guarded through campaign pages that openly show the fundraiser, the breakdown of needs, and funding progress. Donors who have given can share the campaign with one tap, creating a chain effect that widens reach without advertising costs. A platform like DonasiKita shows that foundations, communities, and citizen initiatives can own a credible fundraising channel instead of depending entirely on big third party platforms."
         ]
       },
       {
@@ -232,12 +267,17 @@
         "title": "TravelGo",
         "slug": "travelgo",
         "category": "Company Profile",
-        "heading": "Travel Agency Website with an Online Booking System",
+        "heading": "Travel Agency Website with Online Booking",
         "desc": "Travel agency website with exotic design, online booking, and 24/7 AI Gemini customer service.",
-        "meta": "Project detail of the TravelGo travel agency website by zeepage: an exotic design, an online booking system, and 24-hour AI-based customer service for travelers.",
+        "meta": "Project detail of the TravelGo travel agency website by zeepage: an exotic design, an online booking system, and 24-hour AI customer service.",
         "detail": "TravelGo is a travel agency that wanted to showcase its premium tour packages digitally. The website features an interactive destination gallery, online booking system, and map integration. Equipped with 24/7 AI Gemini-powered Customer Service to assist customers anytime. The stunning visuals increased bookings by 4x.",
         "tech": [
           "Next.js"
+        ],
+        "story": [
+          "TravelGo is a travel agency selling premium tour packages. Their flagship packages used to be promoted only through brochures and social media, so prospective customers could not compare destinations, view itineraries, and understand pricing in one place. Yet buying a tour package requires complete information and a strong sense of trust.",
+          "The TravelGo website presents flagship tour packages with exotic destination photos, detailed itineraries, facilities, and transparent pricing. An online booking system lets customers reserve a package and choose a departure date directly on the website, while 24 hour AI based customer service helps answer questions outside office hours. The visual design emphasizes a premium adventure feel with large galleries and bold typography. With everything presented neatly, prospective customers can plan their trip with confidence and the agency receives far more mature bookings.",
+          "Every package is laid out like an interactive digital brochure: destination highlights, day by day schedules, what is included and excluded in the price, and frequently asked questions. This level of detail filters prospective customers, so the sales team only talks to people who already understand the product. For travel agencies and tour operators, a website with online booking and AI support like this works as both a storefront and a salesperson that never takes a day off."
         ]
       },
       {
@@ -245,13 +285,18 @@
         "title": "PosApotek",
         "slug": "posapotek",
         "category": "Web Application",
-        "heading": "Pharmacy Point of Sale and Stock Management Web App",
+        "heading": "Pharmacy POS and Stock Management Web App",
         "desc": "Pharmacy management system with Exponential Smoothing stock forecasting and innovative features.",
-        "meta": "Project detail of the PosApotek pharmacy point of sale web application by zeepage: complete pharmacy management with stock forecasting using the exponential smoothing method.",
+        "meta": "Project detail of the PosApotek pharmacy POS web app by zeepage: pharmacy management with stock tracking, prescriptions, and sales reports.",
         "detail": "PosApotek is a pharmacy management app that helps track medicine stock, doctor prescriptions, and sales reports. Its main advantage is the stock forecasting feature using the Exponential Smoothing method to predict when medicine stock will run out, allowing pharmacies to restock on time. Also features low stock notifications, transaction history, and multi-user access.",
         "tech": [
           "Next.js",
           "Express"
+        ],
+        "story": [
+          "PosApotek was born from a pharmacy's need to manage complicated operations: hundreds of medicines with different expiry dates, doctor prescriptions that must be recorded, and sales reports the owner needs every month. Manual recording in books or spreadsheets left stock counts mismatched with the shelves and expiring medicines overlooked.",
+          "This web app combines a point of sale cashier with pharmacy stock management: every sale automatically reduces stock, the system warns about medicines approaching expiry and low stock levels, and doctor prescriptions are recorded neatly for easy retrieval. Sales reports are generated automatically per day and per period, so the pharmacy owner can make purchasing decisions with data, not guesswork. The interface is kept simple and fast because pharmacy staff use it while serving customers, and the app runs in the browser with no special installation on each computer.",
+          "Medicine data is organized with complete attributes such as units, purchase and selling prices, batch numbers, and shelf locations, so lookups while serving customers take seconds. Access rights differ between cashiers, pharmacists, and the owner, keeping sensitive data safe. For independent pharmacies and clinics, a web app like PosApotek delivers big chain level management capability without heavy software licensing costs."
         ]
       },
       {
@@ -261,10 +306,15 @@
         "category": "Landing Page",
         "heading": "Landing Page for an Export and Import Company",
         "desc": "Landing page for an import and export management company with a professional and modern design.",
-        "meta": "Project detail of the PT Dejong landing page by zeepage: an export and import management company page with a professional and modern design that builds credibility.",
+        "meta": "Project detail of the PT Dejong landing page by zeepage: an export and import management company page with a professional modern design.",
         "detail": "Pt Dejong is an import and export management company that needed a landing page to showcase its services and company profile professionally. Clean and modern design with complete service information, integrated contact, and a presentation that convinces business partners.",
         "tech": [
           "Laravel"
+        ],
+        "story": [
+          "PT Dejong is an export and import management company working with business partners at home and abroad. In this industry, first impressions decide a lot: prospective partners judge a company's credibility from its digital presence before the first meeting. They needed an official page that is concise, professional, and convincing enough to support business conversations.",
+          "This landing page presents the company profile, export and import management services, advantages, and partnership workflow in a structured single page that flows. The design is modern and formal with a clean layout, projecting an established and trustworthy company image to corporate partners. Contact forms and WhatsApp buttons are placed at strategic points so prospective partners can easily start a business conversation. As a focused single page, this landing page works effectively as the official link on digital business cards, proposals, and company email signatures.",
+          "The content is written in plain business language without excessive jargon, because its readers are busy prospective partners who judge by clarity. Every section leads to one action: contacting the company to open a partnership discussion. For B2B companies that do not yet need a large website, an official landing page like this provides a legitimate and convincing digital presence, far stronger than relying on social media profiles alone."
         ]
       }
     ],

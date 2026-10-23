@@ -122,32 +122,42 @@
         "title": "ZeeRental",
         "slug": "zeerental",
         "category": "Web Application",
-        "heading": "Website Pemesanan dan Aplikasi Pengelolaan Rental Mobil dan Motor di Bali",
+        "heading": "Website Booking Rental Mobil dan Motor di Bali",
         "desc": "Website pemesanan dan aplikasi pengelolaan rental mobil dan motor dengan daftar armada, tarif transparan, dan panel kelola booking serta kalender ketersediaan.",
-        "meta": "Detail proyek ZeeRental oleh zeepage: website pemesanan dan aplikasi pengelolaan rental mobil dan motor di Bali dengan panel ringkasan harian, data armada, booking, dan kalender ketersediaan.",
+        "meta": "Detail proyek ZeeRental oleh zeepage: website pemesanan dan aplikasi pengelolaan rental mobil dan motor di Bali dengan panel ringkasan harian.",
         "detail": "Website pemesanan sekaligus aplikasi pengelolaan untuk ZeeRental, usaha rental mobil dan motor di Denpasar, Bali. Pengunjung melihat daftar armada beserta tarif final dan memesan melalui WhatsApp, sementara pemilik usaha mengelola operasional dari panel kelola berisi ringkasan harian, serah terima kendaraan, data armada, daftar booking, kalender ketersediaan, dan pengaturan usaha.",
         "tech": [
           "React",
           "Dashboard",
           "Booking Management"
         ],
-        "link": "https://rental.zeepage.com/"
+        "link": "https://rental.zeepage.com/",
+        "story": [
+          "ZeeRental melayani wisatawan dan warga lokal yang membutuhkan mobil atau motor selama berada di Bali. Sebelumnya, pemesanan berjalan manual lewat pesan WhatsApp: pelanggan bertanya unit yang tersedia, admin mengecek catatan, lalu membalas satu per satu. Cara ini lambat, rawan dobel booking, dan sulit dilacak saat pesanan sedang ramai. Pemilik usaha membutuhkan satu tempat di mana pelanggan bisa melihat armada dan memesan sendiri, sementara tim internal mengelola semuanya dari panel yang rapi.",
+          "Kami membangun website pemesanan yang menampilkan katalog armada lengkap dengan foto, harga sewa per hari, dan status ketersediaan, dilengkapi formulir booking yang langsung terhubung ke WhatsApp. Di sisi internal, aplikasi pengelolaan menampilkan ringkasan harian berisi unit yang sedang disewa, jadwal pengantaran dan pengambilan, serta pesanan yang masuk. Setiap data kendaraan, harga, dan durasi sewa tercatat terstruktur, sehingga admin tidak lagi bergantung pada ingatan atau catatan kertas. Hasilnya, alur dari melihat armada sampai konfirmasi sewa berjalan dalam hitungan menit, dan pemilik bisa memantau operasional hari itu dalam sekali pandang.",
+          "Fitur yang paling terasa manfaatnya adalah status ketersediaan armada yang selalu sinkron dengan data booking, sehingga tidak ada lagi dua pelanggan memesan unit yang sama di hari yang sama. Bagi wisatawan, prosesnya terasa seperti memesan hotel: pilih unit, isi data, konfirmasi. Bagi pemilik, semua pesanan tercatat otomatis dan bisa dicek ulang kapan saja. Model website seperti ini cocok untuk usaha rental kendaraan di daerah wisata mana pun yang ingin naik kelas dari pencatatan manual."
+        ]
       },
       {
         "img": "/hidroponik.webp",
         "title": "Hidroponik Nusantara",
         "slug": "hidroponik-nusantara",
         "category": "Company Profile",
-        "heading": "Website Company Profile dan Katalog Online untuk Perusahaan Hidroponik",
+        "heading": "Website Company Profile dan Katalog Hidroponik",
         "desc": "Website company profile dan katalog online perusahaan hidroponik dengan harga sayuran segar per kilogram dan pelacakan pesanan.",
-        "meta": "Detail proyek website company profile dan katalog online Hidroponik Nusantara oleh zeepage: katalog sayuran hidroponik dengan harga per kilogram, cara pemesanan, dan lacak pesanan.",
+        "meta": "Detail proyek website company profile dan katalog online Hidroponik Nusantara oleh zeepage: katalog sayuran hidroponik dengan harga dan pelacakan pesanan.",
         "detail": "Website company profile sekaligus katalog online untuk Hidroponik Nusantara, perusahaan pertanian hidroponik yang menyediakan sayuran segar langsung dari kebun. Dilengkapi katalog produk dengan harga transparan per kilogram, halaman cara pemesanan, informasi lokasi, fitur lacak pesanan, dan keranjang belanja.",
         "tech": [
           "Company Profile",
           "Product Catalog",
           "Order Tracking"
         ],
-        "link": "https://hidroponik.zeepage.com/"
+        "link": "https://hidroponik.zeepage.com/",
+        "story": [
+          "Hidroponik Nusantara memasok sayuran hidroponik segar untuk rumah tangga, kafe, dan restoran. Tantangan mereka bukan di kebun, melainkan di komunikasi: katalog produk berubah mengikuti panen, harga ditanyakan berulang kali lewat chat, dan pesanan dari pelanggan bisnis sulit direkap. Mereka membutuhkan website yang berfungsi sebagai katalog resmi perusahaan sekaligus etalase produk yang selalu bisa dirujuk pelanggan kapan pun.",
+          "Website company profile ini menampilkan profil perusahaan, keunggulan budidaya hidroponik, dan katalog sayuran lengkap dengan harga yang mudah diperbarui. Pelanggan dapat menyusun pesanan dan melacak statusnya lewat halaman pelacakan order, sementara tim mengelola produk dan pesanan dari panel admin. Struktur halamannya disusun dengan SEO on page agar mudah ditemukan calon pembeli yang mencari pemasok sayuran hidroponik. Dengan katalog yang selalu mutakhir di satu alamat web, tim tidak perlu lagi mengirim daftar harga manual setiap ada yang bertanya.",
+          "Satu hal yang dijaga dari awal adalah kemudahan pembaruan: panen berganti tiap minggu, jadi katalog harus bisa diubah staf tanpa keahlian teknis. Setiap produk tampil dengan foto, satuan jual, dan harga terbaru, sementara pesanan yang masuk tercatat rapi untuk ditindaklanjuti tim penjualan. Kombinasi company profile dan katalog ini cocok untuk produsen dan distributor bahan pangan yang ingin terlihat profesional di mata pembeli bisnis maupun pelanggan rumahan."
+        ]
       },
       {
         "img": "/demopadel.webp",
@@ -156,30 +166,40 @@
         "category": "Web Application",
         "heading": "Aplikasi Web Booking Lapangan Padel Online",
         "desc": "Platform booking lapangan padel online, pilih venue dan jam lalu bayar dan main tanpa perlu antre.",
-        "meta": "Detail proyek aplikasi web booking lapangan padel online oleh zeepage: pilih venue dan jam, bayar, lalu main tanpa antre, lengkap dengan katalog venue dan halaman event.",
+        "meta": "Detail proyek aplikasi web booking lapangan padel online oleh zeepage: pilih venue dan jam, bayar, lalu main tanpa antre, lengkap dengan katalog venue.",
         "detail": "Website booking lapangan padel dengan alur praktis: pilih venue, tentukan jam, lakukan pembayaran, dan langsung main. Dilengkapi katalog layanan dan venue, halaman event, statistik lapangan dan pemain, serta desain responsif yang energik khas olahraga.",
         "tech": [
           "Booking Flow",
           "Venue Catalog",
           "Responsive"
         ],
-        "link": "https://padel.zeepage.com/"
+        "link": "https://padel.zeepage.com/",
+        "story": [
+          "Olahraga padel sedang naik daun dan pengelola lapangan membutuhkan cara pemesanan yang secepat permainan itu sendiri. DemoPadel dirancang sebagai konsep aplikasi booking yang meniru alur platform pemesanan lapangan profesional: pemain memilih venue, melihat jadwal yang tersedia, dan mengamankan jam bermain tanpa harus menelepon atau menunggu balasan admin yang sibuk.",
+          "Alurnya dibuat empat langkah sederhana: pilih venue, tentukan jam, lakukan pembayaran, lalu datang dan main. Di dalamnya ada katalog venue dengan foto dan fasilitas, halaman event untuk turnamen dan coaching clinic, serta statistik lapangan dan pemain yang memberi kesan hidup pada platform. Desainnya energik dengan warna kontras khas olahraga dan sepenuhnya responsif, karena mayoritas pemain memesan dari ponsel di sela aktivitas. Konsep ini menunjukkan bagaimana sistem booking terstruktur mengurangi antrean, mencegah bentrok jadwal, dan memberi pengelola data pemesanan yang rapi.",
+          "Karena ini konsep demo, fokusnya adalah membuktikan alur dan pengalaman pengguna: seberapa cepat pemain bisa dari halaman depan sampai memegang jadwal bermain. Setiap layar dirancang mengurangi keputusan yang tidak perlu, dengan ketersediaan jam ditampilkan real time dalam bentuk kisi yang mudah dipindai mata. Untuk pengelola venue olahraga, fondasi seperti ini bisa langsung dikembangkan menjadi sistem operasional penuh dengan data member, paket langganan, dan laporan pendapatan."
+        ]
       },
       {
         "img": "/sagaroof.webp",
         "title": "Sagaroof",
         "slug": "sagaroof",
         "category": "Company Profile",
-        "heading": "Website Company Profile Distributor Atap uPVC di Bali",
+        "heading": "Website Company Profile Distributor Atap uPVC Bali",
         "desc": "Website company profile dan katalog distributor atap uPVC di Bali dengan harga transparan dan order via WhatsApp.",
-        "meta": "Detail proyek website company profile Sagaroof oleh zeepage: katalog atap uPVC dengan harga transparan per meter dan per pcs, banner promo, galeri, dan pemesanan via WhatsApp.",
+        "meta": "Detail proyek website company profile Sagaroof oleh zeepage: katalog atap uPVC dengan harga transparan per meter dan per pcs, plus banner promo.",
         "detail": "Website company profile sekaligus katalog online untuk Sagaroof, distributor atap uPVC berkualitas di Bali. Dilengkapi banner promo yang berganti, katalog produk dengan harga transparan per meter dan per pcs, galeri, serta tombol konsultasi dan pemesanan via WhatsApp.",
         "tech": [
           "Company Profile",
           "Product Catalog",
           "WhatsApp Order"
         ],
-        "link": "https://demosagaroof.vercel.app/"
+        "link": "https://demosagaroof.vercel.app/",
+        "story": [
+          "Sagaroof adalah distributor atap uPVC di Bali yang melayani kontraktor, toko bahan bangunan, dan pemilik rumah. Produk atap sulit dijual hanya lewat foto: pembeli membutuhkan spesifikasi, pilihan warna dan profil, serta harga yang jelas per meter dan per lembar. Tanpa website, semua pertanyaan itu menumpuk di chat dan sering berhenti tanpa keputusan karena calon pembeli ragu dengan total biayanya.",
+          "Kami menyusun website company profile yang sekaligus berfungsi sebagai katalog online: setiap produk tampil dengan spesifikasi dan harga transparan, dilengkapi banner promo dan penjelasan keunggulan atap uPVC dibanding material konvensional. Halaman disusun agar mudah ditemukan di Google oleh orang yang mencari atap uPVC di Bali, dengan tombol WhatsApp di titik titik penting untuk konsultasi dan penawaran. Hasilnya, calon pembeli bisa mempelajari produk dan memperkirakan biaya sendiri sebelum menghubungi tim sales, sehingga percakapan yang masuk jauh lebih serius.",
+          "Bagian katalog disusun mengikuti cara kontraktor berpikir: mulai dari profil atap, ketebalan, warna, sampai harga per satuan, semuanya bisa dibandingkan dalam sekali gulir. Ada pula penjelasan perawatan dan garansi yang sering jadi pertanyaan pembeli pertama kali. Untuk distributor bahan bangunan, pola website seperti ini mengubah katalog cetak yang cepat usang menjadi etalase digital yang selalu terbaru dan mudah dibagikan lewat satu tautan."
+        ]
       },
       {
         "img": "/webzeeboost.webp",
@@ -194,6 +214,11 @@
           "Next.js",
           "MySQL2",
           "Duitku.com"
+        ],
+        "story": [
+          "Website Topup Robux melayani pemain Roblox yang ingin membeli Robux dengan cepat dan aman. Bisnis top up game bergerak di pasar yang sangat kompetitif: pembeli membandingkan harga dalam hitungan detik dan berpindah ke situs lain bila prosesnya lambat atau terlihat tidak tepercaya. Kecepatan dan kemudahan pembayaran menjadi penentu utama apakah pengunjung jadi membeli atau pergi.",
+          "Platform ini dilengkapi sistem pembayaran otomatis yang terintegrasi dengan payment gateway, sehingga pesanan diproses begitu pembayaran terkonfirmasi tanpa menunggu admin online. Nominal Robux ditampilkan jelas dengan harga yang kompetitif, dan alur pembelian dibuat sesingkat mungkin dari memilih nominal sampai memasukkan username. Dari sisi teknis, setiap halaman dioptimasi untuk SEO agar mudah ditemukan pemain yang mencari top up Robux di Google, dengan struktur konten dan kecepatan muat yang dijaga. Tampilan gelap bernuansa gaming membuat situs terasa akrab bagi target penggunanya.",
+          "Aspek yang paling dijaga adalah kepercayaan di momen pembayaran: harga final ditampilkan sebelum checkout, metode pembayaran yang dikenal luas disediakan, dan status transaksi bisa diikuti pembeli sampai Robux terkirim. Kombinasi proses instan dan tampilan profesional membuat pembeli pertama berani mencoba, lalu kembali lagi. Pola yang sama efektif untuk semua bisnis top up game dan produk digital yang mengandalkan transaksi cepat bervolume banyak."
         ]
       },
       {
@@ -209,6 +234,11 @@
           "Next.js",
           "Supabase",
           "Midtrans"
+        ],
+        "story": [
+          "Bakery House adalah toko roti rumahan yang produknya disukai pelanggan setia, tetapi jangkauannya terbatas pada lingkungan sekitar dan pesanan lewat chat pribadi. Pemiliknya ingin menjangkau pasar yang lebih luas tanpa harus membuka cabang fisik, sekaligus mengurangi waktu menjawab pertanyaan yang sama tentang menu dan harga setiap hari.",
+          "Website ini menampilkan katalog roti dan kue dengan foto yang menggugah selera, harga yang jelas, dan formulir pemesanan online untuk kebutuhan harian maupun acara khusus. Pelanggan dapat melihat menu lengkap, memilih produk, dan mengirim pesanan yang langsung terhubung ke WhatsApp dapur. Desainnya hangat dengan warna warna khas bakery dan tipografi yang bersahabat, mencerminkan karakter usaha rumahan yang personal. Dengan etalase digital yang bisa diakses kapan saja, Bakery House dapat menerima pesanan dari pelanggan baru yang menemukannya lewat pencarian Google dan media sosial.",
+          "Menu disusun per kategori agar pelanggan acara dan pelanggan harian sama sama cepat menemukan kebutuhannya, lengkap dengan catatan untuk permintaan khusus seperti ucapan di kue atau pilihan rasa. Pemilik juga mudah mengganti menu musiman tanpa bantuan teknis. Untuk usaha kuliner rumahan, website katalog dengan pemesanan terhubung ke WhatsApp seperti ini adalah langkah digital paling realistis sebelum masuk ke sistem toko online penuh."
         ]
       },
       {
@@ -216,7 +246,7 @@
         "title": "DonasiKita",
         "slug": "donasikita",
         "category": "Web Application",
-        "heading": "Platform Donasi Online dengan Pembayaran Terintegrasi",
+        "heading": "Platform Donasi Online dengan Payment Gateway",
         "desc": "Platform donasi online dengan sistem pembayaran terintegrasi dan laporan transparan.",
         "meta": "Detail proyek platform donasi online DonasiKita oleh zeepage: pembayaran terintegrasi, halaman kampanye donasi, dan laporan transparan untuk para donatur.",
         "detail": "DonasiKita adalah platform crowdfunding untuk galang dana sosial. Fitur meliputi kampanye donasi, payment gateway terintegrasi, progress bar real-time, dan laporan keuangan transparan. Digunakan oleh puluhan komunitas sosial di seluruh Indonesia.",
@@ -225,6 +255,11 @@
           "Inertia",
           "React",
           "Midtrans"
+        ],
+        "story": [
+          "DonasiKita adalah platform galang dana sosial yang membantu individu dan komunitas menggalang bantuan untuk kebutuhan medis, bencana, pendidikan, dan kemanusiaan. Tantangan terbesar platform donasi adalah kepercayaan: donatur ingin memastikan dana mereka sampai ke kampanye yang benar, dan penggalang dana membutuhkan cara mudah membagikan kampanye ke jaringan mereka.",
+          "Platform ini menyediakan halaman kampanye dengan cerita, foto, target dana, dan indikator progres penggalangan yang transparan. Donatur dapat berdonasi dalam beberapa langkah dengan pembayaran terintegrasi melalui berbagai metode, lalu membagikan kampanye ke WhatsApp dan media sosial. Setiap kampanye tersusun dalam kategori yang mudah dijelajahi, dan tampilan dibuat sederhana agar nyaman digunakan donatur dari segala usia, termasuk yang baru pertama kali berdonasi online. Struktur seperti ini membantu kampanye menjangkau lebih banyak orang dibanding sekadar mengandalkan unggahan media sosial yang cepat tenggelam.",
+          "Keamanan dan transparansi dijaga lewat halaman kampanye yang menampilkan penggalang dana, rincian kebutuhan, dan perkembangan dana secara terbuka. Donatur yang sudah berdonasi dapat membagikan kampanye dengan satu tombol, menciptakan efek berantai yang memperluas jangkauan tanpa biaya iklan. Platform seperti DonasiKita menunjukkan bahwa yayasan, komunitas, maupun inisiatif warga bisa memiliki kanal galang dana sendiri yang kredibel, tidak hanya bergantung pada platform besar milik pihak lain."
         ]
       },
       {
@@ -234,10 +269,15 @@
         "category": "Company Profile",
         "heading": "Website Agen Travel dengan Sistem Booking Online",
         "desc": "Website agen travel dengan desain eksotis, sistem booking online, dan CS 24 jam berbasis AI Gemini.",
-        "meta": "Detail proyek website agen travel TravelGo oleh zeepage: desain eksotis, sistem booking online, dan customer service 24 jam berbasis AI untuk melayani wisatawan.",
+        "meta": "Detail proyek website agen travel TravelGo oleh zeepage: desain eksotis, sistem booking online, dan layanan pelanggan 24 jam berbasis AI.",
         "detail": "TravelGo adalah agen perjalanan yang ingin menonjolkan paket wisata unggulannya secara digital. Website dilengkapi galeri destinasi interaktif, sistem booking online, dan integrasi peta. Dilengkapi Customer Service 24 jam berbasis AI Gemini untuk membantu pelanggan kapan saja. Tampilan visual yang memukau berhasil meningkatkan booking hingga 4x lipat.",
         "tech": [
           "Next.js"
+        ],
+        "story": [
+          "TravelGo adalah agen perjalanan yang menjual paket wisata premium. Selama ini paket unggulan mereka hanya dipromosikan lewat brosur dan media sosial, sehingga calon pelanggan sulit membandingkan destinasi, melihat itinerary, dan memahami harga dalam satu tempat. Padahal keputusan membeli paket wisata membutuhkan informasi yang lengkap dan rasa percaya yang kuat.",
+          "Website TravelGo menampilkan paket wisata unggulan dengan foto destinasi yang eksotis, rincian itinerary, fasilitas, dan harga yang transparan. Sistem booking online memungkinkan pelanggan memesan paket dan memilih tanggal keberangkatan langsung dari website, sementara layanan pelanggan 24 jam berbasis AI membantu menjawab pertanyaan di luar jam kerja. Desain visualnya menonjolkan kesan petualangan premium dengan galeri besar dan tipografi tegas. Dengan semua informasi tersaji rapi, calon pelanggan bisa merencanakan perjalanan dengan yakin dan agen travel menerima pesanan yang jauh lebih matang.",
+          "Setiap paket disusun seperti brosur digital interaktif: ada sorotan destinasi, jadwal harian, yang termasuk dan tidak termasuk dalam harga, sampai pertanyaan yang sering diajukan. Penyajian selengkap ini menyaring calon pelanggan, sehingga tim sales hanya berbicara dengan orang yang sudah memahami produknya. Untuk agen travel dan operator tur, website dengan booking online dan dukungan AI seperti ini bekerja sebagai etalase sekaligus staf penjualan yang tidak pernah libur."
         ]
       },
       {
@@ -252,6 +292,11 @@
         "tech": [
           "Next.js",
           "Express"
+        ],
+        "story": [
+          "PosApotek lahir dari kebutuhan apotek untuk mengelola operasional yang rumit: ratusan jenis obat dengan tanggal kedaluwarsa berbeda, resep dokter yang harus tercatat, dan laporan penjualan yang dibutuhkan pemilik setiap bulan. Pencatatan manual di buku atau spreadsheet membuat stok sering tidak cocok dengan kondisi rak dan obat yang kedaluwarsa luput dari perhatian.",
+          "Aplikasi web ini menggabungkan kasir point of sale dengan manajemen stok apotek: setiap penjualan otomatis mengurangi stok, sistem memberi peringatan untuk obat yang mendekati kedaluwarsa dan stok yang menipis, dan resep dokter tercatat rapi untuk pencarian ulang. Laporan penjualan tersusun otomatis per hari dan per periode, sehingga pemilik apotek dapat mengambil keputusan pembelian dengan data, bukan perkiraan. Antarmukanya dibuat sederhana dan cepat karena digunakan staf apotek di tengah pelayanan pelanggan, dan aplikasi berjalan di browser sehingga tidak memerlukan instalasi khusus di setiap komputer.",
+          "Data obat disusun dengan atribut lengkap seperti satuan, harga beli dan jual, nomor batch, dan lokasi rak, sehingga pencarian saat melayani pelanggan berlangsung dalam hitungan detik. Hak akses dibedakan antara kasir, apoteker, dan pemilik, menjaga data sensitif tetap aman. Untuk apotek mandiri dan klinik, aplikasi web seperti PosApotek memberi kemampuan manajemen setara jaringan besar tanpa biaya lisensi perangkat lunak yang berat."
         ]
       },
       {
@@ -261,10 +306,15 @@
         "category": "Landing Page",
         "heading": "Landing Page Perusahaan Ekspor dan Impor",
         "desc": "Landing page perusahaan import dan export management dengan desain profesional dan modern.",
-        "meta": "Detail proyek landing page PT Dejong oleh zeepage: halaman perusahaan manajemen ekspor dan impor dengan desain profesional dan modern untuk membangun kredibilitas.",
+        "meta": "Detail proyek landing page PT Dejong oleh zeepage: halaman perusahaan manajemen ekspor dan impor dengan desain profesional dan modern.",
         "detail": "Pt Dejong adalah perusahaan import dan export management yang membutuhkan landing page untuk menampilkan layanan dan profil perusahaan secara profesional. Desain clean dan modern dengan informasi layanan lengkap, kontak terintegrasi, serta tampilan yang meyakinkan mitra bisnis.",
         "tech": [
           "Laravel"
+        ],
+        "story": [
+          "PT Dejong adalah perusahaan manajemen ekspor dan impor yang bekerja dengan mitra bisnis di dalam dan luar negeri. Untuk industri seperti ini, kesan pertama sangat menentukan: calon mitra menilai kredibilitas perusahaan dari tampilan digitalnya sebelum pertemuan pertama. Mereka membutuhkan halaman resmi yang ringkas, profesional, dan meyakinkan untuk mendukung percakapan bisnis.",
+          "Landing page ini menampilkan profil perusahaan, layanan manajemen ekspor dan impor, keunggulan, dan alur kerja sama secara terstruktur dalam satu halaman yang mengalir. Desainnya modern dan formal dengan tata letak bersih, menonjolkan kesan perusahaan yang mapan dan terpercaya bagi calon mitra korporat. Formulir kontak dan tombol WhatsApp ditempatkan di titik strategis agar calon mitra mudah memulai percakapan bisnis. Sebagai halaman tunggal yang fokus, landing page ini efektif dipakai sebagai tautan resmi di kartu nama digital, proposal, dan tanda tangan email perusahaan.",
+          "Kontennya ditulis dengan bahasa bisnis yang lugas dan bebas jargon berlebihan, karena pembacanya adalah calon mitra yang sibuk dan menilai dari kejelasan. Setiap bagian mengarah ke satu tindakan: menghubungi perusahaan untuk membuka pembicaraan kerja sama. Untuk perusahaan B2B yang belum membutuhkan website besar, landing page resmi seperti ini memberi kehadiran digital yang sah dan meyakinkan, jauh lebih kuat dibanding hanya mengandalkan profil media sosial."
         ]
       }
     ],

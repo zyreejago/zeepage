@@ -15,6 +15,37 @@ const t = id;
 const lang = 'id';
 const canonical = 'https://zeepage.com/layanan/';
 const c = content.id;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Layanan Jasa Pembuatan Website di Bali',
+      url: canonical,
+      description: 'Layanan jasa pembuatan website di Bali oleh zeepage: landing page, company profile, toko online, aplikasi web, redesign dan maintenance.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'Service',
+      name: 'Jasa Pembuatan Website',
+      serviceType: 'Website Development',
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+      areaServed: { '@type': 'Country', name: 'Indonesia' },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Layanan Pembuatan Website zeepage',
+        itemListElement: [
+          { '@type': 'Offer', price: '799000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Jasa Pembuatan Landing Page' } },
+          { '@type': 'Offer', price: '1499000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Jasa Pembuatan Website Company Profile' } },
+          { '@type': 'Offer', price: '2500000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Jasa Pembuatan Website Toko Online' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Pembuatan Aplikasi Web' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Jasa Redesign dan Maintenance Website' } },
+        ],
+      },
+    },
+  ],
+};
 const pricingT = {
   ...t.pricing,
   badge: 'Harga',
@@ -55,9 +86,10 @@ const h2s = [
 
 <BaseLayout
   title="Layanan Jasa Pembuatan Website di Bali | zeepage"
-  description="Layanan jasa pembuatan website di Bali oleh zeepage: landing page mulai Rp 799 ribu, company profile, toko online, aplikasi web, redesign dan maintenance. Konsultasi gratis."
+  description="Layanan jasa pembuatan website di Bali: landing page Rp 799 ribu, company profile, toko online, aplikasi web, dan redesign. Konsultasi gratis di zeepage."
   lang="id"
   canonical={canonical}
+  structuredData={structuredData}
 >
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
 

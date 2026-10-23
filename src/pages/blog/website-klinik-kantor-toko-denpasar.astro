@@ -12,7 +12,8 @@ const t = id;
 const lang = 'id';
 
 const title = 'Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar';
-const description = 'Panduan membuat website untuk klinik, kantor, dan toko di Denpasar: fitur yang wajib ada untuk tiap jenis usaha, kesalahan yang membuat website sepi pengunjung, dan cara memilih paket yang tepat.';
+const seoTitle = 'Website untuk Klinik, Kantor, dan Toko di Denpasar';
+const description = 'Panduan membuat website untuk klinik, kantor, dan toko di Denpasar: fitur wajib tiap jenis usaha, kesalahan yang membuat website sepi, dan cara memilih paket.';
 const canonical = 'https://zeepage.com/blog/website-klinik-kantor-toko-denpasar/';
 const cover = '/blog/panduan-website-klinik-kantor-toko-denpasar.webp';
 const coverAlt = 'Panduan membuat website untuk klinik, kantor, dan toko di Denpasar oleh zeepage';
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<BaseLayout title={title + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
+<BaseLayout title={seoTitle + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
   <main>
     <article>

@@ -15,6 +15,37 @@ const t = en;
 const lang = 'en';
 const canonical = 'https://zeepage.com/en/layanan/';
 const c = content.en;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Website Design Services in Bali',
+      url: canonical,
+      description: 'Website design services in Bali by zeepage: landing pages, company profiles, online stores, web applications, redesign and maintenance.',
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'Service',
+      name: 'Website Design Services',
+      serviceType: 'Website Development',
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/en/' },
+      areaServed: { '@type': 'Country', name: 'Indonesia' },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'zeepage Website Design Services',
+        itemListElement: [
+          { '@type': 'Offer', price: '799000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Landing Page Development' } },
+          { '@type': 'Offer', price: '1499000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Company Profile Website Development' } },
+          { '@type': 'Offer', price: '2500000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Online Store Website Development' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Application Development' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Website Redesign and Maintenance' } },
+        ],
+      },
+    },
+  ],
+};
 const pricingT = {
   ...t.pricing,
   badge: 'Pricing',
@@ -55,9 +86,10 @@ const h2s = [
 
 <BaseLayout
   title="Website Design Services in Bali | zeepage"
-  description="Website design services in Bali by zeepage: landing pages from Rp 799k, company profiles, online stores, web applications, redesign and maintenance. Free consultation."
+  description="Website design services in Bali by zeepage: landing pages from Rp 799k, company profiles, online stores, web apps, and redesign. Free consultation."
   lang="en"
   canonical={canonical}
+  structuredData={structuredData}
 >
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
 

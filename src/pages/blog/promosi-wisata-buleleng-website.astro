@@ -12,7 +12,8 @@ const t = id;
 const lang = 'id';
 
 const title = 'Promosi Wisata Buleleng Lewat Website: Panduan untuk Hotel dan Tour di Lovina';
-const description = 'Promosi wisata Buleleng lewat website membantu hotel dan operator tour di Lovina mendapat tamu langsung tanpa komisi perantara. Ini halaman yang wajib ada, peran Google Maps, dan cara mengubah pengunjung menjadi pemesanan.';
+const seoTitle = 'Promosi Wisata Buleleng Lewat Website: Hotel dan Tour Lovina';
+const description = 'Promosi wisata Buleleng lewat website membantu hotel dan operator tour di Lovina mendapat tamu langsung tanpa komisi. Ini halaman wajib dan peran Google Maps.';
 const canonical = 'https://zeepage.com/blog/promosi-wisata-buleleng-website/';
 const cover = '/blog/promosi-wisata-buleleng-lewat-website.webp';
 const coverAlt = 'Promosi wisata Buleleng lewat website untuk hotel dan tour di Lovina oleh zeepage';
@@ -31,7 +32,7 @@ const structuredData = {
 };
 ---
 
-<BaseLayout title={title + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
+<BaseLayout title={seoTitle + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
   <main>
     <article>

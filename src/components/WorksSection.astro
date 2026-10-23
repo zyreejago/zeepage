@@ -21,7 +21,7 @@ const { t } = Astro.props;
     <div data-reveal-group class="grid sm:grid-cols-2 gap-5">
       {t.works.items.map((w: any) => (
         <a href={w.href} target={w.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" class="group relative rounded-3xl overflow-hidden border border-line bg-paper">
-          <img src={w.img} alt={w.title} class="w-full h-60 sm:h-72 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="880" height="560" />
+          <img src={w.img} srcset={`${w.img.includes('donasi') ? '/donasi-480.webp' : w.img.replace('.webp', '-480.webp')} 480w, ${encodeURI(w.img)} 880w`} sizes="(max-width: 768px) 90vw, 540px" alt={w.title} class="w-full h-60 sm:h-72 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="880" height="560" />
           <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-5 pt-16 flex items-end justify-between gap-3">
             <span>
               <span class="block text-white font-bold text-xl">{w.title}</span>

@@ -32,7 +32,29 @@ const areaLinks = [
 <!-- Elfsight Instagram Feed -->
 <section class="bg-paper py-14" aria-label="Instagram zeepage">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <script is:inline src="https://elfsightcdn.com/platform.js" async></script>
+    <script is:inline>
+      (function () {
+        var el = document.querySelector('.elfsight-app-eaa7088a-14f0-40ac-8b75-ee4305ffe0df');
+        if (!el) return;
+        var loaded = false;
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          var sc = document.createElement('script');
+          sc.src = 'https://elfsightcdn.com/platform.js';
+          sc.async = true;
+          document.body.appendChild(sc);
+        }
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) { load(); io.disconnect(); }
+          }, { rootMargin: '600px' });
+          io.observe(el);
+        } else {
+          window.addEventListener('load', load);
+        }
+      })();
+    </script>
     <div class="elfsight-app-eaa7088a-14f0-40ac-8b75-ee4305ffe0df" data-elfsight-app-lazy></div>
   </div>
 </section>

@@ -22,6 +22,12 @@ const isEnPath = rawPath === '/en/' || rawPath.startsWith('/en/');
 const barePath = isEnPath ? rawPath.slice(3) : rawPath;
 let idHref = barePath;
 let enHref = '/en' + barePath;
+if (/^\/portofolio\//.test(barePath)) {
+  enHref = '/en/portfolio/' + barePath.slice('/portofolio/'.length);
+} else if (/^\/portfolio\//.test(barePath)) {
+  idHref = '/portofolio/' + barePath.slice('/portfolio/'.length);
+  enHref = '/en' + barePath;
+}
 if (/^\/blog\/.+/.test(barePath)) {
   // Blog articles have no direct translation; go to the other language's blog index.
   idHref = '/blog/';
