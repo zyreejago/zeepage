@@ -2,6 +2,7 @@
 import { content, WA, WA_EN, type Lang } from '../data/home-content';
 import { daerahList } from '../data/daerah';
 import Testimonials from './Testimonials.astro';
+import SketchToLive from './SketchToLive.astro';
 
 interface Props {
   lang: Lang;
@@ -109,6 +110,13 @@ const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- SKETCH TO LIVE -->
+  <section class="pb-16 sm:pb-24" aria-label="Animasi cara kerja zeepage">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <SketchToLive />
     </div>
   </section>
 
