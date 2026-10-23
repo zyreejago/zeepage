@@ -297,7 +297,7 @@
     "plans": [
       {
         "name": "Landing Page",
-        "price": "Rp 699k",
+        "price": "Rp 799k",
         "target": "Cocok untuk UMKM atau personal yang butuh 1 halaman fokus konversi",
         "features": [
           {
@@ -313,17 +313,37 @@
             "included": true
           },
           {
+            "text": "Domain .com Gratis 1 Tahun",
+            "included": true
+          },
+          {
+            "text": "Hosting Gratis 1 Tahun",
+            "included": true
+          },
+          {
+            "text": "SSL Gratis (Security)",
+            "included": true
+          },
+          {
+            "text": "Support Gratis",
+            "included": true
+          },
+          {
             "text": "2x Revisi Desain",
             "included": true
           },
           {
             "text": "Maintenance Gratis 30 Hari",
             "included": true
+          },
+          {
+            "text": "Biaya Tahunan Rp 600rb Mulai Tahun Ke 2",
+            "included": true
           }
         ],
         "cta": "Pilih Paket",
         "popular": false,
-        "whatsapp": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20berikut%3A%0APaket%3A%20Landing%20Page%0AHarga%3A%20Rp%20699.000%0A%0AMohon%20info%20selengkapnya%20untuk%20memulai%20proyek%20ini."
+        "whatsapp": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20berikut%3A%0APaket%3A%20Landing%20Page%0AHarga%3A%20Rp%20799.000%0A%0AMohon%20info%20selengkapnya%20untuk%20memulai%20proyek%20ini."
       },
       {
         "name": "Company Profile",
@@ -340,6 +360,18 @@
           },
           {
             "text": "Domain .com Gratis 1 Tahun",
+            "included": true
+          },
+          {
+            "text": "Hosting Gratis 1 Tahun",
+            "included": true
+          },
+          {
+            "text": "SSL Gratis (Security)",
+            "included": true
+          },
+          {
+            "text": "Support Gratis",
             "included": true
           },
           {
@@ -364,6 +396,10 @@
           },
           {
             "text": "Maintenance Gratis 3 Bulan",
+            "included": true
+          },
+          {
+            "text": "Biaya Tahunan Rp 600rb Mulai Tahun Ke 2",
             "included": true
           }
         ],

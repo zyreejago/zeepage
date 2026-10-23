@@ -38,7 +38,7 @@ export interface KontenIndustri {
 export const kontenIndustri: Record<string, KontenIndustri> = {
 villa: {
     metaTitle: 'Jasa Pembuatan Website Villa di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website villa di Bali dengan reservasi online dan galeri premium. Mulai Rp 699k, konsultasi gratis. Naikkan booking langsung tanpa komisi OTA.',
+    metaDescription: 'Jasa pembuatan website villa di Bali dengan reservasi online dan galeri premium. Mulai Rp 799k, konsultasi gratis. Naikkan booking langsung tanpa komisi OTA.',
     keywords: ['jasa pembuatan website villa di bali', 'jasa bikin website villa bali', 'website villa bali', 'jasa website reservasi villa', 'pembuatan website villa ubud', 'jasa pembuatan website penginapan bali', 'web developer villa bali', 'website booking villa langsung'],
     heroLead: 'Tamu villa di Bali membandingkan belasan properti sebelum memutuskan menginap, mulai dari villa honeymoon di Ubud, villa surf di Canggu, sampai villa cliff di Uluwatu. Website resmi dengan reservasi online membuat villa Anda tampil premium dan bisa dipesan langsung, tanpa perantara dan tanpa komisi. zeepage merancang website villa yang sekelas pengalaman menginap yang Anda tawarkan.',
     intro: {
@@ -71,7 +71,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website villa di Bali?', a: 'Paket landing page mulai Rp 699k, dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Untuk villa dengan sistem reservasi online dan integrasi channel manager, biaya disesuaikan dengan fitur yang dibutuhkan dan tetap transparan sejak awal.' },
+      { q: 'Berapa biaya jasa pembuatan website villa di Bali?', a: 'Paket landing page mulai Rp 799k, dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Untuk villa dengan sistem reservasi online dan integrasi channel manager, biaya disesuaikan dengan fitur yang dibutuhkan dan tetap transparan sejak awal.' },
       { q: 'Berapa lama pengerjaan website villa?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu. Website dengan kalender ketersediaan dan sinkronisasi channel manager bisa membutuhkan waktu tambahan tergantung kesiapan data tarif dan foto properti Anda.' },
       { q: 'Apakah tamu bisa booking dan bayar langsung di website?', a: 'Bisa. Kami bisa memasang formulir reservasi yang terhubung ke WhatsApp dan email, kalender ketersediaan, dan bila dibutuhkan integrasi channel manager agar tanggal terisi di OTA otomatis tertutup di website, begitu juga sebaliknya.' },
       { q: 'Apakah website villa saya bisa ditemukan wisatawan di Google?', a: 'Kami menulis judul, deskripsi, dan konten yang menargetkan pencarian bertema villa dan kawasan Anda, misalnya villa di Ubud atau villa di Canggu, dilengkapi struktur data LocalBusiness. Cara ini membantu Google memahami lokasi dan layanan villa Anda untuk pencarian lokal.' },
@@ -80,7 +80,7 @@ villa: {
   },
   hotel: {
     metaTitle: 'Jasa Pembuatan Website Hotel di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website hotel di Bali dengan mesin booking langsung dan manajemen tarif. Mulai Rp 699k, konsultasi gratis. Kurangi ketergantungan pada OTA.',
+    metaDescription: 'Jasa pembuatan website hotel di Bali dengan mesin booking langsung dan manajemen tarif. Mulai Rp 799k, konsultasi gratis. Kurangi ketergantungan pada OTA.',
     keywords: ['jasa pembuatan website hotel di bali', 'jasa bikin website hotel bali', 'website hotel booking langsung', 'jasa website reservasi hotel', 'pembuatan website hotel nusa dua', 'jasa pembuatan website resort bali', 'web developer hotel bali', 'website hotel multibahasa'],
     heroLead: 'Wisatawan yang menginap di Bali hampir selalu membandingkan harga di OTA dengan website resmi hotel sebelum memesan. Website hotel dengan mesin booking langsung memberi tamu alasan memesan tanpa perantara: tarif terbaik, promo khusus member, dan informasi fasilitas yang lengkap. zeepage membangun website hotel yang cepat, elegan, dan siap mengubah pengunjung menjadi tamu.',
     intro: {
@@ -113,7 +113,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website hotel di Bali?', a: 'Paket dasar mulai Rp 699k untuk landing page dan Rp 1.499k untuk company profile termasuk domain .com gratis 1 tahun. Website hotel dengan mesin booking langsung dan integrasi PMS dihitung berdasarkan jumlah tipe kamar dan sistem yang dihubungkan, dengan rincian transparan di awal.' },
+      { q: 'Berapa biaya jasa pembuatan website hotel di Bali?', a: 'Paket dasar mulai Rp 799k untuk landing page dan Rp 1.499k untuk company profile termasuk domain .com gratis 1 tahun. Website hotel dengan mesin booking langsung dan integrasi PMS dihitung berdasarkan jumlah tipe kamar dan sistem yang dihubungkan, dengan rincian transparan di awal.' },
       { q: 'Berapa lama pengerjaan website hotel?', a: 'Landing page selesai sekitar 1-2 minggu dan company profile 2-4 minggu. Proyek dengan booking engine dan integrasi channel manager atau PMS umumnya memerlukan waktu tambahan untuk pengujian alur reservasi sampai benar-benar siap dipakai.' },
       { q: 'Apakah booking di website bisa sinkron dengan OTA?', a: 'Bisa, melalui integrasi channel manager atau PMS yang umum dipakai hotel di Bali. Ketersediaan kamar yang terjual di satu saluran akan menutup tanggal di saluran lain, sehingga risiko overbooking jauh berkurang.' },
       { q: 'Apakah staf hotel bisa mengubah tarif dan promo sendiri?', a: 'Bisa. Struktur website dirancang agar tim Anda dapat memperbarui tarif per musim, foto kamar, dan halaman promo tanpa keahlian teknis. Kami juga memberikan panduan singkat pengelolaan konten setelah website serah terima.' },
@@ -122,7 +122,7 @@ villa: {
   },
   properti: {
     metaTitle: 'Jasa Pembuatan Website Properti di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website properti di Bali dengan listing terfilter, virtual tour, dan inquiry WhatsApp. Mulai Rp 699k, konsultasi gratis untuk agen dan developer.',
+    metaDescription: 'Jasa pembuatan website properti di Bali dengan listing terfilter, virtual tour, dan inquiry WhatsApp. Mulai Rp 799k, konsultasi gratis untuk agen dan developer.',
     keywords: ['jasa pembuatan website properti di bali', 'jasa bikin website real estate bali', 'website listing properti bali', 'jasa website agen properti', 'pembuatan website jual villa bali', 'website properti leasehold bali', 'web developer properti bali', 'website developer perumahan bali'],
     heroLead: 'Pembeli properti di Bali, terutama investor dan ekspatriat, memulai pencarian dari Google jauh sebelum menghubungi agen. Website properti dengan listing rapi, filter harga dan kawasan, serta virtual tour membuat portofolio Anda terlihat kredibel dan mudah dijelajahi. zeepage membangun website properti yang mengubah pencarian menjadi inquiry WhatsApp yang serius.',
     intro: {
@@ -155,7 +155,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website properti di Bali?', a: 'Paket landing page mulai Rp 699k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website dengan katalog listing, filter pencarian, dan halaman agen dihitung dari jumlah fitur dan listing awal, dengan penawaran transparan sebelum pengerjaan dimulai.' },
+      { q: 'Berapa biaya jasa pembuatan website properti di Bali?', a: 'Paket landing page mulai Rp 799k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website dengan katalog listing, filter pencarian, dan halaman agen dihitung dari jumlah fitur dan listing awal, dengan penawaran transparan sebelum pengerjaan dimulai.' },
       { q: 'Berapa lama pengerjaan website properti?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu. Katalog dengan banyak listing perdana memerlukan waktu tambahan untuk input data, jadi kami biasanya memprioritaskan listing unggulan agar website bisa tayang lebih dulu.' },
       { q: 'Apakah saya bisa menambah dan mengubah listing sendiri?', a: 'Bisa. Struktur listing dirancang agar Anda dapat menambah properti baru, mengubah harga, dan menandai unit terjual atau tersewa tanpa bantuan developer. Formatnya konsisten sehingga katalog tetap rapi seiring bertambahnya listing.' },
       { q: 'Apakah website membantu listing saya ditemukan pembeli di Google?', a: 'Setiap listing memiliki halaman sendiri dengan judul dan deskripsi yang menargetkan pencarian seperti villa dijual di Berawa atau tanah leasehold di Uluwatu, dilengkapi peta dan struktur data yang jelas. Ini memberi setiap properti peluang ditemukan lewat pencarian berbasis kawasan dan tipe.' },
@@ -164,7 +164,7 @@ villa: {
   },
   restoran: {
     metaTitle: 'Jasa Pembuatan Website Restoran di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website restoran di Bali dengan menu digital QR, reservasi online, dan galeri hidangan. Mulai Rp 699k, konsultasi gratis untuk restoran dan kafe.',
+    metaDescription: 'Jasa pembuatan website restoran di Bali dengan menu digital QR, reservasi online, dan galeri hidangan. Mulai Rp 799k, konsultasi gratis untuk restoran dan kafe.',
     keywords: ['jasa pembuatan website restoran di bali', 'jasa bikin website restoran bali', 'website menu digital restoran', 'jasa website kafe bali', 'pembuatan website fine dining bali', 'website reservasi restoran', 'web developer restoran bali', 'website kuliner bali'],
     heroLead: 'Wisatawan di Bali memilih tempat makan dari Google dan Google Maps, membaca menu dan ulasan sebelum memutuskan datang. Website restoran dengan menu digital, reservasi meja, dan galeri hidangan membuat restoran Anda ditemukan dan dipilih, bukan sekadar dilewati. zeepage merancang website restoran yang membangkitkan selera sejak halaman pertama dibuka.',
     intro: {
@@ -197,7 +197,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website restoran di Bali?', a: 'Paket landing page mulai Rp 699k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website restoran dengan menu digital QR dan reservasi online disesuaikan dengan jumlah menu dan cabang, dan rinciannya selalu kami sampaikan di awal.' },
+      { q: 'Berapa biaya jasa pembuatan website restoran di Bali?', a: 'Paket landing page mulai Rp 799k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website restoran dengan menu digital QR dan reservasi online disesuaikan dengan jumlah menu dan cabang, dan rinciannya selalu kami sampaikan di awal.' },
       { q: 'Berapa lama pengerjaan website restoran?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu, tergantung kesiapan foto hidangan dan data menu. Bila foto belum tersedia, kami bisa mulai dari struktur dan menu terlebih dahulu agar website cepat tayang.' },
       { q: 'Apakah menu digital bisa diperbarui sendiri oleh staf?', a: 'Bisa. Menu disusun dalam format yang mudah diubah, sehingga staf dapat mengganti harga, menambah item musiman, atau menandai menu habis tanpa keahlian teknis. Kode QR di meja tetap sama karena terhubung ke halaman menu yang selalu terbaru.' },
       { q: 'Bagaimana website membantu restoran ditemukan wisatawan?', a: 'Kami mengoptimalkan halaman untuk pencarian seperti restoran di Seminyak atau kafe di Canggu, menampilkan menu dalam format teks yang terbaca Google, dan menghubungkan lokasi ke Google Maps. Ditambah profil Google Business yang rapi, restoran Anda lebih mudah masuk pertimbangan wisatawan.' },
@@ -206,7 +206,7 @@ villa: {
   },
   'beach-club': {
     metaTitle: 'Jasa Website Beach Club di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website beach club di Bali dengan reservasi daybed, kalender event, dan galeri suasana. Mulai Rp 699k, konsultasi gratis untuk beach club Anda.',
+    metaDescription: 'Jasa pembuatan website beach club di Bali dengan reservasi daybed, kalender event, dan galeri suasana. Mulai Rp 799k, konsultasi gratis untuk beach club Anda.',
     keywords: ['jasa pembuatan website beach club di bali', 'jasa bikin website beach club bali', 'website reservasi daybed bali', 'jasa website club bali', 'pembuatan website beach club canggu', 'website event beach club', 'web developer beach club bali', 'website nightlife bali'],
     heroLead: 'Beach club di Bali bersaing lewat pengalaman: sunset, line-up DJ, dan suasana yang harus sudah terasa sejak calon tamu membuka website. Website beach club dengan reservasi daybed, kalender event, dan galeri imersif mengubah rasa penasaran menjadi pemesanan. zeepage membangun website beach club yang semeriah acaranya dan semudah mungkin untuk reservasi.',
     intro: {
@@ -239,7 +239,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website beach club di Bali?', a: 'Paket landing page mulai Rp 699k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Untuk beach club dengan reservasi daybed dan kalender event, biaya disesuaikan dengan kompleksitas alur pemesanan dan akan dirinci transparan sebelum pengerjaan.' },
+      { q: 'Berapa biaya jasa pembuatan website beach club di Bali?', a: 'Paket landing page mulai Rp 799k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Untuk beach club dengan reservasi daybed dan kalender event, biaya disesuaikan dengan kompleksitas alur pemesanan dan akan dirinci transparan sebelum pengerjaan.' },
       { q: 'Berapa lama pengerjaan website beach club?', a: 'Landing page umumnya 1-2 minggu dan company profile 2-4 minggu. Bila materi foto dan video suasana sudah siap, proses bisa berjalan lebih cepat. Fitur reservasi dan guestlist kami uji bersama tim Anda sebelum website tayang.' },
       { q: 'Apakah tim kami bisa memperbarui jadwal event sendiri?', a: 'Bisa. Kalender event dan halaman promo dirancang agar mudah diperbarui oleh tim internal tanpa keahlian teknis, termasuk menambah line-up DJ dan mengubah jam acara. Ini penting karena jadwal beach club berubah hampir setiap minggu.' },
       { q: 'Bagaimana website membantu tamu asing menemukan beach club kami?', a: 'Kami menyusun konten dua bahasa dengan target pencarian seperti beach club di Canggu atau sunset bar di Uluwatu, menautkan lokasi ke Google Maps, dan melengkapi struktur data bisnis lokal. Tamu yang merencanakan dari luar negeri pun bisa menemukan dan memesan lebih dulu.' },
@@ -248,7 +248,7 @@ villa: {
   },
   'tour-travel': {
     metaTitle: 'Jasa Website Tour & Travel di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website tour dan travel di Bali dengan katalog paket, booking online, dan itinerary detail. Mulai Rp 699k, konsultasi gratis untuk operator tour.',
+    metaDescription: 'Jasa pembuatan website tour dan travel di Bali dengan katalog paket, booking online, dan itinerary detail. Mulai Rp 799k, konsultasi gratis untuk operator tour.',
     keywords: ['jasa pembuatan website tour travel di bali', 'jasa bikin website travel bali', 'website paket tour bali', 'jasa website agen travel', 'pembuatan website tour nusa penida', 'website booking tour bali', 'web developer travel bali', 'website private tour bali'],
     heroLead: 'Wisatawan merencanakan liburan Bali dari negara asal, membandingkan itinerary, harga, dan ulasan jauh sebelum tiba. Website tour dan travel dengan katalog paket, jadwal booking, dan itinerary detail membuat bisnis Anda terlihat profesional dan mudah dipesan. zeepage membangun website travel yang mengubah pencari paket tour menjadi tamu yang membayar DP.',
     intro: {
@@ -281,7 +281,7 @@ villa: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website tour dan travel di Bali?', a: 'Paket landing page mulai Rp 699k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website dengan katalog paket lengkap dan booking online disesuaikan dengan jumlah paket awal, dan penawarannya kami rincikan sebelum pengerjaan dimulai.' },
+      { q: 'Berapa biaya jasa pembuatan website tour dan travel di Bali?', a: 'Paket landing page mulai Rp 799k dan company profile Rp 1.499k termasuk domain .com gratis 1 tahun. Website dengan katalog paket lengkap dan booking online disesuaikan dengan jumlah paket awal, dan penawarannya kami rincikan sebelum pengerjaan dimulai.' },
       { q: 'Berapa lama pengerjaan website travel?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu. Jumlah paket yang diinput di awal memengaruhi waktu, jadi kami biasanya menayangkan paket terlaris lebih dahulu, lalu melengkapi sisanya secara bertahap.' },
       { q: 'Apakah saya bisa mengubah harga dan itinerary sendiri?', a: 'Bisa. Struktur paket dirancang agar Anda dapat memperbarui harga, jadwal, dan rincian itinerary tanpa keahlian teknis. Ini penting karena tarif transportasi dan tiket destinasi di Bali dapat berubah mengikuti musim.' },
       { q: 'Bagaimana website membantu paket saya ditemukan wisatawan?', a: 'Setiap paket memiliki halaman sendiri dengan judul dan konten yang menargetkan pencarian nyata seperti day trip Nusa Penida atau private tour Ubud, dilengkapi galeri destinasi dan itinerary yang kaya kata kunci alami. Halaman seperti ini menjawab persis yang diketik wisatawan saat merencanakan liburan.' },
@@ -290,7 +290,7 @@ villa: {
   },
 wedding: {
     metaTitle: 'Jasa Pembuatan Website Wedding di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website wedding di Bali untuk wedding organizer dan venue. Tampilan elegan dan siap menerima konsultasi. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website wedding di Bali untuk wedding organizer dan venue. Tampilan elegan dan siap menerima konsultasi. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website wedding di bali', 'jasa bikin website wedding organizer bali', 'website venue wedding bali', 'jasa website pernikahan bali', 'web designer wedding bali', 'pembuatan website wo bali', 'website wedding planner indonesia'],
     heroLead: 'Bali adalah salah satu destinasi wedding paling dicari di dunia, dari tebing Uluwatu dan hutan Ubud sampai pantai Nusa Dua. Calon pengantin dari Australia, Singapura, dan Eropa meriset vendor jauh sebelum terbang ke sini, dan keputusan mereka hampir selalu dimulai dari website yang mereka temukan di Google.',
     intro: {
@@ -323,7 +323,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website wedding di Bali?', a: 'Paket landing page mulai Rp 699k, cocok untuk wedding organizer yang baru butuh halaman perkenalan dan formulir konsultasi. Paket company profile Rp 1.499k sudah termasuk domain .com gratis 1 tahun dan halaman lengkap berisi galeri, paket, venue, serta versi dua bahasa bila dibutuhkan.' },
+      { q: 'Berapa biaya jasa pembuatan website wedding di Bali?', a: 'Paket landing page mulai Rp 799k, cocok untuk wedding organizer yang baru butuh halaman perkenalan dan formulir konsultasi. Paket company profile Rp 1.499k sudah termasuk domain .com gratis 1 tahun dan halaman lengkap berisi galeri, paket, venue, serta versi dua bahasa bila dibutuhkan.' },
       { q: 'Berapa lama pengerjaan website wedding?', a: 'Landing page selesai dalam 1-2 minggu, sedangkan company profile lengkap 2-4 minggu tergantung jumlah galeri dan halaman venue. Materi foto wedding biasanya menjadi faktor penentu kecepatan, jadi siapkan folder foto terbaik Anda sejak awal.' },
       { q: 'Apakah website wedding saya bisa tampil untuk calon pengantin luar negeri?', a: 'Bisa. Kami menyiapkan versi bahasa Inggris dan struktur konten yang menjawab cara calon pengantin internasional mencari vendor, termasuk kata kunci kawasan seperti Uluwatu, Ubud, dan Nusa Dua. Ditambah profil Google Business yang rapi, peluang ditemukan dari luar negeri jauh lebih besar.' },
       { q: 'Fitur apa yang paling penting untuk website wedding organizer?', a: 'Tiga yang utama: galeri portofolio per acara, halaman paket dan venue yang jelas, serta formulir konsultasi yang terhubung ke WhatsApp. Ketiganya menjawab pertanyaan terbesar calon pengantin sebelum mereka memutuskan menghubungi Anda.' },
@@ -332,7 +332,7 @@ wedding: {
   },
   spa: {
     metaTitle: 'Jasa Pembuatan Website Spa di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website spa di Bali dengan booking online, daftar harga, dan galeri suasana. Mulai Rp 699k, konsultasi gratis untuk bisnis spa Anda.',
+    metaDescription: 'Jasa pembuatan website spa di Bali dengan booking online, daftar harga, dan galeri suasana. Mulai Rp 799k, konsultasi gratis untuk bisnis spa Anda.',
     keywords: ['jasa pembuatan website spa di bali', 'jasa bikin website spa bali', 'website booking spa online', 'jasa website wellness bali', 'web designer spa seminyak', 'pembuatan website massage bali', 'website spa profesional'],
     heroLead: 'Dari spa premium di Seminyak sampai retreat wellness di Ubud, tamu spa di Bali hampir selalu memesan sebelum datang. Mereka membandingkan harga treatment, membaca suasana tempatnya, dan memilih spa yang paling mudah di-booking dari hasil pencarian Google.',
     intro: {
@@ -365,7 +365,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website spa di Bali?', a: 'Paket landing page mulai Rp 699k untuk spa yang butuh halaman perkenalan, daftar treatment, dan tombol booking. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi harga, galeri, gift voucher, dan promo member.' },
+      { q: 'Berapa biaya jasa pembuatan website spa di Bali?', a: 'Paket landing page mulai Rp 799k untuk spa yang butuh halaman perkenalan, daftar treatment, dan tombol booking. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi harga, galeri, gift voucher, dan promo member.' },
       { q: 'Berapa lama pengerjaan website spa?', a: 'Landing page selesai dalam 1-2 minggu dan company profile dalam 2-4 minggu, tergantung kesiapan foto dan daftar harga Anda. Foto suasana spa yang bagus sangat menentukan hasil akhir, jadi kami sarankan menyiapkan foto terbaik sejak awal.' },
       { q: 'Apakah tamu asing bisa booking langsung dari website?', a: 'Bisa. Alur booking kami rancang sederhana dan terhubung ke WhatsApp, kanal yang paling familiar bagi wisatawan maupun tim Anda. Tamu memilih treatment dan waktu, lalu permintaan masuk sebagai pesan yang tinggal dikonfirmasi.' },
       { q: 'Bagaimana website membantu spa saya ditemukan di Google?', a: 'Kami menulis judul, deskripsi, dan konten yang menargetkan pencarian bertema spa dan kawasan Anda, misalnya spa di Ubud atau pijat di Canggu, lengkap dengan struktur data bisnis lokal. Dipadukan profil Google Business yang terisi penuh, spa Anda lebih mudah ditemukan wisatawan yang sedang meriset.' },
@@ -374,7 +374,7 @@ wedding: {
   },
   klinik: {
     metaTitle: 'Jasa Pembuatan Website Klinik di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website klinik kecantikan dan gigi di Bali dengan booking konsultasi dan profil dokter. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website klinik kecantikan dan gigi di Bali dengan booking konsultasi dan profil dokter. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website klinik di bali', 'jasa bikin website klinik kecantikan bali', 'website klinik gigi bali', 'jasa website medical tourism bali', 'web designer klinik denpasar', 'pembuatan website klinik profesional', 'website dental clinic bali'],
     heroLead: 'Bali adalah tujuan medical tourism yang serius, terutama untuk perawatan gigi dan kecantikan, dengan pasien dari Australia dan Eropa yang membandingkan klinik berbulan-bulan sebelum terbang. Mereka memilih klinik yang websitenya transparan soal dokter, layanan, dan harga, bukan yang paling ramai di media sosial.',
     intro: {
@@ -407,7 +407,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website klinik di Bali?', a: 'Paket landing page mulai Rp 699k untuk klinik yang butuh halaman resmi dan booking konsultasi sederhana. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi profil dokter, layanan, daftar harga, artikel edukasi, dan versi dua bahasa.' },
+      { q: 'Berapa biaya jasa pembuatan website klinik di Bali?', a: 'Paket landing page mulai Rp 799k untuk klinik yang butuh halaman resmi dan booking konsultasi sederhana. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi profil dokter, layanan, daftar harga, artikel edukasi, dan versi dua bahasa.' },
       { q: 'Berapa lama pengerjaan website klinik?', a: 'Landing page selesai dalam 1-2 minggu, company profile dalam 2-4 minggu. Waktu terlama biasanya pada penyiapan materi seperti foto klinik, profil dokter, dan daftar harga resmi, jadi semakin siap materi Anda semakin cepat websitenya tayang.' },
       { q: 'Apakah website klinik bisa menjangkau pasien luar negeri?', a: 'Bisa. Kami menyiapkan versi bahasa Inggris dan konten yang menjawab cara pasien asing meneliti klinik, mulai dari profil dokter dan transparansi harga sampai artikel edukasi. Ini fondasi penting untuk pasar medical tourism Bali.' },
       { q: 'Apakah galeri before-after aman ditampilkan?', a: 'Galeri kami susun secara rapi dan etis, menampilkan hasil perawatan sebagai bahan informasi calon pasien. Anda tetap memegang kendali penuh atas foto mana yang boleh diterbitkan, dan foto hanya digunakan dengan persetujuan pasien yang bersangkutan.' },
@@ -416,7 +416,7 @@ wedding: {
   },
   'rental-mobil': {
     metaTitle: 'Jasa Pembuatan Website Rental Mobil di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website rental mobil di Bali dengan katalog armada, harga transparan, dan booking WhatsApp. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website rental mobil di Bali dengan katalog armada, harga transparan, dan booking WhatsApp. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website rental mobil di bali', 'jasa bikin website rental mobil bali', 'website sewa mobil bali', 'jasa website rent car bali', 'web designer rental mobil denpasar', 'pembuatan website sewa mobil online', 'website rental mobil profesional'],
     heroLead: 'Hampir setiap wisatawan yang mendarat di Bandara Ngurah Rai membutuhkan kendaraan, dan mereka membandingkan rental mobil dari Google sebelum memesan. Rental yang websitenya jelas soal armada, harga per hari, dan cara booking akan memenangkan pesanan itu, bukan yang hanya mengandalkan chat dan grup media sosial.',
     intro: {
@@ -449,7 +449,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website rental mobil di Bali?', a: 'Paket landing page mulai Rp 699k, cocok untuk rental yang butuh katalog armada ringkas dan tombol booking. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan katalog lengkap, kalkulator durasi sewa, dan halaman syarat ketentuan.' },
+      { q: 'Berapa biaya jasa pembuatan website rental mobil di Bali?', a: 'Paket landing page mulai Rp 799k, cocok untuk rental yang butuh katalog armada ringkas dan tombol booking. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan katalog lengkap, kalkulator durasi sewa, dan halaman syarat ketentuan.' },
       { q: 'Berapa lama pengerjaan website rental mobil?', a: 'Landing page selesai dalam 1-2 minggu, company profile dalam 2-4 minggu, tergantung jumlah unit dan kesiapan foto armada. Semakin lengkap foto dan data harga setiap unit, semakin cepat website Anda tayang.' },
       { q: 'Apakah penyewa bisa booking langsung dari website?', a: 'Bisa. Setiap unit dilengkapi tombol booking yang membuka WhatsApp dengan pesan otomatis berisi mobil dan tanggal pilihan penyewa. Cara ini paling efektif untuk rental di Bali karena wisatawan dan admin sama-sama familiar dengan WhatsApp.' },
       { q: 'Bagaimana website membantu rental saya ditemukan wisatawan?', a: 'Kami menyusun konten dengan target pencarian seperti sewa mobil di Bali, rental mobil Denpasar, dan antar-jemput bandara, lengkap dengan struktur data bisnis lokal dan profil Google Business. Wisatawan yang meriset dari jauh pun bisa menemukan dan memesan dari Anda.' },
@@ -458,7 +458,7 @@ wedding: {
   },
   kafe: {
     metaTitle: 'Jasa Pembuatan Website Kafe di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website kafe di Bali dengan menu digital QR, galeri suasana, dan info lokasi yang jelas. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website kafe di Bali dengan menu digital QR, galeri suasana, dan info lokasi yang jelas. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website kafe di bali', 'jasa bikin website coffee shop bali', 'website kafe canggu', 'jasa website restoran kafe bali', 'web designer kafe ubud', 'pembuatan website cafe profesional', 'website menu digital kafe'],
     heroLead: 'Kafe di Bali hidup dari penemuan: digital nomad di Canggu mencari tempat kerja dengan wifi kencang, wisatawan di Ubud memburu spot sarapan terbaik, dan semua itu dimulai dari pencarian Google dan foto suasana. Kafe yang mudah ditemukan dan terlihat menggoda di layar akan selalu lebih ramai.',
     intro: {
@@ -491,7 +491,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website kafe di Bali?', a: 'Paket landing page mulai Rp 699k, sudah cukup untuk kafe yang butuh halaman resmi, menu digital, dan info lokasi. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi galeri, promo, dan reservasi meja.' },
+      { q: 'Berapa biaya jasa pembuatan website kafe di Bali?', a: 'Paket landing page mulai Rp 799k, sudah cukup untuk kafe yang butuh halaman resmi, menu digital, dan info lokasi. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan halaman lengkap berisi galeri, promo, dan reservasi meja.' },
       { q: 'Berapa lama pengerjaan website kafe?', a: 'Landing page selesai dalam 1-2 minggu, company profile dalam 2-4 minggu. Faktor penentu kecepatan biasanya foto suasana dan daftar menu final, jadi siapkan foto terbaik kafe Anda dan menu terbaru sejak awal.' },
       { q: 'Apa keuntungan menu digital dibanding menu cetak saja?', a: 'Menu digital di website bisa dibuka calon pengunjung sebelum datang, dibagikan lewat tautan, dan diperbarui kapan saja tanpa biaya cetak. Ditambah kode QR di meja, pengunjung bisa membaca menu dari ponsel mereka sendiri dengan nyaman.' },
       { q: 'Bagaimana website membantu kafe saya muncul di pencarian lokal?', a: 'Kami menargetkan pencarian bertema kafe dan kawasan Anda, misalnya coffee shop di Canggu atau kafe di Ubud, lengkap dengan struktur data bisnis lokal. Dipadukan profil Google Business yang akurat soal jam dan lokasi, kafe Anda lebih mudah ditemukan pencari terdekat.' },
@@ -500,7 +500,7 @@ wedding: {
   },
   butik: {
     metaTitle: 'Jasa Pembuatan Website Butik di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website butik di Bali dengan lookbook, toko online, dan pengiriman internasional. Mulai Rp 699k, konsultasi gratis untuk brand Anda.',
+    metaDescription: 'Jasa pembuatan website butik di Bali dengan lookbook, toko online, dan pengiriman internasional. Mulai Rp 799k, konsultasi gratis untuk brand Anda.',
     keywords: ['jasa pembuatan website butik di bali', 'jasa bikin website fashion bali', 'website toko online butik bali', 'jasa website brand fashion seminyak', 'web designer butik ubud', 'pembuatan website lookbook bali', 'website butik profesional'],
     heroLead: 'Butik di Jalan Kayu Aya Seminyak dan jalanan seni Ubud menjual gaya ke seluruh dunia, tetapi pembeli dari Australia, Eropa, dan Amerika menemukan brand lewat Google dan Instagram jauh sebelum mereka menginjak Bali. Website yang kuat mengubah pengagum dari jauh menjadi pembeli, bahkan setelah mereka pulang ke negaranya.',
     intro: {
@@ -533,7 +533,7 @@ wedding: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website butik di Bali?', a: 'Paket landing page mulai Rp 699k, cocok untuk lookbook dan katalog koleksi tanpa checkout. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan toko online lengkap berisi katalog, info ukuran dan stok, serta halaman pengiriman internasional.' },
+      { q: 'Berapa biaya jasa pembuatan website butik di Bali?', a: 'Paket landing page mulai Rp 799k, cocok untuk lookbook dan katalog koleksi tanpa checkout. Paket company profile Rp 1.499k termasuk domain .com gratis 1 tahun, dengan toko online lengkap berisi katalog, info ukuran dan stok, serta halaman pengiriman internasional.' },
       { q: 'Berapa lama pengerjaan website butik?', a: 'Landing page selesai dalam 1-2 minggu, company profile dengan toko online dalam 2-4 minggu, tergantung jumlah produk dan kesiapan foto. Foto produk yang konsisten adalah penentu terbesar kualitas akhir, jadi rencanakan sesi foto sejak awal.' },
       { q: 'Apakah pembeli luar negeri bisa checkout langsung?', a: 'Bisa. Toko online kami lengkapi alur checkout yang sederhana dan halaman pengiriman internasional yang transparan soal tujuan, estimasi, dan biaya. Untuk pesanan khusus, tombol WhatsApp tetap tersedia sebagai jalur konsultasi cepat.' },
       { q: 'Bagaimana website membantu butik saya ditemukan pembeli baru?', a: 'Kami menulis konten dengan target pencarian seperti butik di Seminyak dan brand fashion Bali, melengkapi struktur data toko dan profil Google Business. Pembeli yang meneliti dari luar negeri pun bisa menemukan dan menilai brand Anda sebelum tiba di Bali.' },
@@ -542,7 +542,7 @@ wedding: {
   },
 diving: {
     metaTitle: 'Jasa Pembuatan Website Diving di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website diving dan surf school di Bali: katalog trip, jadwal harian, dan booking online. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website diving dan surf school di Bali: katalog trip, jadwal harian, dan booking online. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website diving di bali', 'website dive center bali', 'jasa buat website surf school bali', 'website operator diving bali', 'pembuatan website dive shop', 'website sekolah selam bali', 'jasa website wisata bahari bali'],
     heroLead: 'Wisatawan jarang memesan trip selam secara spontan: mereka membandingkan operator diving di Bali jauh hari sebelum terbang, langsung dari negara asal mereka. Website yang rapi dengan katalog trip, jadwal jelas, dan harga transparan membuat dive center atau surf school Anda yang dipilih, bukan kompetitor di sebelah.',
     intro: {
@@ -575,7 +575,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website diving di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk operator dengan katalog trip dan sistem booking yang lebih kompleks, kebutuhannya dibahas dulu lewat konsultasi gratis agar paket yang diambil tepat.' },
+      { q: 'Berapa biaya jasa pembuatan website diving di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk operator dengan katalog trip dan sistem booking yang lebih kompleks, kebutuhannya dibahas dulu lewat konsultasi gratis agar paket yang diambil tepat.' },
       { q: 'Berapa lama pengerjaan website dive center?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak materi seperti foto bawah laut, daftar paket, dan harga kami terima. Katalog trip yang besar atau versi dua bahasa penuh bisa menambah waktu, dan jadwal pastinya disepakati di awal.' },
       { q: 'Apakah website bisa full Bahasa Inggris untuk tamu asing?', a: 'Bisa. Fitur Multibahasa (ID/EN) membuat setiap halaman punya versi Inggris, termasuk katalog paket, jadwal trip, dan formulir booking, karena sebagian besar tamu diving dan surf school di Bali datang dari luar negeri.' },
       { q: 'Apakah website membantu muncul di pencarian lokal Bali?', a: 'Struktur halaman dan konten kami susun untuk menargetkan pencarian seperti dive center di Amed, trip diving Nusa Penida, atau surf lesson di Canggu, lengkap dengan data terstruktur bisnis lokal dan panduan Google Business Profile. Kami tidak menjanjikan peringkat tertentu, tetapi fondasi SEO lokalnya dibangun sejak awal.' },
@@ -585,7 +585,7 @@ diving: {
 
   fotografer: {
     metaTitle: 'Jasa Pembuatan Website Fotografer di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website fotografer wedding di Bali: portofolio elegan, paket harga jelas, dan booking tanggal. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website fotografer wedding di Bali: portofolio elegan, paket harga jelas, dan booking tanggal. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website fotografer di bali', 'website fotografer wedding bali', 'jasa buat website portofolio fotografer', 'website bali wedding photographer', 'pembuatan website prewedding bali', 'jasa website fotografer pernikahan', 'website portofolio fotografi bali'],
     heroLead: 'Pasangan yang menikah di Bali merencanakan semuanya dari luar negeri, dan fotografer adalah vendor yang paling awal mereka kunci. Website portofolio yang elegan dengan galeri utuh dan paket harga jelas membuat calon pengantin yakin memesan tanggal Anda sebelum sempat bertanya ke fotografer lain.',
     intro: {
@@ -618,7 +618,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website fotografer di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk portofolio dengan galeri sangat besar atau halaman paket berlapis, kebutuhan dibahas dulu lewat konsultasi gratis agar paketnya tepat.' },
+      { q: 'Berapa biaya jasa pembuatan website fotografer di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk portofolio dengan galeri sangat besar atau halaman paket berlapis, kebutuhan dibahas dulu lewat konsultasi gratis agar paketnya tepat.' },
       { q: 'Berapa lama pengerjaan website portofolio fotografer?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak foto pilihan, rincian paket, dan harga kami terima. Galeri per kategori yang banyak bisa menambah waktu kurasi, dan jadwal pastinya disepakati di awal.' },
       { q: 'Apakah galeri foto besar membuat website menjadi lambat?', a: 'Tidak, kalau dikelola dengan benar. Semua foto dikompresi dan dimuat secara bertahap, galeri dipisah per kategori agar tidak menumpuk dalam satu halaman, dan tampilannya dioptimalkan untuk ponsel karena sebagian besar calon pengantin membuka dari HP.' },
       { q: 'Apakah website membantu ditemukan pasangan dari luar negeri?', a: 'Konten dan struktur halaman kami susun untuk pencarian seperti bali wedding photographer dan fotografer wedding di Bali, dengan versi Bahasa Inggris agar pasangan mancanegara nyaman membaca. Kami tidak menjanjikan peringkat tertentu, tetapi fondasi SEO lokal dan internasionalnya dibangun sejak awal.' },
@@ -628,7 +628,7 @@ diving: {
 
   salon: {
     metaTitle: 'Jasa Pembuatan Website Salon di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website salon dan barbershop di Bali: booking jadwal online, daftar harga transparan, galeri hasil. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website salon dan barbershop di Bali: booking jadwal online, daftar harga transparan, galeri hasil. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website salon di bali', 'website salon dan barbershop bali', 'jasa buat website salon kecantikan', 'website barbershop bali', 'pembuatan website salon rambut', 'jasa website beauty salon bali', 'website booking salon online'],
     heroLead: 'Di kawasan seperti Seminyak, Canggu, dan Ubud, salon dan barbershop bersaing memperebutkan wisatawan, ekspatriat, dan warga lokal yang mencari lewat Google sebelum datang. Website dengan daftar harga transparan dan booking online membuat salon Anda dipilih lebih dulu, bukan sekadar yang paling ramai di media sosial.',
     intro: {
@@ -661,7 +661,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website salon di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Fitur seperti booking online dan halaman promo sudah bisa masuk dalam paket ini, dan kebutuhan spesifiknya dibahas dulu lewat konsultasi gratis.' },
+      { q: 'Berapa biaya jasa pembuatan website salon di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Fitur seperti booking online dan halaman promo sudah bisa masuk dalam paket ini, dan kebutuhan spesifiknya dibahas dulu lewat konsultasi gratis.' },
       { q: 'Berapa lama pengerjaan website salon atau barbershop?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak daftar layanan, harga, dan foto galeri kami terima. Jumlah stylist yang dibuatkan profil dan banyaknya kategori layanan bisa memengaruhi jadwal, dan estimasi pastinya disepakati di awal.' },
       { q: 'Apakah saya bisa memperbarui harga dan promo sendiri?', a: 'Bisa. Daftar layanan, harga, dan promo disusun agar mudah diperbarui mengikuti perubahan di salon Anda, dan kami jelaskan cara mengelolanya saat serah terima. Untuk perubahan besar seperti menambah halaman layanan baru, Anda juga bisa menghubungi kami kembali.' },
       { q: 'Apakah website membantu salon saya ditemukan di pencarian lokal?', a: 'Struktur halaman dan konten kami susun untuk menargetkan pencarian berbasis kawasan seperti salon di Seminyak atau barbershop di Canggu, lengkap dengan data terstruktur bisnis lokal dan panduan Google Business Profile. Kami tidak menjanjikan peringkat tertentu, tetapi fondasi SEO lokalnya dibangun sejak awal.' },
@@ -671,7 +671,7 @@ diving: {
 
   'guest-house': {
     metaTitle: 'Jasa Pembuatan Website Guest House di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website guest house dan homestay di Bali: booking kamar langsung tanpa potongan komisi OTA. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website guest house dan homestay di Bali: booking kamar langsung tanpa potongan komisi OTA. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website guest house di bali', 'website homestay bali', 'jasa buat website penginapan bali', 'website booking langsung villa kecil', 'pembuatan website guest house', 'jasa website homestay tanpa komisi', 'website penginapan murah bali'],
     heroLead: 'Setiap booking yang masuk lewat OTA memotong komisi belasan persen dari pendapatan Anda, padahal banyak tamu sebenarnya lebih suka memesan langsung kalau bisa menemukan website resmi penginapannya. Website guest house dengan kalender ketersediaan dan harga transparan mengubah tamu OTA menjadi tamu langsung yang jauh lebih menguntungkan.',
     intro: {
@@ -704,7 +704,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website guest house di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk penginapan dengan banyak tipe kamar dan kalender ketersediaan, kebutuhan dibahas dulu lewat konsultasi gratis agar paketnya sesuai.' },
+      { q: 'Berapa biaya jasa pembuatan website guest house di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk penginapan dengan banyak tipe kamar dan kalender ketersediaan, kebutuhan dibahas dulu lewat konsultasi gratis agar paketnya sesuai.' },
       { q: 'Berapa lama pengerjaan website penginapan?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak foto kamar, daftar fasilitas, dan tabel harga kami terima. Jumlah tipe kamar dan kebutuhan versi dua bahasa bisa memengaruhi jadwal, dan estimasi pastinya disepakati di awal.' },
       { q: 'Apakah website ini berarti saya harus meninggalkan OTA?', a: 'Tidak. Website berfungsi sebagai channel tambahan untuk booking langsung, terutama dari tamu berulang dan tamu yang mencari nama penginapan Anda di Google. OTA tetap dipakai untuk menjangkau tamu baru, sementara website mengurangi potongan komisi secara bertahap.' },
       { q: 'Apakah harga dan kalender ketersediaan bisa saya perbarui sendiri?', a: 'Bisa. Harga per tipe kamar dan kalender ketersediaan disusun agar mudah diperbarui mengikuti perubahan di penginapan Anda, termasuk tarif musim ramai dan promo musim sepi, dan cara mengelolanya kami jelaskan saat serah terima.' },
@@ -714,7 +714,7 @@ diving: {
 
   yoga: {
     metaTitle: 'Jasa Pembuatan Website Studio Yoga di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website studio yoga di Bali: jadwal kelas online, booking paket kelas, dan halaman retreat khusus. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website studio yoga di Bali: jadwal kelas online, booking paket kelas, dan halaman retreat khusus. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website yoga di bali', 'website studio yoga bali', 'jasa buat website yoga studio ubud', 'website retreat yoga bali', 'pembuatan website shala yoga', 'jasa website wellness studio bali', 'website teacher training yoga'],
     heroLead: 'Pencari kelas yoga dan retreat di Bali merencanakan perjalanan mereka dari jauh: membandingkan studio, membaca profil guru, dan memesan tempat sebelum mendarat. Website studio dengan jadwal kelas online dan halaman retreat khusus membuat studio Anda masuk ke daftar mereka, bukan hanya studio yang lebih dulu terkenal.',
     intro: {
@@ -747,7 +747,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website studio yoga di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Halaman retreat atau teacher training tambahan bisa dimasukkan dalam paket, dan kebutuhan spesifiknya dibahas dulu lewat konsultasi gratis.' },
+      { q: 'Berapa biaya jasa pembuatan website studio yoga di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Halaman retreat atau teacher training tambahan bisa dimasukkan dalam paket, dan kebutuhan spesifiknya dibahas dulu lewat konsultasi gratis.' },
       { q: 'Berapa lama pengerjaan website studio yoga?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak jadwal kelas, profil instruktur, dan foto studio kami terima. Halaman retreat dengan itinerary lengkap atau versi dua bahasa penuh bisa menambah waktu, dan jadwal pastinya disepakati di awal.' },
       { q: 'Apakah jadwal kelas bisa saya perbarui sendiri setiap minggu?', a: 'Bisa. Halaman jadwal disusun agar mudah diperbarui mengikuti perubahan kelas, jam, dan guru pengganti di studio Anda, dan cara mengelolanya kami jelaskan saat serah terima website.' },
       { q: 'Apakah website membantu studio saya ditemukan peserta dari luar negeri?', a: 'Konten dan struktur halaman kami susun untuk pencarian berbahasa Inggris seperti yoga studio in Ubud atau yoga retreat Bali, dilengkapi versi Indonesia untuk pasar lokal. Kami tidak menjanjikan peringkat tertentu, tetapi fondasi SEO lokal dan internasionalnya dibangun sejak awal.' },
@@ -757,7 +757,7 @@ diving: {
 
   kursus: {
     metaTitle: 'Jasa Pembuatan Website Kursus di Bali | zeepage',
-    metaDescription: 'Jasa pembuatan website kursus dan sekolah bahasa di Bali: katalog program per level, pendaftaran online, kelas trial. Mulai Rp 699k, konsultasi gratis.',
+    metaDescription: 'Jasa pembuatan website kursus dan sekolah bahasa di Bali: katalog program per level, pendaftaran online, kelas trial. Mulai Rp 799k, konsultasi gratis.',
     keywords: ['jasa pembuatan website kursus di bali', 'website sekolah bahasa bali', 'jasa buat website lembaga kursus', 'website kursus bahasa inggris bali', 'pembuatan website tempat les', 'jasa website bimbingan belajar bali', 'website pendaftaran kursus online'],
     heroLead: 'Orang tua dan calon siswa di Bali membandingkan tempat kursus dari hasil pencarian Google: program apa saja yang ditawarkan, berapa biayanya, dan siapa pengajarnya. Website kursus dengan katalog program per level dan pendaftaran online membuat lembaga Anda terlihat paling siap dan paling dipercaya sejak klik pertama.',
     intro: {
@@ -790,7 +790,7 @@ diving: {
       catatan: 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.',
     },
     faq: [
-      { q: 'Berapa biaya jasa pembuatan website kursus di Bali?', a: 'Paket landing page mulai Rp 699k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk lembaga dengan banyak program dan level, kebutuhan dibahas dulu lewat konsultasi gratis agar paket yang diambil sesuai skala lembaga Anda.' },
+      { q: 'Berapa biaya jasa pembuatan website kursus di Bali?', a: 'Paket landing page mulai Rp 799k, sedangkan company profile lengkap mulai Rp 1.499k dan sudah termasuk domain .com gratis 1 tahun. Untuk lembaga dengan banyak program dan level, kebutuhan dibahas dulu lewat konsultasi gratis agar paket yang diambil sesuai skala lembaga Anda.' },
       { q: 'Berapa lama pengerjaan website lembaga kursus?', a: 'Estimasi landing page 1-2 minggu dan company profile 2-4 minggu sejak daftar program, jadwal, harga, dan profil pengajar kami terima. Katalog program yang besar atau formulir pendaftaran bercabang bisa menambah waktu, dan jadwal pastinya disepakati di awal.' },
       { q: 'Ke mana masuknya data dari formulir pendaftaran online?', a: 'Setiap pendaftaran dari formulir website diteruskan langsung ke WhatsApp atau email admin lembaga Anda, lengkap dengan program dan jadwal yang dipilih calon siswa. Hal yang sama berlaku untuk pendaftaran kelas trial gratis, sehingga tim Anda bisa menindaklanjuti dengan cepat.' },
       { q: 'Apakah website membantu kursus saya ditemukan di pencarian lokal?', a: 'Struktur halaman dan konten kami susun untuk menargetkan pencarian per program dan kawasan seperti kursus bahasa Inggris di Denpasar atau sekolah bahasa di Canggu, lengkap dengan data terstruktur bisnis lokal dan panduan Google Business Profile. Kami tidak menjanjikan peringkat tertentu, tetapi fondasi SEO lokalnya dibangun sejak awal.' },

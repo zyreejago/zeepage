@@ -42,7 +42,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   bali: {
     metaTitle: 'Jasa Pembuatan Website di Bali | Profesional & SEO-Friendly',
     metaDescription:
-      'Jasa pembuatan website profesional di Bali untuk hotel, villa, restoran, dan UMKM. Desain modern, cepat, SEO lokal Bali. Harga mulai Rp 699k, konsultasi gratis.',
+      'Jasa pembuatan website profesional di Bali untuk hotel, villa, restoran, dan UMKM. Desain modern, cepat, SEO lokal Bali. Harga mulai Rp 799k, konsultasi gratis.',
     keywords: [
       'jasa pembuatan website bali',
       'jasa website bali',
@@ -104,7 +104,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Bali?',
-        a: 'Paket zeepage di Bali mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk hotel, villa, atau toko online dengan fitur booking dan payment gateway, harga menyesuaikan kompleksitas dan selalu transparan sejak penawaran.',
+        a: 'Paket zeepage di Bali mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk hotel, villa, atau toko online dengan fitur booking dan payment gateway, harga menyesuaikan kompleksitas dan selalu transparan sejak penawaran.',
       },
       {
         q: 'Apakah zeepage melayani seluruh Bali atau hanya Denpasar?',
@@ -136,7 +136,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   seminyak: {
     metaTitle: 'Jasa Pembuatan Website di Seminyak, Bali | zeepage',
     metaDescription:
-      'Jasa website premium untuk butik, beach club, restoran, dan villa di Seminyak, Petitenget, dan Umalas. Desain elegan, SEO lokal, mulai Rp 699k.',
+      'Jasa website premium untuk butik, beach club, restoran, dan villa di Seminyak, Petitenget, dan Umalas. Desain elegan, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website seminyak',
       'jasa website seminyak',
@@ -199,7 +199,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk butik, villa, atau restoran di Seminyak?',
-        a: 'Paket zeepage untuk bisnis Seminyak mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk villa atau beach club dengan galeri foto besar dan sistem reservasi, kami sesuaikan paketnya dengan kebutuhan, tetap transparan tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Seminyak mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk villa atau beach club dengan galeri foto besar dan sistem reservasi, kami sesuaikan paketnya dengan kebutuhan, tetap transparan tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat orang mencari "villa Petitenget" atau "spa Seminyak"?',
@@ -226,7 +226,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   canggu: {
     metaTitle: 'Jasa Pembuatan Website di Canggu, Bali | zeepage',
     metaDescription:
-      'Jasa website untuk cafe, villa, surf school, dan bisnis kreatif di Canggu, Batu Bolong, dan Berawa. Desain modern, SEO lokal, mulai Rp 699k.',
+      'Jasa website untuk cafe, villa, surf school, dan bisnis kreatif di Canggu, Batu Bolong, dan Berawa. Desain modern, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website canggu',
       'jasa website canggu',
@@ -289,7 +289,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk cafe, villa, atau surf school di Canggu?',
-        a: 'Paket zeepage untuk bisnis Canggu mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk fitur booking atau katalog produk, kami sesuaikan paketnya, tetap transparan tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Canggu mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk fitur booking atau katalog produk, kami sesuaikan paketnya, tetap transparan tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat orang mencari "cafe Canggu" atau "villa Berawa"?',
@@ -308,7 +308,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   ubud: {
     metaTitle: 'Jasa Pembuatan Website di Ubud, Bali | zeepage',
     metaDescription:
-      'Jasa website untuk villa, yoga studio, galeri seni, dan restoran sehat di Ubud. Desain tenang, SEO lokal, mulai Rp 699k.',
+      'Jasa website untuk villa, yoga studio, galeri seni, dan restoran sehat di Ubud. Desain tenang, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website ubud',
       'jasa website ubud',
@@ -371,7 +371,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk villa, yoga studio, atau galeri di Ubud?',
-        a: 'Paket zeepage untuk bisnis Ubud mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan retreat atau katalog karya yang lebih kompleks, kami sesuaikan paketnya tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Ubud mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan retreat atau katalog karya yang lebih kompleks, kami sesuaikan paketnya tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat wisatawan asing mencari pengalaman di Ubud?',
@@ -390,7 +390,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   kuta: {
     metaTitle: 'Jasa Pembuatan Website di Kuta, Bali | zeepage',
     metaDescription:
-      'Jasa website untuk hotel, restoran, toko souvenir, dan tour di Kuta. Desain cepat, SEO lokal, mulai Rp 699k.',
+      'Jasa website untuk hotel, restoran, toko souvenir, dan tour di Kuta. Desain cepat, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website kuta',
       'jasa website kuta',
@@ -453,7 +453,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk hotel, restoran, atau toko di Kuta?',
-        a: 'Paket zeepage untuk bisnis Kuta mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk sistem reservasi atau katalog yang lebih lengkap, kami sesuaikan paketnya tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Kuta mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk sistem reservasi atau katalog yang lebih lengkap, kami sesuaikan paketnya tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat wisatawan mencari "hotel Kuta" atau "restoran Kuta"?',
@@ -472,7 +472,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   sanur: {
     metaTitle: 'Jasa Pembuatan Website di Sanur, Bali | zeepage',
     metaDescription:
-      'Jasa website untuk hotel keluarga, restoran, klinik, dan watersport di Sanur. Desain ramah, SEO lokal, mulai Rp 699k.',
+      'Jasa website untuk hotel keluarga, restoran, klinik, dan watersport di Sanur. Desain ramah, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website sanur',
       'jasa website sanur',
@@ -535,7 +535,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk hotel, klinik, atau restoran di Sanur?',
-        a: 'Paket zeepage untuk bisnis Sanur mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan reservasi atau janji temu, kami sesuaikan paketnya tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Sanur mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan reservasi atau janji temu, kami sesuaikan paketnya tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat orang mencari "hotel Sanur" atau "klinik Sanur"?',
@@ -554,7 +554,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   denpasar: {
     metaTitle: 'Jasa Pembuatan Website di Denpasar, Bali | zeepage',
     metaDescription:
-      'Jasa website untuk UMKM, kuliner, jasa profesional, dan klinik di Denpasar. Desain profesional, SEO lokal, mulai Rp 699k.',
+      'Jasa website untuk UMKM, kuliner, jasa profesional, dan klinik di Denpasar. Desain profesional, SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website denpasar',
       'jasa website denpasar',
@@ -617,7 +617,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
       },
       {
         q: 'Berapa biaya pembuatan website untuk UMKM dan jasa di Denpasar?',
-        a: 'Paket zeepage untuk bisnis Denpasar mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan khusus, kami sesuaikan paketnya tanpa biaya tersembunyi.',
+        a: 'Paket zeepage untuk bisnis Denpasar mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan khusus, kami sesuaikan paketnya tanpa biaya tersembunyi.',
       },
       {
         q: 'Bisakah website saya muncul saat orang mencari jasa di Denpasar?',
@@ -644,7 +644,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   badung: {
     metaTitle: 'Jasa Pembuatan Website di Badung, Bali | zeepage',
     metaDescription:
-      'Jasa pembuatan website profesional di Badung: Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua. Untuk hotel, villa, beach club, restoran. Mulai Rp 699k.',
+      'Jasa pembuatan website profesional di Badung: Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua. Untuk hotel, villa, beach club, restoran. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website badung',
       'jasa website badung',
@@ -696,7 +696,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Badung?',
-        a: 'Paket zeepage di Badung mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk hotel, villa, atau beach club dengan fitur booking, harga menyesuaikan kebutuhan.',
+        a: 'Paket zeepage di Badung mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk hotel, villa, atau beach club dengan fitur booking, harga menyesuaikan kebutuhan.',
       },
       {
         q: 'Apakah melayani semua kawasan di Badung seperti Canggu dan Uluwatu?',
@@ -727,7 +727,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   gianyar: {
     metaTitle: 'Jasa Pembuatan Website di Gianyar, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Gianyar & Ubud untuk homestay, yoga, galeri seni, dan tour travel. Desain estetik, SEO lokal. Mulai Rp 699k.',
+      'Jasa website profesional di Gianyar & Ubud untuk homestay, yoga, galeri seni, dan tour travel. Desain estetik, SEO lokal. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website gianyar',
       'jasa website gianyar',
@@ -779,7 +779,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Gianyar?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa dibuatkan website dua bahasa untuk pasar wisatawan?',
@@ -798,7 +798,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   tabanan: {
     metaTitle: 'Jasa Pembuatan Website di Tabanan, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Tabanan: Tanah Lot, Bedugul, Jatiluwih. Untuk agrowisata, villa, restoran sawah, wedding venue. Mulai Rp 699k.',
+      'Jasa website profesional di Tabanan: Tanah Lot, Bedugul, Jatiluwih. Untuk agrowisata, villa, restoran sawah, wedding venue. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website tabanan',
       'jasa website tabanan',
@@ -849,7 +849,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Tabanan?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah cocok untuk wedding venue yang targetnya pasar luar negeri?',
@@ -868,7 +868,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   klungkung: {
     metaTitle: 'Jasa Pembuatan Website di Klungkung, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Klungkung & Nusa Penida untuk tour, homestay, diving, dan kerajinan. SEO lokal, mulai Rp 699k.',
+      'Jasa website profesional di Klungkung & Nusa Penida untuk tour, homestay, diving, dan kerajinan. SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website klungkung',
       'jasa website klungkung',
@@ -919,7 +919,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Klungkung?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa dibuatkan sistem booking untuk tour Nusa Penida?',
@@ -938,7 +938,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   bangli: {
     metaTitle: 'Jasa Pembuatan Website di Bangli, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Bangli & Kintamani untuk agrowisata kopi, restoran view gunung, homestay, dan trekking. Mulai Rp 699k.',
+      'Jasa website profesional di Bangli & Kintamani untuk agrowisata kopi, restoran view gunung, homestay, dan trekking. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website bangli',
       'jasa website bangli',
@@ -989,7 +989,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Bangli?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Sangat terjangkau untuk skala UMKM dan homestay.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Sangat terjangkau untuk skala UMKM dan homestay.',
       },
       {
         q: 'Apakah cocok untuk usaha kecil seperti warung kopi?',
@@ -1008,7 +1008,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   karangasem: {
     metaTitle: 'Jasa Pembuatan Website di Karangasem, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Karangasem: Amed, Tulamben, Besakih, Tirta Gangga. Untuk diving, homestay, agrowisata, dan tour. Mulai Rp 699k.',
+      'Jasa website profesional di Karangasem: Amed, Tulamben, Besakih, Tirta Gangga. Untuk diving, homestay, agrowisata, dan tour. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website karangasem',
       'jasa website karangasem',
@@ -1059,7 +1059,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Karangasem?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa dibuatkan website bahasa Inggris penuh?',
@@ -1078,7 +1078,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   buleleng: {
     metaTitle: 'Jasa Pembuatan Website di Buleleng, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Buleleng & Singaraja untuk UMKM, wisata Lovina, kuliner, dan agrowisata. SEO lokal, mulai Rp 699k.',
+      'Jasa website profesional di Buleleng & Singaraja untuk UMKM, wisata Lovina, kuliner, dan agrowisata. SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website buleleng',
       'jasa website buleleng',
@@ -1129,7 +1129,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Buleleng?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah melayani daerah Lovina dan Singaraja?',
@@ -1148,7 +1148,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   jembrana: {
     metaTitle: 'Jasa Pembuatan Website di Jembrana, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Jembrana untuk UMKM, pertanian, wisata alam Medewi, dan kuliner. Harga ramah UMKM, mulai Rp 699k.',
+      'Jasa website profesional di Jembrana untuk UMKM, pertanian, wisata alam Medewi, dan kuliner. Harga ramah UMKM, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website jembrana',
       'jasa website jembrana',
@@ -1198,7 +1198,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Jembrana?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah ada pendampingan untuk yang gaptek?',
@@ -1217,7 +1217,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   legian: {
     metaTitle: 'Jasa Pembuatan Website di Legian, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Legian untuk hotel, restoran, bar, dan retail. Dekat Pantai Legian & Poppies Lane. Mulai Rp 699k.',
+      'Jasa website profesional di Legian untuk hotel, restoran, bar, dan retail. Dekat Pantai Legian & Poppies Lane. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website legian',
       'jasa website legian',
@@ -1267,7 +1267,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Legian?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah cocok untuk guesthouse kecil?',
@@ -1286,7 +1286,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   jimbaran: {
     metaTitle: 'Jasa Pembuatan Website di Jimbaran, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Jimbaran untuk restoran seafood, hotel, wedding venue, dan properti. SEO lokal, mulai Rp 699k.',
+      'Jasa website profesional di Jimbaran untuk restoran seafood, hotel, wedding venue, dan properti. SEO lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website jimbaran',
       'jasa website jimbaran',
@@ -1337,7 +1337,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Jimbaran?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa untuk wedding venue dengan target pasar luar negeri?',
@@ -1356,7 +1356,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   'nusa-dua': {
     metaTitle: 'Jasa Pembuatan Website di Nusa Dua, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Nusa Dua untuk hotel bintang, MICE, golf, dan spa. Standar korporat internasional. Mulai Rp 699k.',
+      'Jasa website profesional di Nusa Dua untuk hotel bintang, MICE, golf, dan spa. Standar korporat internasional. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website nusa dua',
       'jasa website nusa dua',
@@ -1406,7 +1406,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Nusa Dua?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan korporat dengan fitur khusus, kami buatkan penawaran custom.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Untuk kebutuhan korporat dengan fitur khusus, kami buatkan penawaran custom.',
       },
       {
         q: 'Apakah bisa website full bahasa Inggris?',
@@ -1425,7 +1425,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   uluwatu: {
     metaTitle: 'Jasa Pembuatan Website di Uluwatu, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Uluwatu: villa cliff, surf camp, beach club, wedding venue. Untuk pasar surfer & premium. Mulai Rp 699k.',
+      'Jasa website profesional di Uluwatu: villa cliff, surf camp, beach club, wedding venue. Untuk pasar surfer & premium. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website uluwatu',
       'jasa website uluwatu',
@@ -1476,7 +1476,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Uluwatu?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah cocok untuk surf camp?',
@@ -1495,7 +1495,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   kerobokan: {
     metaTitle: 'Jasa Pembuatan Website di Kerobokan, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Kerobokan & Umalas untuk villa, cafe, studio kreatif, dan jasa lokal. Harga UMKM, mulai Rp 699k.',
+      'Jasa website profesional di Kerobokan & Umalas untuk villa, cafe, studio kreatif, dan jasa lokal. Harga UMKM, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website kerobokan',
       'jasa website kerobokan',
@@ -1545,7 +1545,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Kerobokan?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah melayani area Umalas?',
@@ -1564,7 +1564,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   renon: {
     metaTitle: 'Jasa Pembuatan Website di Renon, Denpasar | zeepage',
     metaDescription:
-      'Jasa website profesional di Renon untuk kantor, jasa profesional, klinik, dan event organizer. Citra korporat terpercaya. Mulai Rp 699k.',
+      'Jasa website profesional di Renon untuk kantor, jasa profesional, klinik, dan event organizer. Citra korporat terpercaya. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website renon',
       'jasa website renon',
@@ -1615,7 +1615,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Renon?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah desainnya bisa formal dan korporat?',
@@ -1634,7 +1634,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   singaraja: {
     metaTitle: 'Jasa Pembuatan Website di Singaraja, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Singaraja untuk UMKM, kuliner, jasa, dan perdagangan. Harga ramah lokal, mulai Rp 699k.',
+      'Jasa website profesional di Singaraja untuk UMKM, kuliner, jasa, dan perdagangan. Harga ramah lokal, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website singaraja',
       'jasa website singaraja',
@@ -1684,7 +1684,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Singaraja?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa konsultasi online saja?',
@@ -1703,7 +1703,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   lovina: {
     metaTitle: 'Jasa Pembuatan Website di Lovina, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Lovina untuk dolphin tour, homestay, diving, dan restoran. Booking online, mulai Rp 699k.',
+      'Jasa website profesional di Lovina untuk dolphin tour, homestay, diving, dan restoran. Booking online, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website lovina',
       'jasa website lovina',
@@ -1754,7 +1754,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Lovina?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Bisakah website menargetkan wisatawan mancanegara?',
@@ -1773,7 +1773,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   amed: {
     metaTitle: 'Jasa Pembuatan Website di Amed, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Amed untuk dive center, homestay, dan tour. Target penyelam dunia, mulai Rp 699k.',
+      'Jasa website profesional di Amed untuk dive center, homestay, dan tour. Target penyelam dunia, mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website amed',
       'jasa website amed',
@@ -1824,7 +1824,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Amed?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah bisa full bahasa Inggris?',
@@ -1843,7 +1843,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   'nusa-penida': {
     metaTitle: 'Jasa Pembuatan Website di Nusa Penida, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Nusa Penida untuk tour, homestay, diving, dan transport. Booking online, SEO Penida. Mulai Rp 699k.',
+      'Jasa website profesional di Nusa Penida untuk tour, homestay, diving, dan transport. Booking online, SEO Penida. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website nusa penida',
       'jasa website nusa penida',
@@ -1893,7 +1893,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Nusa Penida?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah website tetap cepat diakses dari Penida?',
@@ -1912,7 +1912,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   kintamani: {
     metaTitle: 'Jasa Pembuatan Website di Kintamani, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Kintamani untuk agrowisata kopi, restoran view Batur, homestay, dan jeep tour. Mulai Rp 699k.',
+      'Jasa website profesional di Kintamani untuk agrowisata kopi, restoran view Batur, homestay, dan jeep tour. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website kintamani',
       'jasa website kintamani',
@@ -1962,7 +1962,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Kintamani?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Cocok untuk operator jeep tour?',
@@ -1981,7 +1981,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   'tanah-lot': {
     metaTitle: 'Jasa Pembuatan Website di Tanah Lot, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Tanah Lot untuk villa, restoran, toko oleh-oleh, dan wedding venue. Kawasan ikonik Bali. Mulai Rp 699k.',
+      'Jasa website profesional di Tanah Lot untuk villa, restoran, toko oleh-oleh, dan wedding venue. Kawasan ikonik Bali. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website tanah lot',
       'jasa website tanah lot',
@@ -2031,7 +2031,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Tanah Lot?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah melayani area Beraban dan Kediri?',
@@ -2050,7 +2050,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   bedugul: {
     metaTitle: 'Jasa Pembuatan Website di Bedugul, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Bedugul untuk hotel, agrowisata, restoran, dan wisata alam. Kawasan sejuk Bali. Mulai Rp 699k.',
+      'Jasa website profesional di Bedugul untuk hotel, agrowisata, restoran, dan wisata alam. Kawasan sejuk Bali. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website bedugul',
       'jasa website bedugul',
@@ -2100,7 +2100,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Bedugul?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Cocok untuk agrowisata kecil?',
@@ -2119,7 +2119,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
   tuban: {
     metaTitle: 'Jasa Pembuatan Website di Tuban, Bali | zeepage',
     metaDescription:
-      'Jasa website profesional di Tuban dekat Bandara Ngurah Rai untuk hotel transit, restoran, dan transport. Mulai Rp 699k.',
+      'Jasa website profesional di Tuban dekat Bandara Ngurah Rai untuk hotel transit, restoran, dan transport. Mulai Rp 799k.',
     keywords: [
       'jasa pembuatan website tuban',
       'jasa website tuban',
@@ -2169,7 +2169,7 @@ export const kontenDaerah: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'Berapa biaya jasa pembuatan website di Tuban?',
-        a: 'Paket mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
+        a: 'Paket mulai dari Rp 799k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun.',
       },
       {
         q: 'Apakah cocok untuk hotel dekat bandara?',

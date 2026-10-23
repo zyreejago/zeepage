@@ -297,7 +297,7 @@
     "plans": [
       {
         "name": "Landing Page",
-        "price": "Rp 699k",
+        "price": "Rp 799k",
         "target": "Perfect for SMEs or individuals who need one conversion-focused page",
         "features": [
           {
@@ -313,17 +313,37 @@
             "included": true
           },
           {
+            "text": "Free .com Domain for 1 Year",
+            "included": true
+          },
+          {
+            "text": "Free Hosting for 1 Year",
+            "included": true
+          },
+          {
+            "text": "Free SSL (Security)",
+            "included": true
+          },
+          {
+            "text": "Free Support",
+            "included": true
+          },
+          {
             "text": "2x Design Revisions",
             "included": true
           },
           {
             "text": "30 Days Free Maintenance",
             "included": true
+          },
+          {
+            "text": "Annual Fee of Rp 600k from Year 2",
+            "included": true
           }
         ],
         "cta": "Choose Package",
         "popular": false,
-        "whatsapp": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20the%20following%20package%3A%0APackage%3A%20Landing%20Page%0APrice%3A%20Rp%20699%2C000%0A%0APlease%20provide%20more%20information%20to%20start%20this%20project."
+        "whatsapp": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20the%20following%20package%3A%0APackage%3A%20Landing%20Page%0APrice%3A%20Rp%20799%2C000%0A%0APlease%20provide%20more%20information%20to%20start%20this%20project."
       },
       {
         "name": "Company Profile",
@@ -340,6 +360,18 @@
           },
           {
             "text": "Free .com Domain for 1 Year",
+            "included": true
+          },
+          {
+            "text": "Free Hosting for 1 Year",
+            "included": true
+          },
+          {
+            "text": "Free SSL (Security)",
+            "included": true
+          },
+          {
+            "text": "Free Support",
             "included": true
           },
           {
@@ -364,6 +396,10 @@
           },
           {
             "text": "3 Months Free Maintenance",
+            "included": true
+          },
+          {
+            "text": "Annual Fee of Rp 600k from Year 2",
             "included": true
           }
         ],

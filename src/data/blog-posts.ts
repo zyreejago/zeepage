@@ -469,7 +469,7 @@ export const blogPostsData: Record<'id' | 'en', any[]> = {
     href: '/blog/biaya-bikin-website/',
     image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80',
     date: '16 Juni 2026',
-    excerpt: 'Simak rincian lengkap harga pembuatan website dari Rp 699k hingga jutaan. Plus tips agar tidak tertipu harga murah.',
+    excerpt: 'Simak rincian lengkap harga pembuatan website dari Rp 799k hingga jutaan. Plus tips agar tidak tertipu harga murah.',
   },
   {
     title: 'Landing Page vs Company Profile: Mana yang Cocok untuk Bisnis Anda?',

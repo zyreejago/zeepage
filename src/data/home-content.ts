@@ -13,7 +13,7 @@ export const content: Record<Lang, any> = {
     htmlLang: 'id',
     title: 'Jasa Pembuatan Website Profesional di Bali | zeepage',
     description:
-      'zeepage adalah jasa pembuatan website di Bali untuk UMKM dan brand yang sedang bertumbuh. Landing page mulai Rp 699 ribu, company profile Rp 1.499 ribu termasuk domain .com gratis 1 tahun.',
+      'zeepage adalah jasa pembuatan website di Bali untuk UMKM dan brand yang sedang bertumbuh. Landing page mulai Rp 799 ribu, company profile Rp 1.499 ribu, keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis.',
     nav: [
       { label: 'Layanan', href: '#layanan' },
       { label: 'Karya', href: '#karya' },
@@ -28,7 +28,7 @@ export const content: Record<Lang, any> = {
       h1accent: 'bisnis Anda',
       h1b: 'ditemukan pelanggan.',
       sub: 'Kami merancang dan membangun website yang cepat, rapi, dan mudah ditemukan di Google, untuk UMKM dan brand di Bali serta seluruh Indonesia.',
-      priceLine: 'Paket website mulai Rp 699 ribu.',
+      priceLine: 'Paket website mulai Rp 799 ribu.',
       cta1: 'Konsultasi Gratis',
       cta2: 'Lihat Karya Pilihan',
       collage: [
@@ -53,7 +53,7 @@ export const content: Record<Lang, any> = {
       rows: [
         {
           name: 'Landing Page',
-          price: 'Mulai Rp 699rb',
+          price: 'Mulai Rp 799rb',
           desc: 'Satu halaman fokus konversi untuk campaign, peluncuran produk, atau personal brand. Sudah termasuk copywriting headline, tombol WhatsApp, dan form order.',
           meta: '1 halaman custom / 2x revisi / 1 sampai 2 minggu',
         },
@@ -108,17 +108,17 @@ export const content: Record<Lang, any> = {
       plans: [
         {
           name: 'Landing Page',
-          price: 'Rp 699 ribu',
+          price: 'Rp 799 ribu',
           target: 'Cocok untuk UMKM atau personal yang butuh satu halaman fokus konversi.',
-          features: ['1 halaman full custom design', 'Copywriting headline', 'Integrasi WhatsApp dan form order', '2x revisi desain', 'Maintenance gratis 30 hari'],
+          features: ['1 halaman full custom design', 'Copywriting headline', 'Integrasi WhatsApp dan form order', 'Domain .com gratis 1 tahun', 'Hosting gratis 1 tahun', 'SSL gratis (keamanan HTTPS)', 'Support gratis', '2x revisi desain', 'Maintenance gratis 30 hari', 'Biaya tahunan Rp 600 ribu mulai tahun ke 2'],
           popular: false,
-          wa: 'https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Landing%20Page%20Rp%20699%20ribu.%20Mohon%20info%20selengkapnya.',
+          wa: 'https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Landing%20Page%20Rp%20799%20ribu.%20Mohon%20info%20selengkapnya.',
         },
         {
           name: 'Company Profile',
           price: 'Rp 1.499 ribu',
           target: 'Pilihan terbaik untuk bisnis yang ingin tampil lengkap dan kredibel.',
-          features: ['Semua benefit paket Landing Page', 'Sampai 7 halaman lengkap', 'Domain .com gratis 1 tahun', 'Setup blog dan 1 artikel perdana', 'SEO on page: meta, schema, sitemap', 'Setup Google Business Profile', '3x revisi desain', 'Maintenance gratis 3 bulan'],
+          features: ['Semua benefit paket Landing Page', 'Sampai 7 halaman lengkap', 'Domain .com gratis 1 tahun', 'Hosting gratis 1 tahun', 'SSL gratis (keamanan HTTPS)', 'Support gratis', 'Setup blog dan 1 artikel perdana', 'SEO on page: meta, schema, sitemap', 'Setup Google Business Profile', '3x revisi desain', 'Maintenance gratis 3 bulan', 'Biaya tahunan Rp 600 ribu mulai tahun ke 2'],
           popular: true,
           popularLabel: 'Paling dipilih',
           wa: 'https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Company%20Profile%20Rp%201.499%20ribu.%20Mohon%20info%20selengkapnya.',
@@ -186,7 +186,7 @@ export const content: Record<Lang, any> = {
     faq: {
       heading: 'Pertanyaan yang sering masuk',
       items: [
-        { q: 'Berapa biaya membuat website di zeepage?', a: 'Landing page Rp 699 ribu dan company profile Rp 1.499 ribu termasuk domain .com gratis 1 tahun. Kebutuhan khusus seperti e-commerce dan aplikasi web dihitung setelah konsultasi, selalu dengan penawaran tertulis di awal.' },
+        { q: 'Berapa biaya membuat website di zeepage?', a: 'Landing page Rp 799 ribu dan company profile Rp 1.499 ribu, keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis. Biaya tahunan Rp 600 ribu berlaku mulai tahun kedua. Kebutuhan khusus seperti e-commerce dan aplikasi web dihitung setelah konsultasi, selalu dengan penawaran tertulis di awal.' },
         { q: 'Berapa lama pengerjaannya?', a: 'Landing page selesai dalam 1 sampai 2 minggu. Company profile selesai dalam 2 sampai 4 minggu, tergantung kelengkapan materi dari Anda.' },
         { q: 'Apakah bisa revisi?', a: 'Bisa. Paket landing page termasuk 2 kali revisi desain dan company profile 3 kali revisi desain.' },
         { q: 'Apakah ada perawatan setelah website jadi?', a: 'Ada. Landing page termasuk maintenance gratis 30 hari dan company profile gratis 3 bulan. Setelah masa gratis berakhir, perawatan bisa dilanjutkan dengan paket berbayar.' },
@@ -217,7 +217,7 @@ export const content: Record<Lang, any> = {
     htmlLang: 'en',
     title: 'Professional Website Design Services in Bali | zeepage',
     description:
-      'zeepage provides website design services in Bali for growing businesses and brands. Landing pages from Rp 699k, company profile websites Rp 1.499k including a free .com domain for 1 year.',
+      'zeepage provides website design services in Bali for growing businesses and brands. Landing pages from Rp 799k, company profile websites Rp 1.499k, both including a free .com domain for 1 year, free hosting, free SSL, and free support.',
     nav: [
       { label: 'Services', href: '#layanan' },
       { label: 'Work', href: '#karya' },
@@ -232,7 +232,7 @@ export const content: Record<Lang, any> = {
       h1accent: 'your business',
       h1b: 'found by customers.',
       sub: 'We design and build fast, tidy websites that are easy to find on Google, for small businesses and growing brands in Bali and across Indonesia.',
-      priceLine: 'Website packages from Rp 699k.',
+      priceLine: 'Website packages from Rp 799k.',
       cta1: 'Free Consultation',
       cta2: 'See Selected Work',
       collage: [
@@ -257,7 +257,7 @@ export const content: Record<Lang, any> = {
       rows: [
         {
           name: 'Landing Page',
-          price: 'From Rp 699k',
+          price: 'From Rp 799k',
           desc: 'One conversion focused page for a campaign, product launch, or personal brand. Includes headline copywriting, a WhatsApp button, and an order form.',
           meta: '1 custom page / 2 design revisions / 1 to 2 weeks',
         },
@@ -312,17 +312,17 @@ export const content: Record<Lang, any> = {
       plans: [
         {
           name: 'Landing Page',
-          price: 'Rp 699k',
+          price: 'Rp 799k',
           target: 'For small businesses or personal brands that need one conversion focused page.',
-          features: ['1 fully custom designed page', 'Headline copywriting', 'WhatsApp and order form integration', '2 design revisions', '30 days of free maintenance'],
+          features: ['1 fully custom designed page', 'Headline copywriting', 'WhatsApp and order form integration', 'Free .com domain for 1 year', 'Free hosting for 1 year', 'Free SSL (HTTPS security)', 'Free support', '2 design revisions', '30 days of free maintenance', 'Annual fee of Rp 600k from year 2'],
           popular: false,
-          wa: 'https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%20am%20interested%20in%20the%20Landing%20Page%20package%20at%20Rp%20699k.%20Please%20send%20more%20details.',
+          wa: 'https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%20am%20interested%20in%20the%20Landing%20Page%20package%20at%20Rp%20799k.%20Please%20send%20more%20details.',
         },
         {
           name: 'Company Profile',
           price: 'Rp 1.499k',
           target: 'The best choice for businesses that want a complete, credible presence.',
-          features: ['Everything in the Landing Page package', 'Up to 7 complete pages', 'Free .com domain for 1 year', 'Blog setup and 1 starter article', 'On page SEO: meta, schema, sitemap', 'Google Business Profile setup', '3 design revisions', '3 months of free maintenance'],
+          features: ['Everything in the Landing Page package', 'Up to 7 complete pages', 'Free .com domain for 1 year', 'Free hosting for 1 year', 'Free SSL (HTTPS security)', 'Free support', 'Blog setup and 1 starter article', 'On page SEO: meta, schema, sitemap', 'Google Business Profile setup', '3 design revisions', '3 months of free maintenance', 'Annual fee of Rp 600k from year 2'],
           popular: true,
           popularLabel: 'Most chosen',
           wa: 'https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%20am%20interested%20in%20the%20Company%20Profile%20package%20at%20Rp%201.499k.%20Please%20send%20more%20details.',
@@ -390,7 +390,7 @@ export const content: Record<Lang, any> = {
     faq: {
       heading: 'Questions we hear often',
       items: [
-        { q: 'How much does a website cost at zeepage?', a: 'A landing page is Rp 699k and a company profile is Rp 1.499k including a free .com domain for 1 year. Custom needs such as e-commerce and web applications are quoted after a consultation, always in writing upfront.' },
+        { q: 'How much does a website cost at zeepage?', a: 'A landing page is Rp 799k and a company profile is Rp 1.499k, both including a free .com domain for 1 year, free hosting, free SSL, and free support. An annual fee of Rp 600k applies from year two. Custom needs such as e-commerce and web applications are quoted after a consultation, always in writing upfront.' },
         { q: 'How long does it take?', a: 'A landing page takes 1 to 2 weeks. A company profile takes 2 to 4 weeks, depending on how complete your materials are.' },
         { q: 'Can I ask for revisions?', a: 'Yes. The landing page package includes 2 design revisions and the company profile package includes 3 design revisions.' },
         { q: 'Is there maintenance after launch?', a: 'Yes. Landing pages include 30 days of free maintenance and company profiles include 3 months. After the free period, care can continue on a paid plan.' },

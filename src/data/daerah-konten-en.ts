@@ -10,7 +10,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   bali: {
     metaTitle: 'Website Design Services in Bali | Professional & SEO-Friendly',
     metaDescription:
-      'Professional website design services in Bali for hotels, villas, restaurants, and SMEs. Modern design, fast, Bali local SEO. From Rp 699k, free consultation.',
+      'Professional website design services in Bali for hotels, villas, restaurants, and SMEs. Modern design, fast, Bali local SEO. From Rp 799k, free consultation.',
     keywords: [
       'website design bali',
       'web design bali',
@@ -66,7 +66,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Bali?',
-        a: 'zeepage packages in Bali start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For hotels, villas, or online stores with booking and payment gateway features, pricing adjusts to complexity and is always transparent from the quote.',
+        a: 'zeepage packages in Bali start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For hotels, villas, or online stores with booking and payment gateway features, pricing adjusts to complexity and is always transparent from the quote.',
       },
       {
         q: 'Do you serve all of Bali or only Denpasar?',
@@ -98,7 +98,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   seminyak: {
     metaTitle: 'Website Design Services in Seminyak, Bali | zeepage',
     metaDescription:
-      'Premium website design for boutiques, beach clubs, restaurants, and villas in Seminyak, Petitenget, and Umalas. Elegant design, local SEO, from Rp 699k.',
+      'Premium website design for boutiques, beach clubs, restaurants, and villas in Seminyak, Petitenget, and Umalas. Elegant design, local SEO, from Rp 799k.',
     keywords: [
       'website design seminyak',
       'web design seminyak',
@@ -161,7 +161,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for a boutique, villa, or restaurant in Seminyak?',
-        a: 'zeepage packages for Seminyak businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For villas or beach clubs that need large photo galleries and a reservation system, we tailor the package to your needs, always transparent with no hidden fees.',
+        a: 'zeepage packages for Seminyak businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For villas or beach clubs that need large photo galleries and a reservation system, we tailor the package to your needs, always transparent with no hidden fees.',
       },
       {
         q: 'Can my website appear when people search for "villa Petitenget" or "spa Seminyak"?',
@@ -188,7 +188,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   canggu: {
     metaTitle: 'Website Design Services in Canggu, Bali | zeepage',
     metaDescription:
-      'Website design for cafes, villas, surf schools, and creative businesses in Canggu, Batu Bolong, and Berawa. Modern design, local SEO, from Rp 699k.',
+      'Website design for cafes, villas, surf schools, and creative businesses in Canggu, Batu Bolong, and Berawa. Modern design, local SEO, from Rp 799k.',
     keywords: [
       'website design canggu',
       'web design canggu',
@@ -251,7 +251,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for a cafe, villa, or surf school in Canggu?',
-        a: 'zeepage packages for Canggu businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For booking features or a product catalogue, we tailor the package, always transparent with no hidden fees.',
+        a: 'zeepage packages for Canggu businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For booking features or a product catalogue, we tailor the package, always transparent with no hidden fees.',
       },
       {
         q: 'Can my website appear when people search for "cafe Canggu" or "villa Berawa"?',
@@ -270,7 +270,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   ubud: {
     metaTitle: 'Website Design Services in Ubud, Bali | zeepage',
     metaDescription:
-      'Website design for villas, yoga studios, art galleries, and healthy restaurants in Ubud. Calm design, local SEO, from Rp 699k.',
+      'Website design for villas, yoga studios, art galleries, and healthy restaurants in Ubud. Calm design, local SEO, from Rp 799k.',
     keywords: [
       'website design ubud',
       'web design ubud',
@@ -333,7 +333,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for a villa, yoga studio, or gallery in Ubud?',
-        a: 'zeepage packages for Ubud businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For more complex retreat or catalogue needs, we tailor the package with no hidden fees.',
+        a: 'zeepage packages for Ubud businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For more complex retreat or catalogue needs, we tailor the package with no hidden fees.',
       },
       {
         q: 'Can my website appear when foreign travelers search for experiences in Ubud?',
@@ -352,7 +352,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   kuta: {
     metaTitle: 'Website Design Services in Kuta, Bali | zeepage',
     metaDescription:
-      'Website design for hotels, restaurants, souvenir shops, and tours in Kuta. Fast design, local SEO, from Rp 699k.',
+      'Website design for hotels, restaurants, souvenir shops, and tours in Kuta. Fast design, local SEO, from Rp 799k.',
     keywords: [
       'website design kuta',
       'web design kuta',
@@ -415,7 +415,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for a hotel, restaurant, or shop in Kuta?',
-        a: 'zeepage packages for Kuta businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For reservation systems or fuller catalogues, we tailor the package with no hidden fees.',
+        a: 'zeepage packages for Kuta businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For reservation systems or fuller catalogues, we tailor the package with no hidden fees.',
       },
       {
         q: 'Can my website appear when travelers search for "hotel Kuta" or "restaurant Kuta"?',
@@ -434,7 +434,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   sanur: {
     metaTitle: 'Website Design Services in Sanur, Bali | zeepage',
     metaDescription:
-      'Website design for family hotels, restaurants, clinics, and watersports in Sanur. Friendly design, local SEO, from Rp 699k.',
+      'Website design for family hotels, restaurants, clinics, and watersports in Sanur. Friendly design, local SEO, from Rp 799k.',
     keywords: [
       'website design sanur',
       'web design sanur',
@@ -497,7 +497,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for a hotel, clinic, or restaurant in Sanur?',
-        a: 'zeepage packages for Sanur businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For reservation or appointment needs, we tailor the package with no hidden fees.',
+        a: 'zeepage packages for Sanur businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For reservation or appointment needs, we tailor the package with no hidden fees.',
       },
       {
         q: 'Can my website appear when people search for "hotel Sanur" or "clinic Sanur"?',
@@ -516,7 +516,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   denpasar: {
     metaTitle: 'Website Design Services in Denpasar, Bali | zeepage',
     metaDescription:
-      'Website design for SMEs, culinary, professional services, and clinics in Denpasar. Professional design, local SEO, from Rp 699k.',
+      'Website design for SMEs, culinary, professional services, and clinics in Denpasar. Professional design, local SEO, from Rp 799k.',
     keywords: [
       'website design denpasar',
       'web design denpasar',
@@ -579,7 +579,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
       },
       {
         q: 'How much does a website cost for SMEs and services in Denpasar?',
-        a: 'zeepage packages for Denpasar businesses start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For specific needs, we tailor the package with no hidden fees.',
+        a: 'zeepage packages for Denpasar businesses start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For specific needs, we tailor the package with no hidden fees.',
       },
       {
         q: 'Can my website appear when people search for services in Denpasar?',
@@ -606,7 +606,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   badung: {
     metaTitle: 'Website Design Services in Badung, Bali | zeepage',
     metaDescription:
-      'Professional website design in Badung: Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua. For hotels, villas, beach clubs, restaurants. From Rp 699k.',
+      'Professional website design in Badung: Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua. For hotels, villas, beach clubs, restaurants. From Rp 799k.',
     keywords: [
       'website design badung',
       'web design badung bali',
@@ -657,7 +657,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Badung?',
-        a: 'zeepage packages in Badung start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For hotels, villas, or beach clubs with booking features, pricing adjusts to your needs.',
+        a: 'zeepage packages in Badung start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For hotels, villas, or beach clubs with booking features, pricing adjusts to your needs.',
       },
       {
         q: 'Do you serve all Badung areas like Canggu and Uluwatu?',
@@ -688,7 +688,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   gianyar: {
     metaTitle: 'Website Design Services in Gianyar, Bali | zeepage',
     metaDescription:
-      'Professional website design in Gianyar & Ubud for homestays, yoga, art galleries, and tour travel. Aesthetic design, local SEO. From Rp 699k.',
+      'Professional website design in Gianyar & Ubud for homestays, yoga, art galleries, and tour travel. Aesthetic design, local SEO. From Rp 799k.',
     keywords: [
       'website design gianyar',
       'web design ubud bali',
@@ -738,7 +738,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Gianyar?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can you build a bilingual website for the tourist market?',
@@ -757,7 +757,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   tabanan: {
     metaTitle: 'Website Design Services in Tabanan, Bali | zeepage',
     metaDescription:
-      'Professional website design in Tabanan: Tanah Lot, Bedugul, Jatiluwih. For agrotourism, villas, rice field restaurants, wedding venues. From Rp 699k.',
+      'Professional website design in Tabanan: Tanah Lot, Bedugul, Jatiluwih. For agrotourism, villas, rice field restaurants, wedding venues. From Rp 799k.',
     keywords: [
       'website design tabanan',
       'web design tabanan bali',
@@ -807,7 +807,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Tabanan?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for wedding venues targeting overseas markets?',
@@ -826,7 +826,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   klungkung: {
     metaTitle: 'Website Design Services in Klungkung, Bali | zeepage',
     metaDescription:
-      'Professional website design in Klungkung & Nusa Penida for tours, homestays, diving, and crafts. Local SEO, from Rp 699k.',
+      'Professional website design in Klungkung & Nusa Penida for tours, homestays, diving, and crafts. Local SEO, from Rp 799k.',
     keywords: [
       'website design klungkung',
       'website design nusa penida',
@@ -875,7 +875,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Klungkung?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can you build a booking system for Nusa Penida tours?',
@@ -894,7 +894,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   bangli: {
     metaTitle: 'Website Design Services in Bangli, Bali | zeepage',
     metaDescription:
-      'Professional website design in Bangli & Kintamani for coffee agrotourism, mountain-view restaurants, homestays, and trekking. From Rp 699k.',
+      'Professional website design in Bangli & Kintamani for coffee agrotourism, mountain-view restaurants, homestays, and trekking. From Rp 799k.',
     keywords: [
       'website design bangli',
       'website design kintamani',
@@ -943,7 +943,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Bangli?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. Very affordable for SME and homestay scale.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. Very affordable for SME and homestay scale.',
       },
       {
         q: 'Is it suitable for small businesses like coffee stalls?',
@@ -962,7 +962,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   karangasem: {
     metaTitle: 'Website Design Services in Karangasem, Bali | zeepage',
     metaDescription:
-      'Professional website design in Karangasem: Amed, Tulamben, Besakih, Tirta Gangga. For diving, homestays, agrotourism, and tours. From Rp 699k.',
+      'Professional website design in Karangasem: Amed, Tulamben, Besakih, Tirta Gangga. For diving, homestays, agrotourism, and tours. From Rp 799k.',
     keywords: [
       'website design karangasem',
       'website design amed bali',
@@ -1011,7 +1011,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Karangasem?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can you build a full-English website?',
@@ -1030,7 +1030,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   buleleng: {
     metaTitle: 'Website Design Services in Buleleng, Bali | zeepage',
     metaDescription:
-      'Professional website design in Buleleng & Singaraja for SMEs, Lovina tourism, culinary, and agrotourism. Local SEO, from Rp 699k.',
+      'Professional website design in Buleleng & Singaraja for SMEs, Lovina tourism, culinary, and agrotourism. Local SEO, from Rp 799k.',
     keywords: [
       'website design buleleng',
       'website design singaraja',
@@ -1079,7 +1079,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Buleleng?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Do you serve Lovina and Singaraja areas?',
@@ -1098,7 +1098,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   jembrana: {
     metaTitle: 'Website Design Services in Jembrana, Bali | zeepage',
     metaDescription:
-      'Professional website design in Jembrana for SMEs, agriculture, Medewi nature tourism, and culinary. SME-friendly prices, from Rp 699k.',
+      'Professional website design in Jembrana for SMEs, agriculture, Medewi nature tourism, and culinary. SME-friendly prices, from Rp 799k.',
     keywords: [
       'website design jembrana',
       'web design jembrana bali',
@@ -1146,7 +1146,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Jembrana?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is there guidance for non-technical owners?',
@@ -1165,7 +1165,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   legian: {
     metaTitle: 'Website Design Services in Legian, Bali | zeepage',
     metaDescription:
-      'Professional website design in Legian for hotels, restaurants, bars, and retail. Near Legian Beach & Poppies Lane. From Rp 699k.',
+      'Professional website design in Legian for hotels, restaurants, bars, and retail. Near Legian Beach & Poppies Lane. From Rp 799k.',
     keywords: [
       'website design legian',
       'web design legian bali',
@@ -1214,7 +1214,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Legian?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for small guesthouses?',
@@ -1233,7 +1233,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   jimbaran: {
     metaTitle: 'Website Design Services in Jimbaran, Bali | zeepage',
     metaDescription:
-      'Professional website design in Jimbaran for seafood restaurants, hotels, wedding venues, and property. Local SEO, from Rp 699k.',
+      'Professional website design in Jimbaran for seafood restaurants, hotels, wedding venues, and property. Local SEO, from Rp 799k.',
     keywords: [
       'website design jimbaran',
       'web design jimbaran bali',
@@ -1283,7 +1283,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Jimbaran?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for wedding venues targeting overseas markets?',
@@ -1302,7 +1302,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   'nusa-dua': {
     metaTitle: 'Website Design Services in Nusa Dua, Bali | zeepage',
     metaDescription:
-      'Professional website design in Nusa Dua for luxury hotels, MICE, golf, and spas. International corporate standards. From Rp 699k.',
+      'Professional website design in Nusa Dua for luxury hotels, MICE, golf, and spas. International corporate standards. From Rp 799k.',
     keywords: [
       'website design nusa dua',
       'web design nusa dua bali',
@@ -1351,7 +1351,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Nusa Dua?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For corporate needs with custom features, we prepare custom quotes.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. For corporate needs with custom features, we prepare custom quotes.',
       },
       {
         q: 'Can you build a full-English website?',
@@ -1370,7 +1370,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   uluwatu: {
     metaTitle: 'Website Design Services in Uluwatu, Bali | zeepage',
     metaDescription:
-      'Professional website design in Uluwatu: cliff villas, surf camps, beach clubs, wedding venues. For surfer & premium markets. From Rp 699k.',
+      'Professional website design in Uluwatu: cliff villas, surf camps, beach clubs, wedding venues. For surfer & premium markets. From Rp 799k.',
     keywords: [
       'website design uluwatu',
       'web design uluwatu bali',
@@ -1420,7 +1420,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Uluwatu?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for surf camps?',
@@ -1439,7 +1439,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   kerobokan: {
     metaTitle: 'Website Design Services in Kerobokan, Bali | zeepage',
     metaDescription:
-      'Professional website design in Kerobokan & Umalas for villas, cafes, creative studios, and local services. SME prices, from Rp 699k.',
+      'Professional website design in Kerobokan & Umalas for villas, cafes, creative studios, and local services. SME prices, from Rp 799k.',
     keywords: [
       'website design kerobokan',
       'website design umalas',
@@ -1488,7 +1488,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Kerobokan?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Do you serve the Umalas area?',
@@ -1507,7 +1507,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   renon: {
     metaTitle: 'Website Design Services in Renon, Denpasar | zeepage',
     metaDescription:
-      'Professional website design in Renon for offices, professional services, clinics, and event organizers. Trusted corporate image. From Rp 699k.',
+      'Professional website design in Renon for offices, professional services, clinics, and event organizers. Trusted corporate image. From Rp 799k.',
     keywords: [
       'website design renon',
       'website design denpasar',
@@ -1556,7 +1556,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Renon?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can the design be formal and corporate?',
@@ -1575,7 +1575,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   singaraja: {
     metaTitle: 'Website Design Services in Singaraja, Bali | zeepage',
     metaDescription:
-      'Professional website design in Singaraja for SMEs, culinary, services, and trade. Local-friendly prices, from Rp 699k.',
+      'Professional website design in Singaraja for SMEs, culinary, services, and trade. Local-friendly prices, from Rp 799k.',
     keywords: [
       'website design singaraja',
       'web design singaraja bali',
@@ -1623,7 +1623,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Singaraja?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can consultations be online only?',
@@ -1642,7 +1642,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   lovina: {
     metaTitle: 'Website Design Services in Lovina, Bali | zeepage',
     metaDescription:
-      'Professional website design in Lovina for dolphin tours, homestays, diving, and restaurants. Online booking, from Rp 699k.',
+      'Professional website design in Lovina for dolphin tours, homestays, diving, and restaurants. Online booking, from Rp 799k.',
     keywords: [
       'website design lovina',
       'web design lovina bali',
@@ -1692,7 +1692,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Lovina?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can the website target international travelers?',
@@ -1711,7 +1711,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   amed: {
     metaTitle: 'Website Design Services in Amed, Bali | zeepage',
     metaDescription:
-      'Professional website design in Amed for dive centers, homestays, and tours. Targeting the world\'s divers, from Rp 699k.',
+      'Professional website design in Amed for dive centers, homestays, and tours. Targeting the world\'s divers, from Rp 799k.',
     keywords: [
       'website design amed',
       'web design amed bali',
@@ -1761,7 +1761,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Amed?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Can you build a full-English website?',
@@ -1780,7 +1780,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   'nusa-penida': {
     metaTitle: 'Website Design Services in Nusa Penida, Bali | zeepage',
     metaDescription:
-      'Professional website design in Nusa Penida for tours, homestays, diving, and transport. Online booking, Penida SEO. From Rp 699k.',
+      'Professional website design in Nusa Penida for tours, homestays, diving, and transport. Online booking, Penida SEO. From Rp 799k.',
     keywords: [
       'website design nusa penida',
       'web design nusa penida',
@@ -1829,7 +1829,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Nusa Penida?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is the website still fast when accessed from Penida?',
@@ -1848,7 +1848,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   kintamani: {
     metaTitle: 'Website Design Services in Kintamani, Bali | zeepage',
     metaDescription:
-      'Professional website design in Kintamani for coffee agrotourism, Batur-view restaurants, homestays, and jeep tours. From Rp 699k.',
+      'Professional website design in Kintamani for coffee agrotourism, Batur-view restaurants, homestays, and jeep tours. From Rp 799k.',
     keywords: [
       'website design kintamani',
       'web design kintamani bali',
@@ -1897,7 +1897,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Kintamani?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for jeep tour operators?',
@@ -1916,7 +1916,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   'tanah-lot': {
     metaTitle: 'Website Design Services in Tanah Lot, Bali | zeepage',
     metaDescription:
-      'Professional website design in Tanah Lot for villas, restaurants, souvenir shops, and wedding venues. Bali\'s iconic area. From Rp 699k.',
+      'Professional website design in Tanah Lot for villas, restaurants, souvenir shops, and wedding venues. Bali\'s iconic area. From Rp 799k.',
     keywords: [
       'website design tanah lot',
       'web design tanah lot bali',
@@ -1965,7 +1965,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Tanah Lot?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Do you serve Beraban and Kediri areas?',
@@ -1984,7 +1984,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   bedugul: {
     metaTitle: 'Website Design Services in Bedugul, Bali | zeepage',
     metaDescription:
-      'Professional website design in Bedugul for hotels, agrotourism, restaurants, and nature tourism. Bali\'s cool highland. From Rp 699k.',
+      'Professional website design in Bedugul for hotels, agrotourism, restaurants, and nature tourism. Bali\'s cool highland. From Rp 799k.',
     keywords: [
       'website design bedugul',
       'web design bedugul bali',
@@ -2033,7 +2033,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Bedugul?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for small agrotourism?',
@@ -2052,7 +2052,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
   tuban: {
     metaTitle: 'Website Design Services in Tuban, Bali | zeepage',
     metaDescription:
-      'Professional website design in Tuban near Ngurah Rai Airport for transit hotels, restaurants, and transport. From Rp 699k.',
+      'Professional website design in Tuban near Ngurah Rai Airport for transit hotels, restaurants, and transport. From Rp 799k.',
     keywords: [
       'website design tuban',
       'web design tuban bali',
@@ -2101,7 +2101,7 @@ export const kontenDaerahEn: Record<string, KontenDaerah> = {
     faq: [
       {
         q: 'How much does website design cost in Tuban?',
-        a: 'Packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
+        a: 'Packages start from Rp 799k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year.',
       },
       {
         q: 'Is it suitable for airport hotels?',
