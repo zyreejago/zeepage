@@ -311,15 +311,12 @@ const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
           {t.steps.heading} <em class="font-display italic font-medium text-brand">{t.steps.accent}</em>
         </h2>
       </div>
-      <div data-reveal-group class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div data-reveal-group class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {t.steps.items.map((s: any) => (
-          <article class="relative h-full bg-white border border-line rounded-3xl p-7 lg:p-9 overflow-hidden hover:border-brand transition-colors duration-300">
-            <span aria-hidden="true" class="absolute -top-6 -right-2 font-extrabold text-[120px] leading-none text-ink/5 select-none">{s.num}</span>
-            <div class="relative">
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-ink text-white font-extrabold text-sm">{Number(s.num)}</span>
-              <h3 class="mt-5 font-bold text-xl leading-tight">{s.title}</h3>
-              <p class="mt-3 text-sm lg:text-base text-ink/60 leading-relaxed">{s.desc}</p>
-            </div>
+          <article class="bg-white border border-line rounded-3xl p-6">
+            <p class="font-display italic text-4xl text-brand/60 mb-5">{s.num}</p>
+            <h3 class="font-bold text-lg leading-snug mb-2.5">{s.title}</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">{s.desc}</p>
           </article>
         ))}
       </div>

@@ -175,12 +175,13 @@ export const content: Record<Lang, any> = {
     steps: {
       index: '06',
       label: 'Cara kerja',
-      heading: 'Tiga langkah',
+      heading: 'Empat langkah',
       accent: 'sampai tayang.',
       items: [
-        { num: '01', title: 'Konsultasi gratis', desc: 'Ceritakan bisnis dan kebutuhan website Anda lewat WhatsApp. Kami bantu pilihkan jenis website yang paling sesuai, tanpa komitmen apa pun.' },
-        { num: '02', title: 'Penawaran tertulis', desc: 'Anda menerima penawaran tertulis dengan harga final dan rincian yang didapat, sebelum pengerjaan dimulai. Tidak ada biaya yang muncul belakangan.' },
-        { num: '03', title: 'Pengerjaan dan revisi', desc: 'Landing page selesai dalam 1 sampai 2 minggu dan company profile dalam 2 sampai 4 minggu, sudah termasuk revisi desain sesuai paket yang dipilih.' },
+        { num: '01', title: 'Konsultasi dan briefing', desc: 'Ceritakan kebutuhan dan target bisnis Anda. Kami dengarkan, lalu rumuskan solusi yang tepat sasaran.' },
+        { num: '02', title: 'Rekomendasi paket', desc: 'Kami sarankan jenis website dan paket yang paling sesuai, tanpa fitur mubazir dan tanpa biaya tersembunyi.' },
+        { num: '03', title: 'Kesepakatan dan data', desc: 'Setelah penawaran disetujui, Anda membayar DP 50 persen dan melengkapi materi seperti logo, teks, dan foto.' },
+        { num: '04', title: 'Pengerjaan dan serah terima', desc: 'Proyek dikerjakan dengan kabar progres berkala. Setelah Anda setuju dan pelunasan selesai, website siap tayang.' },
       ],
     },
     comparison: {
@@ -401,12 +402,13 @@ export const content: Record<Lang, any> = {
     steps: {
       index: '06',
       label: 'How we work',
-      heading: 'Three steps',
+      heading: 'Four steps',
       accent: 'to launch.',
       items: [
-        { num: '01', title: 'Free consultation', desc: 'Tell us about your business and website needs on WhatsApp. We will help you pick the most suitable type of website, with no commitment at all.' },
-        { num: '02', title: 'Written proposal', desc: 'You receive a written proposal with the final price and everything included, before any work begins. No fees appear later.' },
-        { num: '03', title: 'Build and revisions', desc: 'Landing pages are finished in 1 to 2 weeks and company profiles in 2 to 4 weeks, including design revisions according to your package.' },
+        { num: '01', title: 'Consultation and briefing', desc: 'Tell us about your business needs and goals. We listen, then shape the right solution.' },
+        { num: '02', title: 'Package recommendation', desc: 'We recommend the website type and package that fits best, with no pointless features and no hidden fees.' },
+        { num: '03', title: 'Agreement and materials', desc: 'Once the proposal is approved, you pay a 50 percent deposit and complete materials such as your logo, texts, and photos.' },
+        { num: '04', title: 'Build and handover', desc: 'Your project is built with regular progress updates. After your approval and final payment, the website goes live.' },
       ],
     },
     comparison: {
