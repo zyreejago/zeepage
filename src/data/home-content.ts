@@ -47,8 +47,8 @@ export const content: Record<Lang, any> = {
     services: {
       index: '01',
       label: 'Layanan',
-      heading: 'Jasa pembuatan website',
-      accent: 'untuk bisnis Anda.',
+      heading: 'Jasa pembuatan website di Bali',
+      accent: 'untuk Anda.',
       note: 'Dua paket pertama harganya tetap dan tertulis jelas. Sisanya menyesuaikan kebutuhan, selalu diawali konsultasi gratis.',
       rows: [
         {
@@ -245,7 +245,7 @@ export const content: Record<Lang, any> = {
     services: {
       index: '01',
       label: 'Services',
-      heading: 'Website design services',
+      heading: 'Website design services in Bali',
       accent: 'for your business.',
       note: 'The first two packages have fixed, clearly written prices. The rest adapt to your needs, always starting with a free consultation.',
       rows: [
