@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import Pricing from '../../../components/Pricing.astro';
+import '../../../styles/global.css';
+
+import en from '../../../i18n/en.json';
+import { WA_EN } from '../../../data/home-content';
+
+const t = en;
+const lang = 'en';
+const canonical = 'https://zeepage.com/en/harga/';
+
+const pricingT = {
+  ...t.pricing,
+  badge: 'Pricing',
+  title: 'Website Pricing Packages',
+  titleHighlight: 'for Small Businesses',
+  subtitle: 'Every package includes a free .com domain for 1 year, free hosting, free SSL, and free support. No hidden fees.',
+};
+
+const tokoOnline = {
+  name: 'Online Store Website',
+  was: 'Rp 3,500,000',
+  price: 'Rp 2,500,000',
+  target: 'For businesses that want to sell online with a product catalog, shopping cart, and automated ordering.',
+  features: [
+    'Free .com Domain',
+    'Free Hosting',
+    'Free SSL (Security)',
+    'Free Support',
+    'Free Maintenance',
+    'Responsive Website',
+    'Shopping Cart',
+    'Online / WhatsApp Ordering',
+    'Automatic Shipping Calculation',
+    'Annual Fee Rp 1,200,000',
+  ],
+  whatsapp: 'https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%20am%20interested%20in%20the%20Online%20Store%20Website%20package%20at%20Rp%202%2C500%2C000.%20Please%20send%20more%20details.',
+};
+
+const faqs = [
+  {
+    q: 'How much does a website cost at zeepage?',
+    a: 'A landing page is Rp 799k, a company profile is Rp 1.499k, and an online store website is Rp 2,500,000, down from Rp 3,500,000. Every package includes a free .com domain for 1 year, free hosting, free SSL, and free support.',
+  },
+  {
+    q: 'What is included in the website price?',
+    a: 'Every package includes a fully custom design, a free .com domain for 1 year, free hosting, free SSL for HTTPS security, and free support. The online store package also includes free maintenance, a shopping cart, online ordering via WhatsApp, and automatic shipping cost calculation.',
+  },
+  {
+    q: 'How much is the annual fee after the first year?',
+    a: 'The annual fee is Rp 600k per year for landing pages and company profiles, and Rp 1,200,000 per year for online store websites. It applies from year two and covers domain renewal, hosting, and SSL, so there are no separate renewal bills.',
+  },
+  {
+    q: 'How long does it take to build a website?',
+    a: 'A landing page takes 1 to 2 weeks. A company profile takes 2 to 4 weeks, and an online store around 3 to 5 weeks, depending on your materials and product count.',
+  },
+  {
+    q: 'Can I consult first before choosing a package?',
+    a: 'Yes, and it is free. Tell us about your business on WhatsApp and we will recommend the right package with a written quote upfront, with no commitment.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Website Design Prices in Bali',
+      url: canonical,
+      description: 'Website design prices in Bali by zeepage: landing pages from Rp 799k, company profiles Rp 1.499k, online store websites Rp 2,500,000.',
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'ItemList',
+      name: 'zeepage Website Pricing Packages',
+      itemListElement: [
+        { '@type': 'Offer', position: 1, name: 'Landing Page', price: '799000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Landing Page Development' } },
+        { '@type': 'Offer', position: 2, name: 'Company Profile Website', price: '1499000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Company Profile Website Development' } },
+        { '@type': 'Offer', position: 3, name: 'Online Store Website', price: '2500000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Online Store Website Development' } },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Website Design Prices in Bali: Landing Page, Company Profile & Online Store | zeepage"
+  description="Website design prices in Bali by zeepage: landing pages from Rp 799k, company profiles Rp 1.499k, online store websites Rp 2,500,000. Includes a free .com domain, free hosting, free SSL, free support, and maintenance."
+  lang="en"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-8 sm:pb-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Pricing</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Website design prices <em class="font-display italic font-medium text-brand">in Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          zeepage website design prices are transparent and written upfront. Landing pages from Rp 799k, company profiles Rp 1.499k, and online store websites Rp 2,500,000. Every package includes a free .com domain, free hosting, free SSL, and free support.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href="#paket" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">See Pricing Packages</a>
+          <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <Pricing t={pricingT} lang={lang} id="paket" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-10" data-reveal>
+          <p class="text-sm font-bold text-brand mb-2">Online Store</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Online store website price <em class="font-display italic font-medium text-brand">for selling online.</em>
+          </h2>
+          <p class="text-ink/55 max-w-xl text-sm sm:text-base leading-relaxed mt-4">One complete package to start selling online: a product catalog, shopping cart, WhatsApp ordering, and automatic shipping cost calculation.</p>
+        </div>
+
+        <article class="relative rounded-3xl bg-ink text-white p-7 sm:p-10 shadow-2xl" data-reveal>
+          <span class="absolute -top-3 left-7 bg-brand text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full">Promo</span>
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="flex flex-col">
+              <h3 class="font-bold text-lg">{tokoOnline.name}</h3>
+              <p class="mt-4 text-white/50 line-through text-2xl font-bold">{tokoOnline.was}</p>
+              <p class="font-extrabold tracking-tight text-5xl mt-1">{tokoOnline.price}</p>
+              <p class="text-sm mt-3 text-white/70 leading-relaxed">{tokoOnline.target}</p>
+              <a href={tokoOnline.whatsapp} target="_blank" rel="noopener noreferrer" class="mt-auto pt-8">
+                <span class="inline-flex justify-center w-full sm:w-auto bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors">Choose the Online Store Package</span>
+              </a>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3.5 text-sm content-start">
+              {tokoOnline.features.map((f) => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 mt-0.5 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Annual website fees, <em class="font-display italic font-medium text-brand">clear from the start.</em></h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>Everything is included in the package price for the first year. From year two, one annual fee covers your .com domain renewal, hosting, and SSL.</p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Landing Page</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 600k<span class="text-base font-semibold text-ink/50"> /year</span></p>
+          </article>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Company Profile</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 600k<span class="text-base font-semibold text-ink/50"> /year</span></p>
+          </article>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Online Store Website</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 1,200,000<span class="text-base font-semibold text-ink/50"> /year</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Questions about <em class="font-display italic font-medium text-brand">website pricing.</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Found the package <em class="font-display italic font-medium text-brand">that fits?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Tell us about your business and we will send a written quote with the final price before any work begins. Free, with no commitment.</p>
+        <a href={WA_EN} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Free Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

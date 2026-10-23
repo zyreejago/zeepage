@@ -186,6 +186,13 @@ const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
           </article>
         ))}
       </div>
+
+      <div class="mt-10 text-center" data-reveal>
+        <a href={lang === 'id' ? '/harga/' : '/en/harga/'} class="inline-flex items-center gap-2 bg-ink text-white font-bold px-8 py-3.5 rounded-full hover:bg-brand transition-colors">
+          {lang === 'id' ? 'Lihat Harga Lengkap' : 'See Full Pricing'}
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 

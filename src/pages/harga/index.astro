@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Pricing from '../../components/Pricing.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/harga/';
+
+const pricingT = {
+  ...t.pricing,
+  badge: 'Harga',
+  title: 'Paket Harga Pembuatan Website',
+  titleHighlight: 'untuk UMKM & Bisnis',
+  subtitle: 'Semua paket sudah termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis. Tanpa biaya tersembunyi.',
+};
+
+const tokoOnline = {
+  name: 'Website Toko Online',
+  was: 'Rp 3.500.000',
+  price: 'Rp 2.500.000',
+  target: 'Untuk bisnis yang ingin jualan online dengan katalog produk, keranjang belanja, dan pemesanan otomatis.',
+  features: [
+    'Free Domain .com',
+    'Free Hosting',
+    'Free SSL (Security)',
+    'Free Support',
+    'Free Maintenance',
+    'Website Responsive',
+    'Keranjang Belanja',
+    'Pemesanan Online / Whatsapp',
+    'Hitung Ongkir Otomatis',
+    'Biaya Tahunan Rp 1.200.000',
+  ],
+  whatsapp: 'https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Website%20Toko%20Online%20Rp%202.500.000.%20Mohon%20info%20selengkapnya.',
+};
+
+const faqs = [
+  {
+    q: 'Berapa harga pembuatan website di zeepage?',
+    a: 'Landing page Rp 799 ribu, company profile Rp 1.499 ribu, dan website toko online Rp 2.500.000 dari harga normal Rp 3.500.000. Semua paket termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis.',
+  },
+  {
+    q: 'Apa saja yang sudah termasuk dalam harga website?',
+    a: 'Setiap paket sudah termasuk desain full custom, domain .com gratis 1 tahun, hosting gratis, SSL gratis untuk keamanan HTTPS, dan support gratis. Paket toko online juga termasuk maintenance gratis, keranjang belanja, pemesanan online via WhatsApp, dan hitung ongkir otomatis.',
+  },
+  {
+    q: 'Berapa biaya tahunan website setelah tahun pertama?',
+    a: 'Biaya tahunan landing page dan company profile adalah Rp 600 ribu per tahun, sedangkan website toko online Rp 1.200.000 per tahun. Biaya ini berlaku mulai tahun kedua dan mencakup perpanjangan domain, hosting, dan SSL, jadi tidak ada biaya perpanjangan terpisah.',
+  },
+  {
+    q: 'Berapa lama pengerjaan website?',
+    a: 'Landing page selesai dalam 1 sampai 2 minggu. Company profile selesai dalam 2 sampai 4 minggu, dan toko online sekitar 3 sampai 5 minggu, tergantung kelengkapan materi dan jumlah produk dari Anda.',
+  },
+  {
+    q: 'Apakah bisa konsultasi dulu sebelum memutuskan paket?',
+    a: 'Bisa, dan gratis. Ceritakan kebutuhan bisnis Anda lewat WhatsApp, kami bantu pilihkan paket yang paling sesuai dengan penawaran tertulis di awal, tanpa komitmen.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Harga Pembuatan Website di Bali',
+      url: canonical,
+      description: 'Harga pembuatan website di Bali dari zeepage: landing page Rp 799 ribu, company profile Rp 1.499 ribu, website toko online Rp 2.500.000.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'ItemList',
+      name: 'Paket Harga Pembuatan Website zeepage',
+      itemListElement: [
+        { '@type': 'Offer', position: 1, name: 'Landing Page', price: '799000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Pembuatan Landing Page' } },
+        { '@type': 'Offer', position: 2, name: 'Website Company Profile', price: '1499000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Pembuatan Website Company Profile' } },
+        { '@type': 'Offer', position: 3, name: 'Website Toko Online', price: '2500000', priceCurrency: 'IDR', itemOffered: { '@type': 'Service', name: 'Pembuatan Website Toko Online' } },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Harga Pembuatan Website di Bali: Landing Page, Company Profile & Toko Online | zeepage"
+  description="Harga pembuatan website di Bali dari zeepage: landing page Rp 799 ribu, company profile Rp 1.499 ribu, website toko online Rp 2.500.000. Termasuk domain .com gratis, hosting gratis, SSL gratis, support gratis, dan maintenance."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-8 sm:pb-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Harga</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Harga pembuatan website <em class="font-display italic font-medium text-brand">di Bali.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Harga jasa pembuatan website di zeepage transparan dan tertulis sejak awal. Landing page mulai Rp 799 ribu, company profile Rp 1.499 ribu, dan website toko online Rp 2.500.000. Semua paket sudah termasuk domain .com gratis, hosting gratis, SSL gratis, dan support gratis.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href="#paket" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Lihat Paket Harga</a>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Konsultasi Gratis</a>
+        </div>
+      </div>
+    </section>
+
+    <Pricing t={pricingT} lang={lang} id="paket" />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="mb-10" data-reveal>
+          <p class="text-sm font-bold text-brand mb-2">Toko Online</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Harga website toko online <em class="font-display italic font-medium text-brand">untuk jualan online.</em>
+          </h2>
+          <p class="text-ink/55 max-w-xl text-sm sm:text-base leading-relaxed mt-4">Satu paket lengkap untuk mulai jualan online: katalog produk, keranjang belanja, pemesanan via WhatsApp, dan hitung ongkir otomatis.</p>
+        </div>
+
+        <article class="relative rounded-3xl bg-ink text-white p-7 sm:p-10 shadow-2xl" data-reveal>
+          <span class="absolute -top-3 left-7 bg-brand text-white text-[11px] font-bold tracking-wider uppercase px-3 py-1 rounded-full">Promo</span>
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div class="flex flex-col">
+              <h3 class="font-bold text-lg">{tokoOnline.name}</h3>
+              <p class="mt-4 text-white/50 line-through text-2xl font-bold">{tokoOnline.was}</p>
+              <p class="font-extrabold tracking-tight text-5xl mt-1">{tokoOnline.price}</p>
+              <p class="text-sm mt-3 text-white/70 leading-relaxed">{tokoOnline.target}</p>
+              <a href={tokoOnline.whatsapp} target="_blank" rel="noopener noreferrer" class="mt-auto pt-8">
+                <span class="inline-flex justify-center w-full sm:w-auto bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors">Pilih Paket Toko Online</span>
+              </a>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3.5 text-sm content-start">
+              {tokoOnline.features.map((f) => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 mt-0.5 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Biaya tahunan website, <em class="font-display italic font-medium text-brand">jelas sejak awal.</em></h2>
+        <p class="text-ink/55 leading-relaxed max-w-2xl mt-4" data-reveal>Tahun pertama semua sudah termasuk di harga paket. Mulai tahun kedua, Anda cukup membayar satu biaya tahunan yang sudah mencakup perpanjangan domain .com, hosting, dan SSL.</p>
+        <div class="grid sm:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Landing Page</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 600 ribu<span class="text-base font-semibold text-ink/50"> /tahun</span></p>
+          </article>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Company Profile</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 600 ribu<span class="text-base font-semibold text-ink/50"> /tahun</span></p>
+          </article>
+          <article class="bg-paper border border-line rounded-3xl p-7">
+            <h3 class="font-bold">Website Toko Online</h3>
+            <p class="text-3xl font-extrabold tracking-tight mt-3">Rp 1.200.000<span class="text-base font-semibold text-ink/50"> /tahun</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar <em class="font-display italic font-medium text-brand">harga pembuatan website.</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight" data-reveal>Sudah tahu paket <em class="font-display italic font-medium text-brand">yang cocok?</em></h2>
+        <p class="text-ink/60 leading-relaxed max-w-xl mx-auto mt-5" data-reveal>Ceritakan kebutuhan bisnis Anda, kami kirimkan penawaran tertulis dengan harga final sebelum pengerjaan dimulai. Gratis dan tanpa komitmen.</p>
+        <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-8 bg-brand text-white font-bold px-8 py-3.5 rounded-full hover:bg-branddark transition-colors" data-reveal>Konsultasi Gratis</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
