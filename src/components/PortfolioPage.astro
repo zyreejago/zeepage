@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  lang: 'id' | 'en';
+  t: any;
+}
+
+const { lang, t } = Astro.props;
+const isId = lang === 'id';
+const canonical = isId ? 'https://zeepage.com/portofolio/' : 'https://zeepage.com/en/portfolio/';
+const description = isId
+  ? 'Portofolio zeepage: kumpulan proyek website dan aplikasi web yang pernah kami kerjakan, dari sistem booking, company profile, toko online, sampai aplikasi kasir.'
+  : 'The zeepage portfolio: websites and web applications we have built, from booking systems and company profiles to online stores and point of sale apps.';
+const title = isId ? 'Portofolio Website dan Aplikasi Web | zeepage' : 'Website and Web App Portfolio | zeepage';
+const items = t.portfolio.items;
+const demoTitles = ['DemoPadel', 'Sagaroof', 'Hidroponik Nusantara', 'ZeeRental'];
+
+const alternates = [
+  { hreflang: 'id', href: 'https://zeepage.com/portofolio/' },
+  { hreflang: 'en', href: 'https://zeepage.com/en/portfolio/' },
+  { hreflang: 'x-default', href: 'https://zeepage.com/portofolio/' },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": title,
+  "description": description,
+  "url": canonical,
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": items.map((w: any, i: number) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": w.title,
+        "description": w.desc,
+        ...(w.link ? { "url": w.link } : {}),
+      },
+    })),
+  },
+};
+
+const ui = isId
+  ? { label: 'Karya / Portofolio', h1a: 'Semua', accent: 'karya.', sub: 'Kumpulan proyek dan demo konsep yang pernah kami kerjakan, dari aplikasi web sampai company profile.', visit: 'Lihat detail', count: 'karya', moreLabel: 'Portfolio Lainnya' }
+  : { label: 'Work / Portfolio', h1a: 'All', accent: 'work.', sub: 'A collection of projects and concept demos we have built, from web applications to company profiles.', visit: 'View details', count: 'works', moreLabel: 'More Portfolio' };
+---
+
+<BaseLayout title={title} description={description} lang={lang} canonical={canonical} structuredData={structuredData} alternates={alternates}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main class="pt-32 sm:pt-40 pb-20 bg-paper">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p data-hero-line class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-5">{ui.label}</p>
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight">
+        <span data-hero-line class="block">{ui.h1a} <em class="font-display italic font-medium text-brand">{ui.accent}</em></span>
+      </h1>
+      <p data-hero-line class="text-ink/60 leading-relaxed max-w-xl mt-6">{ui.sub}</p>
+      <p data-hero-line class="text-sm font-bold text-ink/40 mt-4">{items.length} {ui.count}</p>
+
+      <div data-reveal-group class="grid sm:grid-cols-2 gap-5 mt-12">
+        {items.map((w: any) => {
+          const inner = (
+            <>
+              <span class="relative block overflow-hidden">
+                <img src={w.img} alt={w.title} class="w-full h-56 sm:h-64 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="880" height="560" />
+                {demoTitles.includes(w.title) && <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider bg-white/90 text-ink px-2.5 py-1 rounded-full">{isId ? 'Demo konsep' : 'Concept demo'}</span>}
+              </span>
+              <span class="flex flex-col flex-1 p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand">{w.category}</span>
+                <span class="font-bold text-2xl tracking-tight mt-1.5">{w.title}</span>
+                <span class="text-sm text-ink/55 leading-relaxed mt-2">{w.desc}</span>
+                <span class="flex flex-wrap gap-1.5 mt-4">
+                  {w.tech.map((tech: string) => (
+                    <span class="text-[11px] font-semibold bg-paper border border-line text-ink/60 px-2.5 py-1 rounded-full">{tech}</span>
+                  ))}
+                </span>
+                <span class="mt-auto pt-5 text-sm font-bold text-brand inline-flex items-center gap-2">
+                  {ui.visit} <span aria-hidden="true">→</span>
+                </span>
+              </span>
+            </>
+          );
+          return (
+            <a href={isId ? `/portofolio/${w.slug}/` : `/en/portfolio/${w.slug}/`} class="group bg-white border border-line rounded-3xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-ink/5 transition-shadow">{inner}</a>
+          );
+        })}
+      </div>
+
+      <div class="text-center mt-12">
+        <a
+          href="https://drive.google.com/file/d/18hgS8W-4b71zlhyzKWEAR5Ie6nTkejK7/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-ink text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-brand transition-colors"
+        >
+          {ui.moreLabel}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

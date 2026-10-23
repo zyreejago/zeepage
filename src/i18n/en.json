@@ -1,0 +1,530 @@
+{
+  "nav": {
+    "brand": "zeepage",
+    "links": [
+      {
+        "label": "Home",
+        "href": "/en/"
+      },
+      {
+        "label": "Services",
+        "href": "/en/#layanan"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/en/#karya"
+      },
+      {
+        "label": "Pricing",
+        "href": "/en/#harga"
+      },
+      {
+        "label": "Blog",
+        "href": "/en/blog/"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "Based in Bali, Serving All of Indonesia",
+    "title": "zeepage – Professional Website Development Services for Your Business",
+    "subtitle": "Get a website that actually works for your business. Free consultation, fast turnaround, and a Bali-based team building responsive, SEO-friendly websites for clients across Indonesia.",
+    "cta1": "Free Consultation",
+    "cta2": "View Portfolio",
+    "socialProof": [
+      "50+ Happy Clients",
+      "100+ Projects Completed",
+      "3+ Years Experience"
+    ],
+    "whatsappUrl": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20a%20free%20consultation%20for%20website%20development.%20Please%20provide%20more%20information."
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Why Choose <span class=\"text-[#2152cf]\">zeepage</span>?",
+    "description": "Your website is often the first impression customers have of your business. We build modern, fast sites that help you stand out, get found on Google, and turn visitors into real customers. No templates, no shortcuts.",
+    "advantages": [
+      "Custom design, not templates",
+      "Technical SEO from day one",
+      "Lighthouse score 90+ guaranteed",
+      "Direct WhatsApp support to developer"
+    ],
+    "stats": [
+      {
+        "value": "50+",
+        "label": "Happy Clients",
+        "sub": "from various industries"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Done",
+        "sub": "websites, landing pages, e-commerce"
+      },
+      {
+        "value": "3+",
+        "label": "Years Experience",
+        "sub": "since 2021"
+      },
+      {
+        "value": "99%",
+        "label": "Satisfaction Rate",
+        "sub": "based on client reviews"
+      }
+    ],
+    "cta": "See how we work"
+  },
+  "services": {
+    "title": "Build Your Dream Website, <br>Hassle-Free!",
+    "subtitle": "From company profiles to e-commerce we build fast, stunning websites that make your business trusted. Free consultation, maintenance included.",
+    "items": [
+      {
+        "icon": "🏢",
+        "title": "Company Profile Website",
+        "description": "A representative website for your business with professional and modern design."
+      },
+      {
+        "icon": "🛒",
+        "title": "E-Commerce Website",
+        "description": "Complete online store with payment gateway and product management."
+      },
+      {
+        "icon": "🎯",
+        "title": "Landing Page Website",
+        "description": "High-converting landing pages for your marketing campaigns."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Web Application",
+        "description": "Custom web applications tailored to your business needs."
+      },
+      {
+        "icon": "🎨",
+        "title": "Website Redesign",
+        "description": "Refresh your old website to be more modern and responsive."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Maintenance & Support",
+        "description": "Regular website maintenance and support for optimal performance."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Our Work",
+    "title": "Projects That",
+    "titleHighlight": "Speak for Themselves",
+    "subtitle": "More than just looks every project is designed to drive real business results.",
+    "items": [
+      {
+        "img": "/zeerental.webp",
+        "title": "ZeeRental",
+        "slug": "zeerental",
+        "category": "Web Application",
+        "heading": "Booking Website and Management App for a Car and Motorcycle Rental in Bali",
+        "desc": "Booking website and management app for a car and motorcycle rental with a fleet catalog, transparent rates, and a dashboard for bookings and availability.",
+        "meta": "ZeeRental project detail by zeepage: booking website and management app for a car and motorcycle rental in Bali with a daily summary dashboard, fleet data, bookings, and an availability calendar.",
+        "detail": "A booking website and management app for ZeeRental, a car and motorcycle rental business in Denpasar, Bali. Visitors browse the fleet with final rates and book through WhatsApp, while the owner runs daily operations from a dashboard with daily summaries, vehicle handovers, fleet data, booking lists, an availability calendar, and business settings.",
+        "tech": [
+          "React",
+          "Dashboard",
+          "Booking Management"
+        ],
+        "link": "https://rental.zeepage.com/"
+      },
+      {
+        "img": "/hidroponik.webp",
+        "title": "Hidroponik Nusantara",
+        "slug": "hidroponik-nusantara",
+        "category": "Company Profile",
+        "heading": "Company Profile and Online Catalog Website for a Hydroponic Company",
+        "desc": "Company profile and online catalog website for a hydroponic farming company with fresh vegetable pricing per kilogram and order tracking.",
+        "meta": "Project detail of the Hidroponik Nusantara company profile and online catalog website by zeepage: hydroponic vegetable catalog with per-kilogram pricing, ordering guide, and order tracking.",
+        "detail": "A company profile and online catalog website for Hidroponik Nusantara, a hydroponic farming company providing fresh vegetables straight from the greenhouse. Features a product catalog with transparent per-kilogram pricing, an ordering guide page, location information, order tracking, and a shopping cart.",
+        "tech": [
+          "Company Profile",
+          "Product Catalog",
+          "Order Tracking"
+        ],
+        "link": "https://hidroponik.zeepage.com/"
+      },
+      {
+        "img": "/demopadel.webp",
+        "title": "DemoPadel",
+        "slug": "demopadel",
+        "category": "Web Application",
+        "heading": "Online Padel Court Booking Web Application",
+        "desc": "Online padel court booking platform, pick a venue and time slot, then pay and play without the queue.",
+        "meta": "Project detail of the online padel court booking web application by zeepage: pick a venue and time slot, pay, and play without the queue, complete with venue catalog and event pages.",
+        "detail": "A padel court booking website with a practical flow: choose a venue, pick a time slot, complete the payment, and play. Includes service and venue catalogs, event pages, court and player statistics, and an energetic responsive sports design.",
+        "tech": [
+          "Booking Flow",
+          "Venue Catalog",
+          "Responsive"
+        ],
+        "link": "https://padel.zeepage.com/"
+      },
+      {
+        "img": "/sagaroof.webp",
+        "title": "Sagaroof",
+        "slug": "sagaroof",
+        "category": "Company Profile",
+        "heading": "Company Profile Website for a uPVC Roofing Distributor in Bali",
+        "desc": "Company profile and catalog website for a uPVC roofing distributor in Bali with transparent pricing and WhatsApp ordering.",
+        "meta": "Project detail of the Sagaroof company profile website by zeepage: uPVC roofing catalog with transparent per-meter and per-piece pricing, promo banners, gallery, and WhatsApp ordering.",
+        "detail": "A company profile and online catalog website for Sagaroof, a quality uPVC roofing distributor in Bali. Features rotating promo banners, a product catalog with transparent per-meter and per-piece pricing, a gallery, and consultation and ordering buttons via WhatsApp.",
+        "tech": [
+          "Company Profile",
+          "Product Catalog",
+          "WhatsApp Order"
+        ],
+        "link": "https://demosagaroof.vercel.app/"
+      },
+      {
+        "img": "/webzeeboost.webp",
+        "title": "Website Topup Robux",
+        "slug": "website-topup-robux",
+        "category": "Web Application",
+        "heading": "Game Top Up Website with Automatic Payments",
+        "desc": "Robux topup website with maximum SEO optimization and integrated payment system.",
+        "meta": "Project detail of the Robux top up website by zeepage: an integrated automatic payment system and maximum SEO optimization so buyers can easily find it on Google.",
+        "detail": "A Robux topup platform with SEO-optimized features to reach more users. Equipped with automated payment via Duitku.com, real-time stock management, and transaction history. Fast performance and search engine friendly.",
+        "tech": [
+          "Next.js",
+          "MySQL2",
+          "Duitku.com"
+        ]
+      },
+      {
+        "img": "/bakery%20(3).webp",
+        "title": "Bakery House",
+        "slug": "bakery-house",
+        "category": "Web Application",
+        "heading": "Bakery Web Application with Online Ordering",
+        "desc": "Bakery web application with a warm design and online ordering system.",
+        "meta": "Project detail of the Bakery House bakery web application by zeepage: a warm bakery-style design, product catalog, and an online ordering system for customers.",
+        "detail": "Bakery House is a home bakery that wanted to expand its market reach digitally. The website features a product catalog, online ordering system, and delivery integration. The warm, appetizing design successfully boosted online sales by 3x.",
+        "tech": [
+          "Next.js",
+          "Supabase",
+          "Midtrans"
+        ]
+      },
+      {
+        "img": "/donasi%20(2).webp",
+        "title": "DonasiKita",
+        "slug": "donasikita",
+        "category": "Web Application",
+        "heading": "Online Donation Platform with Integrated Payments",
+        "desc": "Online donation platform with integrated payment and transparent reporting.",
+        "meta": "Project detail of the DonasiKita online donation platform by zeepage: integrated payments, donation campaign pages, and transparent reporting for donors.",
+        "detail": "DonasiKita is a crowdfunding platform for social fundraising. Features include donation campaigns, integrated payment gateway, real-time progress bars, and transparent financial reports. Used by dozens of social communities across Indonesia.",
+        "tech": [
+          "Laravel",
+          "Inertia",
+          "React",
+          "Midtrans"
+        ]
+      },
+      {
+        "img": "/travel.webp",
+        "title": "TravelGo",
+        "slug": "travelgo",
+        "category": "Company Profile",
+        "heading": "Travel Agency Website with an Online Booking System",
+        "desc": "Travel agency website with exotic design, online booking, and 24/7 AI Gemini customer service.",
+        "meta": "Project detail of the TravelGo travel agency website by zeepage: an exotic design, an online booking system, and 24-hour AI-based customer service for travelers.",
+        "detail": "TravelGo is a travel agency that wanted to showcase its premium tour packages digitally. The website features an interactive destination gallery, online booking system, and map integration. Equipped with 24/7 AI Gemini-powered Customer Service to assist customers anytime. The stunning visuals increased bookings by 4x.",
+        "tech": [
+          "Next.js"
+        ]
+      },
+      {
+        "img": "/posapotek.webp",
+        "title": "PosApotek",
+        "slug": "posapotek",
+        "category": "Web Application",
+        "heading": "Pharmacy Point of Sale and Stock Management Web App",
+        "desc": "Pharmacy management system with Exponential Smoothing stock forecasting and innovative features.",
+        "meta": "Project detail of the PosApotek pharmacy point of sale web application by zeepage: complete pharmacy management with stock forecasting using the exponential smoothing method.",
+        "detail": "PosApotek is a pharmacy management app that helps track medicine stock, doctor prescriptions, and sales reports. Its main advantage is the stock forecasting feature using the Exponential Smoothing method to predict when medicine stock will run out, allowing pharmacies to restock on time. Also features low stock notifications, transaction history, and multi-user access.",
+        "tech": [
+          "Next.js",
+          "Express"
+        ]
+      },
+      {
+        "img": "/djong.webp",
+        "title": "Pt Dejong",
+        "slug": "pt-dejong",
+        "category": "Landing Page",
+        "heading": "Landing Page for an Export and Import Company",
+        "desc": "Landing page for an import and export management company with a professional and modern design.",
+        "meta": "Project detail of the PT Dejong landing page by zeepage: an export and import management company page with a professional and modern design that builds credibility.",
+        "detail": "Pt Dejong is an import and export management company that needed a landing page to showcase its services and company profile professionally. Clean and modern design with complete service information, integrated contact, and a presentation that convinces business partners.",
+        "tech": [
+          "Laravel"
+        ]
+      }
+    ],
+    "allLabel": "See All Work",
+    "allHref": "/en/portfolio/"
+  },
+  "why": {
+    "badge": "Why a Website?",
+    "title": "Business without a website",
+    "titleHighlight": "loses customers.",
+    "subtitle": "In the digital era, potential customers judge your business credibility from your online presence before they even contact you.",
+    "withLabel": "With Website",
+    "withoutLabel": "Without Website",
+    "with": [
+      "Look professional 24/7",
+      "Customers find you on Google",
+      "Receive orders & bookings automatically",
+      "Build trust before conversation",
+      "Real-time visitor analytics"
+    ],
+    "without": [
+      "Only relies on word of mouth",
+      "Doesn't appear on Google search",
+      "Loses customers to competitors",
+      "Hard to scale outside your city",
+      "Comes across as unprofessional"
+    ]
+  },
+  "pricing": {
+    "badge": "Best Investment",
+    "title": "Transparent Pricing,",
+    "titleHighlight": "Maximum Results",
+    "subtitle": "Choose the package that fits your business needs no hidden costs.",
+    "plans": [
+      {
+        "name": "Landing Page",
+        "price": "Rp 699k",
+        "target": "Perfect for SMEs or individuals who need one conversion-focused page",
+        "features": [
+          {
+            "text": "1 Page Full Custom Design",
+            "included": true
+          },
+          {
+            "text": "Headline Copywriting",
+            "included": true
+          },
+          {
+            "text": "WhatsApp Integration + Order Form",
+            "included": true
+          },
+          {
+            "text": "2x Design Revisions",
+            "included": true
+          },
+          {
+            "text": "30 Days Free Maintenance",
+            "included": true
+          }
+        ],
+        "cta": "Choose Package",
+        "popular": false,
+        "whatsapp": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20the%20following%20package%3A%0APackage%3A%20Landing%20Page%0APrice%3A%20Rp%20699%2C000%0A%0APlease%20provide%20more%20information%20to%20start%20this%20project."
+      },
+      {
+        "name": "Company Profile",
+        "price": "Rp 1.499k",
+        "target": "Best choice for businesses that want a complete, credible presence",
+        "features": [
+          {
+            "text": "All Landing Page Benefits",
+            "included": true
+          },
+          {
+            "text": "Up to 7 Pages (Home, About, Services, Portfolio, Testimonials, Blog, Contact)",
+            "included": true
+          },
+          {
+            "text": "Free .com Domain for 1 Year",
+            "included": true
+          },
+          {
+            "text": "Blog Setup + 1 Starter Article",
+            "included": true
+          },
+          {
+            "text": "On-Page SEO (Meta, Schema, Sitemap)",
+            "included": true
+          },
+          {
+            "text": "Google Business Profile Setup",
+            "included": true
+          },
+          {
+            "text": "Premium Copywriting",
+            "included": true
+          },
+          {
+            "text": "3x Design Revisions",
+            "included": true
+          },
+          {
+            "text": "3 Months Free Maintenance",
+            "included": true
+          }
+        ],
+        "cta": "Choose Package",
+        "popular": true,
+        "whatsapp": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20the%20following%20package%3A%0APackage%3A%20Company%20Profile%0APrice%3A%20Rp%201%2C499%2C000%0A%0APlease%20provide%20more%20information%20to%20start%20this%20project."
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "target": "For special needs: enterprise website, bug fixes, or academic projects",
+        "features": [
+          {
+            "text": "Discuss needs & project details first",
+            "included": true
+          },
+          {
+            "text": "Pages, features, and design are customized",
+            "included": true
+          },
+          {
+            "text": "Bug fixes & existing website maintenance",
+            "included": true
+          },
+          {
+            "text": "Website assignments for college/school",
+            "included": true
+          },
+          {
+            "text": "Price & timeline adjust based on complexity",
+            "included": true
+          }
+        ],
+        "cta": "Consult Now",
+        "popular": false,
+        "customPrice": true,
+        "whatsapp": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27m%20interested%20in%20a%20Custom%20package.%0A%0APlease%20provide%20more%20information%20to%20discuss%20my%20website%20needs."
+      }
+    ]
+  },
+  "steps": {
+    "title": "4 Easy Steps to Start <span class=\"hw-accent\">Your Project</span>",
+    "subtitle": "Free consultation, transparent process, maximum results. We guide you from idea to launch in 4 simple steps.",
+    "tags": [
+      "Adaptive & flexible workflow",
+      "Regular discussion & consultation",
+      "Solutions & revisions as agreed",
+      "Full support after project launch"
+    ],
+    "cta": "Start Project Consultation",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Consultation & Needs Briefing",
+        "desc": "Share your vision and business needs with us. We'll listen, understand your target audience, and formulate the right digital solution."
+      },
+      {
+        "num": "02",
+        "title": "Solution & Package Recommendation",
+        "desc": "Based on our analysis, we recommend the best website type and investment package no bloated features, no hidden costs."
+      },
+      {
+        "num": "03",
+        "title": "Deal & Information Fill",
+        "desc": "Once the proposal is approved, simply pay 50% DP and provide your supporting assets (logo, text, images). We'll handle the rest."
+      },
+      {
+        "num": "04",
+        "title": "Development & Handover",
+        "desc": "We build your project with regular progress updates. After testing and your approval, pay the remaining 50% and your website goes live."
+      }
+    ]
+  },
+  "clientStory": {
+    "badge": "Client Story",
+    "title": "What Our Clients Say"
+  },
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "subtitle": "Free consultation, no commitment. Our team is ready to help!",
+    "button": "Contact Us on WhatsApp",
+    "whatsapp": "6288987244675",
+    "whatsappUrl": "https://wa.me/6288987244675?text=Hello%20zeepage%2C%20I%27d%20like%20to%20consult%20about%20website%20development.%20Please%20help%20me.",
+    "ctaPrimary": "Start Free Consultation",
+    "ctaSecondary": "View Our Portfolio",
+    "trustItems": [
+      "Free, no commitment",
+      "Response within 24 hours"
+    ],
+    "faqIntro": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "How long does website development take?",
+        "a": "Typically 1-2 weeks for a landing page, 2-4 weeks for a company profile, and 4-8 weeks for e-commerce or web applications, depending on feature complexity."
+      },
+      {
+        "q": "Do I need to prepare domain & hosting?",
+        "a": "For the Landing Page package, you prepare domain and hosting yourself or we can handle it for an additional fee. For the Company Profile package, the .com domain and hosting are included free for 1 year, so you can sit back and relax."
+      },
+      {
+        "q": "Will my website be responsive?",
+        "a": "Absolutely! All websites we build are guaranteed to be responsive and look perfect on all devices (desktop, tablet, and smartphone)."
+      },
+      {
+        "q": "Is there a warranty after the website is completed?",
+        "a": "Yes, we provide 1 month free maintenance after your website goes live. We also offer extended maintenance packages if needed."
+      },
+      {
+        "q": "Can I request specific features?",
+        "a": "Of course! We always listen to your needs. Every project includes a discussion session to ensure the desired features align with your business goals."
+      },
+      {
+        "q": "Can I see the website progress?",
+        "a": "Yes, we provide regular progress updates and you can see the development directly on our development server."
+      }
+    ]
+  },
+  "footer": {
+    "description": "zeepage is a digital studio focused on creating professional, modern, and high-performance websites for your business.",
+    "menuTitle": "Menu",
+    "menu": [
+      {
+        "label": "Home",
+        "href": "/en/"
+      },
+      {
+        "label": "Services",
+        "href": "/en/#services"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/en/#portfolio"
+      },
+      {
+        "label": "Pricing",
+        "href": "/en/#pricing"
+      },
+      {
+        "label": "Service Areas",
+        "href": "/en/areas/"
+      },
+      {
+        "label": "Blog",
+        "href": "/en/blog/"
+      }
+    ],
+    "servicesTitle": "Services",
+    "services": [
+      "Company Profile",
+      "E-Commerce",
+      "Landing Page",
+      "Web Application",
+      "Website Redesign",
+      "Maintenance"
+    ],
+    "contactTitle": "Contact",
+    "contact": {
+      "email": "zinknot@gmail.com",
+      "whatsapp": "+62 889-8724-4675",
+      "location": "Bali, Indonesia"
+    },
+    "copyright": "© 2026 zeepage. All rights reserved."
+  }
+}

@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Services from '../../components/Services.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import WhyChooseUs from '../../components/WhyChooseUs.astro';
+import Pricing from '../../components/Pricing.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Footer from '../../components/Footer.astro';
+import HomePage from '../../components/HomePage.astro';
+import ProjectSteps from '../../components/ProjectSteps.astro';
+import ClientStory from '../../components/ClientStory.astro';
+import SeoAreaLinks from '../../components/SeoAreaLinks.astro';
+import '../../styles/global.css';
+
+import en from '../../i18n/en.json';
+import { daerahList } from '../../data/daerah';
+
+const t = en;
+const lang = 'en';
+const canonical = 'https://zeepage.com/en/';
+const description = 'Professional website development from Bali, serving all of Indonesia. Free consultation, modern design, SEO optimized. E-commerce, landing pages.';
+
+const areaServed = [
+  { "@type": "AdministrativeArea", "name": "Bali" },
+  ...daerahList.map((d) => ({ "@type": "Place", "name": d.nama })),
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "zeepage",
+      "url": canonical,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.google.com/search?q=site:zeepage.com+{search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+{
+      "@type": "Organization",
+      "@id": "https://zeepage.com/#organization",
+      "name": "zeepage",
+      "url": "https://zeepage.com/",
+      "logo": "https://zeepage.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62 889-8724-4675",
+        "email": "zinknot@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["Indonesian", "English"]
+      },
+      "sameAs": [
+        "https://instagram.com/zeecreate.id",
+        "https://lynk.id/zeepage",
+        "https://tiktok.com/@zeepage",
+        "https://wa.me/6288987244675",
+        "https://share.google/YuD3Jl2ojzkeZRC68"
+      ]
+    },
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": "https://zeepage.com/#localbusiness",
+      "name": "zeepage",
+      "description": "Professional website development services based in Bali, serving clients across Indonesia. Free consultation, modern design, SEO-friendly. Company profile, e-commerce, landing page, and web application.",
+      "url": canonical,
+      "image": "https://zeepage.com/logo.png",
+      "logo": "https://zeepage.com/logo.png",
+      "telephone": "+62 889-8724-4675",
+      "email": "zinknot@gmail.com",
+      "priceRange": "Rp 699k - Rp 1.499k",
+      "offers": [
+        { "@type": "Offer", "name": "Landing Page", "price": "699000", "priceCurrency": "IDR", "itemOffered": { "@type": "Service", "name": "Landing Page Development" } },
+        { "@type": "Offer", "name": "Website Company Profile", "price": "1499000", "priceCurrency": "IDR", "itemOffered": { "@type": "Service", "name": "Company Profile Website Development" } }
+      ],
+      "serviceType": ["Web Development", "Website Design", "SEO"],
+      "areaServed": areaServed,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Badung",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "parentOrganization": { "@id": "https://zeepage.com/#organization" },
+      "sameAs": [
+        "https://wa.me/6288987244675",
+        "https://instagram.com/zeecreate.id",
+        "https://lynk.id/zeepage",
+        "https://tiktok.com/@zeepage"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does a website cost at zeepage?", "acceptedAnswer": { "@type": "Answer", "text": "A landing page is Rp 699k and a company profile is Rp 1.499k including a free .com domain for 1 year. Custom needs such as e-commerce and web applications are quoted after a consultation, always in writing upfront." } },
+        { "@type": "Question", "name": "How long does it take?", "acceptedAnswer": { "@type": "Answer", "text": "A landing page takes 1 to 2 weeks. A company profile takes 2 to 4 weeks, depending on how complete your materials are." } },
+        { "@type": "Question", "name": "Can I ask for revisions?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The landing page package includes 2 design revisions and the company profile package includes 3 design revisions." } },
+        { "@type": "Question", "name": "Is there maintenance after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Landing pages include 30 days of free maintenance and company profiles include 3 months. After the free period, care can continue on a paid plan." } },
+        { "@type": "Question", "name": "I have no logo or materials yet, can you help?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tell us about your business during the consultation and we will guide what logo, photos, and texts are needed so the website can still move forward." } }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="zeepage | Professional Website Development Services in Indonesia"
+  description={description}
+  lang="en"
+  canonical={canonical}
+  structuredData={structuredData}
+
+  preloadImage="/demopadel.webp">
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <HomePage lang="en" />
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

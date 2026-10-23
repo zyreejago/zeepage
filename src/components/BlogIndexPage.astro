@@ -1,0 +1,110 @@
+---
+import type { Lang } from '../data/home-content';
+
+interface Props {
+  lang: Lang;
+  posts: any[];
+}
+const { lang, posts } = Astro.props;
+const ui =
+  lang === 'id'
+    ? {
+        label: 'Jurnal / Blog',
+        h1a: 'Semua',
+        accent: 'artikel.',
+        sub: 'Panduan praktis seputar website untuk bisnis di Bali dan seluruh Indonesia, ditulis dari pengalaman studio kami.',
+        read: 'Baca artikel',
+        count: 'artikel',
+      }
+    : {
+        label: 'Journal / Blog',
+        h1a: 'All',
+        accent: 'articles.',
+        sub: 'Practical guides about websites for businesses in Bali and across Indonesia, written from our studio experience.',
+        read: 'Read article',
+        count: 'articles',
+      };
+---
+
+<main class="pt-32 sm:pt-40 pb-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <p data-hero-line class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-5">{ui.label}</p>
+    <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight">
+      <span data-hero-line class="block">{ui.h1a} <em class="font-display italic font-medium text-brand">{ui.accent}</em></span>
+    </h1>
+    <p data-hero-line class="text-ink/60 leading-relaxed max-w-xl mt-6">{ui.sub}</p>
+    <p data-hero-line class="text-sm font-bold text-ink/40 mt-4">{posts.length} {ui.count}</p>
+
+    <div id="posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+      {posts.map((p) => (
+        <a href={p.href} class="post-card group bg-white border border-line rounded-3xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-ink/5 transition-shadow">
+          <span class="block overflow-hidden">
+            <img src={p.image} alt={p.title} class="w-full h-44 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="640" height="360" />
+          </span>
+          <span class="flex flex-col flex-1 p-5">
+            <span class="text-xs font-bold uppercase tracking-wider text-ink/40">{p.date}</span>
+            <span class="font-bold text-lg leading-snug mt-2 group-hover:text-brand transition-colors">{p.title}</span>
+            <span class="text-sm text-ink/55 leading-relaxed mt-2 line-clamp-3">{p.excerpt}</span>
+            <span class="mt-auto pt-4 text-sm font-bold text-brand inline-flex items-center gap-2">
+              {ui.read} <span aria-hidden="true">→</span>
+            </span>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <nav id="pagination" class="flex flex-wrap items-center justify-center gap-2 mt-12" aria-label="Pagination"></nav>
+  </div>
+</main>
+
+<script>
+  // @ts-nocheck
+  (function () {
+    var PER_PAGE = 9;
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.post-card'));
+    var nav = document.getElementById('pagination');
+    if (!nav || cards.length <= PER_PAGE) return;
+    var totalPages = Math.ceil(cards.length / PER_PAGE);
+    var current = 1;
+    var isId = document.documentElement.lang !== 'en';
+
+    function btn(label, page, opts) {
+      opts = opts || {};
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = label;
+      b.dataset.page = page;
+      var base = 'min-w-11 h-11 px-3 rounded-full text-sm font-bold border transition-colors ';
+      if (opts.active) b.className = base + 'bg-brand text-white border-brand';
+      else if (opts.disabled) b.className = base + 'bg-white text-ink/30 border-line cursor-not-allowed';
+      else b.className = base + 'bg-white text-ink/70 border-line hover:border-brand hover:text-brand';
+      if (opts.disabled) b.disabled = true;
+      return b;
+    }
+
+    function render() {
+      cards.forEach(function (card, i) {
+        var page = Math.floor(i / PER_PAGE) + 1;
+        card.style.display = page === current ? '' : 'none';
+      });
+      nav.innerHTML = '';
+      nav.appendChild(btn(isId ? 'Sebelumnya' : 'Previous', current - 1, { disabled: current === 1 }));
+      for (var p = 1; p <= totalPages; p++) {
+        nav.appendChild(btn(String(p), p, { active: p === current }));
+      }
+      nav.appendChild(btn(isId ? 'Berikutnya' : 'Next', current + 1, { disabled: current === totalPages }));
+    }
+
+    nav.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-page]');
+      if (!b || b.disabled) return;
+      var target = parseInt(b.dataset.page, 10);
+      if (target < 1 || target > totalPages) return;
+      current = target;
+      render();
+      document.getElementById('posts-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    render();
+  })();
+</script>

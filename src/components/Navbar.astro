@@ -1,0 +1,111 @@
+---
+export interface Props {
+  t: {
+    brand: string;
+    links: { label: string; href: string }[];
+  };
+  lang: string;
+  cta: {
+    primary: string;
+    secondary: string;
+    whatsapp: string;
+    whatsappUrl: string;
+  };
+}
+
+const { t, lang, cta } = Astro.props;
+const homeHref = lang === 'id' ? '/' : '/en/';
+---
+
+<style>
+  #navbar {
+    transition: max-width 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, background-color 0.35s ease;
+  }
+  #navbar.scrolled {
+    max-width: 53rem;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 44px rgba(30, 37, 71, 0.16);
+  }
+  #navbar.scrolled .nav-links {
+    gap: 1.1rem;
+  }
+</style>
+
+<header class="fixed top-0 inset-x-0 z-50 flex justify-center px-4 pt-4">
+  <nav
+    id="navbar"
+    class="w-full max-w-6xl rounded-3xl bg-white/85 backdrop-blur-md border border-ink/10 shadow-lg shadow-ink/5 px-4 sm:px-5"
+    aria-label="Main"
+  >
+    <div class="flex items-center justify-between gap-3 py-3">
+      <a href={homeHref} class="flex items-center gap-2.5 shrink-0">
+        <img src="/logo-ui.webp" alt="zeepage" class="w-9 h-9 rounded-xl object-cover ring-1 ring-ink/10" width="36" height="36" />
+        <span class="font-extrabold text-lg tracking-tight whitespace-nowrap">zeepage</span>
+      </a>
+      <div class="nav-links hidden lg:flex items-center gap-7 text-sm font-semibold text-ink/70 whitespace-nowrap">
+        {t.links.map((link) => (
+          <a href={link.href} class="hover:text-brand transition-colors">{link.label}</a>
+        ))}
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex items-center rounded-full border border-ink/15 overflow-hidden text-xs font-bold">
+          <a href="/" class:list={['px-3 py-1.5', lang === 'id' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>ID</a>
+          <a href="/en/" class:list={['px-3 py-1.5', lang === 'en' ? 'bg-ink text-white' : 'text-ink/60 hover:text-ink']}>EN</a>
+        </div>
+        <a
+          href={cta.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden sm:inline-flex whitespace-nowrap shrink-0 bg-brand text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-branddark transition-colors"
+        >
+          {cta.primary}
+        </a>
+        <button
+          id="btn_menu"
+          type="button"
+          class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-ink/15 text-ink"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile_menu" class="hidden lg:hidden border-t border-ink/10 py-2">
+      {t.links.map((link) => (
+        <a href={link.href} class="mobile-link block py-2.5 px-1 font-semibold text-ink/80 hover:text-brand transition-colors">{link.label}</a>
+      ))}
+      <a href={cta.whatsappUrl} target="_blank" rel="noopener noreferrer" class="mt-2 mb-2 flex justify-center bg-brand text-white text-sm font-bold px-5 py-3 rounded-full hover:bg-branddark transition-colors">
+        {cta.primary}
+      </a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // @ts-nocheck
+  (function () {
+    var nav = document.getElementById('navbar');
+    function onScroll() {
+      if (window.scrollY > 80) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    var btnMenu = document.getElementById('btn_menu');
+    var mobileMenu = document.getElementById('mobile_menu');
+    if (btnMenu && mobileMenu) {
+      btnMenu.addEventListener('click', function () {
+        var isHidden = mobileMenu.classList.toggle('hidden');
+        btnMenu.setAttribute('aria-expanded', String(!isHidden));
+      });
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mobileMenu.classList.add('hidden');
+          btnMenu.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  })();
+</script>

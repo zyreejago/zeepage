@@ -1,0 +1,15 @@
+---
+import PortfolioDetailPage from '../../components/PortfolioDetailPage.astro';
+import id from '../../i18n/id.json';
+
+export function getStaticPaths() {
+  return id.portfolio.items.map((item: any) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<PortfolioDetailPage lang="id" t={id} item={item} />

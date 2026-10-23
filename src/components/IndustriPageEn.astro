@@ -1,0 +1,379 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Services from './Services.astro';
+import WhyChooseUs from './WhyChooseUs.astro';
+import Pricing from './Pricing.astro';
+import ProjectSteps from './ProjectSteps.astro';
+import CtaBanner from './CtaBanner.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+import en from '../i18n/en.json';
+import { getNamaBySlug } from '../data/daerah';
+import { industriList, type Industri } from '../data/industri';
+import { getKontenIndustriEn } from '../data/industri-konten-en';
+
+export interface Props {
+  /** industry data (shared with the ID pages) */
+  industri: Industri;
+}
+
+const { industri: ind } = Astro.props;
+const t = en;
+const lang = 'en';
+
+const canonical = `https://zeepage.com/en/website-design-${ind.slugEn}-bali/`;
+const idUrl = `https://zeepage.com/jasa-pembuatan-website-${ind.slug}/`;
+const alternates = [
+  { hreflang: 'id', href: idUrl },
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'x-default', href: idUrl },
+];
+
+const k = getKontenIndustriEn(ind.slugEn);
+
+const title = k?.metaTitle ?? `${ind.namaEn} Website Design in Bali | zeepage`;
+const description =
+  k?.metaDescription ??
+  `Professional website design for ${ind.namaEn.toLowerCase()} in Bali. Modern design, SEO-friendly, from Rp 699k. Free consultation.`;
+
+const waText = encodeURIComponent(
+  `Hello zeepage, I run a business in Bali and I'm interested in a free consultation for website design. Please share more details.`
+);
+const waUrl = `https://wa.me/6288987244675?text=${waText}`;
+
+const areaPrioritas = ind.areaPrioritas.map((s) => ({ slug: s, nama: getNamaBySlug(s) }));
+const industriLain = industriList.filter((x) => x.slug !== ind.slug);
+
+const faqDefault = [
+  {
+    q: `How much does website design for ${ind.namaEn.toLowerCase()} in Bali cost?`,
+    a: `zeepage's website packages start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. Pricing adjusts to your feature needs, with no hidden costs.`,
+  },
+  {
+    q: `How long does it take to build the website?`,
+    a: `Typically 1-2 weeks for a landing page, 2-4 weeks for a company profile, and 4-8 weeks for e-commerce or web applications. A rush option is available for urgent needs.`,
+  },
+  {
+    q: `What features does the website include?`,
+    a: `Websites come with industry-specific features such as ${ind.fiturEn.slice(0, 3).join(', ').toLowerCase()}, and can grow with your needs. Every website we build is responsive, fast, and SEO-ready.`,
+  },
+  {
+    q: `Can my website rank on Google for Bali searches in my industry?`,
+    a: `Yes. We apply local SEO from day one: LocalBusiness structured data, Bali and industry-focused keywords, page speed, and Google Business Profile guidance so your business is easy for customers to find.`,
+  },
+  {
+    q: `Do you serve clients outside Bali?`,
+    a: `Yes. Although based in Bali and focused on the Bali market, we serve clients across Indonesia and abroad fully online. Consultation, revisions, and handover can all be done remotely.`,
+  },
+];
+
+// Industry-specific FAQ when available, otherwise the generic version
+const faq = k?.faq ?? faqDefault;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeepage.com/en/' },
+        { '@type': 'ListItem', position: 2, name: 'Industries', item: 'https://zeepage.com/en/industries/' },
+        { '@type': 'ListItem', position: 3, name: ind.namaEn, item: canonical },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: `Website Design for ${ind.namaEn} in Bali`,
+      serviceType: 'Web Development',
+      description,
+      url: canonical,
+      ...(k?.keywords ? { keywords: k.keywords.join(', ') } : {}),
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+      areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+    },
+    {
+      '@type': 'LocalBusiness',
+      name: 'zeepage',
+      description: `Professional website design services for ${ind.namaEn.toLowerCase()} in Bali.`,
+      url: canonical,
+      image: 'https://zeepage.com/logo.png',
+      telephone: '+62 889-8724-4675',
+      email: 'zinknot@gmail.com',
+      priceRange: 'Rp 699k - Rp 1.499k',
+      areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressRegion: 'Bali', addressCountry: 'ID' },
+      parentOrganization: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+
+const cta = {
+  ...t.cta,
+  title: `Ready to Take Your Business Online?`,
+  subtitle: `Free consultation for ${ind.namaEn.toLowerCase()} and other businesses across Bali. The zeepage team is ready to help from idea to launch.`,
+  whatsappUrl: waUrl,
+  questions: faq,
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang={lang}
+  canonical={canonical}
+  alternates={alternates}
+  structuredData={structuredData}
+  noindex={true}>
+  <Navbar
+    t={t.nav}
+    lang={lang}
+    cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: waUrl }}
+  />
+
+  <!-- HERO -->
+  <section
+    class="relative bg-[#F6F6F3] pt-36 pb-16"
+   
+  >
+    
+    
+    
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <nav class="flex items-center justify-center gap-2 text-[#1e2547]/50 text-xs font-semibold mb-6" aria-label="Breadcrumb">
+        <a href="/en/" class="hover:text-[#0040FF] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/en/industries/" class="hover:text-[#0040FF] transition-colors">Industries</a>
+        <span>/</span>
+        <span class="text-[#1e2547] font-semibold">{ind.namaEn}</span>
+      </nav>
+
+      <p class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-[#0040FF] mb-6">Based in Bali · {ind.namaEn} Website Specialists</p>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e2547] leading-tight mb-6">
+        Website Design for {ind.namaEn} in Bali
+      </h1>
+
+      <p class="text-[#1e2547]/65 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        {k?.heroLead ?? `${ind.deskripsiEn} zeepage builds fast, modern, SEO-friendly websites so your business in Bali is easy for customers to find.`}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#0040FF] text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#0020AA] transition-all duration-300"
+        >
+          Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a
+          href="#services"
+          class="inline-flex items-center gap-2 border border-[#1e2547]/25 text-[#1e2547] font-bold px-8 py-3.5 rounded-full hover:border-[#1e2547] hover:bg-[#1e2547] hover:text-white transition-all duration-300"
+        >
+          View Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / SEO CONTENT -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none text-justify">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">
+          {k?.intro?.h2 ?? `Why Your Business in Bali Needs a Professional Website`}
+        </h2>
+        {k?.intro ? (
+          <>
+            {k.intro.paragraf.map((p) => (
+              <p class="text-gray-600 leading-relaxed">{p}</p>
+            ))}
+          </>
+        ) : (
+          <>
+            <p class="text-gray-600 leading-relaxed">
+              {ind.deskripsiEn} In Bali, customers compare many options on Google before deciding. A clean, fast website
+              that's easy to find makes your business look far more credible than competitors who rely only on social media.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              zeepage understands the Bali market and designs websites optimized for local SEO, with the features this
+              industry actually needs: {ind.fiturEn.slice(0, 3).join(', ').toLowerCase()}, and more. Consultation, build,
+              and handover can all be done fully online.
+            </p>
+          </>
+        )}
+
+        <div class="bg-[#EBEFFF] rounded-2xl p-6 sm:p-8 my-8 border-l-4 border-[#0040FF] not-prose">
+          <p class="text-base font-bold text-[#1e2547] mb-2">zeepage tip for {ind.namaEn.toLowerCase()} in Bali:</p>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            {k?.intro?.tips ?? `Use industry and location keywords like "${ind.namaEn.toLowerCase()} website design Bali" in your page titles and descriptions. Also keep your WhatsApp button within easy reach so customers can contact you fast.`}
+          </p>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-6 not-prose">
+          See also: <a href="/en/website-design-bali/" class="text-[#0040FF] font-semibold hover:underline">Website Design Services in Bali</a> covering the entire province, or <a href="/en/industries/" class="text-[#0040FF] font-semibold hover:underline">all industries we serve</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY WEBSITE FEATURES -->
+  <section class="bg-[#F6F6F3] py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-[#1e2547] mb-4">Website Features for {ind.namaEn}</h2>
+        <p class="text-[#4f5b7d] text-base sm:text-lg max-w-2xl mx-auto">
+          Every website we build for this industry includes features the business actually needs, not just good looks.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {ind.fiturEn.map((f) => (
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-6 border border-[#E3E4DE] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-[#EBEFFF] text-[#0040FF] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-[#1e2547] mb-1">{f}</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {k?.fiturDesc?.[f] ?? `The ${f.toLowerCase()} feature for your Bali business website, making operations easier and customers happier.`}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {k?.lokal && (
+    <section class="bg-white py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="prose prose-lg max-w-none text-justify">
+          <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">{k.lokal.h2}</h2>
+          {k.lokal.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </div>
+
+        <div class="not-prose mt-8">
+          <h3 class="text-lg font-bold text-[#1e2547] mb-4">Illustrative Examples</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {k.lokal.ilustrasi.map((c) => (
+              <div class="bg-[#F6F6F3] rounded-2xl p-6 border border-[#E3E4DE]">
+                <h4 class="font-bold text-[#1e2547] mb-2">{c.judul}</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">{c.isi}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-gray-400 italic mt-4">
+            {k.lokal.catatan ?? 'All scenarios above are general illustrations, not specific zeepage clients.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Services t={t.services} id="services" />
+  <WhyChooseUs t={t.why} id="why" />
+  <Pricing t={t.pricing} lang={lang} id="pricing" />
+  <ProjectSteps t={t.steps} whatsapp={t.cta.whatsapp} id="steps" />
+
+  <!-- PRIORITY AREAS -->
+  {areaPrioritas.length > 0 && (
+    <section class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">{ind.namaEn} Website Design Across Bali</h2>
+        <p class="text-[#4f5b7d] mb-8">Businesses in this industry are spread across many Bali areas. Each priority area has its own dedicated page for this industry's website services there.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {areaPrioritas.map((a) => (
+            <a
+              href={`/en/website-design-${ind.slugEn}-in-${a.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-[#EBEFFF] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              {ind.namaEn} in {a.nama}
+            </a>
+          ))}
+          <a
+            href="/en/areas/"
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            View All Areas
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- OTHER INDUSTRIES -->
+  <section class="bg-[#F6F6F3] py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Website Design for Other Industries</h2>
+      <p class="text-[#4f5b7d] mb-8">zeepage also serves many other industries in Bali with a tailored approach.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {industriLain.map((x) => (
+          <a
+            href={`/en/website-design-${x.slugEn}-bali/`}
+            class="px-5 py-2.5 rounded-full bg-white border border-[#E3E4DE] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+          >
+            {x.namaEn} Websites
+          </a>
+        ))}
+        <a
+          href="/en/industries/"
+          class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+        >
+          View All Industries
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner t={cta} id="contact" />
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
+
+<style>
+  .hero__grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+  }
+  .hero__bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero__bg-circle--1 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 80, 255, 0.4) 0%, transparent 70%);
+    top: -120px;
+    right: -150px;
+  }
+  .hero__bg-circle--2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(200, 255, 0, 0.08) 0%, transparent 70%);
+    bottom: -60px;
+    left: -100px;
+  }
+</style>

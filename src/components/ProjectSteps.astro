@@ -1,0 +1,357 @@
+---
+export interface Props {
+  t: {
+    title: string;
+    subtitle: string;
+    tags: string[];
+    cta: string;
+    steps: { num: string; title: string; desc: string }[];
+  };
+  whatsapp: string;
+  id: string;
+}
+
+const { t, whatsapp, id } = Astro.props;
+
+const phaseLabels = ["Discovery", "Proposal", "Agreement", "Delivery"];
+
+---
+
+<section id={id} class="hw-section">
+  <div class="hw-container">
+    <div class="hw-grid">
+
+      <!-- LEFT: sticky -->
+      <div class="hw-left">
+        <div class="hw-badge">
+          <span class="hw-badge-dot"></span>
+          How We Work
+        </div>
+
+        <h2 class="hw-heading" set:html={t.title} />
+
+        <div class="hw-rule"></div>
+
+        <p class="hw-sub">{t.subtitle}</p>
+
+        <ul class="hw-list">
+          {t.tags.map((tag) => (
+            <li class="hw-list-item">
+              <span class="hw-check" aria-hidden="true">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#1e2547" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 6l3 3 5-5"/>
+                </svg>
+              </span>
+              {tag}
+            </li>
+          ))}
+        </ul>
+
+        <a
+          href={`https://wa.me/${whatsapp}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hw-cta"
+        >
+          {t.cta}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hw-cta-arrow" aria-hidden="true">
+            <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- RIGHT: scrolls -->
+      <div class="hw-right">
+        {t.steps.map((step, i) => (
+          <div class="hw-step">
+            <!-- Icon + line -->
+            <div class="hw-rail">
+              <div class="hw-icon-box">
+                {step.num}
+              </div>
+              {i < t.steps.length - 1 && (
+                <div class="hw-connector" aria-hidden="true"></div>
+              )}
+            </div>
+
+            <!-- Content -->
+            <div class="hw-content">
+              <div class="hw-meta">
+                <span class="hw-phase">{phaseLabels[i]}</span>
+              </div>
+              <h3 class="hw-step-title">{step.title}</h3>
+              <p class="hw-step-desc">{step.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hw-section {
+    background: #F8F9FC;
+    padding: 96px 0;
+  }
+
+  .hw-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* Two-column grid */
+  .hw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ── LEFT (sticky) ── */
+  .hw-left {
+    position: sticky;
+    top: 112px; /* navbar height — adjust to match your layout */
+  }
+
+  .hw-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #eef2ff;
+    color: #0040FF;
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 99px;
+    margin-bottom: 20px;
+  }
+
+  .hw-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #0040FF;
+    border-radius: 50%;
+  }
+
+  .hw-heading {
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 900;
+    color: #1e2547;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+
+  :global(.hw-accent) {
+    color: #0040FF;
+  }
+
+  .hw-rule {
+    width: 40px;
+    height: 3px;
+    background: #c7d2fe;
+    border-radius: 99px;
+    margin: 18px 0;
+  }
+
+  .hw-sub {
+    color: #4f5b7d;
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin: 0 0 28px;
+    max-width: 420px;
+  }
+
+  /* Checklist */
+  .hw-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hw-list-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4f5b7d;
+  }
+
+  .hw-check {
+    width: 20px;
+    height: 20px;
+    background: #d9ff42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* CTA */
+  .hw-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0040FF;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 28px;
+    border-radius: 99px;
+    text-decoration: none;
+    border: 2px solid #0040FF;
+    box-shadow: 0 4px 18px rgba(33, 82, 207, 0.18);
+    transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hw-cta:hover {
+    background: #1a3fa3;
+    border-color: #1a3fa3;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(33, 82, 207, 0.28);
+  }
+
+  .hw-cta-arrow {
+    transition: transform 0.2s;
+  }
+
+  .hw-cta:hover .hw-cta-arrow {
+    transform: translate(2px, -2px);
+  }
+
+  /* ── RIGHT (timeline) ── */
+  .hw-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hw-step {
+    display: flex;
+    gap: 22px;
+  }
+
+  /* Rail: icon + connector line */
+  .hw-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 56px;
+  }
+
+  .hw-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #0040FF;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 20px rgba(33, 82, 207, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hw-step:hover .hw-icon-box {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 10px 28px rgba(33, 82, 207, 0.36);
+  }
+
+  /* The connecting line between steps */
+  .hw-connector {
+    width: 2px;
+    flex: 1;
+    min-height: 32px;
+    margin: 6px 0;
+    background: linear-gradient(to bottom, rgba(33,82,207,0.35), rgba(33,82,207,0.06) 80%, transparent);
+    border-radius: 99px;
+  }
+
+  /* Content */
+  .hw-content {
+    padding: 4px 0 44px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hw-step:last-child .hw-content {
+    padding-bottom: 0;
+  }
+
+  .hw-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .hw-num {
+    font-size: 11px;
+    font-weight: 800;
+    color: #0040FF;
+    background: rgba(33,82,207,0.09);
+    padding: 3px 9px;
+    border-radius: 99px;
+    letter-spacing: 0.1em;
+  }
+
+  .hw-phase {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #9ca3af;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hw-step-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1e2547;
+    margin: 0 0 10px;
+    line-height: 1.25;
+  }
+
+  .hw-step-desc {
+    font-size: 14.5px;
+    color: #4f5b7d;
+    line-height: 1.78;
+    margin: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .hw-grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    /* Disable sticky on mobile — no room to scroll alongside */
+    .hw-left {
+      position: static;
+    }
+
+    .hw-container {
+      padding: 0 24px;
+    }
+
+    .hw-section {
+      padding: 48px 0;
+    }
+  }
+</style>

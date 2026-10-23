@@ -1,0 +1,415 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Services from './Services.astro';
+import WhyChooseUs from './WhyChooseUs.astro';
+import Pricing from './Pricing.astro';
+import ProjectSteps from './ProjectSteps.astro';
+import CtaBanner from './CtaBanner.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+import en from '../i18n/en.json';
+import { getNamaBySlug, areaUrlIdAbs, type Daerah } from '../data/daerah';
+import { getDaerahEn } from '../data/daerah-en';
+import { getKontenEn } from '../data/daerah-konten-en';
+import { industriList } from '../data/industri';
+
+export interface Props {
+  /** area data (shared with the ID pages) */
+  daerah: Daerah;
+}
+
+const { daerah: d } = Astro.props;
+const t = en;
+const lang = 'en';
+
+const e = getDaerahEn(d.slug);
+if (!e) throw new Error(`English copy not found for area: ${d.slug}`);
+const k = getKontenEn(d.slug);
+
+const canonical = `https://zeepage.com/en/website-design-${d.slug}/`;
+const idUrl = areaUrlIdAbs(d.slug);
+const alternates = [
+  { hreflang: 'id', href: idUrl },
+  { hreflang: 'en', href: canonical },
+  { hreflang: 'x-default', href: idUrl },
+];
+
+const areaSekitar = d.areaSekitar
+  .map((s) => ({ slug: s, nama: getNamaBySlug(s) }))
+  .filter((a) => a.slug !== d.slug);
+
+const title = k?.metaTitle ?? `Website Design Services in ${d.nama} | zeepage`;
+const description =
+  k?.metaDescription ??
+  `Professional website design services in ${d.nama}, ${e.induk}. Perfect for ${e.potensi
+    .slice(0, 3)
+    .join(', ')
+    .toLowerCase()}. Modern design, SEO-friendly, from Rp 699k. Free consultation.`;
+
+const waText = encodeURIComponent(
+  `Hello zeepage, I'm based in ${d.nama} and interested in a free consultation for website design for my business. Please share more details.`
+);
+const waUrl = `https://wa.me/6288987244675?text=${waText}`;
+
+const faqDefault = [
+  {
+    q: `How much does website design cost in ${d.nama}?`,
+    a: `zeepage's website packages in ${d.nama} start from Rp 699k for a landing page and Rp 1.499k for a complete company profile with a free .com domain for 1 year. Pricing adjusts to your feature needs, with no hidden costs.`,
+  },
+  {
+    q: `How long does it take to build the website?`,
+    a: `Typically 1-2 weeks for a landing page, 2-4 weeks for a company profile, and 4-8 weeks for e-commerce or web applications. A rush option is available for urgent needs.`,
+  },
+  {
+    q: `Do you serve clients in ${d.nama}?`,
+    a: `Yes. Although based in Bali, we serve the entire ${d.nama} area and beyond, both online and in person. Consultation, revisions, and handover can all be done fully remotely.`,
+  },
+  {
+    q: `Can my website rank on Google for local ${d.nama} searches?`,
+    a: `Yes. We apply local SEO from day one: LocalBusiness structured data, ${d.nama}-focused keywords, page speed, and Google Business Profile guidance so your business is easy for local customers to find.`,
+  },
+  {
+    q: `What type of website suits a business in ${d.nama}?`,
+    a: `It depends on your business model. ${e.potensi
+      .slice(0, 3)
+      .join(', ')} typically work well with a company profile, a promotional landing page, or an online store. We'll help you pick the most efficient option.`,
+  },
+];
+
+// Area-specific FAQ when available, otherwise the generic version
+const faq = k?.faq ?? faqDefault;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zeepage.com/en/' },
+        { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://zeepage.com/en/areas/' },
+        { '@type': 'ListItem', position: 3, name: d.nama, item: canonical },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: `Website Design Services in ${d.nama}`,
+      serviceType: 'Web Development',
+      description,
+      url: canonical,
+      ...(k?.keywords ? { keywords: k.keywords.join(', ') } : {}),
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+      areaServed: { '@type': 'Place', name: `${d.nama}, ${e.induk}` },
+    },
+    {
+      '@type': 'LocalBusiness',
+      name: 'zeepage',
+      description: `Professional website design services for businesses in ${d.nama}, ${e.induk}.`,
+      url: canonical,
+      image: 'https://zeepage.com/logo.png',
+      telephone: '+62 889-8724-4675',
+      email: 'zinknot@gmail.com',
+      priceRange: 'Rp 699k - Rp 1.499k',
+      areaServed: { '@type': 'Place', name: `${d.nama}, ${e.induk}` },
+      address: { '@type': 'PostalAddress', addressLocality: d.nama, addressRegion: 'Bali', addressCountry: 'ID' },
+      parentOrganization: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+
+const cta = {
+  ...t.cta,
+  title: `Ready to Build Your Website in ${d.nama}?`,
+  subtitle: `Free consultation for your business in ${d.nama}. The zeepage team is ready to help from idea to launch.`,
+  whatsappUrl: waUrl,
+  questions: faq,
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  lang={lang}
+  canonical={canonical}
+  alternates={alternates}
+  structuredData={structuredData}
+  noindex={true}>
+  <Navbar
+    t={t.nav}
+    lang={lang}
+    cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: waUrl }}
+  />
+
+  <!-- HERO -->
+  <section
+    class="relative bg-[#F6F6F3] pt-36 pb-16"
+   
+  >
+    
+    
+    
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <nav class="flex items-center justify-center gap-2 text-[#1e2547]/50 text-xs font-semibold mb-6" aria-label="Breadcrumb">
+        <a href="/en/" class="hover:text-[#0040FF] transition-colors">Home</a>
+        <span>/</span>
+        <a href="/en/areas/" class="hover:text-[#0040FF] transition-colors">Service Areas</a>
+        <span>/</span>
+        <span class="text-[#1e2547] font-semibold">{d.nama}</span>
+      </nav>
+
+      <p class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-[#0040FF] mb-6">Based in Bali · Serving {d.nama}</p>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e2547] leading-tight mb-6">
+        Professional Website Design Services in {d.nama}
+      </h1>
+
+      <p class="text-[#1e2547]/65 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        {k?.heroLead ?? `${e.deskripsi} zeepage builds fast, modern, SEO-friendly websites so your business in ${d.nama} is easy for customers to find.`}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#0040FF] text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#0020AA] transition-all duration-300"
+        >
+          Free Consultation
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a
+          href="#services"
+          class="inline-flex items-center gap-2 border border-[#1e2547]/25 text-[#1e2547] font-bold px-8 py-3.5 rounded-full hover:border-[#1e2547] hover:bg-[#1e2547] hover:text-white transition-all duration-300"
+        >
+          View Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / SEO CONTENT -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none text-justify">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">
+          {k?.intro?.h2 ?? `Why Your Business in ${d.nama} Needs a Professional Website`}
+        </h2>
+        {k?.intro ? (
+          <>
+            {k.intro.paragraf.map((p) => (
+              <p class="text-gray-600 leading-relaxed">{p}</p>
+            ))}
+          </>
+        ) : (
+          <>
+            <p class="text-gray-600 leading-relaxed">
+              {d.nama} is a {e.tipeLabel.toLowerCase()} in {e.induk} with an economy that keeps growing. From
+              <strong>{e.potensi.join(', ')}</strong>, nearly every business now competes online. Customers in {d.nama} are
+              used to searching on Google before deciding to buy or visit.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Without a well-built website that's easy to find, your business risks losing potential customers to competitors
+              who appear first in search results. zeepage helps SMEs and companies in {d.nama} get a fast, responsive website
+              optimized for local SEO, so your business shows up when people search for products or services around {d.nama}.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Landmarks like {d.landmark.join(', ')} draw constant visitors to {d.nama}. Use that momentum with a website ready
+              to take orders, bookings, and inquiries 24/7.
+            </p>
+          </>
+        )}
+
+        <div class="bg-[#EBEFFF] rounded-2xl p-6 sm:p-8 my-8 border-l-4 border-[#0040FF] not-prose">
+          <p class="text-base font-bold text-[#1e2547] mb-2">zeepage tip for businesses in {d.nama}:</p>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            {k?.intro?.tips ?? `Use location-based keywords like "${e.potensi[0].toLowerCase()} ${d.nama}" in your page titles and descriptions. Also make sure your address and WhatsApp number are clearly listed so local customers can reach you fast.`}
+          </p>
+        </div>
+
+        {d.slug !== 'bali' && (
+          <p class="text-sm text-gray-500 mt-6 not-prose">
+            See also: <a href="/en/website-design-bali/" class="text-[#0040FF] font-semibold hover:underline">Website Design Services in Bali</a> covering the entire province.
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES SERVED -->
+  <section class="bg-[#F6F6F3] py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-[#1e2547] mb-4">Industries We Serve in {d.nama}</h2>
+        <p class="text-[#4f5b7d] text-base sm:text-lg max-w-2xl mx-auto">
+          We understand the character of businesses in {d.nama} and design websites that fit your industry's needs.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {e.potensi.map((p) => (
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-6 border border-[#E3E4DE] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-[#EBEFFF] text-[#0040FF] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-[#1e2547] mb-1">{p}</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {k?.potensiDesc?.[p] ?? `A professional website for your ${p.toLowerCase()} business in ${d.nama}, so you look more credible and get found easily.`}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {k?.lokal && (
+    <section class="bg-white py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="prose prose-lg max-w-none text-justify">
+          <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">{k.lokal.h2}</h2>
+          {k.lokal.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </div>
+
+        <div class="not-prose mt-8">
+          <h3 class="text-lg font-bold text-[#1e2547] mb-4">Illustrative Examples</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {k.lokal.ilustrasi.map((c) => (
+              <div class="bg-[#F6F6F3] rounded-2xl p-6 border border-[#E3E4DE]">
+                <h4 class="font-bold text-[#1e2547] mb-2">{c.judul}</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">{c.isi}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-gray-400 italic mt-4">
+            {k.lokal.catatan ?? 'All scenarios above are general illustrations, not specific zeepage clients.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Services t={t.services} id="services" />
+  <WhyChooseUs t={t.why} id="why" />
+  <Pricing t={t.pricing} lang={lang} id="pricing" />
+  <ProjectSteps t={t.steps} whatsapp={t.cta.whatsapp} id="steps" />
+
+  <!-- NEARBY AREAS -->
+  {areaSekitar.length > 0 && (
+    <section class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">We Also Serve Areas Around {d.nama}</h2>
+        <p class="text-[#4f5b7d] mb-8">zeepage builds websites for businesses across Bali and beyond.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {areaSekitar.map((a) => (
+            <a
+              href={`/en/website-design-${a.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-[#EBEFFF] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              Website Design {a.nama}
+            </a>
+          ))}
+          <a
+            href="/en/areas/"
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            View All Areas
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {d.slug === 'bali' && (
+    <section class="bg-[#F6F6F3] py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Website Design by Industry</h2>
+        <p class="text-[#4f5b7d] mb-8">Every industry in Bali needs a different kind of website. See the dedicated page for your industry.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {industriList.map((x) => (
+            <a
+              href={`/en/website-design-${x.slugEn}-bali/`}
+              class="px-5 py-2.5 rounded-full bg-white border border-[#E3E4DE] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              {x.namaEn} Websites
+            </a>
+          ))}
+          <a
+            href="/en/industries/"
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            View All Industries
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {d.slug !== 'bali' && industriList.some((x) => x.areaPrioritas.includes(d.slug)) && (
+    <section class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Website Design by Industry in {d.nama}</h2>
+        <p class="text-[#4f5b7d] mb-8">Pick your business industry to see dedicated website services in {d.nama}.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {industriList.filter((x) => x.areaPrioritas.includes(d.slug)).map((x) => (
+            <a
+              href={`/en/website-design-${x.slugEn}-in-${d.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-[#EBEFFF] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              {x.namaEn} in {d.nama}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CtaBanner t={cta} id="contact" />
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
+
+<style>
+  .hero__grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+  }
+  .hero__bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero__bg-circle--1 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 80, 255, 0.4) 0%, transparent 70%);
+    top: -120px;
+    right: -150px;
+  }
+  .hero__bg-circle--2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(200, 255, 0, 0.08) 0%, transparent 70%);
+    bottom: -60px;
+    left: -100px;
+  }
+</style>

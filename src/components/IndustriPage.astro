@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Services from './Services.astro';
+import WhyChooseUs from './WhyChooseUs.astro';
+import Pricing from './Pricing.astro';
+import ProjectSteps from './ProjectSteps.astro';
+import CtaBanner from './CtaBanner.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { getNamaBySlug } from '../data/daerah';
+import { industriList, type Industri } from '../data/industri';
+import { getKontenIndustri } from '../data/industri-konten';
+
+export interface Props {
+  /** data industri yang akan dirender menjadi landing page */
+  industri: Industri;
+}
+
+const { industri: ind } = Astro.props;
+const t = id;
+const lang = 'id';
+
+const canonical = `https://zeepage.com/jasa-pembuatan-website-${ind.slug}/`;
+const enUrl = `https://zeepage.com/en/website-design-${ind.slugEn}-bali/`;
+const alternates = [
+  { hreflang: 'id', href: canonical },
+  { hreflang: 'en', href: enUrl },
+  { hreflang: 'x-default', href: canonical },
+];
+
+const k = getKontenIndustri(ind.slug);
+
+const title = k?.metaTitle ?? `Jasa Pembuatan Website ${ind.nama} di Bali | zeepage`;
+const description =
+  k?.metaDescription ??
+  `Jasa pembuatan website profesional untuk bisnis ${ind.nama.toLowerCase()} di Bali. Desain modern, SEO-friendly, harga mulai Rp 699k. Konsultasi gratis.`;
+
+const waText = encodeURIComponent(
+  `Halo zeepage, saya pemilik bisnis ${ind.nama.toLowerCase()} di Bali dan tertarik konsultasi gratis pembuatan website. Mohon info lebih lanjut.`
+);
+const waUrl = `https://wa.me/6288987244675?text=${waText}`;
+
+const areaPrioritas = ind.areaPrioritas.map((s) => ({ slug: s, nama: getNamaBySlug(s) }));
+const industriLain = industriList.filter((x) => x.slug !== ind.slug);
+
+const faqDefault = [
+  {
+    q: `Berapa biaya jasa pembuatan website ${ind.nama.toLowerCase()} di Bali?`,
+    a: `Paket pembuatan website zeepage mulai dari Rp 699k untuk landing page dan Rp 1.499k untuk company profile lengkap dengan domain .com gratis 1 tahun. Harga menyesuaikan kebutuhan fitur bisnis ${ind.nama.toLowerCase()} Anda, tanpa biaya tersembunyi.`,
+  },
+  {
+    q: `Berapa lama proses pengerjaannya?`,
+    a: `Estimasi pengerjaan 1-2 minggu untuk landing page, 2-4 minggu untuk company profile, dan 4-8 minggu untuk e-commerce atau web application. Untuk kebutuhan cepat, tersedia opsi pengerjaan dipercepat.`,
+  },
+  {
+    q: `Fitur apa saja yang didapat website ${ind.nama.toLowerCase()}?`,
+    a: `Website dilengkapi fitur khas industri ini seperti ${ind.fitur.slice(0, 3).join(', ').toLowerCase()}, dan dapat dikembangkan sesuai kebutuhan. Semua website kami responsif, cepat, dan siap SEO.`,
+  },
+  {
+    q: `Bisakah website saya muncul di Google untuk pencarian ${ind.nama.toLowerCase()} di Bali?`,
+    a: `Bisa. Kami menerapkan SEO lokal sejak hari pertama: struktur data LocalBusiness, optimasi kata kunci bertema ${ind.nama.toLowerCase()} dan Bali, kecepatan halaman, dan panduan Google Business Profile agar bisnis Anda mudah ditemukan calon pelanggan.`,
+  },
+  {
+    q: `Apakah zeepage melayani bisnis ${ind.nama.toLowerCase()} di luar Bali?`,
+    a: `Ya. Meski berbasis di Bali dan fokus pada pasar Bali, kami melayani klien di seluruh Indonesia secara online. Konsultasi, revisi, dan serah terima bisa dilakukan sepenuhnya daring.`,
+  },
+];
+
+// FAQ spesifik industri bila tersedia, jika tidak pakai versi generik
+const faq = k?.faq ?? faqDefault;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://zeepage.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Industri', item: 'https://zeepage.com/industri/' },
+        { '@type': 'ListItem', position: 3, name: ind.nama, item: canonical },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: `Jasa Pembuatan Website ${ind.nama} di Bali`,
+      serviceType: 'Web Development',
+      description,
+      url: canonical,
+      ...(k?.keywords ? { keywords: k.keywords.join(', ') } : {}),
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+      areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+    },
+    {
+      '@type': 'LocalBusiness',
+      name: 'zeepage',
+      description: `Jasa pembuatan website profesional untuk bisnis ${ind.nama.toLowerCase()} di Bali.`,
+      url: canonical,
+      image: 'https://zeepage.com/logo.png',
+      telephone: '+62 889-8724-4675',
+      email: 'zinknot@gmail.com',
+      priceRange: 'Rp 699k - Rp 1.499k',
+      areaServed: { '@type': 'Place', name: 'Bali, Indonesia' },
+      address: { '@type': 'PostalAddress', addressLocality: 'Bali', addressRegion: 'Bali', addressCountry: 'ID' },
+      parentOrganization: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+
+const cta = {
+  ...t.cta,
+  title: `Siap Bawa Bisnis ${ind.nama} Anda ke Level Berikutnya?`,
+  subtitle: `Konsultasi gratis untuk bisnis ${ind.nama.toLowerCase()} di seluruh Bali. Tim zeepage siap membantu dari ide hingga website tayang.`,
+  whatsappUrl: waUrl,
+  questions: faq,
+};
+---
+
+<BaseLayout title={title} description={description} lang={lang} canonical={canonical} alternates={alternates} structuredData={structuredData} noindex={true}>
+  <Navbar
+    t={t.nav}
+    lang={lang}
+    cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: waUrl }}
+  />
+
+  <!-- HERO -->
+  <section
+    class="relative bg-[#F6F6F3] pt-36 pb-16"
+   
+  >
+    
+    
+    
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <nav class="flex items-center justify-center gap-2 text-[#1e2547]/50 text-xs font-semibold mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#0040FF] transition-colors">Beranda</a>
+        <span>/</span>
+        <a href="/industri/" class="hover:text-[#0040FF] transition-colors">Industri</a>
+        <span>/</span>
+        <span class="text-[#1e2547] font-semibold">{ind.nama}</span>
+      </nav>
+
+      <p class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-[#0040FF] mb-6">Berbasis di Bali · Spesialis Website {ind.nama}</p>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e2547] leading-tight mb-6">
+        Jasa Pembuatan Website {ind.nama} di Bali
+      </h1>
+
+      <p class="text-[#1e2547]/65 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        {k?.heroLead ?? `${ind.deskripsi} zeepage membangun website cepat, modern, dan SEO-friendly agar bisnis ${ind.nama.toLowerCase()} Anda di Bali mudah ditemukan calon pelanggan.`}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#0040FF] text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#0020AA] transition-all duration-300"
+        >
+          Konsultasi Gratis
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a
+          href="#layanan"
+          class="inline-flex items-center gap-2 border border-[#1e2547]/25 text-[#1e2547] font-bold px-8 py-3.5 rounded-full hover:border-[#1e2547] hover:bg-[#1e2547] hover:text-white transition-all duration-300"
+        >
+          Lihat Layanan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / SEO CONTENT -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none text-justify">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">
+        {k?.intro?.h2 ?? `Kenapa Bisnis ${ind.nama} di Bali Butuh Website Profesional?`}
+      </h2>
+      {k?.intro ? (
+        <>
+          {k.intro.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </>
+      ) : (
+        <>
+          <p class="text-gray-600 leading-relaxed">
+            {ind.deskripsi} Di Bali, calon pelanggan membandingkan banyak pilihan lewat Google sebelum memutuskan.
+            Website yang rapi, cepat, dan mudah ditemukan membuat bisnis {ind.nama.toLowerCase()} Anda tampil lebih
+            meyakinkan daripada kompetitor yang hanya mengandalkan media sosial.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            zeepage memahami karakter pasar Bali dan merancang website {ind.nama.toLowerCase()} yang dioptimalkan
+            untuk SEO lokal, lengkap dengan fitur yang memang dibutuhkan industri ini: {ind.fitur.slice(0, 3).join(', ').toLowerCase()},
+            dan lainnya. Konsultasi, pengerjaan, hingga serah terima bisa dilakukan sepenuhnya daring.
+          </p>
+        </>
+      )}
+
+      <div class="bg-[#EBEFFF] rounded-2xl p-6 sm:p-8 my-8 border-l-4 border-[#0040FF] not-prose">
+        <p class="text-base font-bold text-[#1e2547] mb-2">Tips dari zeepage untuk bisnis {ind.nama.toLowerCase()} di Bali:</p>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          {k?.intro?.tips ?? `Gunakan kata kunci bertema industri dan lokasi seperti "website ${ind.nama.toLowerCase()} Bali" pada judul halaman dan deskripsi. Pastikan juga tombol WhatsApp mudah dijangkau agar calon pelanggan cepat menghubungi.`}
+        </p>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-6 not-prose">
+        Lihat juga: <a href="/jasa-website-bali/" class="text-[#0040FF] font-semibold hover:underline">Jasa Pembuatan Website di Bali</a> untuk cakupan seluruh provinsi, atau <a href="/industri/" class="text-[#0040FF] font-semibold hover:underline">semua industri yang kami layani</a>.
+      </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITUR WEBSITE INDUSTRI -->
+  <section class="bg-[#F6F6F3] py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-[#1e2547] mb-4">Fitur Website untuk {ind.nama}</h2>
+        <p class="text-[#4f5b7d] text-base sm:text-lg max-w-2xl mx-auto">
+          Setiap website {ind.nama.toLowerCase()} yang kami bangun dilengkapi fitur yang memang dibutuhkan industri ini, bukan sekadar tampilan.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {ind.fitur.map((f) => (
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-6 border border-[#E3E4DE] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-[#EBEFFF] text-[#0040FF] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-[#1e2547] mb-1">{f}</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {k?.fiturDesc?.[f] ?? `Fitur ${f.toLowerCase()} untuk website ${ind.nama.toLowerCase()} Anda di Bali agar operasional lebih mudah dan pelanggan lebih nyaman.`}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {k?.lokal && (
+    <section class="bg-white py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="prose prose-lg max-w-none text-justify">
+          <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">{k.lokal.h2}</h2>
+          {k.lokal.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </div>
+
+        <div class="not-prose mt-8">
+          <h3 class="text-lg font-bold text-[#1e2547] mb-4">Contoh Ilustratif Pemanfaatan Website</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {k.lokal.ilustrasi.map((c) => (
+              <div class="bg-[#F6F6F3] rounded-2xl p-6 border border-[#E3E4DE]">
+                <h4 class="font-bold text-[#1e2547] mb-2">{c.judul}</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">{c.isi}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-gray-400 italic mt-4">
+            {k.lokal.catatan ?? 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Services t={t.services} id="layanan" />
+  <WhyChooseUs t={t.why} id="kenapa" />
+  <Pricing t={t.pricing} lang={lang} id="harga" />
+  <ProjectSteps t={t.steps} whatsapp={t.cta.whatsapp} id="langkah" />
+
+  <!-- AREA PRIORITAS -->
+  {areaPrioritas.length > 0 && (
+    <section class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Jasa Pembuatan Website {ind.nama} di Berbagai Area Bali</h2>
+        <p class="text-[#4f5b7d] mb-8">Bisnis {ind.nama.toLowerCase()} tersebar di banyak kawasan Bali. Setiap kawasan prioritas punya halaman khusus website {ind.nama.toLowerCase()} untuk area tersebut.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {areaPrioritas.map((a) => (
+            <a
+              href={`/jasa-pembuatan-website-${ind.slug}-di-${a.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-[#EBEFFF] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              Website {ind.nama} di {a.nama}
+            </a>
+          ))}
+          <a
+            href="/daerah/"
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            Lihat Semua Area
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- INDUSTRI LAINNYA -->
+  <section class="bg-[#F6F6F3] py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Jasa Pembuatan Website untuk Industri Lainnya</h2>
+      <p class="text-[#4f5b7d] mb-8">zeepage juga melayani berbagai industri lain di Bali dengan pendekatan yang disesuaikan.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {industriLain.map((x) => (
+          <a
+            href={`/jasa-pembuatan-website-${x.slug}/`}
+            class="px-5 py-2.5 rounded-full bg-white border border-[#E3E4DE] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+          >
+            Website {x.nama}
+          </a>
+        ))}
+        <a
+          href="/industri/"
+          class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+        >
+          Lihat Semua Industri
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner t={cta} id="kontak" />
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
+
+<style>
+  .hero__grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+  }
+  .hero__bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero__bg-circle--1 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 80, 255, 0.4) 0%, transparent 70%);
+    top: -120px;
+    right: -150px;
+  }
+  .hero__bg-circle--2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(200, 255, 0, 0.08) 0%, transparent 70%);
+    bottom: -60px;
+    left: -100px;
+  }
+</style>

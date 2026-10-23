@@ -1,0 +1,110 @@
+---
+import { daerahList, areaUrlId } from '../data/daerah';
+
+export interface Props {
+  lang: 'id' | 'en';
+}
+
+const { lang } = Astro.props;
+const isId = lang === 'id';
+
+/** area populer yang ditonjolkan sebagai internal link */
+const topSlugs = [
+  'bali',
+  'badung',
+  'denpasar',
+  'canggu',
+  'seminyak',
+  'kuta',
+  'ubud',
+  'sanur',
+  'gianyar',
+  'nusa-dua',
+  'uluwatu',
+];
+
+const topAreas = topSlugs
+  .map((slug) => daerahList.find((d) => d.slug === slug))
+  .filter((d): d is NonNullable<typeof d> => Boolean(d));
+
+const areaHref = (slug: string) =>
+  isId ? areaUrlId(slug) : `/en/website-design-${slug}/`;
+
+const articles = isId
+  ? [
+      { href: '/blog/panduan-seo-dasar/', label: 'Panduan SEO Dasar untuk Website Bisnis' },
+      { href: '/blog/panduan-google-my-business/', label: 'Cara Optimasi Google My Business' },
+      { href: '/blog/biaya-bikin-website/', label: 'Berapa Biaya Bikin Website? Ini Rinciannya' },
+      { href: '/blog/memilih-jasa-website/', label: 'Tips Memilih Jasa Pembuatan Website' },
+    ]
+  : [
+      { href: '/en/blog/seo-beginners-guide/', label: 'SEO Beginners Guide for Business Websites' },
+      { href: '/en/blog/local-seo-guide/', label: 'The Complete Local SEO Guide' },
+      { href: '/en/blog/cost-of-not-having-website/', label: 'The Real Cost of Not Having a Website' },
+      { href: '/en/blog/website-speed-optimization/', label: 'Website Speed Optimization Tips' },
+    ];
+
+const areaHub = isId ? '/daerah/' : '/en/areas/';
+const blogHub = isId ? '/blog/' : '/en/blog/';
+
+const copy = isId
+  ? {
+      h2: 'Jasa Pembuatan Website Bali untuk Berbagai Industri',
+      p: 'zeepage melayani jasa pembuatan website untuk bisnis di seluruh Bali — mulai dari Badung, Denpasar, dan Gianyar hingga kawasan populer seperti Canggu, Seminyak, dan Ubud. Kami membangun website cepat, modern, dan siap bersaing di Google untuk hotel, restoran, klinik, hingga toko online.',
+      areasH3: 'Area Layanan Populer di Bali',
+      areasCta: 'Lihat semua area layanan',
+      articlesH3: 'Artikel Terkait',
+      articlesCta: 'Baca semua artikel',
+    }
+  : {
+      h2: 'Website Design Services in Bali for Every Industry',
+      p: 'zeepage builds websites for businesses across Bali — from Badung, Denpasar, and Gianyar to popular areas like Canggu, Seminyak, and Ubud. We create fast, modern, Google-ready websites for hotels, restaurants, clinics, and online stores.',
+      areasH3: 'Popular Service Areas in Bali',
+      areasCta: 'View all service areas',
+      articlesH3: 'Related Articles',
+      articlesCta: 'Read all articles',
+    };
+---
+
+<section class="bg-paper py-16 sm:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">{copy.h2}</h2>
+      <p class="text-gray-600 leading-relaxed mb-10">{copy.p}</p>
+    </div>
+
+    <h3 class="text-lg font-bold text-[#1e2547] mb-4">{copy.areasH3}</h3>
+    <div class="flex flex-wrap gap-3 mb-12">
+      {topAreas.map((d) => (
+        <a
+          href={areaHref(d.slug)}
+          class="px-5 py-2.5 rounded-full bg-white border border-[#E3E4DE] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-white hover:border-[#0040FF] transition-colors"
+        >
+          {isId ? `Jasa Website ${d.nama}` : `Website Design ${d.nama}`}
+        </a>
+      ))}
+      <a
+        href={areaHub}
+        class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+      >
+        {copy.areasCta}
+      </a>
+    </div>
+
+    <h3 class="text-lg font-bold text-[#1e2547] mb-4">{copy.articlesH3}</h3>
+    <div class="grid sm:grid-cols-2 gap-4">
+      {articles.map((a) => (
+        <a
+          href={a.href}
+          class="group flex items-center justify-between gap-4 bg-white rounded-2xl p-5 border border-[#E3E4DE] hover:border-[#0040FF] hover:shadow-md transition-all"
+        >
+          <span class="text-sm font-semibold text-[#1e2547] group-hover:text-[#0040FF] transition-colors">{a.label}</span>
+          <svg class="w-5 h-5 shrink-0 text-[#0040FF]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      ))}
+    </div>
+    <div class="mt-6">
+      <a href={blogHub} class="text-sm font-bold text-[#0040FF] hover:underline">{copy.articlesCta} &rarr;</a>
+    </div>
+  </div>
+</section>

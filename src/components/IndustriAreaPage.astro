@@ -1,0 +1,357 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Services from './Services.astro';
+import WhyChooseUs from './WhyChooseUs.astro';
+import Pricing from './Pricing.astro';
+import ProjectSteps from './ProjectSteps.astro';
+import CtaBanner from './CtaBanner.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { getNamaBySlug, areaUrlId, type Daerah } from '../data/daerah';
+import { getKonten } from '../data/daerah-konten';
+import { industriList, type Industri } from '../data/industri';
+import { getKontenIndustri } from '../data/industri-konten';
+
+export interface Props {
+  /** data industri yang akan dirender */
+  industri: Industri;
+  /** data daerah (area prioritas industri) yang akan dirender */
+  daerah: Daerah;
+}
+
+const { industri: ind, daerah: d } = Astro.props;
+const t = id;
+const lang = 'id';
+
+const canonical = `https://zeepage.com/jasa-pembuatan-website-${ind.slug}-di-${d.slug}/`;
+const enUrl = `https://zeepage.com/en/website-design-${ind.slugEn}-in-${d.slug}/`;
+const alternates = [
+  { hreflang: 'id', href: canonical },
+  { hreflang: 'en', href: enUrl },
+  { hreflang: 'x-default', href: canonical },
+];
+
+const ki = getKontenIndustri(ind.slug);
+const kd = getKonten(d.slug);
+
+const title = `Jasa Pembuatan Website ${ind.nama} di ${d.nama} | zeepage`;
+const description = `Jasa pembuatan website ${ind.nama.toLowerCase()} di ${d.nama}, Bali dengan ${ind.fitur[0].toLowerCase()} dan ${ind.fitur[1].toLowerCase()}. Harga mulai Rp 699k, konsultasi gratis.`;
+
+const waText = encodeURIComponent(
+  `Halo zeepage, saya pemilik bisnis ${ind.nama.toLowerCase()} di ${d.nama} dan tertarik konsultasi gratis pembuatan website. Mohon info lebih lanjut.`
+);
+const waUrl = `https://wa.me/6288987244675?text=${waText}`;
+
+// FAQ gabungan: 3 dari industri + 2 dari daerah, tanpa duplikat pertanyaan
+const faqIndustri = ki?.faq ?? [];
+const faqDaerah = kd?.faq ?? [];
+const faq = [...faqIndustri.slice(0, 3), ...faqDaerah.filter((f) => !faqIndustri.some((x) => x.q === f.q)).slice(0, 2)];
+
+// Industri yang sama di area prioritas lain
+const areaLain = ind.areaPrioritas
+  .filter((s) => s !== d.slug)
+  .map((s) => ({ slug: s, nama: getNamaBySlug(s) }));
+// Industri lain yang juga melayani area ini
+const industriLain = industriList.filter((x) => x.slug !== ind.slug && x.areaPrioritas.includes(d.slug));
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://zeepage.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Industri', item: 'https://zeepage.com/industri/' },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: ind.nama,
+          item: `https://zeepage.com/jasa-pembuatan-website-${ind.slug}/`,
+        },
+        { '@type': 'ListItem', position: 4, name: d.nama, item: canonical },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: `Jasa Pembuatan Website ${ind.nama} di ${d.nama}`,
+      serviceType: 'Web Development',
+      description,
+      url: canonical,
+      ...(ki?.keywords ? { keywords: ki.keywords.join(', ') } : {}),
+      provider: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com/' },
+      areaServed: { '@type': 'Place', name: `${d.nama}, Bali` },
+    },
+    {
+      '@type': 'LocalBusiness',
+      name: 'zeepage',
+      description: `Jasa pembuatan website profesional untuk bisnis ${ind.nama.toLowerCase()} di ${d.nama}, Bali.`,
+      url: canonical,
+      image: 'https://zeepage.com/logo.png',
+      telephone: '+62 889-8724-4675',
+      email: 'zinknot@gmail.com',
+      priceRange: 'Rp 699k - Rp 1.499k',
+      areaServed: { '@type': 'Place', name: `${d.nama}, Bali` },
+      address: { '@type': 'PostalAddress', addressLocality: d.nama, addressRegion: 'Bali', addressCountry: 'ID' },
+      parentOrganization: { '@id': 'https://zeepage.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+};
+
+const cta = {
+  ...t.cta,
+  title: `Siap Bawa Bisnis ${ind.nama} Anda di ${d.nama} ke Level Berikutnya?`,
+  subtitle: `Konsultasi gratis untuk bisnis ${ind.nama.toLowerCase()} di ${d.nama} dan sekitarnya. Tim zeepage siap membantu dari ide hingga website tayang.`,
+  whatsappUrl: waUrl,
+  questions: faq,
+};
+---
+
+<BaseLayout title={title} description={description} lang={lang} canonical={canonical} alternates={alternates} structuredData={structuredData} noindex={true}>
+  <Navbar
+    t={t.nav}
+    lang={lang}
+    cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: waUrl }}
+  />
+
+  <!-- HERO -->
+  <section
+    class="relative bg-[#F6F6F3] pt-36 pb-16"
+   
+  >
+    
+    
+    
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <nav class="flex items-center justify-center gap-2 text-[#1e2547]/50 text-xs font-semibold mb-6" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-[#0040FF] transition-colors">Beranda</a>
+        <span>/</span>
+        <a href="/industri/" class="hover:text-[#0040FF] transition-colors">Industri</a>
+        <span>/</span>
+        <a href={`/jasa-pembuatan-website-${ind.slug}/`} class="hover:text-[#0040FF] transition-colors">{ind.nama}</a>
+        <span>/</span>
+        <span class="text-[#1e2547] font-semibold">{d.nama}</span>
+      </nav>
+
+      <p class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-[#0040FF] mb-6">Berbasis di Bali · Website {ind.nama} di {d.nama}</p>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e2547] leading-tight mb-6">
+        Jasa Pembuatan Website {ind.nama} di {d.nama}
+      </h1>
+
+      <p class="text-[#1e2547]/65 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        {ki?.heroLead ?? ind.deskripsi}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href={waUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#0040FF] text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#0020AA] transition-all duration-300"
+        >
+          Konsultasi Gratis
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a
+          href="#layanan"
+          class="inline-flex items-center gap-2 border border-[#1e2547]/25 text-[#1e2547] font-bold px-8 py-3.5 rounded-full hover:border-[#1e2547] hover:bg-[#1e2547] hover:text-white transition-all duration-300"
+        >
+          Lihat Layanan
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / SEO CONTENT -->
+  <section class="bg-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="prose prose-lg max-w-none text-justify">
+      <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">
+        Kenapa Bisnis {ind.nama} di {d.nama} Butuh Website Profesional?
+      </h2>
+      {ki?.intro ? (
+        <>
+          {ki.intro.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </>
+      ) : (
+        <p class="text-gray-600 leading-relaxed">{ind.deskripsi}</p>
+      )}
+
+      <div class="bg-[#EBEFFF] rounded-2xl p-6 sm:p-8 my-8 border-l-4 border-[#0040FF] not-prose">
+        <p class="text-base font-bold text-[#1e2547] mb-2">Tips dari zeepage untuk bisnis {ind.nama.toLowerCase()} di {d.nama}:</p>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          {ki?.intro?.tips ?? `Gunakan kata kunci bertema industri dan lokasi seperti "website ${ind.nama.toLowerCase()} ${d.nama}" pada judul halaman dan deskripsi. Pastikan juga tombol WhatsApp mudah dijangkau agar calon pelanggan cepat menghubungi.`}
+        </p>
+      </div>
+
+      <p class="text-sm text-gray-500 mt-6 not-prose">
+        Lihat juga: <a href={`/jasa-pembuatan-website-${ind.slug}/`} class="text-[#0040FF] font-semibold hover:underline">Jasa Pembuatan Website {ind.nama} di Bali</a> untuk cakupan seluruh provinsi, atau <a href={areaUrlId(d.slug)} class="text-[#0040FF] font-semibold hover:underline">Jasa Pembuatan Website di {d.nama}</a> untuk semua industri di area ini.
+      </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FITUR WEBSITE INDUSTRI -->
+  <section class="bg-[#F6F6F3] py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-black text-[#1e2547] mb-4">Fitur Website untuk {ind.nama} di {d.nama}</h2>
+        <p class="text-[#4f5b7d] text-base sm:text-lg max-w-2xl mx-auto">
+          Setiap website {ind.nama.toLowerCase()} yang kami bangun dilengkapi fitur yang memang dibutuhkan industri ini, disesuaikan dengan pasar {d.nama}.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {ind.fitur.map((f) => (
+          <div class="flex items-start gap-4 bg-white rounded-2xl p-6 border border-[#E3E4DE] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-[#EBEFFF] text-[#0040FF] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold text-[#1e2547] mb-1">{f}</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">
+                {ki?.fiturDesc?.[f] ?? `Fitur ${f.toLowerCase()} untuk website ${ind.nama.toLowerCase()} Anda di ${d.nama} agar operasional lebih mudah dan pelanggan lebih nyaman.`}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {kd?.lokal && (
+    <section class="bg-white py-16 sm:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="prose prose-lg max-w-none text-justify">
+          <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mt-0 mb-4 text-center">{kd.lokal.h2}</h2>
+          {kd.lokal.paragraf.map((p) => (
+            <p class="text-gray-600 leading-relaxed">{p}</p>
+          ))}
+        </div>
+
+        <div class="not-prose mt-8">
+          <h3 class="text-lg font-bold text-[#1e2547] mb-4">Contoh Ilustratif Pemanfaatan Website</h3>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {kd.lokal.ilustrasi.map((c) => (
+              <div class="bg-[#F6F6F3] rounded-2xl p-6 border border-[#E3E4DE]">
+                <h4 class="font-bold text-[#1e2547] mb-2">{c.judul}</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">{c.isi}</p>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-gray-400 italic mt-4">
+            {kd.lokal.catatan ?? 'Semua skenario di atas adalah ilustrasi umum, bukan klien spesifik zeepage.'}
+          </p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Services t={t.services} id="layanan" />
+  <WhyChooseUs t={t.why} id="kenapa" />
+  <Pricing t={t.pricing} lang={lang} id="harga" />
+  <ProjectSteps t={t.steps} whatsapp={t.cta.whatsapp} id="langkah" />
+
+  <!-- INDUSTRI SAMA DI AREA LAIN -->
+  {areaLain.length > 0 && (
+    <section class="bg-white py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Jasa Pembuatan Website {ind.nama} di Area Lain</h2>
+        <p class="text-[#4f5b7d] mb-8">Kami juga melayani bisnis {ind.nama.toLowerCase()} di kawasan prioritas lain di Bali.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {areaLain.map((a) => (
+            <a
+              href={`/jasa-pembuatan-website-${ind.slug}-di-${a.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-[#EBEFFF] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              Website {ind.nama} di {a.nama}
+            </a>
+          ))}
+          <a
+            href={`/jasa-pembuatan-website-${ind.slug}/`}
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            Semua Area untuk {ind.nama}
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- INDUSTRI LAIN DI AREA INI -->
+  {industriLain.length > 0 && (
+    <section class="bg-[#F6F6F3] py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-[#1e2547] mb-4">Jasa Pembuatan Website Industri Lain di {d.nama}</h2>
+        <p class="text-[#4f5b7d] mb-8">Bisnis lain di {d.nama} juga bisa memilih halaman khusus industrinya.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          {industriLain.map((x) => (
+            <a
+              href={`/jasa-pembuatan-website-${x.slug}-di-${d.slug}/`}
+              class="px-5 py-2.5 rounded-full bg-white border border-[#E3E4DE] text-[#0040FF] text-sm font-semibold hover:bg-[#0040FF] hover:text-[#0040FF] transition-colors"
+            >
+              Website {x.nama} di {d.nama}
+            </a>
+          ))}
+          <a
+            href="/industri/"
+            class="px-5 py-2.5 rounded-full bg-[#1e2547] text-white text-sm font-semibold hover:bg-[#0040FF] transition-colors"
+          >
+            Lihat Semua Industri
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CtaBanner t={cta} id="kontak" />
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>
+
+<style>
+  .hero__grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 75%);
+  }
+  .hero__bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero__bg-circle--1 {
+    width: 520px;
+    height: 520px;
+    background: radial-gradient(circle, rgba(0, 80, 255, 0.4) 0%, transparent 70%);
+    top: -120px;
+    right: -150px;
+  }
+  .hero__bg-circle--2 {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(200, 255, 0, 0.08) 0%, transparent 70%);
+    bottom: -60px;
+    left: -100px;
+  }
+</style>

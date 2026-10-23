@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+
+const t = id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/404/';
+---
+
+<BaseLayout
+  title="Halaman Tidak Ditemukan | zeepage"
+  description="Halaman yang Anda cari tidak ditemukan. Kembali ke beranda zeepage."
+  lang="id"
+  canonical={canonical}
+  noindex={true}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#F6F6F3]">
+    <div class="relative z-10 text-center px-4 max-w-2xl mx-auto">
+      <div class="text-[140px] sm:text-[180px] font-black text-[#0040FF]/10 leading-none mb-4 select-none">404</div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e2547] mb-4">Halaman Tidak Ditemukan</h1>
+      <p class="text-[#1e2547]/60 text-lg mb-10 max-w-md mx-auto">Halaman yang Anda cari mungkin telah dipindahkan, dihapus, atau tidak pernah ada.</p>
+      <a href="/" class="inline-flex items-center gap-2 bg-[#0040FF] text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#0020AA] transition-all duration-300">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Kembali ke Beranda
+      </a>
+    </div>
+  </section>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

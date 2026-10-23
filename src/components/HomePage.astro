@@ -1,0 +1,303 @@
+---
+import { content, WA, WA_EN, type Lang } from '../data/home-content';
+import Testimonials from './Testimonials.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = content[lang];
+const wa = lang === 'id' ? WA : WA_EN;
+const rots = ['sm:-rotate-3', 'sm:rotate-2', 'sm:rotate-3', 'sm:-rotate-2'];
+---
+
+<main id="top">
+  <!-- HERO -->
+  <section class="relative pt-32 sm:pt-40 pb-16 overflow-hidden">
+    <div class="absolute inset-0 bg-grid bg-grid-fade" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <p data-hero-line style="--hd:0.10s" class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-6">
+        {t.hero.eyebrow}
+      </p>
+      <h1 class="text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
+        <span data-hero-line style="--hd:0.22s" class="block">{t.hero.h1a}</span>
+        <span data-hero-line style="--hd:0.34s" class="block">
+          <em class="font-display italic font-medium text-brand">{t.hero.h1accent}</em> {t.hero.h1b}
+        </span>
+      </h1>
+      <div class="mt-8 flex flex-col md:flex-row md:items-end gap-8 md:gap-14">
+        <p data-hero-line style="--hd:0.46s" class="text-base sm:text-lg text-ink/65 leading-relaxed max-w-xl">{t.hero.sub}</p>
+        <div data-hero-line style="--hd:0.58s" class="shrink-0">
+          <p class="font-display italic text-xl sm:text-2xl text-ink/85 mb-4">{t.hero.priceLine}</p>
+          <div class="flex flex-wrap gap-3">
+            <a href={wa} target="_blank" rel="noopener noreferrer" class="bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">
+              {t.hero.cta1}
+            </a>
+            <a href="#karya" class="border border-ink/20 font-bold px-7 py-3.5 rounded-full hover:border-ink hover:bg-white transition-colors">
+              {t.hero.cta2}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {t.hero.collage.map((c: any, i: number) => (
+          <div data-hero-card class={`rounded-3xl overflow-hidden shadow-xl shadow-ink/10 border-4 border-white ${rots[i % rots.length]} ${i > 1 ? 'hidden sm:block' : ''}`}>
+            <img src={c.src} alt={c.alt} class="w-full h-44 sm:h-52 object-cover" loading={i === 0 ? 'eager' : 'lazy'} width="640" height="420" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="border-y border-line bg-white/60 py-4 overflow-hidden" aria-hidden="true">
+    <div class="marquee-track gap-0">
+      {[0, 1].map(() => (
+        <div class="flex shrink-0 items-center">
+          {[0, 1, 2].map(() => (
+            <>
+              {t.marquee.map((m: string) => (
+                <span class="flex items-center text-sm font-bold tracking-[0.18em] uppercase text-ink/50">
+                  <span class="px-6">{m}</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand inline-block"></span>
+                </span>
+              ))}
+            </>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6" data-reveal>
+      <p class="text-xs font-bold tracking-[0.22em] text-ink/40 mb-5">{t.manifesto.label}</p>
+      <p class="text-2xl sm:text-[2rem] leading-snug font-semibold max-w-3xl">{t.manifesto.text}</p>
+      <a href="#layanan" class="inline-flex items-center gap-2 mt-7 font-bold text-brand hover:gap-3.5 transition-all">
+        {t.manifesto.link}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 01 LAYANAN -->
+  <section id="layanan" class="py-16 sm:py-24 scroll-mt-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10" data-reveal>
+        <div>
+          <p class="text-sm font-bold text-brand mb-2">{t.services.index} / {t.services.label}</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            {t.services.heading} <em class="font-display italic font-medium text-brand">{t.services.accent}</em>
+          </h2>
+        </div>
+        <p class="text-ink/55 max-w-sm text-sm leading-relaxed">{t.services.note}</p>
+      </div>
+
+      <div data-reveal-group class="border-t border-ink/10">
+        {t.services.rows.map((r: any, i: number) => (
+          <a href={wa} target="_blank" rel="noopener noreferrer" class="group grid grid-cols-[auto_1fr] md:grid-cols-[64px_1fr_auto] gap-x-5 gap-y-2 items-baseline py-7 border-b border-ink/10 hover:bg-white rounded-xl px-3 -mx-3 transition-colors">
+            <span class="font-display italic text-brand/70 text-lg">{String(i + 1).padStart(2, '0')}</span>
+            <span>
+              <span class="block text-2xl sm:text-3xl font-bold tracking-tight group-hover:text-brand transition-colors">{r.name}</span>
+              <span class="block text-ink/60 leading-relaxed mt-2 max-w-2xl">{r.desc}</span>
+              <span class="block text-xs font-semibold tracking-wide uppercase text-ink/40 mt-3">{r.meta}</span>
+            </span>
+            <span class="col-start-2 md:col-start-3 font-display italic text-lg sm:text-xl text-brand whitespace-nowrap">{r.price}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 KARYA -->
+  <section id="karya" class="py-16 sm:py-24 bg-white border-y border-line scroll-mt-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10" data-reveal>
+        <div>
+          <p class="text-sm font-bold text-brand mb-2">{t.works.index} / {t.works.label}</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            {t.works.heading} <em class="font-display italic font-medium text-brand">{t.works.accent}</em>
+          </h2>
+        </div>
+        <p class="text-ink/55 max-w-sm text-sm leading-relaxed">{t.works.note}</p>
+      </div>
+
+      <div data-reveal-group class="grid sm:grid-cols-2 gap-5">
+        {t.works.items.map((w: any) => (
+          <a href={w.href} target={w.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" class="group relative rounded-3xl overflow-hidden border border-line bg-paper">
+            <img src={w.img} alt={w.title} class="w-full h-60 sm:h-72 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="880" height="560" />
+            <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent p-5 pt-16 flex items-end justify-between gap-3">
+              <span>
+                <span class="block text-white font-bold text-xl">{w.title}</span>
+                <span class="block text-white/70 text-sm">{w.cat}</span>
+              </span>
+              {w.demo && <span class="shrink-0 text-[11px] font-bold uppercase tracking-wider bg-white/90 text-ink px-2.5 py-1 rounded-full">{t.works.demoLabel}</span>}
+            </span>
+          </a>
+        ))}
+      </div>
+      <a href={t.works.allHref} class="inline-flex items-center gap-2 mt-8 font-bold text-brand hover:gap-3.5 transition-all" data-reveal>
+        {t.works.allLabel} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 03 HARGA -->
+  <section id="harga" class="relative py-16 sm:py-24 scroll-mt-28">
+    <div class="absolute inset-0 bg-grid bg-grid-fade" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-10" data-reveal>
+        <p class="text-sm font-bold text-brand mb-2">{t.pricing.index} / {t.pricing.label}</p>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          {t.pricing.heading} <em class="font-display italic font-medium text-brand">{t.pricing.accent}</em>
+        </h2>
+        <p class="text-ink/55 max-w-md text-sm leading-relaxed mt-3">{t.pricing.note}</p>
+      </div>
+
+      <div data-reveal-group class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
+        {t.pricing.plans.map((p: any) => (
+          <article class={`rounded-3xl p-7 sm:p-8 flex flex-col ${p.popular ? 'bg-brand text-white shadow-2xl shadow-brand/25' : 'bg-white border border-line'}`}>
+            {p.popular && <span class="self-start text-[11px] font-bold uppercase tracking-wider bg-white text-brand px-3 py-1 rounded-full mb-5">{p.popularLabel}</span>}
+            <h3 class="text-lg font-bold uppercase tracking-wide opacity-80">{p.name}</h3>
+            <p class={`${p.priceSmall ? 'text-3xl sm:text-[2rem] leading-tight' : 'text-4xl sm:text-5xl'} font-extrabold tracking-tight mt-3`}>{p.price}</p>
+            <p class={`mt-3 text-sm leading-relaxed ${p.popular ? 'text-white/75' : 'text-ink/55'}`}>{p.target}</p>
+            <ul class={`mt-7 space-y-3 text-sm font-medium flex-1 ${p.popular ? 'text-white/90' : 'text-ink/75'}`}>
+              {p.features.map((f: string) => (
+                <li class="flex gap-3">
+                  <svg class={`w-5 h-5 shrink-0 ${p.popular ? 'text-white' : 'text-brand'}`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-3-3a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            <a href={p.wa} target="_blank" rel="noopener noreferrer" class={`mt-9 inline-flex justify-center font-bold px-7 py-3.5 rounded-full transition-colors ${p.popular ? 'bg-white text-brand hover:bg-paper' : 'bg-brand text-white hover:bg-branddark'}`}>
+              {p.cta ?? t.pricing.cta}
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 TESTIMONI -->
+  <Testimonials lang={lang} />
+
+  <!-- 05 JURNAL -->
+  <section id="jurnal" class="py-16 sm:py-24 bg-white border-y border-line scroll-mt-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10" data-reveal>
+        <div>
+          <p class="text-sm font-bold text-brand mb-2">{t.journal.index} / {t.journal.label}</p>
+          <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            {t.journal.heading} <em class="font-display italic font-medium text-brand">{t.journal.accent}</em>
+          </h2>
+        </div>
+        <p class="text-ink/55 max-w-sm text-sm leading-relaxed">{t.journal.note}</p>
+      </div>
+
+      <div data-reveal-group class="border-t border-ink/10">
+        {t.journal.items.map((j: any) => (
+          <a href={j.href} class="group flex flex-col sm:flex-row sm:items-baseline gap-1.5 sm:gap-8 py-6 border-b border-ink/10 px-3 -mx-3 rounded-xl hover:bg-paper transition-colors">
+            <span class="text-sm font-semibold text-ink/40 whitespace-nowrap">{j.date}</span>
+            <span class="text-lg sm:text-xl font-bold leading-snug group-hover:text-brand transition-colors">{j.title}</span>
+            <span class="hidden sm:block ml-auto text-brand font-bold" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+      <a href={t.journal.allHref} class="inline-flex items-center gap-2 mt-7 font-bold text-brand hover:gap-3.5 transition-all" data-reveal>
+        {t.journal.allLabel} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 06 CARA KERJA -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-10" data-reveal>
+        <p class="text-sm font-bold text-brand mb-2">{t.steps.index} / {t.steps.label}</p>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          {t.steps.heading} <em class="font-display italic font-medium text-brand">{t.steps.accent}</em>
+        </h2>
+      </div>
+      <div data-reveal-group class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {t.steps.items.map((s: any) => (
+          <article class="bg-white border border-line rounded-3xl p-6">
+            <p class="font-display italic text-4xl text-brand/60 mb-5">{s.num}</p>
+            <h3 class="font-bold text-lg leading-snug mb-2.5">{s.title}</h3>
+            <p class="text-sm text-ink/60 leading-relaxed">{s.desc}</p>
+          </article>
+        ))}
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-20 grid lg:grid-cols-[1fr_1.4fr] gap-8" data-reveal>
+        <h3 class="text-3xl sm:text-4xl font-extrabold tracking-tight">{t.faq.heading}</h3>
+        <div class="divide-y divide-ink/10 border-y border-ink/10">
+          {t.faq.items.map((f: any) => (
+            <details class="group py-5">
+              <summary class="cursor-pointer font-bold text-base sm:text-lg flex items-center justify-between gap-4 list-none">
+                {f.q}
+                <span class="shrink-0 text-brand text-2xl leading-none group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+              </summary>
+              <p class="text-ink/60 leading-relaxed mt-3 pr-8">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 KONTAK -->
+  <section id="kontak" class="relative py-20 sm:py-28 scroll-mt-28" style="background: linear-gradient(140deg, #0040FF 0%, #0020AA 100%);">
+    <div class="absolute inset-0 bg-grid-light bg-grid-fade" aria-hidden="true"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 text-white">
+      <p class="text-sm font-bold text-white/60 mb-4" data-reveal>{t.contact.index} / {t.contact.label}</p>
+      <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-3xl" data-reveal>
+        {t.contact.heading} <em class="font-display italic font-medium">{t.contact.accent}</em>
+      </h2>
+      <p class="text-white/70 leading-relaxed max-w-xl mt-6" data-reveal>{t.contact.sub}</p>
+      <div data-reveal>
+        <a href={wa} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white text-brand font-bold px-8 py-4 rounded-full mt-9 hover:bg-paper transition-colors">
+          {t.contact.waLabel}
+        </a>
+      </div>
+      <div data-reveal-group class="grid sm:grid-cols-3 gap-x-8 mt-16 border-t border-white/20">
+        {t.contact.rows.map((r: any) => (
+          <a href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" class="py-5 border-b border-white/20 block group">
+            <span class="block text-xs font-bold uppercase tracking-[0.18em] text-white/50 mb-1.5">{r.k}</span>
+            <span class="font-display italic text-xl group-hover:underline">{r.v}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  .bg-grid {
+    background-image: linear-gradient(to right, rgb(30 37 71 / 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgb(30 37 71 / 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .bg-grid-light {
+    background-image: linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .bg-grid-fade {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 16%, black 74%, transparent 98%);
+    mask-image: linear-gradient(to bottom, transparent 0, black 16%, black 74%, transparent 98%);
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>

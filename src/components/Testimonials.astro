@@ -1,0 +1,152 @@
+---
+import { content, type Lang } from '../data/home-content';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = content[lang].testimonials;
+const ratingLabel = lang === 'id' ? 'Rating 5 dari 5' : 'Rated 5 out of 5';
+const prevLabel = lang === 'id' ? 'Testimoni sebelumnya' : 'Previous testimonial';
+const nextLabel = lang === 'id' ? 'Testimoni berikutnya' : 'Next testimonial';
+---
+
+<section id="testimoni" class="py-16 sm:py-24 scroll-mt-28 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-10" data-reveal>
+      <div>
+        <p class="text-sm font-bold text-brand mb-2">{t.index} / {t.label}</p>
+        <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+          {t.heading} <em class="font-display italic font-medium text-brand">{t.accent}</em>
+        </h2>
+      </div>
+      <p class="text-ink/55 max-w-sm text-sm leading-relaxed">{t.note}</p>
+    </div>
+
+    <div class="tst-viewport" data-reveal>
+      <div class="tst-track">
+        {t.items.map((item: any) => (
+          <div class="tst-slide">
+            <figure class="bg-white border border-line rounded-3xl p-7 sm:p-8 flex flex-col h-full">
+              <div class="flex gap-1 text-brand mb-5" role="img" aria-label={ratingLabel}>
+                {[0, 1, 2, 3, 4].map(() => (
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                ))}
+              </div>
+              <blockquote class="text-ink/75 leading-relaxed flex-1">&ldquo;{item.quote}&rdquo;</blockquote>
+              <figcaption class="flex items-center gap-3.5 mt-7 pt-6 border-t border-ink/10">
+                <span class="w-11 h-11 shrink-0 rounded-full bg-brand/10 text-brand font-extrabold text-sm flex items-center justify-center" aria-hidden="true">{item.initials}</span>
+                <span>
+                  <span class="block font-bold leading-tight">{item.name}</span>
+                  <span class="block text-sm text-ink/50 mt-0.5">{item.role}</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex justify-end gap-2.5 mt-6">
+      <button type="button" class="tst-prev w-11 h-11 rounded-full border border-ink/15 bg-white text-ink/70 flex items-center justify-center hover:bg-brand hover:border-brand hover:text-white transition-colors" aria-label={prevLabel}>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="tst-next w-11 h-11 rounded-full border border-ink/15 bg-white text-ink/70 flex items-center justify-center hover:bg-brand hover:border-brand hover:text-white transition-colors" aria-label={nextLabel}>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tst-viewport {
+    overflow: hidden;
+    margin: 0 -0.625rem;
+  }
+  .tst-track {
+    display: flex;
+    align-items: stretch;
+    will-change: transform;
+  }
+  .tst-slide {
+    flex: 0 0 100%;
+    padding: 0 0.625rem;
+    box-sizing: border-box;
+  }
+  @media (min-width: 640px) {
+    .tst-slide { flex-basis: 50%; }
+  }
+  @media (min-width: 1024px) {
+    .tst-slide { flex-basis: 33.3333%; }
+  }
+</style>
+
+<script>
+  // @ts-nocheck
+  (function () {
+    var viewport = document.querySelector('.tst-viewport');
+    if (!viewport) return;
+    var track = viewport.querySelector('.tst-track');
+    if (!track || track.children.length < 2) return;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var section = viewport.closest('section');
+    var prevBtn = section ? section.querySelector('.tst-prev') : null;
+    var nextBtn = section ? section.querySelector('.tst-next') : null;
+
+    var timer = null;
+    var animating = false;
+    var DURATION = reduceMotion ? 0 : 700;
+    var EASE = 'transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1)';
+
+    function stepPrev() {
+      if (animating) return;
+      var last = track.lastElementChild;
+      if (!last) return;
+      var w = last.getBoundingClientRect().width;
+      animating = true;
+      track.prepend(last);
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(' + -w + 'px)';
+      void track.offsetWidth;
+      track.style.transition = DURATION ? EASE : 'none';
+      track.style.transform = 'translateX(0)';
+      setTimeout(function () { animating = false; }, DURATION + 30);
+    }
+
+    function stepNext() {
+      if (animating) return;
+      var first = track.firstElementChild;
+      if (!first) return;
+      var w = first.getBoundingClientRect().width;
+      animating = true;
+      track.style.transition = DURATION ? EASE : 'none';
+      track.style.transform = 'translateX(' + -w + 'px)';
+      setTimeout(function () {
+        track.append(first);
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(0)';
+        animating = false;
+      }, DURATION + 30);
+    }
+
+    function start() {
+      if (timer || reduceMotion) return;
+      timer = setInterval(function () {
+        if (document.hidden) return;
+        stepPrev();
+      }, 3400);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    function restart() { stop(); start(); }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { stepPrev(); restart(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { stepNext(); restart(); });
+
+    viewport.addEventListener('mouseenter', stop);
+    viewport.addEventListener('mouseleave', start);
+    viewport.addEventListener('touchstart', stop, { passive: true });
+    start();
+  })();
+</script>

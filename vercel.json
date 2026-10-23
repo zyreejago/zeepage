@@ -1,0 +1,57 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "destination": "https://zeepage.com/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zeepage.com"
+        }
+      ],
+      "permanent": true,
+      "source": "/:path*"
+    },
+    {
+      "destination": "/",
+      "permanent": true,
+      "source": "/id"
+    },
+    {
+      "destination": "/",
+      "permanent": true,
+      "source": "/id/"
+    },
+    {
+      "destination": "/:rest",
+      "permanent": true,
+      "source": "/id/:rest(.*)"
+    },
+    {
+      "source": "/jasa-website-badung/",
+      "destination": "/jasa-pembuatan-website-di-badung/",
+      "permanent": true
+    },
+    {
+      "source": "/jasa-website-karangasem/",
+      "destination": "/jasa-pembuatan-website-di-karangasem/",
+      "permanent": true
+    },
+    {
+      "source": "/jasa-website-jembrana/",
+      "destination": "/jasa-pembuatan-website-di-jembrana/",
+      "permanent": true
+    },
+    {
+      "source": "/jasa-website-buleleng/",
+      "destination": "/jasa-pembuatan-website-di-buleleng/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "destination": "/sitemap-index.xml",
+      "source": "/sitemap.xml"
+    }
+  ]
+}

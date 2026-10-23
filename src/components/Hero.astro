@@ -1,0 +1,100 @@
+---
+export interface Props {
+  t: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    cta1: string;
+    cta2: string;
+    socialProof: string[];
+    whatsappUrl: string;
+  };
+  id: string;
+}
+
+const { t, id } = Astro.props;
+const [head, rest] = t.title.split(' - ');
+---
+
+<section id={id} class="relative overflow-hidden bg-paper">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40 pb-16 sm:pb-20">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <p data-hero-line class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-6">{t.badge}</p>
+        <h1 class="text-5xl sm:text-6xl xl:text-7xl font-extrabold leading-[1.02] tracking-tight">
+          <span data-hero-line class="block">{head}</span>
+          {rest && <span data-hero-line class="block">- <em class="font-display italic font-medium text-brand">{rest}</em></span>}
+        </h1>
+        <p data-hero-line class="text-lg text-ink/60 leading-relaxed max-w-xl mt-7">{t.subtitle}</p>
+        <div data-hero-line class="flex flex-wrap items-center gap-3 mt-9">
+          <a href={t.whatsappUrl} target="_blank" rel="noopener noreferrer" class="bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">
+            {t.cta1}
+          </a>
+          <a href="#layanan" class="border border-ink/20 font-bold px-7 py-3.5 rounded-full hover:border-ink hover:bg-ink hover:text-white transition-colors">
+            {t.cta2}
+          </a>
+        </div>
+        <div data-hero-line class="flex flex-wrap gap-x-12 gap-y-6 mt-12 pt-8 border-t border-line">
+          {t.socialProof.map((item) => {
+            const match = item.match(/^(\d+)([+\-]?)\\s*(.*)/);
+            const num = match ? parseInt(match[1]) : 0;
+            const suffix = match ? match[2] : '';
+            const label = match ? match[3] : item;
+            return (
+              <div>
+                <p class="text-3xl font-extrabold tracking-tight"><span class="counter" data-target={num}>{num}</span>{suffix}</p>
+                <p class="text-sm text-ink/50 mt-1">{label}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative h-[420px] sm:h-[480px] hidden md:block" aria-hidden="true">
+        <div data-hero-card class="absolute top-0 left-2 w-[68%] rounded-3xl overflow-hidden shadow-2xl shadow-ink/20 rotate-[-4deg]">
+          <img src="/demopadel.webp" alt="DemoPadel" class="w-full h-52 object-cover" width="640" height="420" />
+        </div>
+        <div data-hero-card class="absolute top-32 right-0 w-[62%] rounded-3xl overflow-hidden shadow-2xl shadow-ink/20 rotate-[3deg]">
+          <img src="/sagaroof.webp" alt="Sagaroof" class="w-full h-52 object-cover" width="640" height="420" />
+        </div>
+        <div data-hero-card class="absolute bottom-0 left-8 w-[58%] rounded-3xl overflow-hidden shadow-2xl shadow-ink/20 rotate-[2deg]">
+          <img src="/travel.webp" alt="TravelGo" class="w-full h-44 object-cover" width="640" height="352" />
+        </div>
+        <div data-hero-card class="absolute bottom-6 right-4 bg-white rounded-2xl shadow-xl shadow-ink/15 px-5 py-4 rotate-[-2deg]">
+          <p class="text-xs font-bold uppercase tracking-wider text-ink/40">Mulai dari</p>
+          <p class="text-xl font-extrabold text-brand">Rp 699rb</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// @ts-nocheck
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const duration = 950;
+        const start = performance.now();
+        el.textContent = '0';
+        function update(current) {
+          const elapsed = current - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = String(Math.floor(eased * target));
+          if (progress < 1) requestAnimationFrame(update);
+          else el.textContent = String(target);
+        }
+        requestAnimationFrame(update);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach((el) => observer.observe(el));
+});
+</script>

@@ -1,0 +1,534 @@
+{
+  "nav": {
+    "brand": "zeepage",
+    "links": [
+      {
+        "label": "Beranda",
+        "href": "/"
+      },
+      {
+        "label": "Layanan",
+        "href": "/#layanan"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/#karya"
+      },
+      {
+        "label": "Harga",
+        "href": "/#harga"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog/"
+      }
+    ]
+  },
+  "hero": {
+    "badge": "Berbasis di Bali, Melayani Seluruh Indonesia",
+    "title": "zeepage - Jasa Pembuatan Website Profesional untuk Bisnis Anda",
+    "subtitle": "Konsultasi gratis. Desain modern. Hasil maksimal. Tim kami yang berbasis di Bali membangun website responsif, SEO-friendly, dan siap membantu bisnis Anda tumbuh di seluruh Indonesia.",
+    "cta1": "Konsultasi Gratis",
+    "cta2": "Lihat Portofolio",
+    "socialProof": [
+      "50+ Klien Puas",
+      "100+ Project Selesai",
+      "3+ Tahun Pengalaman"
+    ],
+    "whatsappUrl": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20konsultasi%20gratis%20pembuatan%20website.%20Mohon%20info%20lebih%20lanjut."
+  },
+  "about": {
+    "label": "Tentang Kami",
+    "title": "Kenapa Harus di <span class=\"text-[#2152cf]\">zeepage</span>?",
+    "description": "Kami bukan sekadar pembuat website kami mitra digital yang bantu bisnis Anda tampil profesional, modern, dan siap bersaing. Dengan teknologi terbaru dan pendekatan yang personal, setiap proyek kami kerjakan dengan dedikasi tinggi. Hasilnya? Website yang cepat, responsif, SEO-friendly, dan bikin bisnis Anda dipercaya pelanggan.",
+    "advantages": [
+      "Desain custom, bukan template",
+      "SEO teknikal dari hari pertama",
+      "Skor Lighthouse 90+ dijamin",
+      "Support WhatsApp langsung ke developer"
+    ],
+    "stats": [
+      {
+        "value": "50+",
+        "label": "Klien Puas",
+        "sub": "dari berbagai industri"
+      },
+      {
+        "value": "100+",
+        "label": "Project Selesai",
+        "sub": "website, landing page, toko online"
+      },
+      {
+        "value": "3+",
+        "label": "Tahun Pengalaman",
+        "sub": "sejak 2021"
+      },
+      {
+        "value": "99%",
+        "label": "Tingkat Kepuasan",
+        "sub": "berdasarkan review klien"
+      }
+    ],
+    "cta": "Lihat cara kami bekerja"
+  },
+  "services": {
+    "title": "Bikin Website Impianmu, <br>Tanpa Ribet!",
+    "subtitle": "Dari company profile hingga e-commerce kami bikin website yang cepet, keren, dan bikin bisnismu dipercaya. Gratis konsultasi, garansi maintenance.",
+    "items": [
+      {
+        "icon": "🏢",
+        "title": "Website Company Profile",
+        "description": "Website representatif untuk bisnis Anda dengan desain profesional dan modern."
+      },
+      {
+        "icon": "🛒",
+        "title": "Website E-Commerce",
+        "description": "Toko online lengkap dengan payment gateway dan manajemen produk."
+      },
+      {
+        "icon": "🎯",
+        "title": "Website Landing Page",
+        "description": "Landing page high-converting untuk campaign pemasaran Anda."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Web Application",
+        "description": "Aplikasi web custom sesuai kebutuhan bisnis Anda."
+      },
+      {
+        "icon": "🎨",
+        "title": "Redesign Website",
+        "description": "Refresh tampilan website lama Anda menjadi lebih modern dan responsif."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Maintenance & Support",
+        "description": "Perawatan dan pemeliharaan website rutin untuk performa optimal."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Karya Kami",
+    "title": "Proyek yang",
+    "titleHighlight": "Bicara Sendiri",
+    "subtitle": "Bukan sekadar tampilan setiap proyek dirancang untuk menggerakkan bisnis klien secara nyata.",
+    "items": [
+      {
+        "img": "/zeerental.webp",
+        "title": "ZeeRental",
+        "slug": "zeerental",
+        "category": "Web Application",
+        "heading": "Website Pemesanan dan Aplikasi Pengelolaan Rental Mobil dan Motor di Bali",
+        "desc": "Website pemesanan dan aplikasi pengelolaan rental mobil dan motor dengan daftar armada, tarif transparan, dan panel kelola booking serta kalender ketersediaan.",
+        "meta": "Detail proyek ZeeRental oleh zeepage: website pemesanan dan aplikasi pengelolaan rental mobil dan motor di Bali dengan panel ringkasan harian, data armada, booking, dan kalender ketersediaan.",
+        "detail": "Website pemesanan sekaligus aplikasi pengelolaan untuk ZeeRental, usaha rental mobil dan motor di Denpasar, Bali. Pengunjung melihat daftar armada beserta tarif final dan memesan melalui WhatsApp, sementara pemilik usaha mengelola operasional dari panel kelola berisi ringkasan harian, serah terima kendaraan, data armada, daftar booking, kalender ketersediaan, dan pengaturan usaha.",
+        "tech": [
+          "React",
+          "Dashboard",
+          "Booking Management"
+        ],
+        "link": "https://rental.zeepage.com/"
+      },
+      {
+        "img": "/hidroponik.webp",
+        "title": "Hidroponik Nusantara",
+        "slug": "hidroponik-nusantara",
+        "category": "Company Profile",
+        "heading": "Website Company Profile dan Katalog Online untuk Perusahaan Hidroponik",
+        "desc": "Website company profile dan katalog online perusahaan hidroponik dengan harga sayuran segar per kilogram dan pelacakan pesanan.",
+        "meta": "Detail proyek website company profile dan katalog online Hidroponik Nusantara oleh zeepage: katalog sayuran hidroponik dengan harga per kilogram, cara pemesanan, dan lacak pesanan.",
+        "detail": "Website company profile sekaligus katalog online untuk Hidroponik Nusantara, perusahaan pertanian hidroponik yang menyediakan sayuran segar langsung dari kebun. Dilengkapi katalog produk dengan harga transparan per kilogram, halaman cara pemesanan, informasi lokasi, fitur lacak pesanan, dan keranjang belanja.",
+        "tech": [
+          "Company Profile",
+          "Product Catalog",
+          "Order Tracking"
+        ],
+        "link": "https://hidroponik.zeepage.com/"
+      },
+      {
+        "img": "/demopadel.webp",
+        "title": "DemoPadel",
+        "slug": "demopadel",
+        "category": "Web Application",
+        "heading": "Aplikasi Web Booking Lapangan Padel Online",
+        "desc": "Platform booking lapangan padel online, pilih venue dan jam lalu bayar dan main tanpa perlu antre.",
+        "meta": "Detail proyek aplikasi web booking lapangan padel online oleh zeepage: pilih venue dan jam, bayar, lalu main tanpa antre, lengkap dengan katalog venue dan halaman event.",
+        "detail": "Website booking lapangan padel dengan alur praktis: pilih venue, tentukan jam, lakukan pembayaran, dan langsung main. Dilengkapi katalog layanan dan venue, halaman event, statistik lapangan dan pemain, serta desain responsif yang energik khas olahraga.",
+        "tech": [
+          "Booking Flow",
+          "Venue Catalog",
+          "Responsive"
+        ],
+        "link": "https://padel.zeepage.com/"
+      },
+      {
+        "img": "/sagaroof.webp",
+        "title": "Sagaroof",
+        "slug": "sagaroof",
+        "category": "Company Profile",
+        "heading": "Website Company Profile Distributor Atap uPVC di Bali",
+        "desc": "Website company profile dan katalog distributor atap uPVC di Bali dengan harga transparan dan order via WhatsApp.",
+        "meta": "Detail proyek website company profile Sagaroof oleh zeepage: katalog atap uPVC dengan harga transparan per meter dan per pcs, banner promo, galeri, dan pemesanan via WhatsApp.",
+        "detail": "Website company profile sekaligus katalog online untuk Sagaroof, distributor atap uPVC berkualitas di Bali. Dilengkapi banner promo yang berganti, katalog produk dengan harga transparan per meter dan per pcs, galeri, serta tombol konsultasi dan pemesanan via WhatsApp.",
+        "tech": [
+          "Company Profile",
+          "Product Catalog",
+          "WhatsApp Order"
+        ],
+        "link": "https://demosagaroof.vercel.app/"
+      },
+      {
+        "img": "/webzeeboost.webp",
+        "title": "Website Topup Robux",
+        "slug": "website-topup-robux",
+        "category": "Web Application",
+        "heading": "Website Top Up Game dengan Pembayaran Otomatis",
+        "desc": "Website topup robux dengan SEO maksimal dan sistem pembayaran terintegrasi.",
+        "meta": "Detail proyek website top up Robux oleh zeepage: sistem pembayaran terintegrasi yang otomatis dan optimasi SEO maksimal agar mudah ditemukan pembeli di Google.",
+        "detail": "Platform topup robux dengan fitur SEO optimal untuk menjangkau lebih banyak pengguna. Dilengkapi sistem pembayaran otomatis melalui Duitku.com, manajemen stok real-time, dan riwayat transaksi. Performa cepat dan ramah di mesin pencari.",
+        "tech": [
+          "Next.js",
+          "MySQL2",
+          "Duitku.com"
+        ]
+      },
+      {
+        "img": "/bakery%20(3).webp",
+        "title": "Bakery House",
+        "slug": "bakery-house",
+        "category": "Web Application",
+        "heading": "Aplikasi Web Toko Roti dengan Pemesanan Online",
+        "desc": "Aplikasi web toko roti dengan desain hangat dan sistem pemesanan online.",
+        "meta": "Detail proyek aplikasi web toko roti Bakery House oleh zeepage: desain hangat khas toko roti, katalog produk, dan sistem pemesanan online untuk pelanggan.",
+        "detail": "Bakery House adalah toko roti rumahan yang ingin memperluas jangkauan pasar secara digital. Website ini dilengkapi katalog produk, sistem pemesanan online, dan integrasi pengiriman. Desain hangat dan appetizing sukses meningkatkan penjualan online hingga 3x lipat.",
+        "tech": [
+          "Next.js",
+          "Supabase",
+          "Midtrans"
+        ]
+      },
+      {
+        "img": "/donasi%20(2).webp",
+        "title": "DonasiKita",
+        "slug": "donasikita",
+        "category": "Web Application",
+        "heading": "Platform Donasi Online dengan Pembayaran Terintegrasi",
+        "desc": "Platform donasi online dengan sistem pembayaran terintegrasi dan laporan transparan.",
+        "meta": "Detail proyek platform donasi online DonasiKita oleh zeepage: pembayaran terintegrasi, halaman kampanye donasi, dan laporan transparan untuk para donatur.",
+        "detail": "DonasiKita adalah platform crowdfunding untuk galang dana sosial. Fitur meliputi kampanye donasi, payment gateway terintegrasi, progress bar real-time, dan laporan keuangan transparan. Digunakan oleh puluhan komunitas sosial di seluruh Indonesia.",
+        "tech": [
+          "Laravel",
+          "Inertia",
+          "React",
+          "Midtrans"
+        ]
+      },
+      {
+        "img": "/travel.webp",
+        "title": "TravelGo",
+        "slug": "travelgo",
+        "category": "Company Profile",
+        "heading": "Website Agen Travel dengan Sistem Booking Online",
+        "desc": "Website agen travel dengan desain eksotis, sistem booking online, dan CS 24 jam berbasis AI Gemini.",
+        "meta": "Detail proyek website agen travel TravelGo oleh zeepage: desain eksotis, sistem booking online, dan customer service 24 jam berbasis AI untuk melayani wisatawan.",
+        "detail": "TravelGo adalah agen perjalanan yang ingin menonjolkan paket wisata unggulannya secara digital. Website dilengkapi galeri destinasi interaktif, sistem booking online, dan integrasi peta. Dilengkapi Customer Service 24 jam berbasis AI Gemini untuk membantu pelanggan kapan saja. Tampilan visual yang memukau berhasil meningkatkan booking hingga 4x lipat.",
+        "tech": [
+          "Next.js"
+        ]
+      },
+      {
+        "img": "/posapotek.webp",
+        "title": "PosApotek",
+        "slug": "posapotek",
+        "category": "Web Application",
+        "heading": "Aplikasi Web Kasir dan Manajemen Stok Apotek",
+        "desc": "Sistem manajemen apotek dengan peramalan stok exponential smoothing dan fitur inovatif.",
+        "meta": "Detail proyek aplikasi web kasir apotek PosApotek oleh zeepage: manajemen apotek lengkap dengan peramalan stok memakai metode exponential smoothing.",
+        "detail": "PosApotek adalah aplikasi manajemen apotek yang membantu pencatatan stok obat, resep dokter, dan laporan penjualan. Keunggulan utamanya adalah fitur peramalan stok menggunakan metode Exponential Smoothing yang memprediksi kapan stok obat akan habis, sehingga apotek bisa melakukan restock tepat waktu. Dilengkapi juga notifikasi stok menipis, riwayat transaksi, dan multi-user access.",
+        "tech": [
+          "Next.js",
+          "Express"
+        ]
+      },
+      {
+        "img": "/djong.webp",
+        "title": "Pt Dejong",
+        "slug": "pt-dejong",
+        "category": "Landing Page",
+        "heading": "Landing Page Perusahaan Ekspor dan Impor",
+        "desc": "Landing page perusahaan import dan export management dengan desain profesional dan modern.",
+        "meta": "Detail proyek landing page PT Dejong oleh zeepage: halaman perusahaan manajemen ekspor dan impor dengan desain profesional dan modern untuk membangun kredibilitas.",
+        "detail": "Pt Dejong adalah perusahaan import dan export management yang membutuhkan landing page untuk menampilkan layanan dan profil perusahaan secara profesional. Desain clean dan modern dengan informasi layanan lengkap, kontak terintegrasi, serta tampilan yang meyakinkan mitra bisnis.",
+        "tech": [
+          "Laravel"
+        ]
+      }
+    ],
+    "allLabel": "Lihat Semua Karya",
+    "allHref": "/portofolio/"
+  },
+  "why": {
+    "badge": "Kenapa Website?",
+    "title": "Bisnis tanpa website",
+    "titleHighlight": "kehilangan pelanggan.",
+    "subtitle": "Di era digital, calon pelanggan menilai kredibilitas bisnis Anda dari kehadiran online sebelum mereka bahkan menghubungi Anda.",
+    "withLabel": "Dengan Website",
+    "withoutLabel": "Tanpa Website",
+    "with": [
+      "Tampil profesional 24/7",
+      "Pelanggan bisa temukan Anda di Google",
+      "Terima order & booking otomatis",
+      "Bangun kepercayaan sebelum bicara",
+      "Analitik pengunjung real-time"
+    ],
+    "without": [
+      "Hanya bergantung pada mulut ke mulut",
+      "Tidak muncul di pencarian Google",
+      "Kehilangan pelanggan ke kompetitor",
+      "Susah scale bisnis ke luar kota",
+      "Kesan tidak profesional"
+    ]
+  },
+  "pricing": {
+    "badge": "Investasi Terbaik",
+    "title": "Harga Transparan,",
+    "titleHighlight": "Hasil Maksimal",
+    "subtitle": "Pilih paket yang sesuai kebutuhan bisnis Anda tanpa biaya tersembunyi.",
+    "plans": [
+      {
+        "name": "Landing Page",
+        "price": "Rp 699k",
+        "target": "Cocok untuk UMKM atau personal yang butuh 1 halaman fokus konversi",
+        "features": [
+          {
+            "text": "1 Halaman Full Custom Design",
+            "included": true
+          },
+          {
+            "text": "Copywriting Headline",
+            "included": true
+          },
+          {
+            "text": "Integrasi WhatsApp + Form Order",
+            "included": true
+          },
+          {
+            "text": "2x Revisi Desain",
+            "included": true
+          },
+          {
+            "text": "Maintenance Gratis 30 Hari",
+            "included": true
+          }
+        ],
+        "cta": "Pilih Paket",
+        "popular": false,
+        "whatsapp": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20berikut%3A%0APaket%3A%20Landing%20Page%0AHarga%3A%20Rp%20699.000%0A%0AMohon%20info%20selengkapnya%20untuk%20memulai%20proyek%20ini."
+      },
+      {
+        "name": "Company Profile",
+        "price": "Rp 1.499k",
+        "target": "Pilihan terbaik untuk bisnis yang ingin tampil lengkap dan kredibel",
+        "features": [
+          {
+            "text": "Semua Benefit Paket Landing Page",
+            "included": true
+          },
+          {
+            "text": "Sampai 7 Halaman (Home, Tentang, Layanan, Portofolio, Testimoni, Blog, Kontak)",
+            "included": true
+          },
+          {
+            "text": "Domain .com Gratis 1 Tahun",
+            "included": true
+          },
+          {
+            "text": "Setup Blog + 1 Artikel Perdana",
+            "included": true
+          },
+          {
+            "text": "SEO On Page (Meta, Schema, Sitemap)",
+            "included": true
+          },
+          {
+            "text": "Setup Google Business Profile",
+            "included": true
+          },
+          {
+            "text": "Copywriting Premium",
+            "included": true
+          },
+          {
+            "text": "3x Revisi Desain",
+            "included": true
+          },
+          {
+            "text": "Maintenance Gratis 3 Bulan",
+            "included": true
+          }
+        ],
+        "cta": "Pilih Paket",
+        "popular": true,
+        "whatsapp": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20berikut%3A%0APaket%3A%20Company%20Profile%0AHarga%3A%20Rp%201.499.000%0A%0AMohon%20info%20selengkapnya%20untuk%20memulai%20proyek%20ini."
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "target": "Untuk kebutuhan khusus: website enterprise, perbaikan bug, atau joki tugas website",
+        "features": [
+          {
+            "text": "Diskusi kebutuhan & detail project terlebih dahulu",
+            "included": true
+          },
+          {
+            "text": "Jumlah halaman, fitur, dan desain disesuaikan",
+            "included": true
+          },
+          {
+            "text": "Perbaikan bug & maintenance website yang sudah ada",
+            "included": true
+          },
+          {
+            "text": "Pengerjaan tugas/proyek website untuk kuliah maupun sekolah",
+            "included": true
+          },
+          {
+            "text": "Estimasi harga & waktu pengerjaan menyesuaikan kompleksitas",
+            "included": true
+          }
+        ],
+        "cta": "Konsultasi Sekarang",
+        "popular": false,
+        "customPrice": true,
+        "whatsapp": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20tertarik%20dengan%20paket%20Custom.%0A%0AMohon%20info%20lebih%20lanjut%20untuk%20konsultasi%20kebutuhan%20website%20saya."
+      }
+    ]
+  },
+  "steps": {
+    "title": "4 Langkah Mudah Memulai <span class=\"hw-accent\">Proyek Anda</span>",
+    "subtitle": "Konsultasi gratis, proses transparan, hasil maksimal. Kami dampingi Anda dari ide hingga website siap tayang dalam 4 langkah mudah.",
+    "tags": [
+      "Alur kerja adaptif & fleksibel",
+      "Diskusi & konsultasi berkala",
+      "Revisi solutif sesuai kesepakatan",
+      "Dukungan penuh setelah proyek rilis"
+    ],
+    "cta": "Mulai Konsultasi Proyek",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Konsultasi & Briefing Kebutuhan",
+        "desc": "Ceritakan visi dan kebutuhan bisnis Anda. Kami akan mendengarkan, memahami target audiens Anda, dan merumuskan solusi digital yang tepat sasaran."
+      },
+      {
+        "num": "02",
+        "title": "Rekomendasi Solusi & Paket",
+        "desc": "Dari hasil analisis, kami rekomendasikan jenis website dan paket investasi yang paling sesuai tanpa fitur mubazir, tanpa biaya tersembunyi."
+      },
+      {
+        "num": "03",
+        "title": "Deal & Pengisian Informasi",
+        "desc": "Setelah proposal disepakati, Anda cukup membayar DP 50% dan melengkapi data serta aset pendukung (logo, teks, gambar). Kami urus sisanya."
+      },
+      {
+        "num": "04",
+        "title": "Pengerjaan & Serah Terima",
+        "desc": "Kami garap proyek Anda dengan update progres berkala. Setelah selesai diuji dan Anda setuju, lakukan pelunasan 50% sisanya dan website siap diluncurkan."
+      }
+    ]
+  },
+  "clientStory": {
+    "badge": "Client Story",
+    "title": "Apa Kata Klien Kami"
+  },
+  "cta": {
+    "title": "Siap Memulai Project Anda?",
+    "subtitle": "Konsultasi gratis, tanpa komitmen. Tim kami siap membantu!",
+    "button": "WhatsApp Kami Sekarang",
+    "whatsapp": "6288987244675",
+    "whatsappUrl": "https://wa.me/6288987244675?text=Halo%20zeepage%2C%20saya%20ingin%20konsultasi%20tentang%20pembuatan%20website.%20Mohon%20bantuannya.",
+    "ctaPrimary": "Mulai Konsultasi Gratis",
+    "ctaSecondary": "Lihat Portfolio Kami",
+    "trustItems": [
+      "Gratis, tanpa komitmen",
+      "Respon dalam 24 jam"
+    ],
+    "faqIntro": "Pertanyaan yang sering ditanyakan",
+    "questions": [
+      {
+        "q": "Berapa lama proses pembuatan website?",
+        "a": "Estimasi pengerjaan kami mulai dari 1-2 minggu untuk landing page, 2-4 minggu untuk company profile, hingga 4-8 minggu untuk e-commerce atau web application tergantung seberapa kompleks fitur yang dibutuhkan. Oh iya, kalau Anda butuh selesai lebih cepat (inrush), kami juga bisa kok, dengan biaya tambahan yang sudah disesuaikan."
+      },
+      {
+        "q": "Apakah saya perlu menyiapkan domain & hosting?",
+        "a": "Untuk paket Landing Page, domain dan hosting perlu disiapkan sendiri atau bisa kami bantu uruskan dengan biaya tambahan. Sementara untuk paket Company Profile, domain .com dan hosting sudah termasuk gratis 1 tahun jadi Anda tinggal duduk manis aja."
+      },
+      {
+        "q": "Apakah website saya akan responsive?",
+        "a": "Tentu! Semua website yang kami buat dijamin responsive dan tampil sempurna di berbagai perangkat (desktop, tablet, dan smartphone)."
+      },
+      {
+        "q": "Apakah ada garansi setelah website selesai?",
+        "a": "Ya, kami memberikan garansi 1 bulan gratis maintenance setelah website live. Kami juga menyediakan paket maintenance lanjutan jika diperlukan."
+      },
+      {
+        "q": "Bisakah saya request fitur tertentu?",
+        "a": "Tentu! Kami selalu mendengarkan kebutuhan Anda. Setiap project memiliki sesi diskusi untuk memastikan fitur yang diinginkan sesuai dengan tujuan bisnis Anda."
+      },
+      {
+        "q": "Apakah saya bisa melihat progress website?",
+        "a": "Ya, kami akan memberikan update progress secara berkala dan Anda bisa melihat langsung hasil pengerjaan melalui development server kami."
+      },
+      {
+        "q": "Bagaimana sistem pembayarannya?",
+        "a": "Sistem pembayaran kami fleksibel. Anda bisa membayar DP 50% di awal untuk memulai pengerjaan, atau bisa langsung lunas sekaligus jika mau. Semua transparan dan tanpa biaya tersembunyi."
+      }
+    ]
+  },
+  "footer": {
+    "description": "zeepage adalah studio digital yang berfokus pada pembuatan website profesional, modern, dan berperforma tinggi untuk bisnis Anda.",
+    "menuTitle": "Menu",
+    "menu": [
+      {
+        "label": "Beranda",
+        "href": "/"
+      },
+      {
+        "label": "Layanan",
+        "href": "/#layanan"
+      },
+      {
+        "label": "Portfolio",
+        "href": "/#portfolio"
+      },
+      {
+        "label": "Harga",
+        "href": "/#harga"
+      },
+      {
+        "label": "Area Layanan",
+        "href": "/daerah/"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog/"
+      }
+    ],
+    "servicesTitle": "Layanan",
+    "services": [
+      "Company Profile",
+      "E-Commerce",
+      "Landing Page",
+      "Web Application",
+      "Redesign Website",
+      "Maintenance"
+    ],
+    "contactTitle": "Kontak",
+    "contact": {
+      "email": "zinknot@gmail.com",
+      "whatsapp": "+62 889-8724-4675",
+      "location": "Bali, Indonesia"
+    },
+    "copyright": "© 2026 zeepage. All rights reserved."
+  }
+}

@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  lang: 'id' | 'en';
+  t: any;
+  item: any;
+}
+
+const { lang, t, item } = Astro.props;
+const isId = lang === 'id';
+const items = t.portfolio.items;
+const others = items.filter((w: any) => w.slug !== item.slug);
+const demoTitles = ['DemoPadel', 'Sagaroof', 'Hidroponik Nusantara'];
+const isDemo = demoTitles.includes(item.title);
+
+const base = isId ? 'https://zeepage.com/portofolio/' : 'https://zeepage.com/en/portfolio/';
+const canonical = `${base}${item.slug}/`;
+const indexUrl = base;
+const homeUrl = isId ? 'https://zeepage.com/' : 'https://zeepage.com/en/';
+const title = `${item.heading} | zeepage`;
+const description = item.meta;
+
+const alternates = [
+  { hreflang: 'id', href: `https://zeepage.com/portofolio/${item.slug}/` },
+  { hreflang: 'en', href: `https://zeepage.com/en/portfolio/${item.slug}/` },
+  { hreflang: 'x-default', href: `https://zeepage.com/portofolio/${item.slug}/` },
+];
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": item.heading,
+      "headline": item.heading,
+      "description": item.meta,
+      "url": canonical,
+      "image": `https://zeepage.com${item.img}`,
+      "inLanguage": isId ? 'id' : 'en',
+      "creator": { "@type": "Organization", "name": "zeepage", "url": "https://zeepage.com/" },
+      ...(item.link ? { "sameAs": item.link } : {}),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": isId ? 'Beranda' : 'Home', "item": homeUrl },
+        { "@type": "ListItem", "position": 2, "name": isId ? 'Portofolio' : 'Portfolio', "item": indexUrl },
+        { "@type": "ListItem", "position": 3, "name": item.title, "item": canonical },
+      ],
+    },
+  ],
+};
+
+const ui = isId
+  ? { crumbHome: 'Beranda', crumbIndex: 'Portofolio', about: 'Tentang proyek ini', features: 'Fitur dan teknologi', visit: 'Kunjungi situs', consult: 'Konsultasi proyek serupa', more: 'Karya lainnya', allLabel: 'Lihat semua karya', demoLabel: 'Demo konsep' }
+  : { crumbHome: 'Home', crumbIndex: 'Portfolio', about: 'About this project', features: 'Features and technology', visit: 'Visit site', consult: 'Consult a similar project', more: 'More work', allLabel: 'See all work', demoLabel: 'Concept demo' };
+---
+
+<BaseLayout title={title} description={description} lang={lang} canonical={canonical} structuredData={structuredData} alternates={alternates}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main class="pt-32 sm:pt-40 pb-20 bg-paper">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav aria-label="breadcrumb" class="text-sm text-ink/50 mb-8" data-hero-line>
+        <a href={homeUrl} class="hover:text-brand">{ui.crumbHome}</a>
+        <span aria-hidden="true" class="mx-2">/</span>
+        <a href={indexUrl} class="hover:text-brand">{ui.crumbIndex}</a>
+        <span aria-hidden="true" class="mx-2">/</span>
+        <span class="text-ink/80 font-semibold">{item.title}</span>
+      </nav>
+
+      <p data-hero-line class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-5">{item.category}</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl" data-hero-line>{item.heading}</h1>
+      <p data-hero-line class="text-ink/60 leading-relaxed max-w-2xl mt-6 text-lg">{item.desc}</p>
+
+      <div class="relative mt-10 rounded-3xl overflow-hidden border border-line" data-hero-line>
+        <img src={item.img} alt={item.heading} class="w-full object-cover" width="880" height="560" />
+        {isDemo && <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider bg-white/90 text-ink px-2.5 py-1 rounded-full">{ui.demoLabel}</span>}
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-10 mt-14">
+        <section class="lg:col-span-2" data-reveal>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">{ui.about}</h2>
+          <p class="text-ink/65 leading-relaxed mt-4">{item.detail}</p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            {item.link && (
+              <a href={item.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-ink transition-colors">
+                {ui.visit}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            )}
+            <a href={t.cta.whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-ink text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-brand transition-colors">{ui.consult}</a>
+          </div>
+        </section>
+
+        <section data-reveal>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">{ui.features}</h2>
+          <ul class="flex flex-wrap gap-1.5 mt-4">
+            {item.tech.map((tech: string) => (
+              <li class="text-[11px] font-semibold bg-white border border-line text-ink/60 px-2.5 py-1 rounded-full">{tech}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
+
+      <section class="mt-20">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight" data-reveal>{ui.more}</h2>
+        <div data-reveal-group class="grid sm:grid-cols-2 gap-5 mt-8">
+          {others.map((w: any) => (
+            <a href={`${base}${w.slug}/`} class="group bg-white border border-line rounded-3xl overflow-hidden flex flex-col hover:shadow-xl hover:shadow-ink/5 transition-shadow">
+              <span class="relative block overflow-hidden">
+                <img src={w.img} alt={w.title} class="w-full h-56 sm:h-64 object-cover group-hover:scale-[1.04] transition-transform duration-500" loading="lazy" width="880" height="560" />
+                {demoTitles.includes(w.title) && <span class="absolute top-4 left-4 text-[11px] font-bold uppercase tracking-wider bg-white/90 text-ink px-2.5 py-1 rounded-full">{ui.demoLabel}</span>}
+              </span>
+              <span class="flex flex-col flex-1 p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand">{w.category}</span>
+                <span class="font-bold text-2xl tracking-tight mt-1.5">{w.title}</span>
+                <span class="text-sm text-ink/55 leading-relaxed mt-2">{w.desc}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+        <div class="text-center mt-12">
+          <a href={indexUrl} class="inline-flex items-center gap-2 bg-ink text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-brand transition-colors">{ui.allLabel}</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

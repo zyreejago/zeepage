@@ -1,0 +1,102 @@
+---
+export interface Props {
+  t: {
+    label: string;
+    title: string;
+    description: string;
+    advantages: string[];
+    stats: { value: string; label: string; sub: string }[];
+    cta: string;
+  };
+  id: string;
+}
+
+const { t, id } = Astro.props;
+
+const statIcons = [
+  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>`,
+];
+
+const parsedStats = t.stats.map((stat) => {
+  const match = stat.value.match(/^(\d+)(.*)$/);
+  return {
+    ...stat,
+    num: match ? parseInt(match[1]) : 0,
+    suffix: match ? match[2] : '',
+  };
+});
+---
+
+<section id={id} class="bg-white border-y border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div data-reveal>
+        <p class="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase text-brand mb-5">{t.label}</p>
+        <h2 set:html={t.title} class="text-4xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight mb-6"></h2>
+        <p class="text-ink/60 leading-relaxed mb-8">{t.description}</p>
+        <ul class="space-y-3.5 mb-9">
+          {t.advantages.map((adv) => (
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-brand/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span class="font-medium">{adv}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="/#portfolio" class="inline-flex items-center gap-2 font-bold text-brand hover:gap-3.5 transition-all">
+          {t.cta}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div data-reveal-group class="grid grid-cols-2 gap-4 sm:gap-5">
+        {parsedStats.map((stat, i) => (
+          <div class="bg-paper border border-line rounded-3xl p-6 sm:p-7 hover:border-brand/40 transition-colors">
+            <div class="w-10 h-10 bg-brand/10 rounded-xl flex items-center justify-center mb-4 text-brand">
+              <div set:html={statIcons[i % statIcons.length]}></div>
+            </div>
+            <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              <span class="counter-value" data-target={stat.num} data-suffix={stat.suffix}>{stat.num}{stat.suffix}</span>
+            </p>
+            <p class="text-sm font-semibold mt-1">{stat.label}</p>
+            <p class="text-xs text-ink/45 mt-0.5">{stat.sub}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// @ts-nocheck
+const counters = document.querySelectorAll('.counter-value');
+if (counters.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 950;
+        const start = performance.now();
+        el.textContent = '0';
+        function update(current) {
+          const elapsed = current - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          el.textContent = String(Math.floor(eased * target)) + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+          else el.textContent = String(target) + suffix;
+        }
+        requestAnimationFrame(update);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach((el) => observer.observe(el));
+}
+</script>

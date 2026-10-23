@@ -1,0 +1,15 @@
+---
+import PortfolioDetailPage from '../../../components/PortfolioDetailPage.astro';
+import en from '../../../i18n/en.json';
+
+export function getStaticPaths() {
+  return en.portfolio.items.map((item: any) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<PortfolioDetailPage lang="en" t={en} item={item} />

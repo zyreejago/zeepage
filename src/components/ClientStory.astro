@@ -1,0 +1,154 @@
+---
+export interface Props {
+  t: {
+    badge: string;
+    title: string;
+  };
+  id: string;
+}
+
+const { t, id } = Astro.props;
+
+const members = [
+  { id: '1', name: 'Ayu Pratiwi', role: 'Build Landing Page', image: '/IMG_5725.webp' },
+  { id: '2', name: 'Budi Santoso', role: 'Build Company Profile', image: '/IMG_5726.webp' },
+  { id: '3', name: 'Citra Dewi', role: 'Build Business Website', image: '/IMG_5727.webp' },
+  { id: '4', name: 'Dimas Prayoga', role: 'Build E-commerce', image: '/IMG_5728.webp' },
+  { id: '5', name: 'Eka Wijaya', role: 'Build Web Application', image: '/IMG_5729.webp' },
+  { id: '6', name: 'Fitri Handayani', role: 'Build Website Design', image: '/IMG_5730.webp' },
+];
+
+const col1 = members.filter((_, i) => i % 3 === 0);
+const col2 = members.filter((_, i) => i % 3 === 1);
+const col3 = members.filter((_, i) => i % 3 === 2);
+---
+
+<section id={id} class="bg-white border-y border-line py-24 max-md:py-12">
+  <div class="max-w-5xl mx-auto px-10 max-md:px-5">
+    <div class="text-center mb-12">
+      <span class="cs-badge">{t.badge}</span>
+      <h2 class="cs-title">{t.title}</h2>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start gap-8 md:gap-10 lg:gap-14 select-none w-full py-8 font-sans" id="team-root">
+      <div class="flex gap-2 md:gap-3 flex-shrink-0 overflow-x-auto pb-1 max-md:self-center">
+        <div class="flex flex-col gap-2 md:gap-3">
+          {col1.map((m) => (
+            <div class="team-card overflow-hidden rounded-xl cursor-pointer flex-shrink-0 w-[110px] h-[120px] sm:w-[130px] sm:h-[140px] md:w-[155px] md:h-[165px]" data-id={m.id}>
+              <img src={m.image} alt={m.name} class="w-full h-full object-cover transition-all duration-500" />
+            </div>
+          ))}
+        </div>
+        <div class="flex flex-col gap-2 md:gap-3 mt-[48px] sm:mt-[56px] md:mt-[68px]">
+          {col2.map((m) => (
+            <div class="team-card overflow-hidden rounded-xl cursor-pointer flex-shrink-0 w-[122px] h-[132px] sm:w-[145px] sm:h-[155px] md:w-[172px] md:h-[182px]" data-id={m.id}>
+              <img src={m.image} alt={m.name} class="w-full h-full object-cover transition-all duration-500" />
+            </div>
+          ))}
+        </div>
+        <div class="flex flex-col gap-2 md:gap-3 mt-[22px] sm:mt-[26px] md:mt-[32px]">
+          {col3.map((m) => (
+            <div class="team-card overflow-hidden rounded-xl cursor-pointer flex-shrink-0 w-[115px] h-[125px] sm:w-[136px] sm:h-[146px] md:w-[162px] md:h-[172px]" data-id={m.id}>
+              <img src={m.image} alt={m.name} class="w-full h-full object-cover transition-all duration-500" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 md:gap-5 pt-0 md:pt-2 flex-1 w-full max-md:px-3">
+        {members.map((m) => (
+          <div class="team-row cursor-pointer" data-id={m.id}>
+            <div class="flex items-center gap-2.5">
+              <span class="team-dot w-4 h-3 rounded-[5px] flex-shrink-0 bg-foreground/25 transition-all duration-300"></span>
+              <span class="text-base md:text-[18px] font-semibold leading-none tracking-tight text-foreground/80 transition-colors duration-300 team-name">{m.name}</span>
+            </div>
+            <p class="mt-1.5 pl-[27px] text-[7px] md:text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">{m.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// @ts-nocheck
+  const cards = document.querySelectorAll('.team-card');
+  const rows = document.querySelectorAll('.team-row');
+  let hoveredId = null;
+
+  function setHover(id) {
+    hoveredId = id;
+    cards.forEach((el) => {
+      const isActive = el.dataset.id === id;
+      const img = el.querySelector('img');
+      if (id === null) {
+        el.style.opacity = '1';
+        img.style.filter = 'grayscale(0) brightness(1)';
+      } else if (isActive) {
+        el.style.opacity = '1';
+        img.style.filter = 'grayscale(0) brightness(1)';
+      } else {
+        el.style.opacity = '0.6';
+        img.style.filter = 'grayscale(1) brightness(0.77)';
+      }
+    });
+    rows.forEach((el) => {
+      const isActive = el.dataset.id === id;
+      const dot = el.querySelector('.team-dot');
+      const name = el.querySelector('.team-name');
+      if (id === null) {
+        el.style.opacity = '1';
+        dot.style.background = 'rgba(0,0,0,0.25)';
+        dot.style.width = '1rem';
+        name.style.color = 'rgba(0,0,0,0.8)';
+      } else if (isActive) {
+        el.style.opacity = '1';
+        dot.style.background = '#1e2547';
+        dot.style.width = '1.25rem';
+        name.style.color = '#1e2547';
+      } else {
+        el.style.opacity = '0.5';
+        dot.style.background = 'rgba(0,0,0,0.25)';
+        dot.style.width = '1rem';
+        name.style.color = 'rgba(0,0,0,0.8)';
+      }
+    });
+  }
+
+  cards.forEach((el) => {
+    el.addEventListener('mouseenter', () => setHover(el.dataset.id));
+    el.addEventListener('mouseleave', () => setHover(null));
+  });
+  rows.forEach((el) => {
+    el.addEventListener('mouseenter', () => setHover(el.dataset.id));
+    el.addEventListener('mouseleave', () => setHover(null));
+  });
+</script>
+
+<style>
+  .cs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #eef2ff;
+    color: #0040FF;
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 5px 13px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+  }
+  .cs-title {
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 900;
+    color: #1e2547;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+  .text-muted-foreground {
+    color: #6b7280;
+  }
+</style>
