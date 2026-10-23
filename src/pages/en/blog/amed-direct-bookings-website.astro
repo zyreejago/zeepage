@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Navbar from '../../../components/Navbar.astro';
 import Footer from '../../../components/Footer.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
 import '../../../styles/global.css';
 
 import en from '../../../i18n/en.json';
@@ -30,7 +31,7 @@ const structuredData = {
 };
 ---
 
-<BaseLayout title={title + ' | zeepage'} description={description} lang="en" canonical={canonical} structuredData={structuredData}>
+<BaseLayout title={title + ' | zeepage'} description={description} lang="en" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
   <main>
     <article>
@@ -41,6 +42,7 @@ const structuredData = {
         <figure>
           <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
         </figure>
+    <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-8" />
       </div>
 
       <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
@@ -104,7 +106,8 @@ const structuredData = {
         <h3 class="text-xl font-bold mt-9 mb-3">Direct booking basics for dive shops and villas in Amed</h3>
       <p class="text-ink/65 leading-relaxed mb-5">You do not need a large website to start winning direct bookings. A focused site with your key trips or rooms, honest prices, and a WhatsApp button on every page already outperforms a social media profile for guests who plan ahead. You can see how packages are structured on our <a href="/en/harga/" class="font-semibold text-brand hover:underline">pricing page</a>, and if you want the wider picture for East Bali businesses, read about our <a href="/jasa-pembuatan-website-di-karangasem/" class="font-semibold text-brand hover:underline">web design services in Karangasem</a>. Start with the one page your guests ask about most, and build from there.</p>
 
-        <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mt-14">
+        <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-14" />
+    <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mt-14">
     <p class="text-xl font-bold mb-4">Read next</p>
     <ul class="list-disc pl-5 space-y-2.5 text-ink/70 leading-relaxed">
       <li><a href="/en/" class="font-semibold text-brand hover:underline">Web Design Services in Bali — zeepage Home</a></li>
