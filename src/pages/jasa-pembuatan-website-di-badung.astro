@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import WorksSection from '../components/WorksSection.astro';
+import ComparisonSection from '../components/ComparisonSection.astro';
+import ContactCta from '../components/ContactCta.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA, content } from '../data/home-content';
+
+const t = id;
+const home = content.id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-badung/';
+const cover = '/area/cover-jasa-website-badung.webp';
+const coverAlt = 'Jasa pembuatan website di Badung untuk hotel, villa, restoran, dan beach club oleh zeepage';
+
+const alasan = [
+  {
+    title: 'Persaingan Bali Selatan dimenangkan di hasil pencarian',
+    desc: 'Satu pencarian tamu bisa memunculkan ratusan hotel, villa, dan restoran sekaligus. Website resmi yang cepat dan jelas adalah syarat untuk ikut bertanding di pasar ini, bukan lagi sekadar pelengkap brosur.',
+  },
+  {
+    title: 'Booking langsung mengembalikan margin ke Anda',
+    desc: 'Setiap pemesanan yang lewat platform memotong pendapatan usaha Anda. Website dengan jalur booking langsung dan tombol WhatsApp membuat tamu memesan ke Anda, dan hubungan dengan tamu itu menjadi milik Anda sepenuhnya.',
+  },
+  {
+    title: 'Tamu asing menuntut standar digital yang tinggi',
+    desc: 'Pengunjung Canggu, Seminyak, dan Uluwatu terbiasa memesan apa pun dari ponsel dalam hitungan detik. Website yang lambat, membingungkan, atau tidak berbahasa Inggris akan ditinggalkan sebelum halaman pertama selesai dibaca.',
+  },
+];
+
+const bisnis = [
+  { name: 'Hotel, villa & resort', desc: 'Halaman kamar dan unit, tarif musiman, serta booking langsung yang terhubung ke WhatsApp atau mesin booking Anda.' },
+  { name: 'Restoran, kafe & beach club', desc: 'Menu digital, jadwal acara, dan reservasi meja untuk tamu di Seminyak, Canggu, sampai Uluwatu.' },
+  { name: 'Surf school, rental & aktivitas', desc: 'Katalog paket pelajaran dan armada dengan pemesanan online untuk tamu yang baru mendarat di Bali.' },
+  { name: 'Butik, spa & klinik kecantikan', desc: 'Katalog layanan dan produk dengan harga transparan, galeri hasil, dan booking perawatan secara online.' },
+  { name: 'Wedding venue & event organizer', desc: 'Portofolio venue dan paket pernikahan dengan formulir tanya tanggal untuk calon pengantin dari luar negeri.' },
+  { name: 'Properti & manajemen villa', desc: 'Profil layanan dan daftar villa kelolaan yang meyakinkan pemilik villa dan calon tamu dalam satu tempat.' },
+];
+
+const cakupan = ['Kuta', 'Legian', 'Seminyak', 'Kerobokan', 'Canggu', 'Berawa', 'Pererenan', 'Tuban', 'Jimbaran', 'Nusa Dua', 'Ungasan', 'Uluwatu', 'Pecatu', 'Dalung', 'Mengwi', 'Abiansemal'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Badung?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu. Keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis, dengan biaya tahunan Rp 600 ribu mulai tahun kedua.',
+  },
+  {
+    q: 'Bisakah website villa atau hotel saya menerima booking langsung?',
+    a: 'Bisa. Setiap halaman dilengkapi tombol WhatsApp dan Anda bisa memakai formulir reservasi, sehingga tamu yang menemukan Anda di Google memesan langsung ke Anda tanpa potongan komisi platform.',
+  },
+  {
+    q: 'Apakah tersedia website dua bahasa untuk tamu asing?',
+    a: 'Tersedia dwibahasa Indonesia dan Inggris. Untuk usaha di Badung ini hampir wajib, karena mayoritas tamu di Canggu, Seminyak, dan Nusa Dua adalah wisatawan mancanegara yang mencari dalam bahasa Inggris.',
+  },
+  {
+    q: 'Bisakah website saya muncul di Google Maps?',
+    a: 'Bisa. Paket company profile termasuk setup Google Business Profile, sehingga usaha Anda tampil di Google Maps dengan alamat, jam buka, foto, dan tautan ke website yang benar.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Badung',
+      url: canonical,
+      description: 'Jasa pembuatan website di Badung oleh zeepage untuk hotel, villa, restoran, dan beach club di Canggu, Seminyak, dan Nusa Dua: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Badung: Canggu, Seminyak, Nusa Dua | zeepage"
+  description="Jasa pembuatan website di Badung untuk hotel, villa, restoran, dan beach club: landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu, siap booking langsung dan dwibahasa."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+  image={'https://zeepage.com' + cover}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Badung, <em class="font-display italic font-medium text-brand">untuk bisnis di jantung pariwisata Bali Selatan.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Kabupaten Badung menaungi hampir semua nama besar pariwisata Bali: Kuta, Seminyak, Canggu, Jimbaran, Nusa Dua, sampai tebing Uluwatu, lengkap dengan bandara internasionalnya. Di sinilah persaingan usaha paling ketat di Bali, dan tamu membandingkan semuanya dari ponsel sebelum memesan ke yang paling meyakinkan.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu hotel, villa, restoran, dan usaha lain di Badung memiliki website yang cepat, dwibahasa, dan siap menerima booking langsung, mulai Rp 799 ribu sudah termasuk domain .com, hosting, SSL, dan support.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+        <figure class="mt-12" data-reveal>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Kenapa bisnis di Badung <em class="font-display italic font-medium text-brand">tidak bisa lagi tanpa website?</em></h2>
+        <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website untuk berbagai usaha <em class="font-display italic font-medium text-brand">di Bali Selatan</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah yang kami layani di Badung</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <WorksSection t={home} />
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <ComparisonSection t={home} />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar jasa pembuatan website <em class="font-display italic font-medium text-brand">di Badung</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Cari area lain? Lihat juga <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-gianyar/">di Gianyar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-tabanan/">di Tabanan</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">di Karangasem</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <ContactCta heading="Bisnis Anda di Badung" accent="siap punya website?" sub="Ceritakan usaha Anda lewat WhatsApp. Kami bantu pilihkan paket yang paling pas, gratis dan tanpa komitmen." />
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

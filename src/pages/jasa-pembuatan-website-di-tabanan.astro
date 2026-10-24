@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import WorksSection from '../components/WorksSection.astro';
+import ComparisonSection from '../components/ComparisonSection.astro';
+import ContactCta from '../components/ContactCta.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA, content } from '../data/home-content';
+
+const t = id;
+const home = content.id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-tabanan/';
+const cover = '/area/cover-jasa-website-tabanan.webp';
+const coverAlt = 'Jasa pembuatan website di Tabanan untuk agrowisata, penginapan Tanah Lot, dan UMKM oleh zeepage';
+
+const alasan = [
+  {
+    title: 'Ikon wisata dunia ada di halaman belakang Anda',
+    desc: 'Tanah Lot dan terasering Jatiluwih mendatangkan wisatawan sepanjang tahun, dan mereka memilih penginapan, warung, serta jasa tur lewat pencarian Google. Website resmi membuat usaha Anda yang dipilih, bukan sekadar dilewati rombongan wisata.',
+  },
+  {
+    title: 'Hasil bumi Tabanan layak dijual lebih jauh',
+    desc: 'Beras, kopi Pupuan, cokelat, dan hasil kebun Tabanan selama ini banyak berpindah lewat tengkulak. Katalog online dan company profile membuka jalan untuk menegosiasikan harga langsung ke pembeli di luar Bali.',
+  },
+  {
+    title: 'Agrowisata dan desa wisata butuh etalase',
+    desc: 'Pengunjung mencari pengalaman sebelum datang: tur sawah, agrowisata kopi, sampai kelas memasak. Website menampilkan paket, jadwal, dan harga dengan jelas, lengkap dengan pemesanan lewat WhatsApp.',
+  },
+];
+
+const bisnis = [
+  { name: 'Villa & penginapan sekitar Tanah Lot', desc: 'Galeri foto, tarif per malam, dan booking langsung untuk tamu yang ingin menginap dekat ikon matahari terbenam Bali.' },
+  { name: 'Agrowisata & tur Jatiluwih', desc: 'Paket tur sawah, trekking, dan pengalaman kebun dengan jadwal keberangkatan dan pemesanan online.' },
+  { name: 'Produsen beras, kopi & hasil bumi', desc: 'Katalog produk, cerita asal usul, dan kontak grosir untuk pembeli dari luar daerah.' },
+  { name: 'Warung, restoran & kafe', desc: 'Menu digital dan lokasi yang terhubung ke Google Maps untuk wisatawan yang melintasi jalur Denpasar Gilimanuk.' },
+  { name: 'Venue pernikahan & acara', desc: 'Portofolio venue taman dan pantai seperti di Kedungu dan Yeh Gangga, lengkap dengan formulir tanya ketersediaan tanggal.' },
+  { name: 'Toko & UMKM desa wisata', desc: 'Katalog produk dan pemesanan via WhatsApp yang mudah dibagikan ke pelanggan lewat satu tautan resmi.' },
+];
+
+const cakupan = ['Kota Tabanan', 'Kediri', 'Tanah Lot', 'Kedungu', 'Beraban', 'Kerambitan', 'Marga', 'Penebel', 'Jatiluwih', 'Baturiti', 'Bedugul', 'Pupuan', 'Selemadeg', 'Yeh Gangga'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Tabanan?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu. Keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis, dengan biaya tahunan Rp 600 ribu mulai tahun kedua.',
+  },
+  {
+    q: 'Usaha saya di dekat Tanah Lot atau Jatiluwih, apakah tetap bisa dilayani?',
+    a: 'Tentu bisa. Seluruh proses dari konsultasi, pengiriman materi, sampai revisi berjalan lewat WhatsApp dan online, jadi usaha di Kediri, Penebel, Pupuan, sampai Baturiti tetap terlayani penuh tanpa harus datang ke kantor.',
+  },
+  {
+    q: 'Bisakah membuat website untuk agrowisata dan produsen hasil bumi?',
+    a: 'Bisa. Kami susun katalog produk, cerita asal, paket kunjungan kebun, dan kontak grosir. Paket company profile juga termasuk setup Google Business Profile agar usaha Anda tampil di Google Maps.',
+  },
+  {
+    q: 'Berapa lama pengerjaan website untuk bisnis di Tabanan?',
+    a: 'Landing page selesai dalam 1 sampai 2 minggu dan company profile dalam 2 sampai 4 minggu, tergantung kelengkapan materi seperti logo, foto, dan teks dari Anda.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Tabanan',
+      url: canonical,
+      description: 'Jasa pembuatan website di Tabanan oleh zeepage untuk agrowisata, villa sekitar Tanah Lot, produsen hasil bumi, dan UMKM: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Tabanan: Tanah Lot, Jatiluwih, dan UMKM | zeepage"
+  description="Jasa pembuatan website di Tabanan untuk agrowisata, villa, dan UMKM: landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu, termasuk domain .com, hosting, dan SSL."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+  image={'https://zeepage.com' + cover}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Tabanan, <em class="font-display italic font-medium text-brand">lumbung beras Bali yang siap go digital.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Tabanan dikenal sebagai lumbung beras Bali, rumah bagi terasering Jatiluwih yang diakui dunia dan Pura Tanah Lot yang menjadi ikon matahari terbenam. Di antara sawah dan garis pantainya, penginapan, agrowisata, dan produsen hasil bumi bersaing merebut perhatian wisatawan dan pembeli, dan persaingan itu kini dimulai dari pencarian Google.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu usaha di Tabanan memiliki website yang cepat, rapi, dan mudah ditemukan, mulai Rp 799 ribu sudah termasuk domain .com, hosting, SSL, dan support.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+        <figure class="mt-12" data-reveal>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Kenapa bisnis di Tabanan <em class="font-display italic font-medium text-brand">butuh website resmi?</em></h2>
+        <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website untuk berbagai usaha <em class="font-display italic font-medium text-brand">di lumbung beras Bali</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah yang kami layani di Tabanan</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <WorksSection t={home} />
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <ComparisonSection t={home} />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar jasa pembuatan website <em class="font-display italic font-medium text-brand">di Tabanan</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Cari area lain? Lihat juga <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-badung/">di Badung</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-gianyar/">di Gianyar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">di Karangasem</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <ContactCta heading="Bisnis Anda di Tabanan" accent="siap punya website?" sub="Ceritakan usaha Anda lewat WhatsApp. Kami bantu pilihkan paket yang paling pas, gratis dan tanpa komitmen." />
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

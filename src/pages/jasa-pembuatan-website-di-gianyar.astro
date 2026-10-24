@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Pricing from '../components/Pricing.astro';
+import WorksSection from '../components/WorksSection.astro';
+import ComparisonSection from '../components/ComparisonSection.astro';
+import ContactCta from '../components/ContactCta.astro';
+import '../styles/global.css';
+
+import id from '../i18n/id.json';
+import { WA, content } from '../data/home-content';
+
+const t = id;
+const home = content.id;
+const lang = 'id';
+const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-gianyar/';
+const cover = '/area/cover-jasa-website-gianyar.webp';
+const coverAlt = 'Jasa pembuatan website di Gianyar untuk galeri seni, villa Ubud, dan UMKM oleh zeepage';
+
+const alasan = [
+  {
+    title: 'Tamu Ubud merencanakan semuanya secara online',
+    desc: 'Dari memilih villa, galeri, sampai kelas yoga, keputusan tamu Gianyar dibuat jauh sebelum mereka tiba di Bali. Website dwibahasa yang rapi memastikan usaha Anda masuk ke daftar pilihan itu, bukan hanya dilihat sekilas di media sosial.',
+  },
+  {
+    title: 'Karya perajin Gianyar pantas tampil global',
+    desc: 'Lukisan Batuan, perak Celuk, ukiran Mas, dan patung Batubulan dicari kolektor serta pembeli grosir dari luar negeri. Katalog online menampilkan karya Anda dengan layak dan membuka pertanyaan pembelian langsung, tanpa menunggu musim pameran.',
+  },
+  {
+    title: 'Persaingan penginapan dan wellness sangat rapat',
+    desc: 'Di satu jalan di Ubud saja bisa ada belasan villa dan studio yang menawarkan hal serupa. Foto yang jujur, tarif yang transparan, dan jalur booking langsung di website sendiri adalah pembeda yang membuat tamu memilih Anda.',
+  },
+];
+
+const bisnis = [
+  { name: 'Galeri lukis & sanggar seni', desc: 'Katalog karya, profil seniman, dan formulir pertanyaan pembelian untuk kolektor di dalam dan luar negeri.' },
+  { name: 'Perajin perak, ukiran & kerajinan ekspor', desc: 'Katalog produk grosir dan eceran dengan bahan, ukuran, dan harga yang memudahkan pembeli luar daerah memesan.' },
+  { name: 'Villa, resort & penginapan Ubud', desc: 'Halaman tiap unit, tarif per musim, dan booking langsung tanpa potongan komisi perantara.' },
+  { name: 'Studio yoga & wellness', desc: 'Jadwal kelas yang selalu terbaru, profil pengajar, dan pemesanan tempat secara online.' },
+  { name: 'Restoran, kafe & kuliner khas', desc: 'Menu digital, cerita bahan lokal, dan reservasi untuk tamu yang merencanakan kunjungannya dari jauh.' },
+  { name: 'Operator tur & aktivitas', desc: 'Paket rafting Ayung, tur sawah Tegallalang, dan kunjungan budaya dengan pemesanan lewat WhatsApp.' },
+];
+
+const cakupan = ['Kota Gianyar', 'Ubud', 'Pengosekan', 'Nyuh Kuning', 'Peliatan', 'Sukawati', 'Celuk', 'Batubulan', 'Mas', 'Batuan', 'Blahbatuh', 'Tampaksiring', 'Tegallalang', 'Payangan'];
+
+const faqs = [
+  {
+    q: 'Berapa harga jasa pembuatan website di Gianyar?',
+    a: 'Landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu. Keduanya termasuk domain .com gratis 1 tahun, hosting gratis, SSL gratis, dan support gratis, dengan biaya tahunan Rp 600 ribu mulai tahun kedua.',
+  },
+  {
+    q: 'Bisakah website dibuat dua bahasa, Indonesia dan Inggris?',
+    a: 'Bisa. Banyak usaha di Gianyar memakai website dwibahasa karena tamu Ubud sebagian besar wisatawan mancanegara. Pengunjung memilih bahasa dari menu, sementara struktur halaman dan tombol pemesanannya tetap sama.',
+  },
+  {
+    q: 'Saya perajin, apakah website bisa menampilkan katalog karya?',
+    a: 'Bisa. Kami susun katalog berisi foto karya, bahan, ukuran, dan tombol tanya harga via WhatsApp di tiap produk. Format ini cocok untuk penjualan eceran maupun pertanyaan grosir dari pembeli luar negeri.',
+  },
+  {
+    q: 'Berapa lama pengerjaan website untuk bisnis di Gianyar?',
+    a: 'Landing page selesai dalam 1 sampai 2 minggu dan company profile dalam 2 sampai 4 minggu. Seluruh proses berjalan online lewat WhatsApp, jadi Anda tidak perlu datang ke kantor kami.',
+  },
+];
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      name: 'Jasa Pembuatan Website di Gianyar',
+      url: canonical,
+      description: 'Jasa pembuatan website di Gianyar oleh zeepage untuk galeri seni, perajin, villa dan studio yoga di Ubud, dan UMKM: mulai Rp 799 ribu termasuk domain .com gratis, hosting, SSL, dan support, tersedia dwibahasa.',
+      inLanguage: 'id-ID',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Website di Gianyar: Ubud, Seni, dan Villa | zeepage"
+  description="Jasa pembuatan website di Gianyar untuk galeri seni, villa, studio yoga, dan UMKM Ubud: landing page mulai Rp 799 ribu dan company profile Rp 1.499 ribu, tersedia dwibahasa."
+  lang="id"
+  canonical={canonical}
+  structuredData={structuredData}
+  image={'https://zeepage.com' + cover}
+>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+
+  <main>
+    <section class="relative pt-32 sm:pt-40 pb-16 sm:pb-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <p class="text-sm font-bold text-brand mb-3" data-reveal>Jasa Pembuatan Website</p>
+        <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight max-w-4xl" data-reveal>
+          Jasa pembuatan website di Gianyar, <em class="font-display italic font-medium text-brand">jantung seni Bali yang karyanya mendunia.</em>
+        </h1>
+        <p class="text-ink/60 text-lg leading-relaxed max-w-2xl mt-6" data-reveal>
+          Gianyar adalah rumah bagi Ubud, pusat seni dan budaya Bali yang namanya dikenal di seluruh dunia. Galeri lukis, perajin perak dan ukiran, villa di antara sawah, sampai studio yoga, semuanya melayani tamu yang hampir selalu merencanakan kunjungannya lewat internet sebelum menginjakkan kaki di Bali.
+        </p>
+        <p class="text-ink/60 leading-relaxed max-w-2xl mt-4" data-reveal>
+          zeepage membantu usaha di Gianyar memiliki website yang cepat, rapi, dan siap dibaca tamu mancanegara, mulai Rp 799 ribu sudah termasuk domain .com, hosting, SSL, dan support.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8" data-reveal>
+          <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
+          <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
+        </div>
+        <figure class="mt-12" data-reveal>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="pb-16 sm:pb-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Kenapa bisnis di Gianyar <em class="font-display italic font-medium text-brand">butuh website resmi?</em></h2>
+        <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {alasan.map((a) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 bg-white border-y border-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight" data-reveal>Website untuk berbagai usaha <em class="font-display italic font-medium text-brand">di jantung seni Bali</em></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10" data-reveal-group>
+          {bisnis.map((b) => (
+            <article class="bg-paper border border-line rounded-3xl p-6">
+              <h3 class="font-bold leading-snug">{b.name}</h3>
+              <p class="text-ink/60 text-sm leading-relaxed mt-2.5">{b.desc}</p>
+            </article>
+          ))}
+        </div>
+        <h3 class="font-bold text-xl mt-14" data-reveal>Wilayah yang kami layani di Gianyar</h3>
+        <ul class="flex flex-wrap gap-2.5 mt-5" data-reveal-group>
+          {cakupan.map((c) => (
+            <li class="px-4 py-2 rounded-full border border-line bg-paper text-sm font-semibold text-ink/75">{c}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <WorksSection t={home} />
+
+    <Pricing t={t.pricing} lang={lang} id="harga" />
+
+    <ComparisonSection t={home} />
+
+    <section class="py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-10" data-reveal>Pertanyaan seputar jasa pembuatan website <em class="font-display italic font-medium text-brand">di Gianyar</em></h2>
+        <div class="grid gap-5 max-w-4xl" data-reveal-group>
+          {faqs.map((f) => (
+            <article class="bg-white border border-line rounded-3xl p-7">
+              <h3 class="font-bold text-lg">{f.q}</h3>
+              <p class="text-ink/60 leading-relaxed mt-3">{f.a}</p>
+            </article>
+          ))}
+        </div>
+        <p class="text-ink/55 mt-12" data-reveal>
+          Cari area lain? Lihat juga <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-badung/">di Badung</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-tabanan/">di Tabanan</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-karangasem/">di Karangasem</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+        </p>
+      </div>
+    </section>
+
+    <ContactCta heading="Bisnis Anda di Gianyar" accent="siap punya website?" sub="Ceritakan usaha Anda lewat WhatsApp. Kami bantu pilihkan paket yang paling pas, gratis dan tanpa komitmen." />
+  </main>
+
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

@@ -15,6 +15,8 @@ const t = id;
 const home = content.id;
 const lang = 'id';
 const canonical = 'https://zeepage.com/jasa-pembuatan-website-di-karangasem/';
+const cover = '/area/cover-jasa-website-karangasem.webp';
+const coverAlt = 'Jasa pembuatan website di Karangasem untuk villa, dive shop, dan tour Amed Tulamben oleh zeepage';
 
 const bisnis = [
   { name: 'Dive center & operator snorkeling', desc: 'Jadwal trip ke Tulamben dan Amed, daftar harga dive, dan booking langsung dari wisatawan yang merencanakan liburan jauh hari.' },
@@ -85,6 +87,7 @@ const structuredData = {
   lang="id"
   canonical={canonical}
   structuredData={structuredData}
+  image={'https://zeepage.com' + cover}
 >
   <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
 
@@ -105,6 +108,9 @@ const structuredData = {
           <a href={WA} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand text-white font-bold px-7 py-3.5 rounded-full hover:bg-branddark transition-colors">Konsultasi Gratis</a>
           <a href="/harga/" class="inline-flex items-center gap-2 bg-white border border-line font-bold px-7 py-3.5 rounded-full hover:border-brand hover:text-brand transition-colors">Lihat Harga</a>
         </div>
+        <figure class="mt-12" data-reveal>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line" />
+        </figure>
       </div>
     </section>
 
@@ -160,7 +166,7 @@ const structuredData = {
           ))}
         </div>
         <p class="text-ink/55 mt-12" data-reveal>
-          Lihat juga layanan kami untuk <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
+          Cari area lain? Lihat juga <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-denpasar/">jasa pembuatan website di Denpasar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-badung/">di Badung</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-gianyar/">di Gianyar</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-tabanan/">di Tabanan</a>, <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-buleleng/">di Buleleng</a>, dan <a class="font-semibold text-brand hover:underline" href="/jasa-pembuatan-website-di-jembrana/">di Jembrana</a>.
         </p>
       </div>
     </section>
