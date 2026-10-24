@@ -57,9 +57,11 @@ const areaLinks = [
       </nav>
       <nav class="flex flex-col gap-2.5 text-sm font-semibold text-white/70" aria-label={areaTitle}>
         <span class="text-white font-bold">{areaTitle}</span>
-        {areaLinks.map((link) => (
-          <a href={link.href} class="hover:text-white transition-colors">{link.label}</a>
-        ))}
+        <div class="grid grid-cols-2 gap-x-8 gap-y-2.5">
+          {areaLinks.map((link) => (
+            <a href={link.href} class="hover:text-white transition-colors">{link.label}</a>
+          ))}
+        </div>
       </nav>
       <div class="flex flex-col gap-4">
         <div class="flex items-center gap-3">
