@@ -12,52 +12,15 @@ export interface Props {
   noindex?: boolean;
   alternates?: { hreflang: string; href: string }[];
   preloadImage?: string;
-  image?: string;
 }
 
-const { title, description, lang, canonical, structuredData, noindex, alternates, preloadImage, image } = Astro.props;
-
-// Hreflang pairs follow the current page and its real counterpart in the other language.
-const SITE = 'https://zeepage.com';
-let autoAlternates = alternates;
-if (!autoAlternates) {
-  const path = Astro.url.pathname;
-  const isEn = path === '/en/' || path.startsWith('/en/');
-  const bare = isEn ? path.slice(3) : path;
-  let idPath = bare;
-  let enPath = '/en' + bare;
-  if (bare.startsWith('/portofolio/')) enPath = '/en/portfolio/' + bare.slice('/portofolio/'.length);
-  if (bare.startsWith('/portfolio/')) { idPath = '/portofolio/' + bare.slice('/portfolio/'.length); enPath = '/en' + bare; }
-  const selfOnly = /^\/blog\/.+/.test(bare) || /^\/jasa-/.test(bare) || /^\/layanan\/.+/.test(bare);
-  if (selfOnly) {
-    autoAlternates = [
-      { hreflang: isEn ? 'en' : 'id', href: SITE + path },
-      { hreflang: 'x-default', href: SITE + path },
-    ];
-  } else {
-    autoAlternates = [
-      { hreflang: 'id', href: SITE + idPath },
-      { hreflang: 'en', href: SITE + enPath },
-      { hreflang: 'x-default', href: SITE + idPath },
-    ];
-  }
-}
-    const ogImage = image ?? 'https://zeepage.com/og-image.jpg';
-    const ogW = image ? 1600 : 1200;
-    const ogH = image ? 900 : 630;
+const { title, description, lang, canonical, structuredData, noindex, alternates, preloadImage } = Astro.props;
+    const ogImage = 'https://zeepage.com/og-image.jpg';
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4C7M0L23VW"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4C7M0L23VW');
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Tag Manager -->
@@ -65,7 +28,7 @@ if (!autoAlternates) {
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K6G66WKD');</script>
+    })(window,document,'script','dataLayer','GTM-5B2JHNL8');</script>
     <!-- End Google Tag Manager -->
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -75,13 +38,20 @@ if (!autoAlternates) {
     <meta name="google-site-verification" content="f_lb5Z5NTRdQA3m7hLSKrwD3KYpVgzWSZFZJABd-jlk" />
     <meta name="msvalidate.01" content="24532BC902817BA356CBEA82249FFE7F" />
 
-    <link rel="preload" href="/fonts/plus-jakarta-sans-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/plus-jakarta-sans-normal-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/plus-jakarta-sans-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/plus-jakarta-sans-normal-800-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/fraunces-italic-500-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     {canonical && <link rel="canonical" href={canonical} />}
-    {autoAlternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+    {alternates
+      ? alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)
+      : (
+        <>
+          <link rel="alternate" hreflang="id" href="https://zeepage.com/" />
+          <link rel="alternate" hreflang="en" href="https://zeepage.com/en/" />
+          <link rel="alternate" hreflang="x-default" href="https://zeepage.com/" />
+        </>
+      )}
 
     <meta property="og:site_name" content="zeepage" />
     <meta property="og:title" content={title} />
@@ -89,8 +59,8 @@ if (!autoAlternates) {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content={ogW} />
-    <meta property="og:image:height" content={ogH} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content={lang === 'id' ? 'id_ID' : 'en_US'} />
     <meta property="og:locale:alternate" content={lang === 'id' ? 'en_US' : 'id_ID'} />
 
@@ -101,11 +71,9 @@ if (!autoAlternates) {
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32x32.png" />
 
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
@@ -126,16 +94,16 @@ if (!autoAlternates) {
   </head>
   <body class="font-sans text-dark bg-[#F6F6F3] antialiased overflow-x-hidden">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6G66WKD"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B2JHNL8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <slot />
     <SpeedInsights />
     <Analytics />
-    <script is:inline defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script is:inline defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script is:inline>
-      document.addEventListener('DOMContentLoaded', function () {
+      (function () {
         if (!window.gsap) return;
         gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo('[data-hero-card]', { y: 60, opacity: 0, rotate: 0 }, { y: 0, opacity: 1, duration: 1, stagger: 0.13, ease: 'power3.out', delay: 0.45, clearProps: 'transform,opacity' });
@@ -145,7 +113,7 @@ if (!autoAlternates) {
         gsap.utils.toArray('[data-reveal-group]').forEach(function (group) {
           gsap.fromTo(group.children, { y: 26, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75, stagger: 0.09, ease: 'power3.out', scrollTrigger: { trigger: group, start: 'top 84%' } });
         });
-      });
+      })();
     </script>
   </body>
 </html>
