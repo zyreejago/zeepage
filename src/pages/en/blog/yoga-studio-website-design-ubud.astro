@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
+import '../../../styles/global.css';
+import en from '../../../i18n/en.json';
+import { WA_EN } from '../../../data/home-content';
+
+const t = en;
+const lang = 'en';
+
+const title = 'Yoga Studio Website Design: A Guide for Ubud Studios with Schedules and Online Booking';
+const seoTitle = 'Yoga Studio Website Design Guide for Ubud Studios';
+const description = 'Yoga studio website design for Ubud studios: the pages to include, class schedule and online booking features, and the design patterns that turn visitors into students.';
+const canonical = 'https://zeepage.com/en/blog/yoga-studio-website-design-ubud/';
+const cover = '/blog/yoga-studio-website-design-ubud.webp';
+const coverAlt = 'Yoga studio website design guide for Ubud studios with schedules and online booking by zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-24',
+  inLanguage: 'en',
+  author: {
+    '@type': 'Organization',
+    name: 'zeepage',
+    url: 'https://zeepage.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'zeepage',
+    url: 'https://zeepage.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://zeepage.com/logo-ui.webp',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonical,
+  },
+};
+---
+
+<BaseLayout title={seoTitle + ' | zeepage'} description={description} lang="en" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-block text-sm font-bold tracking-wide uppercase text-brand bg-accent px-4 py-1.5 rounded-full">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 mt-6">October 24, 2026 • by zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+    <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-8" />
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Ubud may be the most competitive yoga town in the world. A traveler planning a week of practice can choose between famous open air shalas, small neighborhood studios, and everything between, and almost all of that choosing happens online before they ever arrive in Bali. Residents and long stay visitors do the same thing for a different reason: they check who is teaching, at what time, and whether the class suits their level.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">That is why yoga studio website design in Ubud is not mainly about looking serene. It is about answering a moving schedule of questions quickly: what class is on today, who teaches it, how much it costs, and how to save a spot. This guide breaks down the pages, booking features, and design patterns that help an Ubud studio turn those searches into students on the mat.</p>
+
+        <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mb-12">
+    <p class="text-sm font-extrabold uppercase tracking-widest text-ink/40 mb-4">On this page</p>
+    <ol class="list-decimal pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="#yoga-studio-website-design-journey" class="font-semibold text-brand hover:underline">Yoga Studio Website Design Starts with the Student Journey</a></li>
+      <li><a href="#yoga-studio-website-design-pages" class="font-semibold text-brand hover:underline">Pages Every Yoga Studio Website Design Should Include</a></li>
+      <li><a href="#yoga-studio-website-design-booking" class="font-semibold text-brand hover:underline">Class Schedules and Online Booking in Yoga Studio Website Design</a></li>
+      <li><a href="#yoga-studio-website-examples" class="font-semibold text-brand hover:underline">Yoga Studio Website Examples: Patterns Worth Copying</a></li>
+      <li><a href="#yoga-studio-website-design-mistakes" class="font-semibold text-brand hover:underline">Yoga Studio Website Design Mistakes That Quietly Cost You Students</a></li>
+      <li><a href="#brief-yoga-studio-website-design" class="font-semibold text-brand hover:underline">How to Brief a Yoga Studio Website Design for Your Ubud Studio</a></li>
+    </ol>
+  </div>
+  <h2 id="yoga-studio-website-design-journey" class="text-3xl font-extrabold tracking-tight mt-2 mb-5 scroll-mt-32">Yoga Studio Website Design Starts with the Student Journey</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Two very different students land on your website. The first is overseas, planning a trip, comparing studios by atmosphere, teachers, and the styles offered. The second is already in Ubud, phone in hand, deciding where to practice tomorrow morning. Good yoga studio website design serves both without making either dig: the schedule and booking path sit up front for the student who is ready now, while the story, teachers, and space get room to breathe for the student who is still choosing.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Ubud adds one more consideration: many students stay for weeks or months. They are not buying a single class, they are choosing a temporary home for their practice. Pages that explain class packs, monthly options, and the community around the studio, from workshops to regular events, speak directly to that longer decision.</p>
+
+        <h2 id="yoga-studio-website-design-pages" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Pages Every Yoga Studio Website Design Should Include</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Most studios need the same core set of pages. What changes is how honestly and completely each one is filled in:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>A home page that shows the shala, the styles you teach, and the next classes on the schedule, without making visitors hunt for any of them.</li>
+          <li>A class schedule page that is always current, laid out by day, with teacher names and levels on every class.</li>
+          <li>Class style descriptions that explain each style you offer, who it suits, and how intense it is, written for students who do not know the vocabulary yet.</li>
+          <li>Teacher profiles with real photos, training background, and the classes each teacher leads.</li>
+          <li>Pricing for drop in classes, class packs, and monthly options, shown openly instead of revealed only by message.</li>
+          <li>A page for workshops, retreats, or teacher trainings if you run them, since these are often how new students first find a studio.</li>
+          <li>A visit page with the exact location and map pin, parking notes, and what to bring for a first class.</li>
+          <li>A contact and booking page with a form, WhatsApp, and your response hours.</li>
+        </ul>
+
+        <h2 id="yoga-studio-website-design-booking" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Class Schedules and Online Booking in Yoga Studio Website Design</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">The schedule is the beating heart of a studio website, and it is where design most often fails in practice. A schedule published as a photo of a printed board, or as a file nobody updates, quietly teaches students to stop trusting the website. Build the schedule as real web content that someone on your team can edit in minutes when a teacher is away or a class changes time. If you use a booking platform, embed it so students stay on your site through the whole flow instead of being sent away mid decision.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Online booking itself can stay simple. For many Ubud studios, a clear schedule with a book button per class, leading to a short form or a WhatsApp chat with the class details filled in, converts better than a heavy system nobody maintains. What matters is that the student can act in the moment they decide, on their phone, in under a minute.</p>
+
+        <div class="bg-brand text-white rounded-[2rem] p-8 sm:p-10 my-14">
+      <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Your studio schedule deserves better than a photo on Instagram</h3>
+      <p class="text-white/85 leading-relaxed mt-3 mb-7">zeepage designs websites for yoga studios in Bali with clear schedules and simple online booking, starting from just a few hundred thousand rupiah. The consultation is free.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={WA_EN} target="_blank" rel="noopener" class="bg-white text-brand font-bold rounded-full px-6 py-3">Free Consultation</a>
+        <a href="/en/layanan/" class="border border-white/50 text-white font-bold rounded-full px-6 py-3">See Website Services</a>
+      </div>
+    </div>
+    <h2 id="yoga-studio-website-examples" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Yoga Studio Website Examples: Patterns Worth Copying</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">When owners browse yoga studio website examples before briefing a designer, the same patterns keep appearing on the sites that actually fill classes. The schedule is reachable in one tap from anywhere on the site. Photography shows the real shala and real light, not generic meditation imagery. Teachers appear as people, with faces and names, early in the visit. Prices are visible without asking. And the whole site feels calm without being empty: generous space, readable type, and no element competing with the schedule for attention.</p>
+        <h3 class="text-xl font-bold mt-9 mb-3">Calm design that still loads fast on a phone</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">The trap is confusing calm with heavy. Slow fading galleries, autoplay video backgrounds, and huge uncompressed photos make a site feel peaceful in a design review and painful on a phone in Ubud traffic. The studios that get this right use a few excellent photos, compressed properly, simple motion or none at all, and text that can be read at a glance. Serenity that loads in two seconds beats serenity that loads in ten.</p>
+
+        <h2 id="yoga-studio-website-design-mistakes" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Yoga Studio Website Design Mistakes That Quietly Cost You Students</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">The mistakes below rarely look like mistakes. The site is often beautiful; it just does not get the student to class:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>The schedule lives in an old image or post that no longer matches the classes actually running.</li>
+          <li>No prices for drop in classes or packs, forcing every interested student to start a chat and wait.</li>
+          <li>Booking only by direct message, with no booking path on the website at all.</li>
+          <li>An address or pin that differs from Google Maps, sending first time students to the wrong street.</li>
+          <li>English that is technically present but machine translated, in a town where most students read English first.</li>
+          <li>No mention of levels, so beginners quietly assume every class is too advanced for them.</li>
+        </ul>
+
+        <h2 id="brief-yoga-studio-website-design" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">How to Brief a Yoga Studio Website Design for Your Ubud Studio</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">A short preparation list makes the whole project faster and cheaper. Gather your current schedule in a simple document, short bios and good photos of each teacher, your class style descriptions, your pricing for drop ins and packs, and a handful of honest photos of the shala at class time. Decide who on your team will update the schedule, and how. With that ready, a designer can focus on structure and polish instead of chasing information.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">You can see what our work costs on the <a href="/en/harga/" class="font-semibold text-brand hover:underline">pricing page</a>, with every package listed openly, and what each engagement includes on our <a href="/en/layanan/" class="font-semibold text-brand hover:underline">website services page</a>. For a different corner of Bali tourism, our guide to a <a href="/en/blog/surf-school-website-canggu/" class="font-semibold text-brand hover:underline">surf school website for Canggu schools</a> covers the same direct booking principles for lesson based businesses.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
+        <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-14" />
+    <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mt-14">
+    <p class="text-xl font-bold mb-4">Read next</p>
+    <ul class="list-disc pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="/en/" class="font-semibold text-brand hover:underline">Web Design Services in Bali: zeepage Home</a></li>
+      <li><a href="/en/blog/surf-school-website-canggu/" class="font-semibold text-brand hover:underline">Surf School Website Guide: How Canggu Surf Schools Can Take Bookings Directly</a></li>
+      <li><a href="/en/blog/amed-direct-bookings-website/" class="font-semibold text-brand hover:underline">How Dive Shops and Villas in Amed, Karangasem Can Win Direct Bookings Online</a></li>
+      <li><a href="/en/blog/medewi-surf-camps-website-guide/" class="font-semibold text-brand hover:underline">Getting Found on Google: A Website Guide for Medewi Surf Camps and Jembrana Producers</a></li>
+      <li><a href="/en/harga/" class="font-semibold text-brand hover:underline">Website Pricing at zeepage</a></li>
+    </ul>
+  </div>
+  <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight mb-4">Ready for a yoga studio website that fills your classes?</h2>
+          <p class="text-white/70 leading-relaxed mb-8">Tell us about your studio on WhatsApp: your styles, your weekly schedule, and how students book today. We will suggest the simplest design that turns your website into a working front desk, free of charge and with no obligation.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href={WA_EN} target="_blank" rel="noopener" class="bg-brand text-white rounded-full px-7 py-3.5 font-bold hover:bg-branddark transition">Free Consultation</a>
+            <a href="/en/layanan/" class="border border-white/40 rounded-full px-7 py-3.5 font-bold hover:bg-white/10 transition">See Website Services</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+
+const title = 'Panduan Membuat Website Villa di Bali dengan Fitur Booking Langsung';
+const seoTitle = 'Website Villa Bali: Panduan Booking Langsung Tanpa Perantara';
+const description = 'Panduan lengkap website villa bali dengan fitur booking langsung: fitur wajib, halaman yang perlu disiapkan, kesalahan yang membuat villa sepi, dan cara memulainya.';
+const canonical = 'https://zeepage.com/blog/website-villa-bali/';
+const cover = '/blog/website-villa-bali.webp';
+const coverAlt = 'Panduan membuat website villa bali dengan fitur booking langsung dari zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-24',
+  inLanguage: 'id-ID',
+  author: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+  publisher: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+};
+---
+
+<BaseLayout title={seoTitle + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-block rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 text-sm mt-5">24 Oktober 2026 • oleh zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+    <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-8" />
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Hampir semua villa di Bali memulai hidupnya di platform pemesanan online. Cara itu memang cepat untuk mendapatkan tamu pertama, tetapi ada harga yang dibayar setiap kali pemesanan masuk: potongan komisi untuk platform, aturan main yang ditentukan pihak lain, dan hubungan dengan tamu yang tidak pernah benar benar menjadi milik Anda. Tamu mengenal nama platformnya, bukan nama villa Anda.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Website sendiri mengubah posisi itu. Tamu yang menemukan villa Anda lewat Google, Instagram, atau rekomendasi teman bisa diarahkan ke satu tempat yang Anda kendalikan penuh: tarif Anda sendiri, kalender Anda sendiri, dan jalur pemesanan yang langsung masuk ke WhatsApp atau mesin booking Anda. Panduan ini membahas cara membuat website villa di Bali yang siap menerima booking langsung, dari fitur wajib sampai kesalahan yang membuat website villa sepi padahal tampilannya sudah bagus.</p>
+
+        <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mb-12">
+    <p class="text-sm font-extrabold uppercase tracking-widest text-ink/40 mb-4">Daftar Isi</p>
+    <ol class="list-decimal pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="#kenapa-website-villa-bali" class="font-semibold text-brand hover:underline">Kenapa Website Villa Bali Tidak Bisa Hanya Mengandalkan OTA</a></li>
+      <li><a href="#fitur-website-villa-bali-booking-langsung" class="font-semibold text-brand hover:underline">Fitur Wajib Website Villa Bali agar Tamu Bisa Booking Langsung</a></li>
+      <li><a href="#cara-membuat-website-villa-di-bali" class="font-semibold text-brand hover:underline">Cara Membuat Website Villa di Bali yang Meyakinkan Tamu Asing</a></li>
+      <li><a href="#halaman-website-villa-bali" class="font-semibold text-brand hover:underline">Halaman yang Wajib Ada di Website Villa Bali Anda</a></li>
+      <li><a href="#kesalahan-website-villa" class="font-semibold text-brand hover:underline">Kesalahan yang Membuat Website Villa Bali Sepi Booking Langsung</a></li>
+      <li><a href="#biaya-membuat-website-villa" class="font-semibold text-brand hover:underline">Biaya Membuat Website Villa dan Cara Memulai dari yang Paling Berdampak</a></li>
+    </ol>
+  </div>
+  <h2 id="kenapa-website-villa-bali" class="text-3xl font-extrabold tracking-tight mt-2 mb-5 scroll-mt-32">Kenapa Website Villa Bali Tidak Bisa Hanya Mengandalkan OTA</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Platform pemesanan online pada dasarnya adalah etalase sewaan. Anda tampil selama membayar lewat komisi, dan Anda selalu berdampingan dengan ratusan villa lain yang tinggal digeser satu layar. Begitu tamu membandingkan harga, yang menang sering kali bukan villa terbaik, melainkan yang paling murah pada hari itu. Website villa bali milik sendiri membebaskan Anda dari perlombaan itu, karena tamu yang sudah berada di website Anda hanya melihat villa Anda.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Ada perilaku tamu yang juga menguntungkan pemilik website. Banyak wisatawan menemukan villa di platform, lalu mencari nama villa itu di Google untuk memeriksa foto tambahan, lokasi persisnya, atau tarif di luar platform. Bila yang mereka temukan adalah website resmi yang rapi dengan tombol booking yang jelas, peluang pemesanan langsung berpindah ke tangan Anda. Bila yang mereka temukan tidak ada apa apa, mereka kembali ke platform dan Anda kembali membayar komisi.</p>
+
+        <h2 id="fitur-website-villa-bali-booking-langsung" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Fitur Wajib Website Villa Bali agar Tamu Bisa Booking Langsung</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Website villa tidak harus rumit. Yang menentukan bukan banyaknya fitur, melainkan apakah tamu bisa bergerak dari tertarik menjadi memesan tanpa hambatan. Fitur berikut adalah fondasinya:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Kalender ketersediaan yang selalu terbaru, agar tamu bisa langsung melihat tanggal kosong tanpa bertanya dulu.</li>
+          <li>Formulir reservasi atau mesin booking yang sederhana, dengan langkah sesedikit mungkin dari memilih tanggal sampai mengonfirmasi pesanan.</li>
+          <li>Tombol WhatsApp yang selalu terlihat, karena banyak tamu ingin memastikan satu dua hal sebelum membayar, terutama untuk menginap lama.</li>
+          <li>Pilihan pembayaran yang jelas, misalnya transfer bank dan gerbang pembayaran, beserta penjelasan uang muka dan pelunasannya.</li>
+          <li>Kebijakan pembatalan dan perubahan tanggal yang ditulis terbuka, supaya tamu tidak ragu memesan jauh jauh hari.</li>
+          <li>Galeri foto asli tiap sudut villa, dari kamar tidur, kamar mandi, dapur, sampai kolam dan pemandangan di depannya.</li>
+          <li>Peta lokasi yang terhubung ke Google Maps, lengkap dengan jarak ke pantai, bandara, dan tempat yang sering dituju tamu di sekitar villa Anda.</li>
+          <li>Versi bahasa Inggris yang rapi, karena sebagian besar tamu villa di Bali mencari dan membaca dalam bahasa Inggris.</li>
+        </ul>
+
+        <h2 id="cara-membuat-website-villa-di-bali" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Cara Membuat Website Villa di Bali yang Meyakinkan Tamu Asing</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Tamu asing memesan dari jarak ribuan kilometer tanpa pernah melihat villa Anda secara langsung. Seluruh keputusan mereka bertumpu pada rasa percaya yang dibangun website Anda dalam beberapa menit pertama. Karena itu, cara membuat website villa di Bali yang benar selalu dimulai dari pertanyaan sederhana: informasi apa yang membuat orang berani mentransfer uang ke villa yang belum pernah ia datangi?</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Jawabannya adalah kejelasan dan kejujuran. Tampilkan tarif per malam secara terbuka beserta yang sudah termasuk di dalamnya, misalnya sarapan, pembersihan harian, atau penjemputan bandara. Tulis kapasitas dan aturan rumah dengan bahasa yang sopan tetapi tegas. Cantumkan nama pengelola dan nomor yang bisa dihubungi, karena villa yang dikelola orang yang jelas namanya terasa jauh lebih aman daripada villa anonim.</p>
+        <h3 class="text-xl font-bold mt-9 mb-3">Galeri foto website villa bali yang menjual tanpa kata kata</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Foto adalah halaman penjualan utama Anda. Ambil foto di pagi atau sore hari saat cahaya lembut, rapikan kamar seperti menyambut tamu, dan fotolah setiap ruangan dari sudut yang menunjukkan ukuran sebenarnya. Hindari foto yang terlalu diedit sampai warna kolam dan dinding tidak lagi sesuai kenyataan, karena tamu yang kecewa di hari pertama adalah awal dari ulasan yang buruk. Lengkapi galeri dengan foto suasana sekitar villa, seperti jalan masuk, sawah atau pantai terdekat, dan tempat makan di sekitarnya, agar tamu bisa membayangkan seluruh pengalamannya.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Terakhir, pastikan website villa Anda cepat dibuka dari HP. Tamu biasanya menemukan villa Anda dari ponsel, sering kali dengan koneksi yang tidak stabil dari negara asalnya. Website yang berat dan lambat akan ditinggalkan sebelum foto pertama selesai dimuat, sebaik apa pun villanya.</p>
+
+        <div class="bg-brand text-white rounded-[2rem] p-8 sm:p-10 my-14">
+      <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Villa Anda masih bergantung penuh ke OTA?</h3>
+      <p class="text-white/85 leading-relaxed mt-3 mb-7">zeepage membantu pemilik villa di Bali punya website sendiri dengan fitur booking langsung, mulai dari ratusan ribu saja. Konsultasinya gratis, ceritakan dulu kebutuhan villa Anda.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={WA} target="_blank" rel="noopener" class="bg-white text-brand font-bold rounded-full px-6 py-3">Konsultasi Gratis</a>
+        <a href="/layanan/" class="border border-white/50 text-white font-bold rounded-full px-6 py-3">Lihat Layanan Pembuatan Website</a>
+      </div>
+    </div>
+    <h2 id="halaman-website-villa-bali" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Halaman yang Wajib Ada di Website Villa Bali Anda</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Setelah fitur dasar beres, susun halaman website villa Anda mengikuti cara tamu mengambil keputusan. Susunan yang terbukti masuk akal untuk sebagian besar villa adalah:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Halaman utama yang langsung menampilkan foto terbaik, tarif mulai, dan tombol booking, tanpa pengunjung harus menggulir jauh.</li>
+          <li>Halaman tiap unit atau tipe kamar, berisi foto, kapasitas, fasilitas, dan tarif masing masing.</li>
+          <li>Halaman galeri yang mengumpulkan foto villa dan suasana sekitarnya dalam satu tempat.</li>
+          <li>Halaman lokasi berisi peta, alamat, dan daftar tempat menarik beserta perkiraan waktu tempuhnya.</li>
+          <li>Halaman pengalaman, misalnya pilihan aktivitas di sekitar villa seperti kelas yoga, tur sawah, atau susur sungai untuk villa di Ubud, dan pantai serta kafe untuk villa di Canggu.</li>
+          <li>Halaman tentang pengelola, yang memperkenalkan siapa yang mengelola villa dan bagaimana tamu akan dilayani selama menginap.</li>
+          <li>Halaman kontak dan reservasi dengan formulir singkat, nomor WhatsApp, dan alamat email.</li>
+          <li>Blog panduan wisata sekitar villa, yang membantu calon tamu menemukan website Anda saat mereka masih merencanakan perjalanan.</li>
+        </ul>
+
+        <h2 id="kesalahan-website-villa" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Kesalahan yang Membuat Website Villa Bali Sepi Booking Langsung</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Tidak sedikit villa yang sudah punya website tetapi tetap menerima semua pemesanan dari platform. Setelah kami perhatikan, penyebabnya biasanya berulang dan sebenarnya mudah diperbaiki:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Tarif tidak ditampilkan sama sekali, sehingga tamu malas bertanya dan kembali ke platform yang harganya jelas.</li>
+          <li>Kalender ketersediaan tidak pernah diperbarui, membuat tamu ragu apakah tanggal yang tampil benar benar kosong.</li>
+          <li>Tombol booking tersembunyi di bagian paling bawah halaman, padahal keputusan tamu sering diambil di detik pertama melihat foto.</li>
+          <li>Website hanya berbahasa Indonesia, sementara tamu yang dicari membaca dalam bahasa Inggris.</li>
+          <li>Foto memakai gambar stok generik yang tidak menggambarkan villa sebenarnya, dan tamu bisa merasakannya.</li>
+          <li>Nomor WhatsApp di website berbeda dengan nomor di Google Maps, menimbulkan keraguan saat tamu ingin menghubungi.</li>
+          <li>Website tidak pernah disebut di mana pun, tidak di Instagram, tidak di tanda di lokasi, dan tidak di balasan pesan ke tamu lama.</li>
+        </ul>
+
+        <h2 id="biaya-membuat-website-villa" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Biaya Membuat Website Villa dan Cara Memulai dari yang Paling Berdampak</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Biaya membuat website villa ditentukan oleh beberapa hal: jumlah halaman dan bahasa, apakah memakai mesin booking penuh atau cukup formulir reservasi plus WhatsApp, dan seberapa banyak bantuan penulisan serta fotografi yang Anda butuhkan. Anda bisa melihat rincian paket kami secara terbuka di <a href="/harga/" class="font-semibold text-brand hover:underline">halaman harga</a>, lalu membandingkannya dengan komisi yang selama ini keluar untuk platform dari hanya beberapa pemesanan saja.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Cara paling sehat adalah memulai dari fondasi yang paling berdampak: halaman utama yang meyakinkan, halaman unit dengan tarif yang jelas, kalender, dan jalur booking yang pendek. Fitur tambahan seperti blog wisata dan halaman pengalaman bisa menyusul sambil website mulai menghasilkan pemesanan langsung pertamanya. Bila Anda ingin gambaran layanan lengkapnya, halaman <a href="/layanan/" class="font-semibold text-brand hover:underline">layanan pembuatan website</a> kami menjelaskan pilihan untuk tiap jenis usaha, dan <a href="/" class="font-semibold text-brand hover:underline">beranda zeepage</a> merangkum cara kami bekerja dari konsultasi sampai website online.</p>
+
+        <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-14" />
+    <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mt-14">
+    <p class="text-xl font-bold mb-4">Baca juga</p>
+    <ul class="list-disc pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="/" class="font-semibold text-brand hover:underline">Jasa Pembuatan Website di Bali: Beranda zeepage</a></li>
+      <li><a href="/blog/cara-membuat-website-rental-mobil/" class="font-semibold text-brand hover:underline">Cara Membuat Website Rental Mobil dengan Fitur Pemesanan Online</a></li>
+      <li><a href="/blog/website-klinik-kantor-toko-denpasar/" class="font-semibold text-brand hover:underline">Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar</a></li>
+      <li><a href="/layanan/" class="font-semibold text-brand hover:underline">Layanan Pembuatan Website di zeepage</a></li>
+      <li><a href="/harga/" class="font-semibold text-brand hover:underline">Harga Pembuatan Website di zeepage</a></li>
+    </ul>
+  </div>
+  <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight text-white">Siap menerima booking langsung dari website villa Anda sendiri?</h2>
+          <p class="text-white/70 leading-relaxed mt-4 max-w-2xl">Ceritakan villa Anda lewat WhatsApp: lokasinya, jumlah unit, dan cara Anda menerima pemesanan selama ini. Kami bantu susun website yang membuat tamu memesan langsung ke Anda, tanpa kewajiban untuk langsung memesan.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href={WA} class="bg-brand text-white rounded-full px-7 py-3.5 font-bold">Konsultasi Gratis</a>
+            <a href="/harga/" class="border border-white/40 text-white rounded-full px-7 py-3.5 font-bold">Lihat Harga Pembuatan Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

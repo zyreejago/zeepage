@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
+import '../../styles/global.css';
+
+import id from '../../i18n/id.json';
+import { WA } from '../../data/home-content';
+
+const t = id;
+const lang = 'id';
+
+const title = 'Cara Membuat Website Rental Mobil dengan Fitur Pemesanan Online';
+const seoTitle = 'Cara Membuat Website Rental Mobil dengan Pemesanan Online';
+const description = 'Cara membuat website rental mobil langkah demi langkah: menyiapkan katalog armada, tarif yang transparan, formulir pemesanan online, dan mendatangkan pemesan dari Google.';
+const canonical = 'https://zeepage.com/blog/cara-membuat-website-rental-mobil/';
+const cover = '/blog/cara-membuat-website-rental-mobil.webp';
+const coverAlt = 'Cara membuat website rental mobil dengan fitur pemesanan online dari zeepage';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description,
+  image: 'https://zeepage.com' + cover,
+  datePublished: '2026-10-24',
+  inLanguage: 'id-ID',
+  author: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+  publisher: { '@type': 'Organization', name: 'zeepage', url: 'https://zeepage.com' },
+};
+---
+
+<BaseLayout title={seoTitle + ' | zeepage'} description={description} lang="id" canonical={canonical} structuredData={structuredData} image={'https://zeepage.com' + cover}>
+  <Navbar t={t.nav} lang={lang} cta={{ primary: t.hero.cta1, secondary: t.hero.cta2, whatsapp: t.cta.whatsapp, whatsappUrl: t.cta.whatsappUrl }} />
+  <main>
+    <article>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 sm:pt-40">
+        <span class="inline-block rounded-full border border-line bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand">Blog</span>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mt-6">{title}</h1>
+        <p class="text-ink/50 text-sm mt-5">24 Oktober 2026 • oleh zeepage</p>
+        <figure>
+          <img src={cover} alt={coverAlt} class="w-full rounded-[2rem] border border-line mt-10" />
+        </figure>
+    <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-8" />
+      </div>
+
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+        <p class="text-ink/65 leading-relaxed mb-5">Calon penyewa mobil hampir selalu memulai dari Google. Mereka mengetik kebutuhan mereka, membuka beberapa rental sekaligus, membandingkan tarif dan armada, lalu menghubungi yang informasinya paling jelas. Rental yang hanya mengandalkan status WhatsApp dan unggahan Instagram akan sulit ikut dalam perbandingan itu, karena tidak ada satu tempat yang merangkum armada, tarif, dan cara memesan secara utuh.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Kabar baiknya, website rental mobil tidak harus rumit dan tidak harus langsung secanggih platform besar. Yang dibutuhkan calon penyewa sebenarnya sederhana: melihat mobil yang tersedia, tahu tarifnya, dan bisa memesan tanpa menunggu balasan berjam jam. Artikel ini membahas cara membuat website rental mobil langkah demi langkah, dari menyiapkan data armada sampai mendatangkan pemesan pertama dari Google.</p>
+
+        <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mb-12">
+    <p class="text-sm font-extrabold uppercase tracking-widest text-ink/40 mb-4">Daftar Isi</p>
+    <ol class="list-decimal pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="#kenapa-cara-membuat-website-rental-mobil" class="font-semibold text-brand hover:underline">Kenapa Pemilik Rental Perlu Memahami Cara Membuat Website Rental Mobil</a></li>
+      <li><a href="#langkah-cara-membuat-website-rental-mobil" class="font-semibold text-brand hover:underline">Langkah Cara Membuat Website Rental Mobil dari Nol</a></li>
+      <li><a href="#fitur-website-rental-mobil" class="font-semibold text-brand hover:underline">Fitur Wajib Website Rental Mobil: Katalog Armada dan Pemesanan Online</a></li>
+      <li><a href="#cara-membuat-website-rental-mobil-cepat-di-hp" class="font-semibold text-brand hover:underline">Cara Membuat Website Rental Mobil yang Cepat Dibuka di HP</a></li>
+      <li><a href="#kesalahan-website-rental-mobil" class="font-semibold text-brand hover:underline">Kesalahan Umum Website Rental Mobil yang Membuat Calon Penyewa Batal</a></li>
+      <li><a href="#setelah-website-rental-mobil-jadi" class="font-semibold text-brand hover:underline">Setelah Website Rental Mobil Jadi: Cara Mendatangkan Pemesan</a></li>
+    </ol>
+  </div>
+  <h2 id="kenapa-cara-membuat-website-rental-mobil" class="text-3xl font-extrabold tracking-tight mt-2 mb-5 scroll-mt-32">Kenapa Pemilik Rental Perlu Memahami Cara Membuat Website Rental Mobil</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Selama pemesanan hanya berjalan lewat percakapan, setiap calon penyewa harus dilayani satu per satu dengan pertanyaan yang sama: mobil apa saja yang ada, berapa tarif per hari, apa syaratnya, bisa diantar ke mana. Pertanyaan itu berulang setiap hari dan memakan waktu yang seharusnya bisa dipakai mengurus armada. Website menjawab semua pertanyaan dasar itu sekali untuk selamanya, sehingga percakapan yang masuk ke WhatsApp Anda sudah jauh lebih matang: calon penyewa tinggal memastikan tanggal dan unit.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Memahami cara membuat website rental mobil juga membuat Anda tidak mudah diarahkan ke fitur yang tidak perlu. Anda tahu persis halaman apa yang dibutuhkan usaha Anda, data apa yang harus disiapkan, dan bagian mana yang benar benar menghasilkan pemesanan. Pengetahuan ini berguna baik bila Anda membangun websitenya sendiri, maupun bila Anda menyerahkannya ke jasa pembuatan website seperti kami.</p>
+
+        <h2 id="langkah-cara-membuat-website-rental-mobil" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Langkah Cara Membuat Website Rental Mobil dari Nol</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Urutan pengerjaan yang rapi membuat prosesnya jauh lebih ringan. Berikut langkah yang kami sarankan untuk sebagian besar rental mobil di Bali:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Tentukan nama domain yang pendek dan mudah diingat, idealnya mengandung nama usaha rental Anda.</li>
+          <li>Susun daftar armada lengkap dengan data tiap unit sebelum desain dimulai, karena katalog adalah jantung website rental.</li>
+          <li>Tentukan alur pemesanan sejak awal: formulir di website yang masuk ke WhatsApp, atau formulir yang tersimpan sebagai data pemesanan.</li>
+          <li>Siapkan halaman pendukung: syarat dan ketentuan sewa, area layanan dan antar jemput, profil usaha, serta kontak.</li>
+          <li>Bangun tampilan dengan prioritas HP, karena hampir semua calon penyewa membuka website Anda dari ponsel.</li>
+          <li>Uji seluruh alur sebagai calon penyewa: buka katalog, pilih mobil, isi formulir, dan pastikan pesan pemesanan benar benar sampai ke Anda.</li>
+          <li>Hubungkan website dengan Google Business Profile agar alamat website tampil di hasil pencarian dan Google Maps.</li>
+        </ul>
+        <h3 class="text-xl font-bold mt-9 mb-3">Menyiapkan data armada sebelum website rental mobil dibuat</h3>
+        <p class="text-ink/65 leading-relaxed mb-5">Bagian yang paling sering menghambat pembuatan website rental bukanlah teknisnya, melainkan datanya. Siapkan untuk tiap unit: nama dan tipe mobil, jenis transmisi, jumlah kursi, tarif per durasi sewa yang Anda tawarkan, serta foto mobil yang sebenarnya dalam keadaan bersih. Data yang rapi sejak awal membuat katalog selesai lebih cepat dan mengurangi revisi di akhir.</p>
+
+        <h2 id="fitur-website-rental-mobil" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Fitur Wajib Website Rental Mobil: Katalog Armada dan Pemesanan Online</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Setelah langkah dasarnya jelas, pastikan website rental mobil Anda memuat fitur yang langsung memengaruhi keputusan penyewa berikut:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Katalog armada dengan foto asli tiap unit, bukan foto brosur dari internet yang tidak sesuai mobil yang akan diterima penyewa.</li>
+          <li>Tarif yang transparan untuk tiap pilihan durasi dan untuk opsi lepas kunci maupun dengan sopir, bila Anda menyediakan keduanya.</li>
+          <li>Penanda ketersediaan sederhana pada tiap unit, misalnya tersedia atau sedang disewa, yang rajin diperbarui.</li>
+          <li>Formulir pemesanan online yang pendek: nama, tanggal dan jam sewa, unit yang dipilih, serta lokasi pengambilan atau pengantaran.</li>
+          <li>Tombol WhatsApp pada tiap unit, agar penyewa bisa bertanya tentang mobil yang spesifik tanpa menjelaskan ulang dari awal.</li>
+          <li>Halaman syarat sewa yang jelas, mencakup dokumen yang perlu disiapkan penyewa, ketentuan bahan bakar, dan aturan keterlambatan pengembalian.</li>
+          <li>Info antar jemput, terutama untuk bandara dan hotel, beserta area yang dilayani dan ketentuan biayanya bila ada.</li>
+          <li>Alamat garasi atau kantor yang terhubung ke Google Maps, agar penyewa yang mengambil sendiri tidak tersesat.</li>
+        </ul>
+
+        <div class="bg-brand text-white rounded-[2rem] p-8 sm:p-10 my-14">
+      <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Mau website rental mobil tanpa repot menyusunnya sendiri?</h3>
+      <p class="text-white/85 leading-relaxed mt-3 mb-7">zeepage membantu rental mobil di Bali membuat website dengan katalog armada dan pemesanan online, mulai dari ratusan ribu saja. Anda cukup siapkan data armada, sisanya kami yang kerjakan.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href={WA} target="_blank" rel="noopener" class="bg-white text-brand font-bold rounded-full px-6 py-3">Konsultasi Gratis</a>
+        <a href="/jasa-pembuatan-website-di-denpasar/" class="border border-white/50 text-white font-bold rounded-full px-6 py-3">Jasa Website di Denpasar</a>
+      </div>
+    </div>
+    <h2 id="cara-membuat-website-rental-mobil-cepat-di-hp" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Cara Membuat Website Rental Mobil yang Cepat Dibuka di HP</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Calon penyewa biasanya mencari rental dalam keadaan terburu buru: baru mendarat di bandara, baru tahu jadwal berubah, atau baru sadar butuh mobil untuk besok pagi. Dalam keadaan seperti itu, website yang lambat langsung ditinggalkan. Karena itu kecepatan di HP bukan pelengkap, melainkan syarat utama saat Anda membuat website rental mobil.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Beberapa hal yang paling berpengaruh: kompres foto armada sebelum diunggah agar ukurannya ringan tetapi tetap jelas, tampilkan tarif dan tombol pesan di bagian awal halaman tanpa mengharuskan pengunjung menggulir jauh, gunakan tombol yang cukup besar untuk ditekan jempol, dan jaga formulir tetap pendek. Setiap kolom tambahan yang tidak penting akan mengurangi jumlah pemesanan yang selesai dikirim.</p>
+
+        <h2 id="kesalahan-website-rental-mobil" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Kesalahan Umum Website Rental Mobil yang Membuat Calon Penyewa Batal</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Ada website rental yang tampilannya bagus tetapi sepi pemesanan. Dari pengalaman kami, penyebabnya biasanya salah satu dari daftar ini:</p>
+        <ul class="list-disc pl-6 space-y-2.5 text-ink/65 leading-relaxed mb-6">
+          <li>Tarif tidak ditampilkan dengan alasan harga mengikuti musim, padahal penyewa membutuhkan angka awal untuk membandingkan.</li>
+          <li>Foto katalog memakai mobil yang berbeda dari unit yang sebenarnya disewakan, merusak kepercayaan sejak pertemuan pertama.</li>
+          <li>Syarat sewa tidak ditulis di website, sehingga percakapan WhatsApp habis untuk menjelaskan dokumen dan ketentuan dari nol.</li>
+          <li>Nomor WhatsApp di website sudah tidak aktif, sementara nomor yang benar hanya ada di media sosial.</li>
+          <li>Katalog tidak pernah diperbarui: unit yang sudah dijual masih tampil, unit baru tidak pernah ditambahkan.</li>
+          <li>Tidak ada informasi area layanan, membuat penyewa dari luar kota ragu apakah mobil bisa diantar ke lokasi mereka.</li>
+        </ul>
+
+        <h2 id="setelah-website-rental-mobil-jadi" class="text-3xl font-extrabold tracking-tight mt-14 mb-5 scroll-mt-32">Setelah Website Rental Mobil Jadi: Cara Mendatangkan Pemesan</h2>
+        <p class="text-ink/65 leading-relaxed mb-5">Website yang sudah jadi perlu diperkenalkan ke tempat calon penyewa berada. Mulailah dari Google Business Profile: pastikan kategori, jam operasional, dan nomor teleponnya benar, lalu cantumkan alamat website Anda di sana. Tambahkan tautan website ke profil Instagram dan katalog WhatsApp Business usaha Anda, agar setiap orang yang menemukan Anda di mana pun berakhir di katalog yang sama.</p>
+        <p class="text-ink/65 leading-relaxed mb-5">Selanjutnya, minta penyewa yang puas meninggalkan ulasan asli di Google dan sesekali perbarui katalog serta tarif mengikuti musim, supaya website selalu tampil hidup. Bila Anda ingin melihat pilihan paket dan biayanya, <a href="/harga/" class="font-semibold text-brand hover:underline">halaman harga</a> kami menampilkannya secara terbuka, dan <a href="/layanan/" class="font-semibold text-brand hover:underline">halaman layanan</a> kami menjelaskan apa saja yang dikerjakan untuk tiap jenis website. Contoh penerapannya pada jenis usaha lain bisa Anda lihat di panduan <a href="/blog/website-villa-bali/" class="font-semibold text-brand hover:underline">website villa bali dengan booking langsung</a>, karena pola katalog dan pemesanannya mirip dengan rental mobil.</p>
+
+        <ShareButtons title={title} url={canonical} lang={lang} extraClass="mt-14" />
+    <div class="bg-white border border-line rounded-3xl p-6 sm:p-8 mt-14">
+    <p class="text-xl font-bold mb-4">Baca juga</p>
+    <ul class="list-disc pl-5 space-y-2.5 text-ink/70 leading-relaxed">
+      <li><a href="/" class="font-semibold text-brand hover:underline">Jasa Pembuatan Website di Bali: Beranda zeepage</a></li>
+      <li><a href="/blog/website-villa-bali/" class="font-semibold text-brand hover:underline">Panduan Membuat Website Villa di Bali dengan Fitur Booking Langsung</a></li>
+      <li><a href="/blog/website-klinik-kantor-toko-denpasar/" class="font-semibold text-brand hover:underline">Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar</a></li>
+      <li><a href="/layanan/" class="font-semibold text-brand hover:underline">Layanan Pembuatan Website di zeepage</a></li>
+      <li><a href="/harga/" class="font-semibold text-brand hover:underline">Harga Pembuatan Website di zeepage</a></li>
+    </ul>
+  </div>
+  <div class="bg-ink text-white rounded-[2rem] p-8 sm:p-12 mt-16">
+          <h2 class="text-3xl font-extrabold tracking-tight text-white">Rental Anda siap menerima pemesanan dari website sendiri?</h2>
+          <p class="text-white/70 leading-relaxed mt-4 max-w-2xl">Ceritakan jumlah armada dan cara Anda menerima pesanan selama ini lewat WhatsApp. Kami bantu pilihkan susunan katalog dan paket yang paling sesuai, tanpa kewajiban untuk langsung memesan.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <a href={WA} class="bg-brand text-white rounded-full px-7 py-3.5 font-bold">Konsultasi Gratis</a>
+            <a href="/layanan/" class="border border-white/40 text-white rounded-full px-7 py-3.5 font-bold">Lihat Layanan Pembuatan Website</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer t={t.footer} lang={lang} navLinks={t.nav.links} id="footer" />
+</BaseLayout>

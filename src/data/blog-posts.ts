@@ -1,6 +1,20 @@
 export const blogPostsData: Record<'id' | 'en', any[]> = {
   id: [
   {
+    title: 'Panduan Membuat Website Villa di Bali dengan Fitur Booking Langsung',
+    href: '/blog/website-villa-bali/',
+    image: '/blog/website-villa-bali.webp',
+    date: '24 Oktober 2026',
+    excerpt: 'Panduan lengkap website villa bali dengan fitur booking langsung: fitur wajib, halaman yang perlu disiapkan, kesalahan yang membuat villa sepi, dan cara memulainya.',
+  },
+  {
+    title: 'Cara Membuat Website Rental Mobil dengan Fitur Pemesanan Online',
+    href: '/blog/cara-membuat-website-rental-mobil/',
+    image: '/blog/cara-membuat-website-rental-mobil.webp',
+    date: '24 Oktober 2026',
+    excerpt: 'Cara membuat website rental mobil langkah demi langkah: menyiapkan katalog armada, tarif yang transparan, formulir pemesanan online, dan mendatangkan pemesan dari Google.',
+  },
+  {
     title: 'Panduan Membuat Website untuk Klinik, Kantor, dan Toko di Denpasar',
     href: '/blog/website-klinik-kantor-toko-denpasar/',
     image: '/blog/panduan-website-klinik-kantor-toko-denpasar.webp',
@@ -16,6 +30,20 @@ export const blogPostsData: Record<'id' | 'en', any[]> = {
   },
   ],
   en: [
+  {
+    title: 'Surf School Website Guide: How Canggu Surf Schools Can Take Bookings Directly',
+    href: '/en/blog/surf-school-website-canggu/',
+    image: '/blog/surf-school-website-canggu.webp',
+    date: 'October 24, 2026',
+    excerpt: 'A surf school website lets Canggu schools take lesson bookings directly instead of paying marketplace commissions: the pages, features, and mistakes to avoid.',
+  },
+  {
+    title: 'Yoga Studio Website Design: A Guide for Ubud Studios with Schedules and Online Booking',
+    href: '/en/blog/yoga-studio-website-design-ubud/',
+    image: '/blog/yoga-studio-website-design-ubud.webp',
+    date: 'October 24, 2026',
+    excerpt: 'Yoga studio website design for Ubud studios: the pages to include, class schedule and online booking features, and the design patterns that turn visitors into students.',
+  },
   {
     title: 'How Dive Shops and Villas in Amed, Karangasem Can Win Direct Bookings Online',
     href: '/en/blog/amed-direct-bookings-website/',
