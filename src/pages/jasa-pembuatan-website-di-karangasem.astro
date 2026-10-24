@@ -132,10 +132,13 @@ const structuredData = {
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-3xl" data-reveal>Alasan usaha di Karangasem <em class="font-display italic font-medium text-brand">tidak cukup hanya mengandalkan media sosial</em></h2>
         <div class="grid md:grid-cols-3 gap-5 mt-10" data-reveal-group>
-          {alasan.map((a) => (
-            <article class="bg-paper border border-line rounded-3xl p-7">
-              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
-              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+          {alasan.map((a, i) => (
+            <article class="relative overflow-hidden bg-paper border border-line rounded-3xl p-7">
+              <span class="pointer-events-none select-none absolute -top-4 right-2 text-[6.5rem] leading-none font-extrabold text-ink/5" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <div class="relative">
+                <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+                <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+              </div>
             </article>
           ))}
         </div>
