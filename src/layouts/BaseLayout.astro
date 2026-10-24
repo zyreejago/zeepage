@@ -12,10 +12,11 @@ export interface Props {
   noindex?: boolean;
   alternates?: { hreflang: string; href: string }[];
   preloadImage?: string;
+  image?: string;
 }
 
-const { title, description, lang, canonical, structuredData, noindex, alternates, preloadImage } = Astro.props;
-    const ogImage = 'https://zeepage.com/og-image.jpg';
+const { title, description, lang, canonical, structuredData, noindex, alternates, preloadImage, image } = Astro.props;
+    const ogImage = image ? (image.startsWith('http') ? image : 'https://zeepage.com' + image) : 'https://zeepage.com/og-image.jpg';
 ---
 
 <!DOCTYPE html>
@@ -79,11 +80,9 @@ const { title, description, lang, canonical, structuredData, noindex, alternates
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32x32.png" />
 
     {structuredData && (
       <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
