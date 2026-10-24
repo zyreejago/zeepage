@@ -121,10 +121,13 @@ const structuredData = {
           <p class="text-ink/55 leading-relaxed mt-4">Jarak Bali utara dari pusat ekonomi di selatan membuat internet menjadi jalan pintasnya. Usaha yang mudah ditemukan online memangkas jarak itu setiap hari.</p>
         </div>
         <div class="grid gap-5" data-reveal-group>
-          {alasan.map((a) => (
-            <article class="bg-white border border-line rounded-3xl p-7">
-              <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
-              <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+          {alasan.map((a, i) => (
+            <article class="relative overflow-hidden bg-white border border-line rounded-3xl p-7">
+              <span class="pointer-events-none select-none absolute -top-4 right-2 text-[6.5rem] leading-none font-extrabold text-ink/5" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <div class="relative">
+                <h3 class="font-bold text-lg leading-snug">{a.title}</h3>
+                <p class="text-ink/60 text-sm leading-relaxed mt-3">{a.desc}</p>
+              </div>
             </article>
           ))}
         </div>
